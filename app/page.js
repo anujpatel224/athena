@@ -1,9 +1,14 @@
-import styles from "./page.module.css";
+import Image from "next/image";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Navbar/>
+      <HeroSection/>
+      <Footer/>
+    </>
   );
 }
