@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from 'next/link';
+import Image from 'next/image';
+import LogoIcon from '@/public/images/navbarlogo.svg';
 
 export default function Navbar() {
   // State to track the mobile menu's open/close status
@@ -31,30 +34,32 @@ export default function Navbar() {
       <div className="bg-[#140B0B] container mx-auto flex items-center justify-between py-4 px-6 fixed top-0 left-0 w-full z-[99999] md:static">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <span className="font-geist-sans">ATHENA</span>
+              <Link href="#">
+                  <Image src={LogoIcon} alt="Logo" width={60} height={40} className="w-24 h-auto" />
+              </Link>
         </div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#" className="text-white hover:text-gray-300">
+          <Link href="#" className="text-white hover:text-gray-300">
             Venue Hire
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300">
             Discover
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300">
             Live Events
-          </a>
+          </Link>
         </nav>
 
         {/* Enquire Button for Desktop */}
         <div className="hidden md:block">
-          <a
+          <Link
             href="#"
             className="bg-[#F43900] text-white px-6 py-2 rounded-full hover:bg-orange-500 transition duration-300"
           >
             Enquire Now
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -106,21 +111,21 @@ export default function Navbar() {
         className="md:hidden fixed bottom-0 left-0 w-full h-full bg-[#140B0B] z-50"
       >
         <div className="h-full flex flex-col items-start justify-end pb-16 px-6 py-4 space-y-4">
-          <a href="#" className="text-2xl text-white hover:text-gray-300">
+          <Link href="#" className="text-2xl text-white hover:text-gray-300">
             Venue Hire
-          </a>
-          <a href="#" className="text-2xl text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-2xl text-white hover:text-gray-300">
             Discover
-          </a>
-          <a href="#" className="text-2xl text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-2xl text-white hover:text-gray-300">
             Live Events
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="text-2xl bg-[#F43900] text-white px-6 py-2 rounded-full hover:bg-orange-500 transition duration-300"
           >
             Enquire Now
-          </a>
+          </Link>
         </div>
       </motion.nav>
     </header>
