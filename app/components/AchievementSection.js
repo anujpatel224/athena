@@ -114,26 +114,25 @@ const AchievementSection = () => {
 
       {/* Slide Content with AnimatePresence */}
       <AnimatePresence mode="wait">
-  <motion.div
-    key={slideData[currentSlide].id}
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -50 }}
-    transition={{ duration: 0.8 }}
-    className="text-center relative p-10 rounded-lg"
-  >
-    <p className="text-left text-white text-xl font-light">
-      {slideData[currentSlide].count}
-    </p>
-    <h1 className="text-white text-8xl font-bold">
-      {slideData[currentSlide].title}
-    </h1>
-    <p className="text-white text-6xl italic font-light">
-      {slideData[currentSlide].subtitle}
-    </p>
-  </motion.div>
-</AnimatePresence>
-
+        <motion.div
+          key={slideData[currentSlide].id}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.8 }}
+          className="text-center relative p-4 md:p-10 rounded-lg"
+        >
+          <p className="text-left text-white text-lg md:text-xl font-light">
+            {slideData[currentSlide].count}
+          </p>
+          <h1 className="text-white text-5xl md:text-8xl font-bold">
+            {slideData[currentSlide].title}
+          </h1>
+          <p className="text-white text-3xl md:text-6xl italic font-light">
+            {slideData[currentSlide].subtitle}
+          </p>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 };
