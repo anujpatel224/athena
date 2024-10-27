@@ -1,115 +1,140 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const slideData = [
   { id: 1, count: "200+", title: "WEDDINGS", subtitle: "ORGANIZED" },
   { id: 2, count: "150+", title: "EVENTS", subtitle: "HOSTED" },
-  { id: 3, count: "300+", title: "PARTIES", subtitle: "CELEBRATED" },
-  { id: 4, count: "400+", title: "DIWALI", subtitle: "ENJOY" },
-  { id: 5, count: "500+", title: "HOLI", subtitle: "FUNSSS" },
+  { id: 3, count: "300+", title: "PARTIES", subtitle: "CELEBRATED" }
 ];
 
 const AchievementSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isLocked, setIsLocked] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const sliderRef = useRef(null);
+  const [isLocked, setIsLocked] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setCurrentSlide(0); // Reset to the first slide when the component is in view
-          setIsLocked(true);  // Lock scroll within the section
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.99) {
+          setIsLocked(true);
+          document.body.style.overflow = "hidden";
         } else {
-          setIsLocked(false); // Unlock scroll when out of section
+          setIsLocked(false);
+          document.body.style.overflow = "auto";
         }
       },
-      { threshold: 0.5 }
+      { threshold: [0, 0.99] }
     );
 
-    if (sliderRef.current) {
-      observer.observe(sliderRef.current);
-    }
+    if (sliderRef.current) observer.observe(sliderRef.current);
 
     return () => {
-      if (sliderRef.current) {
-        observer.unobserve(sliderRef.current);
-      }
+      document.body.style.overflow = "auto";
+      if (sliderRef.current) observer.unobserve(sliderRef.current);
     };
   }, []);
 
   const handleWheel = (event) => {
-    if (isTransitioning) return; // Prevent new scroll action if transitioning
+    if (isTransitioning || !isLocked) return;
 
-    const atFirstSlide = currentSlide === 0;
-    const atLastSlide = currentSlide === slideData.length - 1;
+    setIsTransitioning(true);
 
-    if (!isLocked) return; // Allow normal scrolling when out of the section
-
-    // Scroll down
-    if (event.deltaY > 0) {
-      if (atLastSlide) {
-        setIsLocked(false); // Unlock scroll to leave the section on the last slide
-      } else {
-        setIsTransitioning(true);
-        setCurrentSlide((prevSlide) => Math.min(prevSlide + 1, slideData.length - 1));
-      }
-    }
-    // Scroll up
-    else if (event.deltaY < 0) {
-      if (atFirstSlide) {
-        setIsLocked(false); // Unlock scroll to leave the section on the first slide
-      } else {
-        setIsTransitioning(true);
-        setCurrentSlide((prevSlide) => Math.max(prevSlide - 1, 0));
-      }
+    if (event.deltaY > 0 && currentSlide < slideData.length - 1) {
+      setCurrentSlide((prevSlide) => prevSlide + 1);
+      setScrollDirection("down");
+    } else if (event.deltaY < 0 && currentSlide > 0) {
+      setCurrentSlide((prevSlide) => prevSlide - 1);
+      setScrollDirection("up");
+    } else if (event.deltaY > 0 && currentSlide === slideData.length - 1) {
+      setIsLocked(false);
+      document.body.style.overflow = "auto";
+    } else if (event.deltaY < 0 && currentSlide === 0) {
+      setIsLocked(false);
+      document.body.style.overflow = "auto";
     }
 
     setTimeout(() => setIsTransitioning(false), 800);
-    event.preventDefault(); // Prevent default scroll
+    event.preventDefault();
   };
 
   useEffect(() => {
-    window.addEventListener("wheel", handleWheel, { passive: false });
+    const sliderElement = sliderRef.current;
+    if (sliderElement && isLocked) {
+      sliderElement.addEventListener("wheel", handleWheel, { passive: false });
+    }
+
     return () => {
-      window.removeEventListener("wheel", handleWheel);
+      if (sliderElement) {
+        sliderElement.removeEventListener("wheel", handleWheel);
+      }
     };
-  }, [currentSlide, isLocked, isTransitioning]);
+  }, [currentSlide, isTransitioning, isLocked]);
+
+  const getTransformStyle = () => {
+    if (scrollDirection === "down") {
+      return { transform: "translateX(-10%)" };
+    } else if (scrollDirection === "up") {
+      return { transform: "translateX(10%)" };
+    }
+    return {};
+  };
 
   return (
-    <div
+    <section
       ref={sliderRef}
-      className="relative w-full h-screen flex items-center justify-center bg-gray-900 overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden"
     >
-      {/* Left Lines */}
-      <div className="absolute left-10 h-24 flex flex-col justify-between">
-        <div className="w-0.5 h-10 bg-white opacity-50" />
-        <div className="w-0.5 h-10 bg-white opacity-50" />
+      {/* Gradient Circles */}
+      <div className="absolute inset-0 gradients-wrapper pointer-events-none">
+        <div
+          className="gradient-circle blue"
+          style={{ top: "20%", left: "15%", ...getTransformStyle() }}
+        ></div>
+        <div
+          className="gradient-circle pink"
+          style={{ top: "40%", left: "25%", ...getTransformStyle() }}
+        ></div>
       </div>
 
-      {/* Slide Content */}
-      <motion.div
-        className="text-center"
-        key={slideData[currentSlide].id}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.8 }}
-      >
-        <p className="text-white text-sm font-light">
-          {slideData[currentSlide].count}
-        </p>
-        <h1 className="text-white text-6xl font-bold">
-          {slideData[currentSlide].title}
-        </h1>
-        <p className="text-white text-4xl italic font-light">
-          {slideData[currentSlide].subtitle}
-        </p>
-      </motion.div>
-    </div>
+      {/* Slide Indicators */}
+      <div className="absolute left-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+        {slideData.map((_, index) => (
+          <div
+            key={index}
+            className={`w-1 h-8 ${
+              index === currentSlide ? "bg-white opacity-100" : "bg-white opacity-50"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Slide Content with AnimatePresence */}
+      <AnimatePresence mode="wait">
+  <motion.div
+    key={slideData[currentSlide].id}
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -50 }}
+    transition={{ duration: 0.8 }}
+    className="text-center relative p-10 rounded-lg"
+  >
+    <p className="text-left text-white text-xl font-light">
+      {slideData[currentSlide].count}
+    </p>
+    <h1 className="text-white text-8xl font-bold">
+      {slideData[currentSlide].title}
+    </h1>
+    <p className="text-white text-6xl italic font-light">
+      {slideData[currentSlide].subtitle}
+    </p>
+  </motion.div>
+</AnimatePresence>
+
+    </section>
   );
 };
 

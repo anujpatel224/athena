@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.gradient-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 40vw;
+  aspect-ratio: 1 / 1;
+  transform-origin: center;
+  transition: transform 1.5s ease; /* Increased duration for smoother transition */
+}
+
+.gradient-circle.pink {
+  background: radial-gradient(circle, rgba(255, 180, 238, 0.5) 0%, rgba(255, 180, 238, 0) 70%);
+}
+
+.gradient-circle.blue {
+  background: radial-gradient(circle, rgba(168, 210, 241, 0.4) 0%, rgba(168, 210, 241, 0) 70%);
+}
+
+
+
+
