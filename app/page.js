@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import AchievementSection from "./components/AchievementSection";
+import OurServices from "./components/OurServices";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar/>
       <HeroSection/>
       <AchievementSection/>
+      <OurServices/>
       <Footer/>
     </>
   );

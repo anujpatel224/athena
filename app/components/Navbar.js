@@ -1,11 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
 import Link from 'next/link';
 import Image from 'next/image';
 import LogoIcon from '@/public/images/navbarlogo.svg';
 
 export default function Navbar() {
+  const menuItems = ["Venue Hire", "Discover", "Live Events"];
+  
   // State to track the mobile menu's open/close status
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,11 +32,33 @@ export default function Navbar() {
     },
   };
 
+  useEffect(() => {
+    document.querySelectorAll(".menu-item").forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        gsap.to(item.querySelectorAll("span"), {
+          rotationX: 360,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      });
+      item.addEventListener("mouseleave", () => {
+        gsap.to(item.querySelectorAll("span"), {
+          rotationX: 0,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      });
+    });
+  }, []);
+  
+
   return (
     <header className="bg-[#140B0B] text-white">
       <div className="bg-[#140B0B] container mx-auto flex items-center justify-between py-4 px-6 fixed top-0 left-0 w-full z-[99999] md:static">
         {/* Logo */}
-        <div className="text-2xl font-bold">
+        <div className="text-2xl font-bold logo">
               <Link href="#">
                   <Image src={LogoIcon} alt="Logo" width={60} height={40} className="w-24 h-auto" />
               </Link>
@@ -41,26 +66,28 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="#" className="text-white hover:text-gray-300">
-            Venue Hire
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-300">
-            Discover
-          </Link>
-          <Link href="#" className="text-white hover:text-gray-300">
-            Live Events
-          </Link>
+        {menuItems.map((item) => (
+          <div key={item} className="menu-item text-center relative">
+            <Link href={`#${item.toLowerCase()}`} className="overflow-hidden text-white">
+              {item.split("").map((char, index) => (
+                <span key={index} className="inline-block transition-transform">
+                  {char}
+                </span>
+              ))}
+            </Link>
+          </div>
+        ))}
         </nav>
 
         {/* Enquire Button for Desktop */}
         <div className="hidden md:block">
-          <Link
-            href="#"
-            className="bg-[#F43900] text-white px-6 py-2 rounded-full hover:bg-orange-500 transition duration-300"
-          >
-            Enquire Now
-          </Link>
-        </div>
+        <Link
+          href="#"
+          className="enquire-button bg-[#F43900] text-white px-6 py-2 rounded-full hover:bg-orange-500 transition duration-300"
+        >
+          Enquire Now
+        </Link>
+      </div>
 
         {/* Hamburger Icon for Mobile */}
         <div className="md:hidden">
