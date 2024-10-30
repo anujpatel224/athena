@@ -20,7 +20,6 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-<<<<<<< Updated upstream
 
 .gradient-circle {
   position: absolute;
@@ -43,7 +42,6 @@ body {
 
 
 
-=======
 input::placeholder {
   color: black;
   font-family: 'DM Serif Display', serif;
@@ -54,4 +52,3 @@ input::placeholder {
 p {
   font-family:'Archivo'
 }
->>>>>>> Stashed changes

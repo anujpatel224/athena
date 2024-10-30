@@ -2,7 +2,6 @@ import Image from 'next/image';
 import HeroImg from '../../public/images/heroimg.svg';
 
 export default function HeroSection() {
-<<<<<<< Updated upstream
   return (
     <section className="relative bg-#191919 text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
@@ -31,11 +30,3 @@ export default function HeroSection() {
     </section>
   );
 }
-=======
-    return (
-      <></>
-
-    )
-  }
-  
->>>>>>> Stashed changes
