@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useSpring, animated } from "@react-spring/web";
 
-import testimonial1 from "../../public/testimonial1.png";
+import anna_desk from "../../public/anna-desk.png";
 import testimonial2 from "../../public/testimonial2.png";
 import testimonial3 from "../../public/testimonial3.png";
 
@@ -17,15 +17,14 @@ const Testimonial = () => {
   const sectionRef = useRef(null);
 
   const testimonials = [
-
     {
-      image: testimonial1,
-      alt: "Testimonial 1",
-      text: "Lorem ipsum dolor sit amet consectetur. Vivamus erat ut massa urna eget luctus.",
-      author: "John Doe, Company A"
+      image: anna_desk,
+      alt: "Testimonial 2",
+      text: "Adipiscing ullamcorper Adipiscing ullamcorper Adipiscing ullamcorper Adipiscing ullamcorper quam bibendum elementum arcu commodo diam.",
+      author: "Jane Smith, Company B"
     },
     {
-        image: testimonial2,
+      image: testimonial2,
       alt: "Testimonial 2",
       text: "Adipiscing ullamcorper quam bibendum elementum arcu commodo diam.",
       author: "Jane Smith, Company B"
@@ -73,54 +72,45 @@ const Testimonial = () => {
   }, [api]);
 
   const handleSlideChange = () => {
-    if (isLeftHalf) {
-      setCurrentSlide((prev) => {
-        const newSlide = prev === testimonials.length - 1 ? 0 : prev + 1;
-        return newSlide;
-      });
-    } else {
-      setCurrentSlide((prev) => {
-        const newSlide = prev === 0 ? testimonials.length - 1 : prev - 1;
-        return newSlide;
-      });
-    }
-  };
-
-  const getSlideIndex = (index) => {
-    return (index + testimonials.length) % testimonials.length;
+    setCurrentSlide((prev) => {
+      const newSlide = isLeftHalf 
+        ? (prev === testimonials.length - 1 ? 0 : prev + 1) 
+        : (prev === 0 ? testimonials.length - 1 : prev - 1);
+      return newSlide;
+    });
   };
 
   return (
-    <section ref={sectionRef} className="bg-[#191919] text-white py-8 md:py-12 relative">
+    <section ref={sectionRef} className="bg-[#191919] text-white relative w-full h-screen md:py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-6xl lg:text-[92px] font-bold text-left mb-6 md:mb-10">
+        <h2 className="text-4xl md:text-6xl lg:text-[92px] font-bold text-left mb-[80px] md:mb-10">
           TESTIMONIALS
         </h2>
 
-        <div ref={testimonialDivRef} className="flex flex-col md:flex-row items-start">
+        <div ref={testimonialDivRef} className="flex flex-col md:flex-row items-start mt-[6rem]">
           <div className="w-full md:w-2/3 relative h-96 overflow-hidden flex items-center">
             <div 
-              className="flex items-end transition-transform duration-500 ease-in-out absolute w-full" 
+              className="flex transition-transform duration-500 ease-in-out" 
               style={{transform: `translateX(${-currentSlide * 100}%)`}}
             >
-              {[...testimonials, ...testimonials].map((_, index) => (
-                <div key={index} className="flex-shrink-0 w-full flex">
-                  <div className="w-1/2 px-2 scale-75 opacity-50">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="flex-shrink-0 w-full h-[800xp] flex">
+                  <div className={`w-1/2 px-2 flex items-end ${index === (currentSlide + 1) % testimonials.length ? 'scale-100' : 'scale-75 opacity-50'}`}>
                     <Image
-                      src={testimonials[getSlideIndex(index - 1)].image}
-                      alt={testimonials[getSlideIndex(index - 1)].alt}
-                      width={280}
-                      height={382}
-                      className="object-cover grayscale"
+                      src={testimonials[(index + 1) % testimonials.length].image}
+                      alt={testimonials[(index + 1) % testimonials.length].alt}
+                      width={450}
+                      height={600}
+                      className={`object-cover grayscale`}
                     />
                   </div>
-                  <div className="w-1/2 px-2 scale-100">
+                  <div className={`w-1/2 px-2 flex items-end ${index === currentSlide ? 'scale-100' : 'scale-75 opacity-50'}`}>
                     <Image
-                      src={testimonials[getSlideIndex(index)].image}
-                      alt={testimonials[getSlideIndex(index)].alt}
-                      width={353}
-                      height={483}
-                      className="object-cover"
+                      src={testimonial.image}
+                      alt={testimonial.alt}
+                      width={450}
+                      height={600}
+                      className={`object-cover ${index === currentSlide ? '' : 'grayscale'}`}
                     />
                   </div>
                 </div>
@@ -128,9 +118,9 @@ const Testimonial = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/3 md:mt-8 md:ml-8 relative">
-            <div className="absolute w-full transition-all duration-500 ease-in-out">
-              <p className="text-base md:text-xl text-left">
+          <div className="w-full md:w-1/3 md:mt-[17rem] md:ml-8 relative ">
+            <div className="text-base absolute w-full transition-all duration-500 ease-in-out flex flex-col">
+              <p className=" md:text-xl text-left mb-4">
                 {testimonials[currentSlide].text}
               </p>
               <p className="font-bold text-sm text-left mt-4 text-gray-400">

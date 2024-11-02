@@ -10,7 +10,7 @@ import nva2018winner from "../../public/nva2018winner.png";
 function Brands() {
   return (
     <div className="bg-white overflow-hidden">
-      <div className="flex justify-center gap-14 animate-scroll p-4">
+      <div className="flex justify-center gap-14 animate-scroll p-4 infinite-scroll">
         <Image src={candlelight} height={100} width="auto" alt="brand" className="w-auto" />
         <Image src={awards} height={100} width="auto" alt="brand" className="w-auto" />
         <Image src={nicebook} height={100} width="auto" alt="brand" className="w-auto" />
@@ -18,8 +18,18 @@ function Brands() {
         <Image src={awards} height={100} width="auto" alt="brand" className="w-auto" />
         <Image src={nicebook} height={100} width="auto" alt="brand" className="w-auto" />
         <Image src={drum} height={100} width={100} alt="brand" />
-        <Image src={nva2018silver} height={100} width={100} alt="brand" />
-        <Image src={nva2018winner} height={100} width={100} alt="brand" />
+        <Image src={nva2018silver} height={100} width={300} alt="brand" />
+        <Image src={nva2018winner} height={100} width={300} alt="brand" />
+        
+        <Image src={candlelight} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={awards} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={nicebook} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={candlelight} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={awards} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={nicebook} height={100} width="auto" alt="brand" className="w-auto" />
+        <Image src={drum} height={100} width={100} alt="brand" />
+        <Image src={nva2018silver} height={100} width={300} alt="brand" />
+        <Image src={nva2018winner} height={100} width={300} alt="brand" />
       </div>
     </div>
   );
