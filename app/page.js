@@ -1,18 +1,20 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AchievementSection from "./components/AchievementSection";
-import OurServices from "./components/OurServices";
-import LiveEvents from "./components/LiveEvents";
-import Footer from "./components/Footer";
+import Testimonial from "./components/Testimonial";
+import Brands from "./components/Brands";
+import ContactUs from "./components/ContactUs";
+
 
 export default function Home() {
   return (
-    <div className="scroll-container h-screen">
-      <Navbar />
-      <HeroSection />
-      <AchievementSection />
-      <OurServices />
-      <LiveEvents/>
+    <div className="w-screen ">
+      <Navbar/>
+      <HeroSection/>
+      <AchievementSection/>
+      <Testimonial/>
+      <Brands />
+      <ContactUs />
       <Footer />
     </div>
   );
