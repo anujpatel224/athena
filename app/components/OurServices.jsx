@@ -45,7 +45,7 @@ export default function OurServices() {
               </button>
             </div>
             {/* Image Section (40%) */}
-            <div className="relative md:w-full md:w-2/5 md:h-72 h-64 m-8 rounded-lg overflow-hidden">
+            <div className="relative md:w-2/5 md:h-72 h-64 m-8 rounded-lg overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title}
