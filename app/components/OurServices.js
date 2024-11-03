@@ -26,7 +26,7 @@ const servicesData = [
 
 export default function OurServices() {
   return (
-    <section className="flex flex-col items-center bg-black min-h-screen text-white px-4 py-8">
+    <section className="flex flex-col items-center bg-black text-white px-4 py-8">
       <h2 className="md:text-7xl text-4xl font-bold mb-10">OUR SERVICES</h2>
       <div className="space-y-8">
         {servicesData.map((service) => (

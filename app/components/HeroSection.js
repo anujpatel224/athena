@@ -44,7 +44,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-[#191919] text-white py-12">
+    <section className="relative bg-[#191919] text-white py-12 flex items-center">
       <div className="container mx-auto px-6 md:px-12">
         <div className="relative flex items-center justify-end">
           <div ref={imageRef} className="md:w-1/2">

@@ -86,7 +86,7 @@ const AchievementSection = () => {
   return (
     <section
       ref={sliderRef}
-      className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden"
+      className="relative w-full flex items-center justify-center bg-black overflow-hidden"
     >
       {/* Gradient Circles */}
       <div className="absolute inset-0 gradients-wrapper pointer-events-none">
