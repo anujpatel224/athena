@@ -27,14 +27,15 @@ const servicesData = [
 export default function OurServices() {
   return (
     <section className="flex flex-col items-center bg-black text-white px-4 py-8">
-      <h2 className="md:text-7xl text-4xl font-bold mb-10">OUR SERVICES</h2>
-      <div className="space-y-8">
+      <h2 className="md:text-7xl text-4xl font-bold mb-14">OUR SERVICES</h2>
+      <div className="space-y-16 w-full flex flex-col items-center">
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="w-9xl flex md:flex-row flex-col bg-[#1F2125] rounded-lg overflow-hidden shadow-lg"
+            className="w-full max-w-6xl flex md:flex-row flex-col bg-[#1F2125] rounded-xl overflow-hidden shadow-lg"
           >
-            <div className="p-8 md:flex-1 flex flex-col items-center md:items-baseline">
+            {/* Content Section (60%) */}
+            <div className="p-8 w-full md:w-3/5 flex flex-col items-center md:items-start justify-center">
               <h3 className="text-2xl italic font-semibold mb-4 text-white">
                 {service.title}
               </h3>
@@ -43,16 +44,15 @@ export default function OurServices() {
                 Explore More
               </button>
             </div>
-            <div className="relative md:w-1/2 h-full flex items-center">
-              <div className="relative w-full h-64 m-4 rounded-lg overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
+            {/* Image Section (40%) */}
+            <div className="relative md:w-full md:w-2/5 md:h-72 h-64 m-8 rounded-lg overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
             </div>
           </div>
         ))}

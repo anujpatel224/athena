@@ -27,7 +27,7 @@ export default function LiveEvents() {
   }, []);
 
   return (
-    <section className="relative flex w-full h-screen items-center bg-black text-white overflow-hidden">
+    <section className="card-shadow relative flex w-full h-screen items-center bg-black text-white overflow-hidden">
       {/* Overlay Text and Button */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
         <h1 className="text-4xl md:text-8xl font-bold mb-8 text-center">LIVE EVENTS</h1>
