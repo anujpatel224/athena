@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 :root {
   --background: #ffffff;
@@ -41,3 +42,13 @@ body {
 
 
 
+input::placeholder {
+  color: black;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  font-weight: 400; /* Regular weight */
+}
+
+p {
+  font-family:'Archivo'
+}
