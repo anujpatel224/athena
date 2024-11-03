@@ -2,7 +2,7 @@ import React from "react";
 
 function RequirementForm() {
   return (
-    <div className="relative min-h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center">
+    <div className="relative md:p-16 py-32 px-4 bg-cover bg-center bg-no-repeat flex justify-center items-center">
      
       <div className="bg-white/50 backdrop-blur-lg pt-0 rounded-xl shadow-lg max-w-[460px]">
         <h2 className="text-xl bg-white/70 mb-2 text-black rounded-t-xl p-4 max-w-[460px] font-semibold ">

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const imageData = [
@@ -15,33 +15,16 @@ const imageData = [
 ];
 
 export default function LiveEvents() {
-  const [scrollDirection, setScrollDirection] = useState('down');
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        setScrollDirection('down');
-      } else {
-        setScrollDirection('up');
-      }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Mobile breakpoint at 768px
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleResize(); // Check on mount
+    window.addEventListener('resize', handleResize); // Listen for resize events
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const columnTransform = (column) => {
-    if (scrollDirection === 'down') {
-      return column === 'middle' ? 'translate-y-4' : '-translate-y-4';
-    } else {
-      return column === 'middle' ? '-translate-y-4' : 'translate-y-4';
-    }
-  };
 
   return (
     <section className="relative flex w-full h-screen items-center bg-black text-white overflow-hidden">
@@ -53,10 +36,11 @@ export default function LiveEvents() {
         </button>
       </div>
 
-      {/* Image Grid */}
-      <div className="w-full h-full grid grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0 z-0 bg-black opacity-50">
-        {/* Column 1 */}
-        <div className={`space-y-4 h-full flex flex-col transition-transform duration-300 transform ${columnTransform('left')}`}>
+      {/* Image Columns - render only on non-mobile */}
+      {!isMobile && (
+      <div className="w-full h-full grid grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0 z-0">
+
+        <div className="space-y-4 h-full flex flex-col">
           {imageData.slice(0, 3).map((src, index) => (
             <Image 
               key={index} 
@@ -70,8 +54,7 @@ export default function LiveEvents() {
           ))}
         </div>
 
-        {/* Column 2 */}
-        <div className={`space-y-4 h-full flex flex-col transition-transform duration-300 transform ${columnTransform('middle')}`}>
+        <div className="space-y-4 h-full flex flex-col">
           {imageData.slice(3, 6).map((src, index) => (
             <Image 
               key={index} 
@@ -84,10 +67,25 @@ export default function LiveEvents() {
             />
           ))}
         </div>
-
-        {/* Column 3 */}
-        <div className={`space-y-4 h-full flex flex-col transition-transform duration-300 transform ${columnTransform('right')}`}>
-          {imageData.slice(6, 9).map((src, index) => (
+          <div className="space-y-4 h-full flex flex-col">
+            {imageData.slice(6, 9).map((src, index) => (
+              <Image 
+                key={index} 
+                src={src} 
+                alt={`image ${index + 1}`} 
+                className="w-full object-cover flex-1" 
+                width={400} 
+                height={300} 
+                layout="responsive"
+              />
+            ))}
+          </div>
+      </div>
+       )}
+      {isMobile && (
+        <div className="w-full h-full flex px-4 md:px-0 space-x-4 z-0">
+           <div className="space-y-4 h-full flex flex-col">
+          {imageData.slice(0, 4).map((src, index) => (
             <Image 
               key={index} 
               src={src} 
@@ -99,7 +97,22 @@ export default function LiveEvents() {
             />
           ))}
         </div>
-      </div>
+
+        <div className="space-y-4 h-full flex flex-col">
+          {imageData.slice(4, 8).map((src, index) => (
+            <Image 
+              key={index} 
+              src={src} 
+              alt={`image ${index + 1}`} 
+              className="w-full object-cover flex-1" 
+              width={400} 
+              height={300} 
+              layout="responsive"
+            />
+          ))}
+        </div>
+        </div>
+      )}
     </section>
   );
 }

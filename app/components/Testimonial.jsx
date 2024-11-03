@@ -83,7 +83,7 @@ const Testimonial = () => {
   return (
     <section ref={sectionRef} className="bg-[#191919] text-white relative w-full h-screen md:py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-6xl lg:text-[92px] font-bold text-left mb-[80px] md:mb-10">
+        <h2 className="text-4xl md:text-6xl lg:text-[92px] font-bold text-left pt-8 md:pt-0 md:mb-10">
           TESTIMONIALS
         </h2>
 

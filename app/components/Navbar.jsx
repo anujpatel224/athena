@@ -1,5 +1,5 @@
 "use client";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import Link from 'next/link';
@@ -33,6 +33,7 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    // Animate each menu item on hover
     document.querySelectorAll(".menu-item").forEach((item) => {
       item.addEventListener("mouseenter", () => {
         gsap.to(item.querySelectorAll("span"), {
@@ -51,6 +52,20 @@ export default function Navbar() {
         });
       });
     });
+
+    // GSAP animation for the pulsing logo effect
+    const logoBeat = gsap.to(".logo img", {
+      scale: 1.3,
+      repeat: -1,
+      yoyo: true,
+      duration: 0.7,
+      ease: "power1.inOut",
+    });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      logoBeat.kill();
+    };
   }, []);
   
 
