@@ -1740,3 +1740,238 @@
          };
      }
  }
+
+  $(function(){
+    $('body').on('wsc.event.youtube.ready', function () {
+    var modalDom = 
+      '<a href="https://download.wondershare.com/filmora_full846.exe" class="btn btn-secondary block-light btn-lg dev-desktop sys-win">Get Started for Free</a><a href="https://download.wondershare.com/filmora-mac_full14792.dmg" class="btn btn-secondary block-light btn-lg dev-desktop sys-mac">Get Started for Free</a><a href="https://app.adjust.com/b0k9hf2_4bsu85t" class="btn btn-secondary btn-lg dev-mobile">Get Started for Free</a>'
+      
+      $('#modal-youtube .modal-footer').html(modalDom)
+      $('#modal-youtube .modal-footer').addClass('justify-content-center')
+
+    })
+    if(window.innerWidth <= 576) {
+      $("video[data-mobile]").each(function(){
+        $(this).attr('data-src',$(this).attr('data-mobile'))
+        if($(this).attr('data-poster-mobile')) {
+          $(this).attr('poster',$(this).attr('data-poster-mobile'))
+        }
+      })
+    }
+    var lazy_videos = []
+    document.querySelectorAll('.lazy-video').forEach(function(el){
+      lazy_videos.push(el)
+    })
+    window.addEventListener('scroll', function() {
+      lazy_videos && lazy_videos.forEach(function(el, index) {
+        if (isElementInViewport(el)) {
+          el.src = el.getAttribute('data-src')
+          if(el.getAttribute('data-poster')) {
+            el.poster = el.getAttribute('data-poster')
+          }
+          el.setAttribute('webkit-playsinline', '')
+          el.setAttribute('playsinline', 'true')
+          lazy_videos.splice(index, 1)
+          lazy_videos = lazy_videos.length === 0 ? null : lazy_videos
+        }
+      })
+    })
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+    }
+
+    
+    function createCommonSwiper(elm,thumbsArray){
+      var swiper_inited = false
+      document.querySelectorAll(elm + ' video').forEach(function(el) {
+        el.removeAttribute('autoplay')
+        el.removeAttribute('loop')
+      })
+      
+      return new Swiper(elm, {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        noSwiping: false,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+        breakpoints: {
+          1279: {
+            noSwiping: true,
+            loop: false,
+          }
+        },
+        pagination: {
+          el: elm + '-pagination',
+          clickable: true,
+        }, 
+        on: {
+          init() {
+            var swiper = this
+            swiper_inited = true
+            $(elm + ' video').each(function(index,el) {
+              el.addEventListener('ended', function() {
+                swiper.isEnd ? swiper.slideTo(0) : swiper.slideNext()
+              })
+            })
+            $(elm + ' video')[this.activeIndex].addEventListener('canplay', function(event) {
+              $(this)[0].play()
+            })
+          },
+          slideChange: function(){
+            if(swiper_inited && !$(elm + ' video')[this.activeIndex].src) {
+              $(elm + ' video')[this.activeIndex].src = $(elm + ' video')[this.activeIndex].getAttribute('data-src')
+            }
+            var $videoMuted = $(elm + ' video').eq(this.previousIndex).next()
+            if($videoMuted && $videoMuted.hasClass('active')){
+              $videoMuted.trigger('click')
+            }
+            swiper_inited && ($(elm + ' video')[this.activeIndex].play(), $(elm + ' video')[this.previousIndex].pause())
+          },
+          slideChangeTransitionStart: function() {
+            if(thumbsArray) {
+              thumbsArray.removeClass('active')
+              thumbsArray.eq(this.realIndex).addClass('active')
+            }
+          }
+        },
+      })
+    }
+
+    function checkSwiper(swiper,thumbsAll,index){
+      thumbsAll.removeClass('active')
+      thumbsAll.eq(index).addClass('active')
+      swiper.slideTo(index, 500, false);
+    }
+
+    var efficiencySwiper = createCommonSwiper('.efficiency-swiper',$('.efficiency-thumbs li'))
+    $('.efficiency-thumbs li').on('click',function(){checkSwiper(efficiencySwiper,$('.efficiency-thumbs li'),$(this).index())})
+    var audioSwiper = createCommonSwiper('.audio-swiper',$('.audio-thumbs li'))
+    $('.audio-thumbs li').on('click',function(){checkSwiper(audioSwiper,$('.audio-thumbs li'),$(this).index())})
+
+    var professionalSwiper = new Swiper(".professional-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 12,
+      noSwiping: false,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 2,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      breakpoints: {
+        1279: {
+          noSwiping: true,
+          loop: false,
+        }
+      },
+      pagination: {
+        el: '.professional-swiper-pagination',
+        clickable: true,
+      }, 
+      on: {
+        slideChangeTransitionStart: function() {
+          $('.professional-thumbs li').removeClass('active')
+          $('.professional-thumbs li').eq(this.realIndex).addClass('active')
+        }
+      }
+    })
+    $('.professional-thumbs li').on('click',function(){checkSwiper(professionalSwiper,$('.professional-thumbs li'),$(this).index())})
+    function createCommonTitleSwiper(elm,$elmParents){
+      return new Swiper(elm, {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+        navigation: {
+          nextEl: elm + "-next",
+          prevEl: elm + "-prev",
+        },
+        on: {
+          init: function(){
+            $elmParents.find('.img-wrapper .img-item').eq(0).addClass('active')
+            $elmParents.find('.content-wrapper .content-item').eq(0).addClass('active')
+
+          },
+          slideChangeTransitionStart: function() {
+            $elmParents.find('.img-wrapper .img-item').eq(this.realIndex).addClass('active').siblings().removeClass('active')
+            $elmParents.find('.content-wrapper .content-item').eq(this.realIndex).addClass('active').siblings().removeClass('active')
+          }
+        },
+      })
+    }
+    
+
+    if(window.innerWidth > 1279) {
+      var scrollElement = document.scrollingElement || document.documentElement || document.body
+
+      $('.assetsSwiper .swiper-slide').mouseenter(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+        $('.assetsSwiper-box').css('--assetIndex',$(this).index())
+      })
+
+      $(".part-ai .content-wrapper .content-item").on('mouseenter',function(){
+        $(this).addClass('active').siblings().addClass('hideItem')
+        $(this).find('.skip-btn').slideDown()
+        $(this).parents('.box-style').find('.img-wrapper .img-item').eq($(this).index()).addClass('active').siblings().removeClass('active')
+      })
+      $(".part-ai .content-wrapper .content-item").on('mouseleave',function(){
+        $(this).removeClass('active').siblings().removeClass('hideItem')
+        $(this).find('.skip-btn').slideUp()
+        $(this).parents('.box-style').find('.img-wrapper .img-item').eq($(this).index()).removeClass('active')
+      })
+
+      function loop(previousScrollTop, callback) {
+        function repeat() {
+          requestAnimationFrame( function () {
+            loop(previousScrollTop, callback)
+          } )
+        }
+        var scrollTop = scrollElement.scrollTop
+        if( previousScrollTop === scrollTop ) {
+          return repeat()
+        } else {
+          callback && callback( previousScrollTop, scrollTop )
+          previousScrollTop = scrollTop
+        }
+        return repeat()
+      }
+
+      loop(0, function (previousScrollTop, scrollTop) {
+        var minProcessTitleTop = $(".part-process").offset().top + $(".part-process .light-item").height() / 3
+
+        if(scrollTop > minProcessTitleTop) {
+          $(".part-process .process-title").addClass('active')
+        } else {
+          $(".part-process .process-title").removeClass('active')
+        }
+
+        var minProcessTop = $(".part-process").offset().top
+        var maxProcessTop = $(".part-process").offset().top + $(".part-process").height() - $(window).height()
+        var indexProcess = 0
+        
+        if(scrollTop < minProcessTop) {
+          indexProcess = 0
+        } else if(scrollTop > maxProcessTop) {
+          indexProcess = 2
+        } else {
+          indexProcess = Math.floor((scrollTop - minProcessTop) / (maxProcessTop - minProcessTop) * 3)
+        }
+        $(".part-process .light-item").eq(indexProcess).addClass('active').siblings().removeClass('active')
+
+        if(scrollTop > maxProcessTop) {
+          $(".part-process .light-item").removeClass('active')
+        }
+      })
+    } else {
+      var assetsSwiper = createCommonSwiper('.assetsSwiper')
+      var ai1TitleSwiper = createCommonTitleSwiper('.ai1TitleSwiper',$('#nav-aiTab1'))
+      var ai2TitleSwiper = createCommonTitleSwiper('.ai2TitleSwiper',$('#nav-aiTab2'))
+      var ai3TitleSwiper = createCommonTitleSwiper('.ai3TitleSwiper',$('#nav-aiTab3'))
+     if(window.innerWidth <= 576) {
+        assetsSwiper.slideTo(6, 1000, false);
+      }
+    }
+  })
