@@ -1741,6 +1741,8 @@
      }
  }
 
+
+ /* services slider js */
   $(function(){
     $('body').on('wsc.event.youtube.ready', function () {
     var modalDom = 
@@ -1879,6 +1881,8 @@
       }
     })
     $('.professional-thumbs li').on('click',function(){checkSwiper(professionalSwiper,$('.professional-thumbs li'),$(this).index())})
+
+    
     function createCommonTitleSwiper(elm,$elmParents){
       return new Swiper(elm, {
         slidesPerView: 1,
@@ -1912,6 +1916,7 @@
         $('.assetsSwiper-box').css('--assetIndex',$(this).index())
       })
 
+      // part-ai版块处理
       $(".part-ai .content-wrapper .content-item").on('mouseenter',function(){
         $(this).addClass('active').siblings().addClass('hideItem')
         $(this).find('.skip-btn').slideDown()
