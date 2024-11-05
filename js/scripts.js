@@ -1,5 +1,3 @@
- //Thank you to Dennis Snellenberg (https://dennissnellenberg.com/) for large parts of this code 
-
  gsap.registerPlugin(ScrollTrigger, CustomEase);
  gsap.registerPlugin(MotionPathPlugin);
  CustomEase.create("custom-ease", ".9, .1, .1, .9");
@@ -22,6 +20,7 @@
      });
      tl.set(".logo-sec .name", {
          letterSpacing: "0em",
+         scale: 0.5
      });
      tl.to(".logo-sec", {
          opacity: 1,
@@ -40,6 +39,7 @@
      }, 0);
      tl.to(".logo-sec .name", {
          letterSpacing: "-0.04em",
+         scale: 1,
          duration: 2.5,
          ease: "custom-ease"
 
