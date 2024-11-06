@@ -4931,6 +4931,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   border: 1px solid rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 16px;
+  font-family: Archivo;
 }
 
 .input-field:focus {
@@ -4949,7 +4950,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
-  border: none;
+  border: 1px solid white;
 }
 
 .submit-button:hover {
@@ -4962,7 +4963,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   justify-content: space-between;
   padding: 16px;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #555;
+  color: #000;
   font-size: 0.875rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -6311,7 +6312,9 @@ main .btn-secondary:hover,
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 443px;
+  left: 40px;
 }
 .float-download-a .download-container .content-logo {
   opacity: 0;
@@ -6348,13 +6351,16 @@ main .btn-secondary:hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 700;
-  color: #000;
+  color: #fff;
   border-radius: 86px;
   text-decoration: none;
   border: none;
+  font-family: Archivo;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+
 }
 .float-download-a .download-container .close-download {
   opacity: 0;
@@ -6370,10 +6376,6 @@ main .btn-secondary:hover,
   transform: translateX(100%);
   cursor: pointer;
 }
-.float-download-a .download-container .content-button a:hover {
-  background-position: 0 48px;
-  background-color: #fff;
-}
 
 .float-download-a.show {
   bottom: 12px;
@@ -6382,7 +6384,7 @@ main .btn-secondary:hover,
   transition: all 0.4s linear;
 }
 .float-download-a.show .download-container .bg-layer {
-  width: 680px;
+  width: 443px;
   height: 72px;
   transition: all 0.4s 0.3s linear;
 }
@@ -6393,7 +6395,13 @@ main .btn-secondary:hover,
 .float-download-a.show .download-container .content-text {
   transition: all 0.4s 0.7s linear;
   opacity: 1;
-  width: 396px;
+  width: 243px;
+  font-family: Archivo;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.32px;
+  text-align: left;
+
 }
 .float-download-a.show .download-container .content-button {
   transition: all 0.4s 0.7s linear;
@@ -6439,4 +6447,5 @@ text-align: left;
   background-color: #F43900;
   color: white;
   border: none;
+  margin-top: 30px;
 }
