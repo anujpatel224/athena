@@ -788,12 +788,12 @@ ol {
 
 @media (min-width: 759px) {
   .padding-outer {
-    padding: 14.06rem 0;
+    padding: 0 0 14.06rem 0;
   }
 }
 
 .padding-outer.top-only {
-  padding: 27.32rem 0 0;
+  padding: 0 0 27.32rem  0;
 }
 
 @media (min-width: 759px) {
@@ -2387,18 +2387,6 @@ html:not(.open-navi) .navi-gradients-wrapper .gradient-ct.pink {
   position: relative;
   overflow: hidden;
   z-index: 2;
-}
-
-.index-header:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 10vh;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
-  opacity: 1;
-  z-index: 4;
 }
 
 @media (max-width: 759px) {
@@ -4988,7 +4976,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .overlay-text {
   position: absolute;
-  bottom: 16px;
+  bottom: 2rem;
   width: 100%;
   text-align: center;
   color: white;
@@ -5021,6 +5009,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   background-color: white;
   overflow: hidden;
   padding: 2rem;
+  margin-bottom:6rem;
 }
 
 .brands-scroll {
@@ -5031,7 +5020,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 .brand-logo {
-  height: 4rem;
+  height: 6rem;
   width: auto;
 }
 
