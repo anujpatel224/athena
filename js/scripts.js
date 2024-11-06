@@ -1740,3 +1740,42 @@
          };
      }
  }
+
+ /* sticky float */
+ $(function(){
+    if (document.body.clientWidth > 1280){
+        var leave = false
+
+        window.addEventListener('scroll', function() {
+            if(!$(".float-download-a").length) return
+                var scrollElement = document.scrollingElement || document.documentElement || document.body
+                var scrollTopStart = scrollElement.scrollTop + $(window).height() / 2
+                var scrollTopEnd = scrollElement.scrollTop + $(window).height()
+                var $block1 = $("main section").eq(1)
+                var $block2 = $("main section").eq($("main section").length - 1)
+
+                if((scrollTopStart > $block1.offset().top && scrollTopEnd <= $block2.offset().top + $block2.height())) {
+                $(".float-download-a").addClass("show")
+                leave = true
+                } else {
+                        if(leave) {
+                                $(".float-download-a").removeClass("show")
+                                $(".float-download-a").addClass("leave")
+                                setTimeout(function(){
+                                        $(".float-download-a").removeClass("leave")
+                                }, 1500)
+                                leave = false
+                        }
+                        
+                }
+        })
+
+        $(".float-download-a .close-download").on("click",function(){
+            window.dataLayer.push({
+        event: 'pop_up_close',
+                location: 'closeBottomDownload'
+    })
+            $(".float-download-a").remove()
+        })
+    }
+})
