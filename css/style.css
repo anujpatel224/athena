@@ -5619,7 +5619,7 @@ main .btn-secondary:hover,
     max-width: 520px;
     margin-left: 10.83%;
   }
-  .part-process .process-wrapper .process-slide.slide3 .box-style .box-left {
+  .part-process .process-wrapper .process-slide.slide4 .box-style .box-left {
     max-width: 600px;
   }
   .part-process .process-wrapper .process-slide .box-style .box-right {
@@ -5805,7 +5805,7 @@ main .btn-secondary:hover,
   .part-process .process-wrapper .process-slide .box-style .box-left {
     margin-left: calc(50% - 600px);
   }
-  .part-process .process-wrapper .process-slide.slide3 .box-style .box-left {
+  .part-process .process-wrapper .process-slide.slide4 .box-style .box-left {
     max-width: 500px;
   }
 
@@ -6412,4 +6412,31 @@ main .btn-secondary:hover,
   width: 64px;
   height: 64px;
   transition: all 0.4s linear;
+}
+
+.services_swiper_heading{
+font-family: DM Serif Display;
+font-size: 38px;
+font-style: italic;
+font-weight: 400;
+line-height: 52.1px;
+text-align: left;
+text-transform: none;
+}
+
+.service_text{
+font-family: Archivo;
+font-size: 22px;
+font-weight: 400;
+line-height: 35.2px;
+text-align: left;
+
+}
+
+.explore_btn {
+  padding: 12px 45px;
+  border-radius: 86px;
+  background-color: #F43900;
+  color: white;
+  border: none;
 }
