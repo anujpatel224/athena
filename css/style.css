@@ -4746,7 +4746,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 .image-container {
-  width: 60%;
+  width: 50%;
 }
 
 .hero-image {
@@ -4778,7 +4778,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .text-container {
   margin-top: 1rem;
-  max-width: 900px;
+  max-width: 100%;
   text-align: center;
   padding: 0 1.5rem;
 }
@@ -4813,12 +4813,15 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 @media (min-width: 1024px) {
+  .heading-container{
+    margin-left:5rem;
+  }
   .hero-heading {
     font-size: 6rem;
   }
 
   .sub-heading {
-    margin-left: 6rem;
+    margin-left: 15rem;
   }
 
   .hero-text {
