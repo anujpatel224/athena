@@ -4784,9 +4784,11 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 .hero-text {
+  font-family: "DM Serif Display";  
   font-size: 1rem;
   font-style: italic;
   line-height: 1.6;
+  color:#cccccc;
 }
 
 @media (min-width: 768px) {
@@ -4963,7 +4965,11 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .contact-footer div {
   text-align: left;
-  line-height: 13px;
+  font-size: 14px;
+}
+
+.contact-footer div p{
+    margin-bottom: 0px;
 }
 
 .contact-footer div:last-child {
