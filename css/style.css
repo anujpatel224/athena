@@ -4880,6 +4880,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   background-position: center;
   background-repeat: no-repeat;
   margin: 5rem;
+  z-index: 99;
 }
 
 /* Form container */
@@ -4919,7 +4920,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   border: 1px solid rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 16px;
-  font-family: Archivo;
+  font-family: "Archivo", sans-serif;
 }
 
 .input-field:focus {
@@ -4959,6 +4960,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .contact-footer div {
   text-align: left;
+  line-height: 13px;
 }
 
 .contact-footer div:last-child {
@@ -6374,7 +6376,7 @@ main .btn-secondary:hover,
 }
 .float-download-a.show .download-container .bg-layer {
   width: 443px;
-  height: 72px;
+  height: 60px;
   transition: all 0.4s 0.3s linear;
 }
 .float-download-a.show .download-container .content-logo {
@@ -6422,7 +6424,7 @@ text-transform: none;
 }
 
 .service_text{
-font-family: Archivo;
+font-family: "Archivo", sans-serif;
 font-size: 22px;
 font-weight: 400;
 line-height: 35.2px;
@@ -6437,4 +6439,5 @@ text-align: left;
   color: white;
   border: none;
   margin-top: 30px;
+  font-family: "Archivo", sans-serif;
 }

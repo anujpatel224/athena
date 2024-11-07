@@ -1779,3 +1779,67 @@
         })
     }
 })
+
+$(function(){
+    if(window.innerWidth > 1279) {
+      var lenis = new Lenis({
+      lerp: 0.1, 
+      smooth: true, 
+      wheelMultiplier: 1, 
+    });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+      gsap.registerPlugin(ScrollTrigger);
+
+      var slides = document.querySelectorAll('.process-slide');
+      slides.forEach((slide, index) => {
+        ScrollTrigger.create({
+          trigger: slide,
+          start: 'top 70%',
+          end: 'bottom 90%',
+          onLeaveBack: () => {
+            if (index > 0) {
+              gsap.to(slides[index - 1], {
+                scale: 1,
+                ease: 'power1.out'
+              });
+            }
+          },
+          onUpdate: self => {
+            if (index > 0) {
+              const scrollPosition = window.scrollY;
+              const triggerTop = slide.getBoundingClientRect().top + scrollPosition;
+              const triggerHeight = slide.offsetHeight;
+              const slideTop = slides[index - 1].getBoundingClientRect().top + scrollPosition;
+              const scaleY = 0.7 + 0.28 * ((triggerTop - slideTop) / triggerHeight);
+              gsap.to(slides[index - 1], {
+                scale: scaleY,
+                ease: 'power1.out'
+              });
+            }
+          },
+          // markers: true,
+        });
+      });
+        
+      // 处理反向首次加载位置刷新
+      var scrollElement = document.scrollingElement || document.documentElement || document.body
+      var isRefresh = false
+      if(scrollElement.scrollTop > $(".part-process").offset().top && !isRefresh) {
+        $(window).on('scroll',function(){
+          if(isRefresh) return
+          if(scrollElement.scrollTop < $(".part-process").offset().top + $(window).height()) {
+            ScrollTrigger.refresh();
+            // console.log('refresh')
+            isRefresh = true
+          }
+        })
+      } else {
+        isRefresh = true
+      }
+    }
+  })
