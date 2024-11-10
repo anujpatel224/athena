@@ -1548,9 +1548,8 @@
 
 
  function followCursor() {
-     // Überprüfe, ob das erforderliche HTML-Element vorhanden ist
      const cursorFollow = document.querySelector(".cursor-follow");
-     if (!cursorFollow) return; // Beende die Funktion, wenn das Element nicht gefunden wurde
+     if (!cursorFollow) return; 
 
      if (window.innerWidth > 759) {
          const span = cursorFollow.querySelector("span");
@@ -1622,7 +1621,7 @@
              cursorFollow.classList.add("pressed", "pressed-animation");
              setTimeout(() => {
                  cursorFollow.classList.remove("pressed-animation");
-             }, 700); // Dauer der Animation in ms
+             }, 700); 
          }
 
          function mouseUpHandler() {
@@ -1700,7 +1699,6 @@
 
      window.addEventListener('orientationchange', reloadOnResize);
 
-     // Optional: Ein Timer, um zu verhindern, dass zu häufig neu geladen wird
      let resizeTimeout;
      window.addEventListener('orientationchange', function() {
          clearTimeout(resizeTimeout);
@@ -1715,7 +1713,6 @@
          const viewportHeight = window.innerHeight;
          const documentHeight = document.documentElement.clientHeight;
 
-         // Umgekehrte Logik basierend auf deinen Beobachtungen
          if (viewportHeight > documentHeight) {
              footerElement.classList.remove('small');
          } else {
@@ -1822,11 +1819,9 @@ $(function(){
               });
             }
           },
-          // markers: true,
         });
       });
         
-      // 处理反向首次加载位置刷新
       var scrollElement = document.scrollingElement || document.documentElement || document.body
       var isRefresh = false
       if(scrollElement.scrollTop > $(".part-process").offset().top && !isRefresh) {
@@ -1834,7 +1829,6 @@ $(function(){
           if(isRefresh) return
           if(scrollElement.scrollTop < $(".part-process").offset().top + $(window).height()) {
             ScrollTrigger.refresh();
-            // console.log('refresh')
             isRefresh = true
           }
         })
