@@ -213,7 +213,6 @@
                  targetElement.scrollIntoView({
                      block: 'start',
                  });
-                 console.log(`Scrolling to anchor ${targetId}`);
 
 
                  return; // Beenden Sie die Funktion, wenn das Scrollen zum Ankerziel erfolgt ist
@@ -339,7 +338,6 @@
      followCursor();
      clipboardCopy();
      orientationCheck();
-     checkUrlBar();
      bottomPage();
  }
 
@@ -1708,24 +1706,6 @@
      });
  })();
 
-
- function checkUrlBar() {
-     if (window.innerWidth <= 760) {
-         const footerElement = document.querySelector('.footer-infos-ct');
-         const viewportHeight = window.innerHeight;
-         const documentHeight = document.documentElement.clientHeight;
-
-         // Umgekehrte Logik basierend auf deinen Beobachtungen
-         if (viewportHeight > documentHeight) {
-             footerElement.classList.remove('small');
-         } else {
-             footerElement.classList.add('small');
-         }
-         window.addEventListener('resize', checkUrlBar);
-
-     }
- }
-
  function bottomPage() {
      if (window.innerWidth <= 760) {
          const htmlTag = document.documentElement;
@@ -1834,7 +1814,6 @@ $(function(){
           if(isRefresh) return
           if(scrollElement.scrollTop < $(".part-process").offset().top + $(window).height()) {
             ScrollTrigger.refresh();
-            // console.log('refresh')
             isRefresh = true
           }
         })
