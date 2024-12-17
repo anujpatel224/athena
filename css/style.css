@@ -4926,6 +4926,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 16px;
   font-family: "Archivo", sans-serif;
+  box-sizing: border-box;
 }
 
 .input-field:focus {
@@ -4945,6 +4946,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   transition: background-color 0.3s;
   text-align: center;
   border: 1px solid white;
+  box-sizing: border-box;
 }
 
 .submit-button:hover {
@@ -6449,4 +6451,39 @@ text-align: left;
   border: none;
   margin-top: 30px;
   font-family: "Archivo", sans-serif;
+}
+
+/* cards section */
+.part-process{
+  display: block;
+  box-sizing: border-box;
+}
+.process-title{
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom:3rem;
+}
+.process-container{
+  text-align: left;
+}
+.process-box{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.d-xl-none{
+  display: none;
+}
+/*  mobile device media query */
+@media only screen and (max-width: 768px) {
+  .overlay-text{
+    padding:0;
+  }
+  .welcome-heading{
+    font-size: 12rem;
+  }
+  .welcome-subtext{
+    font-size:4rem;
+  }
 }
