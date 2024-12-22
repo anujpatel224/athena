@@ -1761,7 +1761,7 @@
 })
 
 $(function(){
-    if(window.innerWidth > 1279) {
+    
       var lenis = new Lenis({
       lerp: 0.1, 
       smooth: true, 
@@ -1820,5 +1820,4 @@ $(function(){
       } else {
         isRefresh = true
       }
-    }
-  })
+})
