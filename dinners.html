@@ -25,6 +25,87 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/insights.css" media="screen" />
     <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('hidden');
+                if (entry.target.classList.contains('slide-left')) {
+                    entry.target.classList.add('slide-in-left');
+                    entry.target.classList.remove('slide-out-left');
+                } else if (entry.target.classList.contains('slide-right')) {
+                    entry.target.classList.add('slide-in-right');
+                    entry.target.classList.remove('slide-out-right');
+                }
+            }
+        });
+    }, observerOptions);
+            document.querySelectorAll('.slide-left, .slide-right').forEach(section => {
+                section.classList.add('hidden');
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                threshold: 0.1,
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // When section enters viewport, apply zoom-in effect
+                        entry.target.querySelectorAll("button").forEach((button, index) => {
+                            setTimeout(() => {
+                                button.classList.remove("zoom-out");
+                                button.classList.add("zoom-in");
+                            }, index * 100);
+                        });
+                    } else {
+                        // When section leaves viewport, apply zoom-out effect
+                        entry.target.querySelectorAll("button").forEach((button, index) => {
+                            setTimeout(() => {
+                                button.classList.remove("zoom-in");
+                                button.classList.add("zoom-out");
+                            }, index * 100);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll(".button-container").forEach((section) => {
+                section.querySelectorAll("button").forEach((button) => {
+                    button.classList.add("hidden"); // Ensure buttons are hidden initially
+                });
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelector('.image-marquee-left').classList.add('marquee-left');
+                    entry.target.querySelector('.image-marquee-right').classList.add('marquee-right');
+                    observer.unobserve(entry.target);
+                }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.image-marquee-container').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </head>
 
 <body data-barba="wrapper">
@@ -188,7 +269,7 @@
                 </div>
                 <!-- content section -->
                 <div class="content-container">
-                    <div class="content-section">
+                    <div class="content-section slide-left">
                         <h2>Enjoy a night of celebration in a stunning venue in the heart of the Midlands</h2>
                         <p>Athena offers flexible and uninterrupted views of the purpose-built stage with extensive
                             in-house AV and state of the art table service. Thanks to our award-winning catering from
@@ -200,14 +281,14 @@
                         <p>For more information about choosing Athena as your dinner venue, please call 0116 2626556 or
                             email contact@athenacb.co.uk. </p>
                     </div>
-                    <div class="images-section">
+                    <div class="images-section slide-right">
                         <img src="https://times-event.de/images/index/scroll-imgs/scroll-img-6.jpg" alt="Dinners" />
                         <img src="https://times-event.de/images/index/scroll-imgs/scroll-img-5.jpg" alt="Dinners" />
                     </div>
                 </div>
                 <!-- card section -->
                 <div class="card-container">
-                    <div class="card">
+                    <div class="card slide-left">
                         <div class="card-image">
                             <img src="https://times-event.de/images/index/scroll-imgs/scroll-img-1.jpg" alt="Dinners" />
                         </div>
@@ -218,7 +299,7 @@
                             <button>Explore More</button>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card slide-right">
                         <div class="card-image">
                             <img src="https://times-event.de/images/index/scroll-imgs/scroll-img-2.jpg" alt="Dinners" />
                         </div>
@@ -233,7 +314,7 @@
                 <!-- overlap section -->
                 <div class="hero-section">
                     <div class="overlap-container">
-                        <div class="image-content">
+                        <div class="image-content slide-left">
                             <div class="image-container">
                                 <img src="images/heroimg.svg" alt="Athena Leicester" />
                             </div>
@@ -243,7 +324,7 @@
                                 </h1>
                             </div>
                         </div>
-                        <div class="text-container">
+                        <div class="text-container slide-right">
                             <p>
                                 Whether you would like a full three-course dinner or a simple buffet lunch for your
                                 guests, we offer a full in-house catering service for you and your guests. Feel free to
