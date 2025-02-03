@@ -1336,12 +1336,13 @@ footer {
 
 .marquee-content .list-item {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   line-height: 4rem;
   width: -moz-max-content;
   width: max-content;
+  font-family: "Archivo";
 }
 /* marquee css end */
 
@@ -1448,15 +1449,25 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-container .card .card-image {
   width: 30%;
+  transition: width 0.3s ease-in-out;
 }
 
 .card-container .card img {
   height: 286px;
   border-radius: 24px 0px 0px 24px;
+}
+
+.card:hover .card-image {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .card-container .card .card-content {
@@ -1466,6 +1477,11 @@ footer {
   color: #fff;
   width: 70%;
   padding: 2rem;
+  transition: left 0.3s ease-in-out;
+}
+.card:hover .card-content {
+  left: 100%;
+  transition: left 0.3s ease-in-out;
 }
 
 .card-container .card .card-content h3 {
@@ -1496,6 +1512,7 @@ footer {
   border-radius: 86px;
   width: max-content;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 /* cards section end */
 
@@ -1709,8 +1726,20 @@ footer {
     height: auto;
     object-fit: cover;
     border-radius: 1rem;
+    cursor:pointer;
 }
 
+.image-marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee-left {
+  animation: marquee-left 10s linear infinite;
+}
+
+.marquee-right {
+  animation: marquee-right 10s linear infinite;
+}
 /* image-marquee-container end*/
 
 /* video section start */
@@ -2116,4 +2145,99 @@ footer {
     .card-container{
         flex-direction: column;
     }
+}
+
+/* animation css */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s forwards;
+}
+
+.slide-out-left {
+  animation: slideOutLeft 1s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 1s forwards;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s forwards;
+}
+
+.zoom-out {
+  animation: zoomOut 0.5s forwards;
 }
