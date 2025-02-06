@@ -1436,7 +1436,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding-top: 3rem;
+  padding: 3rem 4rem;
   gap: 2rem;
 }
 
@@ -1464,7 +1464,7 @@ footer {
 }
 
 .card:hover .card-image {
-  width: 100%;
+  width: 50%;
   transition: width 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -1733,11 +1733,11 @@ footer {
 }
 
 .marquee-left {
-  animation: marquee-left 10s linear infinite;
+  animation: marquee-left 30s linear infinite;
 }
 
 .marquee-right {
-  animation: marquee-right 10s linear infinite;
+  animation: marquee-right 30s linear infinite;
 }
 /* image-marquee-container end*/
 
@@ -1832,6 +1832,11 @@ footer {
     color: #444444;
     font-weight: 900;
     font-size: 3rem;
+}
+
+.list-section li {
+  opacity: 0;
+  animation: slide-left 4s ease-in-out forwards;
 }
 
 .list-section li:hover{
@@ -1951,6 +1956,9 @@ footer {
 
 /* Mobile Screens (Below 768px) */
 @media (max-width: 768px) {
+    .bg-video{
+      width:100%;
+    }
     .marquee-content .list-item{
         font-size:4rem;
         line-height: 8rem;
@@ -1959,7 +1967,7 @@ footer {
         height:8rem;
     }
     .bg-ct{
-        height:100vh;
+        height:max-content;
     }
     .content-container{
         height:max-content;   
@@ -1967,7 +1975,7 @@ footer {
     .card-container{
         flex-direction:column;
         gap:4rem;
-        padding:6rem 4rem;
+        padding:10rem 0px;
     }
     .card-container .card{
         height:max-content;
@@ -1984,19 +1992,34 @@ footer {
     }
     .card-container .card .card-content button{
         padding:2rem 4rem;
+        font-size:12px;
+    }
+    .card-container .card .card-content h2{
+        font-size: 28px;
+    }
+    .card-container .card .card-content p{
+        font-size: 16px;
     }
     .overlap-container{
         padding:6rem 4rem;
     }
+    .overlap-container .image-content{
+      margin-right:0px;
+    }
+    .overlap-container .image-content .image-container{
+      width:60%;
+    }
     .text-container .button-container button{
         border-radius: 4rem;
         padding: 1.5rem 3rem;
+        font-size:12px;
     }
     .overlap-container .text-container p{
-        font-size:3.5rem;
+        font-size:16px;
+        line-height:30px;
     }
     .overlap-container .image-content .heading-container h1{
-        font-size: 4.5rem;
+        font-size: 22px;
     }
     .text-container .button-container{
         gap:2rem;
@@ -2025,13 +2048,14 @@ footer {
         width:100%;
     }
     .everything-container .button-container button {
-        width: 100%;
         text-align: center;
-        font-size: 14px;
-        padding: 0.8rem 1.5rem;
+        font-size: 12px;
+        padding: 1rem 2rem;
         white-space: normal; 
         line-height: 1.4; 
         margin-bottom:2rem;
+        border-radius: 5rem;
+        margin-right:2rem;
     }
     .content-container{
         flex-direction: column;
@@ -2124,6 +2148,37 @@ footer {
     .form-container{
       padding: 20rem 4rem;
     }
+    .content-section h2{
+        font-size: 28px;
+        line-height: 38px; 
+    }
+    .content-section p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .image-marquee img{
+        width:300px;
+        border-radius: 4rem;
+    }
+    .contact-info p{
+        font-size: 12px;
+    }
+    .footer-section{
+      font-size: 12px;
+    }
+    .video-main-container{
+      height:max-content;
+      padding:40px 0px;
+    }
+    .video-main-container .content-container h1{
+      font-size: 4rem;
+    }
+    .video-main-container .content-container p{
+      font-size:2.5rem;
+    }
+    .clients-section{
+      height:450px;
+    }
 }
 
 /* Tablet Screens (768px to 1024px) */
@@ -2143,6 +2198,18 @@ footer {
     }
     .card-container{
         flex-direction: column;
+    }
+    .contact-info p{
+      font-size:12px;
+    }
+    .everything-container .button-container button{
+        font-size: 14px;
+    }
+    .video-main-container .content-container h1{
+      font-size: 3rem;
+    }
+    .video-main-container .content-container p{
+      font-size:2.2rem;
     }
 }
 
@@ -2183,11 +2250,6 @@ footer {
 h1 {
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -2378,26 +2440,6 @@ button:hover {
 
 
 /* clients */
-.clients-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem;
-  background-color: white;
-  color: #F43900;
-  height: 60vh;
-}
-
-.clients-section h1{
-  font-family: Archivo;
-  font-size: 92px;
-  font-weight: 900;
-  line-height: 100.1px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
 
 /* client showcase */
 
