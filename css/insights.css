@@ -1070,7 +1070,6 @@ html:not(.open-navi) .navi-gradients-wrapper .gradient-ct.pink {
   border-radius: 3rem;
   cursor: pointer;
   flex: 1;
-  margin-right: 20px;
   overflow: hidden;
   position: relative;
   transition: all 0.5s cubic-bezier(0.05, 0.6, 0.39, 0.94);
@@ -2605,4 +2604,91 @@ button:hover {
 
 .zoom-out {
   animation: zoomOut 0.5s forwards;
+
+}
+
+/* room layout css */
+.room-layout-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Archivo;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 75.6px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+.room-layout-container{
+  margin-top: 35px;
+}
+
+.room-layout-container .description {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid #F4390080;
+  border-radius: 12px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.room-name {
+  color: red;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 2 columns */
+  gap: 20px;
+  justify-items: center;
+}
+
+.layout-image {
+  width: 310px;
+  height: 170px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.layout-image img {
+  vertical-align: bottom;
+  float: none;
+  height: auto;
+  max-width: 50%;
+  width: auto;
+}
+
+.label {
+  text-align: center;
+  margin-top: 10px;
 }
