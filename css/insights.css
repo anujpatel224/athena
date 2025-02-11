@@ -1435,13 +1435,13 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 3rem 4rem;
+  padding: 1rem 4rem;
   gap: 2rem;
 }
 
 .card-container .card {
   background: #1f2125;
-  width: 92%;
+  width: 100%;
   height: 286px;
   border-radius: 24px;
   display: flex;
@@ -1450,6 +1450,7 @@ footer {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  margin: 30px 30px;
 }
 
 .card-container .card .card-image {
@@ -1994,12 +1995,11 @@ footer {
     }
     .card-container{
         flex-direction:column;
-        gap:4rem;
         padding:10rem 0px;
     }
     .card-container .card{
         height:max-content;
-        gap:4rem;
+        width: 85%;
     }
     .card-container .card img{
         height:255px;
@@ -2015,10 +2015,10 @@ footer {
         font-size:12px;
     }
     .card-container .card .card-content h2{
-        font-size: 28px;
+        font-size: 24px;
     }
     .card-container .card .card-content p{
-        font-size: 16px;
+        font-size: 13px;
     }
     .overlap-container{
         padding:6rem 4rem;
@@ -2198,6 +2198,14 @@ footer {
     }
     .clients-section{
       height:450px;
+    }
+
+    .grid-container{
+      display: block !important;
+    }
+
+    table{
+      font-size: 8px !important;
     }
 }
 
