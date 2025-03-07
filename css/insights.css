@@ -331,9 +331,6 @@ div.please-rotate {
   gap: 2rem;
   display: none;
 }
-html.please-rotate div.please-rotate {
-  display: flex !important;
-}
 .quickbar {
   position: sticky;
   top: 0;
