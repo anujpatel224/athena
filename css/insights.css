@@ -2043,6 +2043,44 @@ footer {
 
 /* contact form end */
 
+/* header dropdown css */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.05rem);
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.8);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-menu li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* Mobile Screens (Below 768px) */
 @media (max-width: 768px) {
     #roomLayouts{
