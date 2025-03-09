@@ -228,7 +228,7 @@
          prevent: ({
              el
          }) => {
-             return el.tagName === 'A' && el.getAttribute('href').startsWith('#');
+            return el.classList.contains('no-barba') || (el.tagName === 'A' && el.getAttribute('href').startsWith('#'));
          },
          sync: true,
          timeout: 7000,
