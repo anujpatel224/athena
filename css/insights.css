@@ -1800,9 +1800,9 @@ footer {
     cursor:pointer;
 }
 
-.image-marquee:hover {
+/* .image-marquee:hover {
   animation-play-state: paused;
-}
+} */
 
 .marquee-left {
   animation: marquee-left 30s linear infinite;
@@ -2630,4 +2630,119 @@ th {
 .label {
   text-align: center;
   margin-top: 10px;
+}
+
+/* 2K and higher */
+@media (min-width: 2560px) { 
+  .container {
+    max-width: 100%; 
+    padding: 0 5rem; 
+  }
+  .part-process .process-wrapper .process-slide{
+    width:80%;
+  }
+  .bg-video{
+    width: 100% !important;
+  }
+  .images-section {
+    width: 25% !important;
+  }
+}
+
+@media (min-width: 3840px) { 
+  .images-section {
+    width: 15% !important;
+  }
+  .bg-video{
+    width: 100% !important;
+  }
+
+  .quickbar .quickbar-inner {
+    padding: 2rem 5rem 2rem 2rem;
+  }
+  .container {
+    max-width: 75%;
+    padding: 0 8rem;
+  }
+  .part-process .process-wrapper .process-slide{
+    width:80%;
+  }
+  .live_evets_cta {
+    border: 4px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .float-download-a.show .download-container .content-text{
+    line-height:30px;
+    width:500px;
+    font-size:30px;
+  }
+  .float-download-a.show .download-container .bg-layer{
+    width:800px;
+    height:100px;
+  }
+  .float-download-a .download-container .download-content{
+    height:100px;
+  }
+  .float-download-a .download-container .content-button a {
+    width:200px;
+    height:50px;
+    font-size:25px;
+  }
+  .general-container{
+    width:80%;
+    height:70vh;
+  }
+  .card-title{
+    font-size:1rem !important;
+  }
+  .subsubtitle{
+    font-size:1rem !important;
+  }
+  .form-row{
+    flex-direction: column;
+    gap:0.5rem;
+    margin-bottom:0.5rem;
+  }
+  .form-box{
+    width:2000px;
+  }
+  .form-content{
+    padding:1rem;
+  }
+  .form-title{
+    padding:1rem;
+  }
+  #form-button-row{
+    margin-bottom:0px;
+  }
+  .contact-footer div{
+    font-size:1rem;
+  }
+  body{
+    line-height:1.2;
+  }
+  .contact-container{
+    margin-top:3rem;
+  }
+  .footer-logo{
+    width:200px !important;
+  }
+  .social-icons a img{
+    width:35px;
+    height:35px;
+  }
+  .contact-footer{
+    padding:20px 40px;
+  }
+  .footer .lets-talk .marquee .marquee-scroll .marquee-content .list-item {
+    font-size: 5rem;
+  }
+  .footer .lets-talk .marquee .marquee-scroll .marquee-content .line{
+    width:4rem;
+  }
+  .footer-container{
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

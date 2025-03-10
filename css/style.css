@@ -6419,7 +6419,7 @@ html{
     padding: 2rem 7rem 2rem 2rem;
   }
   .container {
-    max-width: 80%; 
+    max-width: 100%; 
     padding: 0 5rem; 
   }
   .part-process .process-wrapper .process-slide{
@@ -6468,6 +6468,8 @@ html{
     font-size: 20px;
     line-height: 20px;
     padding:2rem 4rem;
+  .bg-video{
+    width: 100% !important;
   }
 }
 /* 4K screens */
