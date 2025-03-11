@@ -4906,6 +4906,7 @@ footer {
   padding: 2rem 5rem;
   font-size: 14px;
   line-height: 16px;
+  padding: 2rem 5rem;
 }
 
 .footer-section {
@@ -4914,7 +4915,7 @@ footer {
 }
 
 .footer-section h3 {
-  font-size: 1.5rem;
+  font-size: 14px;
   margin-bottom: 1rem;
 }
 
@@ -4973,8 +4974,8 @@ footer {
 }
 
 .social-icons a img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .contact-info p {
@@ -6203,6 +6204,7 @@ font-size: 1rem;
 font-weight: 400;
 line-height: 1.5rem;
 text-align: left;
+opacity: 0.8;
 
 }
 
@@ -6214,6 +6216,38 @@ text-align: left;
   border: none;
   font-family: "Archivo", sans-serif;
 }
+
+.features-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features-list li::before {
+  content: "";
+  display: inline-block;
+  width: 1rem; 
+  height: 1rem;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23F43900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') 
+    no-repeat center;
+  background-size: contain;
+  flex-shrink: 0; 
+}
+
+.features-list li span {
+  opacity: 0.8; 
+}
+
 
 /* cards section */
 .part-process{
@@ -6419,7 +6453,7 @@ html{
     padding: 2rem 7rem 2rem 2rem;
   }
   .container {
-    max-width: 100%; 
+    max-width: 80%; 
     padding: 0 5rem; 
   }
   .part-process .process-wrapper .process-slide{
@@ -6468,8 +6502,19 @@ html{
     font-size: 20px;
     line-height: 20px;
     padding:2rem 4rem;
+  }
   .bg-video{
-    width: 100% !important;
+    width: 100%;
+  }
+  .footer-logo{
+    width:130px !important;
+  }
+  .social-icons a img{
+    width:25px;
+    height:25px;
+  }
+  .footer-section h3{
+    font-size:20px;
   }
 }
 /* 4K screens */
@@ -6562,12 +6607,15 @@ html{
     font-size: 30px;
     line-height: 30px;
   }
+  .footer-section h3{
+    font-size:30px;
+  }
 }
 
 /* 1080p screens */
 @media screen and (min-width: 1920px) and (max-width: 1920px) and (aspect-ratio: 16/9) {
   .quickbar .quickbar-inner {
-    padding: 2rem 10rem 2rem 2rem; 
+    padding: 2rem 5rem 2rem 2rem; 
   }
   .part-process .process-wrapper .process-slide {
     width: 80%;
@@ -6611,6 +6659,9 @@ html{
   .footer-container{
     font-size: 14px;
     line-height: 16px;
-    padding: 1rem 8rem 3rem 4rem;
+    padding: 2rem 4rem;
+  }
+  .footer-section h3{
+    font-size:14px;
   }
 }
