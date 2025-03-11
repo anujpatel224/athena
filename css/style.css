@@ -4900,18 +4900,19 @@ footer {
   color: #000;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+  /* justify-content: space-between; */
+  gap: 15rem;
   margin: 0 auto;
   padding: 2rem 5rem;
   font-size: 14px;
   line-height: 16px;
   padding: 2rem 5rem;
+  align-items:center;
 }
 
 .footer-section {
-  flex: 1;
-  min-width: 250px;
+  /* flex: 1; */
+  /* min-width: 250px; */
 }
 
 .footer-section h3 {
@@ -4986,6 +4987,7 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
+  column-gap: 2rem;
 }
 
 .grid-list {
@@ -6501,7 +6503,6 @@ html{
   .footer-container{
     font-size: 20px;
     line-height: 20px;
-    padding:2rem 4rem;
   }
   .bg-video{
     width: 100%;
@@ -6624,9 +6625,9 @@ html{
     width: 80%;
     height: 70vh;
   }
-  .footer-container {
+  /* .footer-container {
     padding: 1rem 7rem 3rem 2rem;
-  }
+  } */
   .form-row{
     flex-direction: column;
     gap:0.5rem;
@@ -6659,7 +6660,6 @@ html{
   .footer-container{
     font-size: 14px;
     line-height: 16px;
-    padding: 2rem 4rem;
   }
   .footer-section h3{
     font-size:14px;
