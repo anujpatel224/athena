@@ -1285,7 +1285,7 @@ body.scrolling-down .quickbar {
 
 @media (min-width: 759px) {
   .quickbar .quickbar-inner {
-    padding: 1.35rem 2.81rem;
+    padding: 0.5rem 2.81rem;
   }
 }
 
@@ -2538,7 +2538,7 @@ main [class*="sec-"]:not([class*="sec-2"]) {
   background-color: #141414;
   position: relative;
   z-index: 2;
-  padding-bottom:1rem;
+  padding-bottom:4rem;
 }
 
 main .sec-1 {
@@ -2682,7 +2682,7 @@ main .sec-2 .name {
   border-radius:10px;
   cursor: pointer;
   margin-top: 1rem;
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 3rem;
   font-size:1.5rem;
 }
 
@@ -6381,7 +6381,7 @@ background-size: cover;
 
 .subsubtitle{
   display: block;
-  font-size: 18px !important;
+  font-size: 3rem;
 }
 
 .paddT{
