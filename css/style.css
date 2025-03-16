@@ -5033,7 +5033,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 5rem;
+  margin: 7rem;
   z-index: 99;
 }
 
@@ -6193,9 +6193,9 @@ text-transform: none;
 
 .service_text{
 font-family: "Archivo", sans-serif;
-font-size: 1rem;
+font-size: 1.2rem;
 font-weight: 400;
-line-height: 1.5rem;
+line-height: 1.8rem;
 text-align: left;
 opacity: 0.8;
 
@@ -6224,6 +6224,7 @@ opacity: 0.8;
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom:0.5rem;
 }
 
 .features-list li::before {
