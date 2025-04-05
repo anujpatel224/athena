@@ -47,8 +47,8 @@
                         <nav>
                             <ul>
                                 <li class="nav-item start">
-                                    <a href="index.html" data-anchor-target="index.html" data-toggle-nav title="Venue Hire"
-                                        class="home no-barba">
+                                    <a href="index.html" data-anchor-target="index.html" data-toggle-nav
+                                        title="Venue Hire" class="home no-barba">
                                         <span class="number">01</span>
                                         <span class="name"> Venue Hire </span>
                                     </a>
@@ -111,12 +111,13 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="dinners.html" class="no-barba">Dinners</a></li>
                                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
-                                    <li><a href="exhibitions&festivals.html"class="no-barba">Exhibitions & Festivals</a></li>
+                                    <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
+                                            Festivals</a></li>
                                     <li><a href="#" class="no-barba">Concerts</a></li>
                                     <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                     <li><a href="#" class="no-barba">Balls & Proms</a></li>
                                     <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                             <li>
                                 <a href="index.html" title="Discover" data-anchor-target="index.html" class="no-barba">
@@ -186,11 +187,12 @@
                 <!-- video section -->
                 <div class="bg-ct">
                     <div class="dark-overlay-video">
-                        <img class="bg-image" 
-     src="https://anuj-personal.s3.ap-south-1.amazonaws.com/home.png" 
-     alt="Background Image"
-     data-parallax-strength="5.5" 
-     data-parallax-height="5">
+                        <video class="bg-video" autoplay muted loop playsinline data-parallax-strength="5.5" data-parallax-height="5">
+                            <source
+                              src="https://anuj-personal.s3.ap-south-1.amazonaws.com/wedding.mp4"
+                              type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                     </div>
                 </div>
                 <!-- content section -->
@@ -319,7 +321,7 @@
                     <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                     <li><a href="shows.html" class="no-barba">Shows</a></li>
-                    <li><a href="exhibitions&festivals.html"class="no-barba">Exhibitions & Festivals</a></li>
+                    <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a></li>
                     <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                     <li><a href="#" class="no-barba">Christmas</a></li>
                 </ul>
@@ -346,17 +348,17 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const faqItems = document.querySelectorAll(".faq-item");
-    
+
             faqItems.forEach(item => {
                 item.addEventListener("click", function () {
                     const isOpen = this.classList.contains("open");
-    
+
                     // Close all other open items
                     faqItems.forEach(el => {
                         el.classList.remove("open");
                         el.querySelector(".faq-toggle").textContent = "+";
                     });
-    
+
                     // Toggle the clicked item
                     if (!isOpen) {
                         this.classList.add("open");
