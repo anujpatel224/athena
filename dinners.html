@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dinners | Athena Leicester</title>
-    <meta name="description" content="Celebrate your gala dinners, award ceremonies, proms, and special occasions in style at Athena Leicester – a spectacular venue in the heart of the city." />
+    <meta name="description"
+        content="Celebrate your gala dinners, award ceremonies, proms, and special occasions in style at Athena Leicester – a spectacular venue in the heart of the city." />
     <meta property="og:title" content="Dinners | Athena Leicester" />
-    <meta property="og:description" content="Celebrate your gala dinners, award ceremonies, proms, and special occasions in style at Athena Leicester – a spectacular venue in the heart of the city." />
+    <meta property="og:description"
+        content="Celebrate your gala dinners, award ceremonies, proms, and special occasions in style at Athena Leicester – a spectacular venue in the heart of the city." />
     <meta property="og:url" content="" />
-    <link rel="canonical" href="" />    
+    <link rel="canonical" href="" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Athena Leicester" />
     <meta property="og:image" content="https://www.athenacb.co.uk/images/social_branding.png" />
@@ -449,6 +451,23 @@
                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
         });
+        function adjustBgHeight() {
+            const header = document.querySelector(".quickbar");
+            const marquee = document.querySelector(".lets-talk");
+            const bgSection = document.querySelector(".bg-ct");
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const marqueeHeight = marquee ? marquee.offsetHeight : 0;
+
+            const remainingHeight = window.innerHeight - headerHeight - marqueeHeight;
+
+            if (bgSection) {
+                bgSection.style.height = `${remainingHeight}px`;
+            }
+        }
+
+        window.addEventListener("load", adjustBgHeight);
+        window.addEventListener("resize", adjustBgHeight);
     </script>
 </body>
 

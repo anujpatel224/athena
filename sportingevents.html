@@ -421,6 +421,23 @@
                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
         });
+        function adjustBgHeight() {
+            const header = document.querySelector(".quickbar");
+            const marquee = document.querySelector(".lets-talk");
+            const bgSection = document.querySelector(".bg-ct");
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const marqueeHeight = marquee ? marquee.offsetHeight : 0;
+
+            const remainingHeight = window.innerHeight - headerHeight - marqueeHeight;
+
+            if (bgSection) {
+                bgSection.style.height = `${remainingHeight}px`;
+            }
+        }
+
+        window.addEventListener("load", adjustBgHeight);
+        window.addEventListener("resize", adjustBgHeight);
     </script>
 </body>
 

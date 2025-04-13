@@ -1476,8 +1476,15 @@ footer {
 .bg-ct {
   position: relative;
   width: 100%;
-  height: 100%;
   overflow: hidden;
+}
+
+.quickbar {
+  --header-height: 80px;
+}
+
+.lets-talk {
+  --marquee-height: 40px; 
 }
 
 .bg-video {
@@ -2285,10 +2292,6 @@ footer {
 
   .lets-talk {
     height: 8rem;
-  }
-
-  .bg-ct {
-    height: max-content;
   }
 
   .content-container {
