@@ -1,0 +1,87 @@
+{
+  "main_navigation": {
+    "home": "Home",
+    "about_us": {
+      "title": "About Us",
+      "subsections": ["History", "Testimonials"]
+    },
+    "what_we_do": {
+      "title": "What We Do",
+      "subsections": [
+        "Dinners",
+        "Conferences",
+        "Weddings",
+        "Exhibitions & Festivals",
+        "Concerts",
+        "Shows",
+        "Sporting Events"
+      ]
+    },
+    "room_layouts": "Room Layouts",
+    "christmas": "Christmas",
+    "live_events": "Live Events",
+    "news": "News",
+    "contact": "Contact",
+    "work_with_us": "Work With Us"
+  },
+  "main_content": {
+    "welcome": {
+      "heading": "Welcome to Athena",
+      "description": "We are the Midlands' most unique venue, and the perfect setting for the perfect event.",
+      "intro_paragraph": "Whether your event is an opulent awards ceremony, a conference, a specialist exhibition, festival, concert, show, or an unforgettable wedding, Athena is the perfect backdrop for your event."
+    },
+    "venue_description": {
+      "heading": "Venue Features",
+      "description": "Athena combines inspiring art deco architecture and state-of-the art technology to create a one-of-a kind atmosphere for your event. Experienced staff will work with you to ensure that all of your requirements are met, ensuring you have a slick and professional operation, and ultimately a successful event",
+      "team_description": "Our team are renowned for their flexibility, whether this involves helping you to access our extensive integrated AV equipment, providing exceptional bespoke menus, or much more."
+    },
+    "services": {
+      "dinners": {
+        "title": "Dinners",
+        "description": "Our award-winning venue is perfect for your all of your awards, balls, proms, celebrations and gala dinners."
+      },
+      "conferences": {
+        "title": "Conferences",
+        "description": "With state-of-the-art facilities and capacity for small or large events, Athena is Leicester's foremost conference venue."
+      },
+      "exhibitions_festivals": {
+        "title": "Exhibitions & Festivals",
+        "description": "With over 1500 sqm of space and a city centre location, Athena offers a genuinely unique space for your exhibition or festival"
+      },
+      "concerts": {
+        "title": "Concerts",
+        "description": "Extensive sound, lighting and AV is included as standard in our room hire with flexible seating for 1000+ guests."
+      },
+      "weddings": {
+        "title": "Weddings",
+        "description": "Make your special day truly special by holding it at Leicester's most unique wedding venue."
+      },
+      "balls_proms": {
+        "title": "Balls & Proms",
+        "description": "With our sweeping 1920s architecture, you can relive the golden age of cinema with a glitzy, ritzy ball at Athena."
+      },
+      "sporting_events": {
+        "title": "Sporting Events",
+        "description": "Soak up the atmosphere and adrenaline at the sporting capital of England's most unique venue."
+      },
+      "christmas": {
+        "title": "Christmas",
+        "description": "Fabulous entertainment and a superb dinner - welcome to the best Christmas Party in Leicester at Athena!"
+      },
+      "shows": {
+        "title": "Shows",
+        "description": "With a completely flexible venue and unique architecture, Athena is the perfect venue for a dazzling show"
+      }
+    },
+    "explore_venue": {
+      "heading": "Explore the Venue",
+      "description": "Take a video tour around Athena and get a taste of our exciting venue.",
+      "tour_description": "Our 3D video tour of Athena is an experience in itself, but not as good as the experience your guests will have when holding your event with us!"
+    },
+    "contact_info": {
+      "phone": "0116 262 6556",
+      "email": "contact@athenacb.co.uk",
+      "address": "Athena • Queen Street • Leicester • LE1 1QD"
+    }
+  }
+} 
