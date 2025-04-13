@@ -511,7 +511,7 @@ div.please-rotate {
 .quickbar .quickbar-inner .menu .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 @media (max-width: 759px) {
@@ -2223,6 +2223,7 @@ footer {
   border-radius: 0.5rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  white-space: nowrap;
 }
 
 .dropdown-menu li {
