@@ -320,6 +320,40 @@
      });
  }
 
+ function initCardVideoAutoplay() {
+    const timeouts = new Map(); 
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target.querySelector('video');
+  
+          if (!video) return;
+  
+          if (entry.isIntersecting && entry.intersectionRatio === 1) {
+            clearTimeout(timeouts.get(entry.target));
+  
+            const timeoutId = setTimeout(() => {
+              video.play();
+            }, 1000); 
+  
+            timeouts.set(entry.target, timeoutId);
+          } else {
+            clearTimeout(timeouts.get(entry.target));
+            timeouts.delete(entry.target);
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 1.0,
+      }
+    );
+  
+    const cards = document.querySelectorAll('.process-slide');
+    cards.forEach((card) => observer.observe(card));
+  }
+  
 
  /**
   * Fire all scripts on page load
@@ -339,6 +373,7 @@
      clipboardCopy();
      orientationCheck();
      bottomPage();
+     initCardVideoAutoplay();
  }
 
 
