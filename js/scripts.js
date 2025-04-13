@@ -1412,27 +1412,6 @@
                      zIndex: "1",
                  });
 
-
-             gsap.timeline({
-                     scrollTrigger: {
-                         trigger: ".sec-6 h3",
-                         start: () => 'top ' + window.innerHeight * 0.9,
-                         toggleActions: "play none none reverse",
-                     }
-                 })
-                 .from('.sec-6 h3 span:first-of-type', {
-                     x: "5%",
-                     opacity: 0,
-                     duration: 2,
-                     ease: "Expo.easeOut",
-                 })
-                 .from('.sec-6 h3 span:last-of-type', {
-                     paddingLeft: "0",
-                     opacity: 0,
-                     duration: 2,
-                     ease: "Expo.easeOut",
-                 }, 0);
-
              gsap.from(".sec-6 .reviewsSwiperDesktopCt", {
                  y: "25%",
                  opacity: 0,

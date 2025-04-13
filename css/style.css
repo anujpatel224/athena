@@ -4814,7 +4814,11 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   color:#cccccc;
 }
 .welcome-subtext{
-  font-size:1rem;
+  font-family: "DM Serif Display";
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #cccccc;
 }
 
 @media (min-width: 768px) {
