@@ -1733,7 +1733,7 @@ html.fixed .quickbar .quickbar-inner .menu .div-line {
   min-height: 1px;
   position: relative;
   overflow: hidden;
-  margin-bottom:1rem;
+  margin-bottom:1.5rem;
 }
 
 .quickbar .quickbar-inner .menu .hamburger .line:last-of-type:before {
@@ -6782,7 +6782,7 @@ html{
 /*  mobile device media query */
 @media only screen and (max-width: 768px) {
   .quickbar .quickbar-inner {
-    padding: 1.5rem 14rem 1rem 2rem;
+    padding: 1.5rem 4rem 1rem 2rem;
   }
   .overlay-text{
     padding:0;
@@ -6875,9 +6875,6 @@ html{
   .brand-logo {
     height: 12rem;
     width: auto;
-  }
-  #lastFooterSection{
-    margin-bottom:10rem;
   }
   .contact-container{
     margin:20rem 7rem 7rem 7rem;

@@ -80,6 +80,16 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  display: block;
+  text-rendering: optimizeLegibility;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -412,7 +422,7 @@ div.please-rotate {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem;
+  padding: 2rem;
   position: relative;
 }
 
@@ -501,7 +511,7 @@ div.please-rotate {
 .quickbar .quickbar-inner .menu .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 @media (max-width: 759px) {
@@ -749,6 +759,7 @@ div.please-rotate {
   min-height: 1px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .quickbar .quickbar-inner .menu .hamburger .line:last-of-type:before {
@@ -1292,19 +1303,16 @@ footer {
   color: #000;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: 15rem;
   margin: 0 auto;
-  padding: 2rem 5rem;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
+  padding: 1.5rem 1rem 1rem 6rem;
+  font-size: 14px;
+  align-items: center;
+  line-height: 16px;
 }
 
 .footer-section h3 {
-  font-size: 1.5rem;
+  font-size: 14px;
   margin-bottom: 1rem;
 }
 
@@ -1377,26 +1385,24 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
+  column-gap: 2rem;
 }
 
 .grid-list {
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 768px) {
-  .grid-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
+  .footer-container{
+    font-size: 2.5rem;
+  }
   footer {
     position: fixed;
   }
 
   .footer-container {
     flex-direction: column;
-    padding: 4rem;
+    padding: 3rem 5rem;
   }
 
   .social-icons a img {
@@ -1410,6 +1416,21 @@ footer {
 
   .footer-section h3 {
     font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  .footer-logo{
+    width: 70px !important;;
+  }
+  .social-icons{
+    gap:2rem;
+  }
+  .social-icons a img {
+    width: 15px;
+    height: 15px;
+  }
+  .footer-section h3 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     margin-top: 2rem;
   }
@@ -2225,8 +2246,28 @@ footer {
   display: block;
 }
 
+.desktop-nav li:hover .dropdown-menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .grid-list {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Mobile Screens (Below 768px) */
 @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    font-size: 2.5rem;
+    gap: 0rem;
+    align-items: flex-start;
+    padding: 3rem 5rem;
+}
+  .footer-container{
+    gap:0rem;
+  }
   #roomLayouts {
     font-size: 12px;
     padding: 5px 20px;
@@ -2493,14 +2534,6 @@ footer {
     border-radius: 4rem;
   }
 
-  .contact-info p {
-    font-size: 12px;
-  }
-
-  .footer-section {
-    font-size: 12px;
-  }
-
   .video-main-container {
     height: max-content;
     padding: 40px 0px;
@@ -2638,10 +2671,6 @@ footer {
 
   .card-container {
     flex-direction: column;
-  }
-
-  .contact-info p {
-    font-size: 12px;
   }
 
   .everything-container .button-container button {
@@ -3057,4 +3086,51 @@ th {
   font-weight: 400;
   line-height: 150%;
   /* 28.5px */
+}
+
+.dropdown-menu-mobile {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 8rem;
+  margin-top: 0.5rem;
+  list-style: none;
+  margin-bottom:2rem;
+  opacity: 0;
+}
+
+.dropdown-menu-mobile li {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.dropdown-menu-mobile li::before {
+  content: "▶"; 
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-right:1rem;
+}
+
+
+.dropdown-menu-mobile.active {
+  max-height: 500px; 
+  opacity: 1; 
+}
+
+.dropdown-menu-mobile li a {
+  display: block;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 4rem;
+}
+
+@media (min-width: 759px) {
+  .quickbar .quickbar-inner {
+      padding: 0.5rem 2.81rem;
+  }
 }
