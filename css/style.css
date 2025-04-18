@@ -5177,12 +5177,13 @@ footer {
 
 .overlay-text {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: white;
-  padding: 0 16px;
+  padding: 2rem 16px;
   z-index: 2;
+  background: linear-gradient(to top, black, transparent);
 }
 
 .welcome-heading {
@@ -5990,6 +5991,7 @@ main .btn-secondary:hover,
   .box-left .service_text{
     text-align:center;
   }
+  
   .explore_btn{
     margin-top:1rem!important;
     margin-bottom:4rem;

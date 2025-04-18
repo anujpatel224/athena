@@ -1845,4 +1845,3 @@ listItems.forEach(item => {
         clientImage.src = newImage;
     });
 });
-

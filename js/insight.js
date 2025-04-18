@@ -1,0 +1,80 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            var isOpen = this.classList.contains('open');
+            faqItems.forEach(function (el) {
+                el.classList.remove('open');
+                el.querySelector('.expand-collapse-icon').classList.remove('collapsed');
+            });
+            if (!isOpen) {
+                this.classList.add('open');
+                this.querySelector('.expand-collapse-icon').classList.add('collapsed');
+            }
+        });
+    });
+});
+jQuery(document).ready(function () {
+    jQuery('.expand-collapse-icon').click(function () {
+
+        jQuery(this).toggleClass('collapsed');
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navItem = document.querySelector('.nav-item.start.dropdown > a');
+    const dropdownMenu = document.querySelector('.dropdown-menu-mobile');
+
+    navItem.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const header = document.querySelector(".quickbar");
+
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            header.style.transform = "translateY(-100%)";
+        } else {
+            // Scrolling up
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+});
+
+function adjustBgHeight() {
+    const header = document.querySelector(".quickbar");
+    const marquee = document.querySelector(".lets-talk");
+    const bgSection = document.querySelector(".bg-ct");
+
+    if (window.innerWidth <= 768) {
+        // For mobile, set height to max-content
+        if (bgSection) {
+            bgSection.style.height = "max-content";
+        }
+    } else {
+        // For larger screens, calculate remaining height
+        const headerHeight = header ? header.offsetHeight : 0;
+        const marqueeHeight = marquee ? marquee.offsetHeight : 0;
+        const remainingHeight = window.innerHeight - headerHeight - marqueeHeight;
+
+        if (bgSection) {
+            bgSection.style.height = `${remainingHeight}px`;
+        }
+    }
+}
+
+window.addEventListener("load", adjustBgHeight);
+window.addEventListener("resize", adjustBgHeight);
