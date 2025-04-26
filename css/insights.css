@@ -1,4 +1,32 @@
 /* html, loader, navbar css start */
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo-v19-latin-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo-v19-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo SemiExpanded";
+  src: url("../fonts/archivo-semiexpanded-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo SemiExpanded";
+  src: url("../fonts/archivo-semiexpanded-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -11,6 +39,16 @@ html {
   transition: 0.3s ease;
 }
 
+.img-brightness {
+  filter: brightness(0.8);
+}
+
+h3{
+  font-family: Archivo SemiExpanded, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
 #navigation,
 .navi-overlay {
   transition: 0.7s cubic-bezier(0.9, 0.1, 0.1, 0.9);
@@ -1305,10 +1343,11 @@ footer {
   flex-wrap: wrap;
   gap: 15rem;
   margin: 0 auto;
-  padding: 1.5rem 1rem 1rem 6rem;
+  padding: 2rem 5rem;
   font-size: 14px;
-  align-items: center;
   line-height: 16px;
+  padding: 1.5rem 1rem 1rem 6rem;
+  align-items:center;
 }
 
 .footer-section h3 {
@@ -1372,8 +1411,8 @@ footer {
 }
 
 .social-icons a img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .contact-info p {
@@ -1393,16 +1432,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .footer-container{
-    font-size: 2.5rem;
+  .footer-container {
+    flex-direction: column;
+    padding: 4rem;
   }
   footer {
     position: fixed;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    padding: 3rem 5rem;
   }
 
   .social-icons a img {
@@ -1428,11 +1463,6 @@ footer {
   .social-icons a img {
     width: 15px;
     height: 15px;
-  }
-  .footer-section h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
   }
 }
 
@@ -1491,7 +1521,6 @@ footer {
 .bg-video {
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.5);
 }
 
 .overlay-text {
@@ -1960,7 +1989,7 @@ footer {
 
 .image-marquee img {
   width: 380px;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   border-radius: 1rem;
   cursor: pointer;
@@ -1985,11 +2014,20 @@ footer {
   position: relative;
   width: 100%;
   height: 650px;
-  background: url('https://times-event.de/images/index/scroll-imgs/scroll-img-1.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
 
+.video-main-container video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
 }
 
 .video-main-container::before {
@@ -2000,6 +2038,7 @@ footer {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .video-main-container .content-container {
@@ -2015,6 +2054,7 @@ footer {
   flex-direction: column;
   height: max-content;
   width: 50%;
+  z-index: 1;
 }
 
 .video-main-container .content-container h1 {
@@ -2915,6 +2955,18 @@ th {
   .images-section {
     width: 25% !important;
   }
+  .footer-container{
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 1.5rem 0rem 1rem 8rem;
+  }
+  .footer-section h3{
+    font-size:1rem;
+  }
+  .social-icons a img{
+    width:25px;
+    height:25px;
+  }
 }
 
 /* for 4k screen */
@@ -3051,8 +3103,12 @@ th {
   }
 
   .footer-container {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 2rem 1rem 2rem 6rem;
+  }
+  .footer-section h3{
+    font-size:1rem;
   }
 }
 
@@ -3289,4 +3345,52 @@ h2 {
   letter-spacing: 0%;
   text-align: center;
   width:45%;
+}
+
+/* 1080p screens */
+@media screen and (min-width: 1920px) and (max-width: 1920px) and (aspect-ratio: 16/9) {
+  .footer-container {
+    padding: 1.5rem 1rem 1rem 10rem;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .footer-section h3{
+    font-size:14px;
+  }
+}
+/* HD (1280×720) */
+@media (max-width: 1280px) {
+  .footer-container{
+    padding: 1.5em 1rem 1rem 5rem;
+    font-size:1rem;
+    flex-direction: row;
+  }
+  .footer-section h3 {
+    font-size:1rem;
+  }
+}
+/* 8K UHD */
+@media(min-width: 3841px){
+  .footer-container {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 1.5rem 1rem 1rem 7rem;
+  }
+  .social-icons a img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+/*  mobile device media query */
+@media only screen and (max-width: 768px) {
+  .footer-container{
+    flex-direction: column;
+    font-size:2.5rem;
+    gap:0rem;
+    align-items:flex-start;
+    padding:3rem 5rem;
+  }
+  .footer-section h3{
+    font-size:2.5rem;
+  }
 }
