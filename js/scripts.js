@@ -1845,3 +1845,35 @@ listItems.forEach(item => {
         clientImage.src = newImage;
     });
 });
+
+// Live Events Section
+document.addEventListener('DOMContentLoaded', function() {
+    const yearBtns = document.querySelectorAll('.year-btn');
+    yearBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            yearBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Month Selection
+    const monthBtns = document.querySelectorAll('.month-btn');
+    monthBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            monthBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Know More Button Animation
+    const knowMoreBtns = document.querySelectorAll('.know-more-btn');
+    knowMoreBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+});
