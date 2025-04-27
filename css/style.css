@@ -173,7 +173,8 @@ h6,
   font-family: Archivo SemiExpanded, sans-serif;
   font-weight: 800;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  text-transform:capitalize;
 }
 
 html {
