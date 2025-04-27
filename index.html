@@ -66,7 +66,8 @@
                     <li><a href="what-we-do/dinners.html" class="no-barba">Dinners</a></li>
                     <li><a href="what-we-do/conferences.html" class="no-barba">Conferences</a></li>
                     <li><a href="what-we-do/weddings.html" class="no-barba">Weddings</a></li>
-                    <li><a href="what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a></li>
+                    <li><a href="what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
+                    </li>
                     <li><a href="what-we-do/concerts.html" class="no-barba">Concerts</a></li>
                     <li><a href="what-we-do/shows.html" class="no-barba">Shows</a></li>
                     <li><a href="what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
@@ -80,17 +81,17 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#liveEvents" data-anchor-target="#liveEvents" data-toggle-nav title="Live Events">
+                  <a href="events.html" data-anchor-target="#liveEvents" data-toggle-nav title="Live Events">
                     <span class="number">03</span>
                     <span class="name"> Live Events </span>
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" id="about-us-dropdown">
                   <a href="#" data-anchor-target="no-barba" title="about us" class="home no-barba">
                     <span class="number">04</span>
                     <span class="name"> About Us </span>
                   </a>
-                  <ul class="dropdown-menu-mobile">
+                  <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
                     <li><a href="./about-us/history.html" class="no-barba">History</a></li>
                     <li><a href="./about-us/testimonials.html" class="no-barba">Testimonials</a></li>
                   </ul>
@@ -610,7 +611,7 @@
                           <source media="(min-width: 760px)" data-srcset="images/live-events/live-event14.webp"
                             srcset="images/layout/placeholder.png" />
                           <img alt="Impressionen von Eventveranstaltungen" class="lazy"
-                            src="images/layout/placeholder.png" data-src="images/live-events/live-event14.webp"/>
+                            src="images/layout/placeholder.png" data-src="images/live-events/live-event14.webp" />
                         </picture>
                         <picture>
                           <source media="(min-width: 760px)" data-srcset="images/live-events/live-event1.webp"
@@ -1093,7 +1094,8 @@
                     <li><a href="/what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
                     <li><a href="/what-we-do/conferences.html" class="no-barba">Conferences</a></li>
                     <li><a href="/what-we-do/shows.html" class="no-barba">Shows</a></li>
-                    <li><a href="/what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a></li>
+                    <li><a href="/what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
+                    </li>
                     <li><a href="/what-we-do/weddings.html" class="no-barba">Weddings</a></li>
                     <li><a href="christmas.html" class="no-barba">Christmas</a></li>
                     <li><a href="/what-we-do/dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
@@ -1107,8 +1109,7 @@
                 <source media="(min-width: 760px)" srcset="images/layout/placeholder.png"
                   data-srcset="../images/footer-bg.jpg" />
                 <img alt="Detailansicht einer Frau mit Handy, die Bild einer Party macht" class="lazy"
-                  src="images/layout/placeholder.png"
-                  data-src="../images/footer-bg.jpg" />
+                  src="images/layout/placeholder.png" data-src="../images/footer-bg.jpg" />
               </picture>
             </div>
           </div>
@@ -1163,7 +1164,7 @@
                 </a>
               </li>
               <li>
-                <a href="#liveEvents" data-anchor-target="#liveEvents" title="Live Events">
+                <a href="events.html" data-anchor-target="#liveEvents" title="Live Events">
                   <span class="name">
                     <span class="first"> Live Events </span>
                     <span class="second"> Live Events </span>
@@ -1245,6 +1246,24 @@
         e.stopPropagation();
         dropdownMenu.classList.toggle('active');
       });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const aboutUsNavItem = document.getElementById('about-us-dropdown');
+      const aboutdropdownMenu = document.getElementById('aboutusdropdown-menu-mobile');
+
+      if (aboutUsNavItem && aboutdropdownMenu) {
+        aboutUsNavItem.addEventListener('click', function (e) {
+          e.preventDefault();
+          aboutdropdownMenu.classList.toggle('active'); 
+        });
+
+        const dropdownLinks = aboutdropdownMenu.querySelectorAll('a');
+        dropdownLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.stopPropagation(); 
+          });
+        });
+      }
     });
     document.addEventListener("DOMContentLoaded", function () {
       const links = document.querySelectorAll('a[href^="#"]');

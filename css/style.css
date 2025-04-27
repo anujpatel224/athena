@@ -6462,15 +6462,15 @@ html{
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding-left: 8rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
   list-style: none;
-  margin-bottom:2rem;
+  margin-bottom:0;
   opacity: 0;
 }
 
 .dropdown-menu-mobile li {
   position: relative;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
 }
 
 .dropdown-menu-mobile li::before {
@@ -6906,7 +6906,7 @@ html{
   }
 
   .general-container label.content {
-    min-width: 60%;
+    min-width: 50%;
     flex-shrink: 0;
     scroll-snap-align: center;
     border-radius: 10rem;
@@ -6923,5 +6923,31 @@ html{
   }
   .radio:hover + .content {
     border-radius: 10rem;
+  }
+  .video-container{
+    height: 100%;
+  }
+  .video-container video {
+    height: 100%;
+  }
+  .quickbar .quickbar-inner .menu {
+    width:10rem;
+  }
+  .overlay-text {
+    padding-bottom:4rem;
+  }
+  .card-title{
+    text-align:left;
+    font-size:3rem !important;
+    margin-bottom:1rem;
+  }
+  .subsubtitle{
+    font-size:5rem;
+  }
+  .brands-container{
+    margin-bottom:10rem;
+  }
+  main [class*="sec-"]:not([class*="sec-2"]){
+    padding-bottom:10rem;
   }
 }

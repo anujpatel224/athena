@@ -15,6 +15,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutUsNavItem = document.getElementById('about-us-dropdown');
+    const aboutdropdownMenu = document.getElementById('aboutusdropdown-menu-mobile');
+
+    if (aboutUsNavItem && aboutdropdownMenu) {
+        aboutUsNavItem.addEventListener('click', function (e) {
+            e.preventDefault();
+            aboutdropdownMenu.classList.toggle('active');
+        });
+
+        const dropdownLinks = aboutdropdownMenu.querySelectorAll('a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        });
+    }
+});
 jQuery(document).ready(function () {
     jQuery('.expand-collapse-icon').click(function () {
 
@@ -84,10 +103,9 @@ const leftArrow = document.querySelector('.arrow.left');
 const rightArrow = document.querySelector('.arrow.right');
 
 leftArrow.addEventListener('click', () => {
-  slider.scrollBy({ left: -300, behavior: 'smooth' });
+    slider.scrollBy({ left: -300, behavior: 'smooth' });
 });
 
 rightArrow.addEventListener('click', () => {
-  slider.scrollBy({ left: 300, behavior: 'smooth' });
+    slider.scrollBy({ left: 300, behavior: 'smooth' });
 });
-
