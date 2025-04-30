@@ -24,8 +24,9 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
     rel="stylesheet" />
   <!-- styles -->
-  <link rel="stylesheet" href="css/insights.css" media="screen" />
+  <link rel="stylesheet" href="css/insights.css" media="screen" />  
   <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
+  <link rel="stylesheet" href="css/live-events.css" media="screen" />
 </head>
 
 <body data-barba="wrapper">
@@ -70,7 +71,8 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="events.html" data-anchor-target="#liveEvents" data-toggle-nav title="Live Events" class="no-barba">
+                  <a href="events.html" data-anchor-target="#liveEvents" data-toggle-nav title="Live Events"
+                    class="no-barba">
                     <span class="number">03</span>
                     <span class="name"> Live Events </span>
                   </a>
@@ -204,21 +206,25 @@
 
         <!-- content section -->
         <section class="live-events-section">
-          <h1 class="section-title">LIVE EVENTS</h1>
-          <p class="section-description">From concerts to comedy and boxing to bingo, Athena is a great choice of venue
-            for a wide range of live events.</p>
+          <div class="events-header">
+            <h1 class="section-title">LIVE EVENTS</h1>
+            <p class="section-description">From concerts to comedy and boxing to bingo, Athena is a great choice of
+              venue
+              for a wide range of live events.</p>
 
-          <div class="year-selector-container">
-            <div class="year-selector">
-              <button class="year-btn active">2025</button>
-              <button class="year-btn">2026</button>
-              <button class="year-btn">2027</button>
+            <div class="year-selector-container">
+              <div class="year-selector">
+                <button class="year-btn active">2025</button>
+                <button class="year-btn">2026</button>
+                <button class="year-btn">2027</button>
+              </div>
+            </div>
+            <div class="month-navigation" id="monthNavigation">
             </div>
           </div>
 
           <div class="events-container">
-            <div class="month-navigation" id="monthNavigation">
-            </div>
+          
 
             <div class="events-list">
               <div class="event-item dashed">
@@ -264,6 +270,7 @@
               </div>
             </div>
           </div>
+          
         </section>
       </main>
     </div>
@@ -380,7 +387,7 @@
         monthNavigation.innerHTML = '';
         const targetYear = currentYear + yearOffset;
         let startMonth = 0;
-        
+
         // If it's the current year, start from current month
         if (targetYear === currentYear) {
           startMonth = currentMonth;
@@ -413,7 +420,7 @@
         // Add click handlers for month buttons
         const monthButtons = document.querySelectorAll('.month-btn');
         monthButtons.forEach(btn => {
-          btn.addEventListener('click', function() {
+          btn.addEventListener('click', function () {
             // Remove active class and reset opacity for all month buttons
             monthButtons.forEach(b => {
               b.classList.remove('active');
@@ -425,10 +432,10 @@
           });
         });
       };
-      
+
       // Initial render
       renderMonths();
-      
+
       // Add click handlers for year buttons
       yearBtns.forEach((yearBtn, index) => {
         yearBtn.addEventListener('click', function () {
