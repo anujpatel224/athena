@@ -1323,7 +1323,7 @@ body.scrolling-down .quickbar {
 
 @media (min-width: 759px) {
   .quickbar .quickbar-inner .whole-logo .branding {
-    width: 8rem;
+    width: 6rem;
   }
 }
 
@@ -1564,7 +1564,7 @@ body.scrolling-down .quickbar {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a {
-  padding: 0.94rem 2.5rem;
+  padding: 0.8rem 2rem;
   position: relative;
 }
 

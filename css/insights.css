@@ -524,7 +524,7 @@ div.please-rotate {
 
 @media (min-width: 759px) {
   .quickbar .quickbar-inner .whole-logo .branding {
-    width: 8rem;
+    width: 6rem;
   }
 }
 
@@ -733,7 +733,7 @@ div.please-rotate {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a {
-  padding: 0.94rem 2.5rem;
+  padding: 0.8rem 2rem;
   position: relative;
 }
 
@@ -1722,6 +1722,14 @@ footer {
   gap: 2rem;
 }
 
+#card-container-top{
+  padding-top:4rem;
+}
+
+#card-container-bottom{
+  padding-bottom:4rem;
+}
+
 .single {
   width: 50% !important;
 }
@@ -1737,7 +1745,6 @@ footer {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  margin: 30px 30px;
 }
 
 .card-container .card .card-image {
@@ -2092,11 +2099,10 @@ footer {
 }
 
 .image-marquee img {
-  width: 380px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   object-fit: cover;
   border-radius: 1rem;
-  cursor: pointer;
 }
 
 /* .image-marquee:hover {
@@ -2412,8 +2418,27 @@ footer {
   }
 }
 
+.christmas-banner {
+  background: #b7af91;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.christmas-banner a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+}
+
 /* Mobile Screens (Below 768px) */
 @media (max-width: 768px) {
+  .christmas-banner{
+    font-size:3rem;
+    padding: 2rem;
+  }
   .card-container .card .card-content a {
     width: 50%;
     padding: 5px;
@@ -2458,12 +2483,22 @@ footer {
 
   .card-container {
     flex-direction: column;
-    padding: 4rem 0px;
+    padding: 0px 0px;
+    gap:0px;
+  }
+
+  #card-container-top{
+    padding-top:8rem;
+  }
+
+  #card-container-bottom{
+    padding-bottom:8rem;
   }
 
   .card-container .card {
     height: max-content;
-    width: 85%;
+    width: 85%;        
+    margin: 2rem;
   }
 
   .card-container .card img {
@@ -2700,7 +2735,8 @@ footer {
   }
 
   .grid-container {
-    display: block !important;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
   }
 
   table {
@@ -2944,9 +2980,8 @@ footer {
   text-align: center;
   text-transform: uppercase;
   font-family: Archivo;
-  font-size: 54px;
+  font-size: 4rem;
   font-weight: 900;
-  line-height: 75.6px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -2954,6 +2989,7 @@ footer {
 
 .room-layout-container {
   margin-top: 35px;
+  padding:2rem;
 }
 
 .room-layout-container .description {
@@ -3023,7 +3059,7 @@ th {
 
 .label {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 /* 2K and higher */
@@ -3474,6 +3510,20 @@ th {
 }
 /*  mobile device media query */
 @media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-items: center;
+    overflow:hidden;
+    margin:2rem;
+  }
+  .grid-container .layout-image{
+     width: 160px;
+     height: 150px;
+  }
+  .room-layout-container h1 {
+    font-size:6rem;
+  }
   .footer-container{
     flex-direction: column;
     font-size:2.5rem;
