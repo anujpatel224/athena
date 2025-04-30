@@ -2381,6 +2381,8 @@ footer {
   white-space: nowrap;
 }
 
+
+
 .dropdown-menu li {
   list-style: none;
   margin-bottom: 0.5rem;
@@ -2717,7 +2719,7 @@ footer {
 .faq-section {
   max-width: 100%;
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: 70px 90px 105px 90px;
 }
 
 /* Title */
