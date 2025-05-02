@@ -152,6 +152,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 66px */
+    padding: 5px;
   }
   
   .know-more-btn {
@@ -228,7 +229,7 @@
 
   .events-header {
     position: sticky;
-    top: -88px;
+    top: -126px;
     background: #EEE;
     z-index: 10;
     align-items: center;
