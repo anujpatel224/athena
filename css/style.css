@@ -6966,16 +6966,34 @@ html{
   }
 }
 
-.youtube-embed {
-  position: relative;
-  padding-bottom: 56%;
-  width: 100%;
-  text-align: left;
+
+
+.yt-container{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
 }
 
-.youtube-embed iframe {
-  width: 100%;
+
+.yt-container iframe{
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+}
+
+.yt-container iframe {
+  pointer-events: none;
+}
+.yt-container iframe{
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 120px);
+}
+.yt-foreground{
+  pointer-events:none;
 }
