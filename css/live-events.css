@@ -43,6 +43,8 @@
     background: #444444;
     width: 15%;
     gap: 1rem;
+    padding: 4px;
+    border-radius: 2.5rem;
   }
   
   .year-btn {
@@ -238,7 +240,7 @@
   .events-list {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    min-height: 500px;
     gap: 1.5rem;
     overflow-y: scroll;
     padding: 40px;
