@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="css/style.css" media="screen" />
   <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -121,17 +122,19 @@
     <header class="index-header" id="home">
       <div class="bg-ct">
         <div class="dark-overlay-video video-container">
-          <video class="bg-video" autoplay loop playsinline data-parallax-strength="5.5" data-parallax-height="5">
+          <video class="bg-video main-video" autoplay muted loop playsinline preload="auto" data-parallax-strength="5.5" data-parallax-height="5">
             <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Athena+Montage+hero+video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          
         </div>
         <div class="overlay-text">
           <h1 class="welcome-heading">Welcome to Athena</h1>
           <p class="welcome-subtext">
             We are the Midlands’ most unique venue
           </p>
+          <button id="button" class="volume-button">
+            <i class="fas fa-volume-mute"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -637,6 +640,9 @@
                         frameborder="0"
                         allowfullscreen>
                       </iframe>
+                      <button id="yt-volume-button" class="volume-button volume-button-yt">
+                        <i class="fas fa-volume-mute"></i>
+                      </button>
                     </div>
                   </div>            
                             

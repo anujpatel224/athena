@@ -7,6 +7,74 @@
 
  initPageTransitions();
 
+
+const button = document.querySelector(".volume-button");
+const icon = document.querySelector("#button > i");
+const video = document.querySelector('.main-video');
+
+button.addEventListener("click", () => {
+  if (video.muted) {
+    video.muted = false;
+    icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+    
+  } else {
+    video.muted = true;
+    icon.classList.remove('fa-volume-up');
+    icon.classList.add('fa-volume-mute');
+  }
+});
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-video', {
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+const buttonYt = document.querySelector("#yt-volume-button");
+
+buttonYt.addEventListener("click",() => {
+    console.log("hello")
+    //   if (video.muted) {
+//     player.mute();
+//     icon.classList.remove('fa-volume-mute');
+//     icon.classList.add('fa-volume-up');
+    
+//   } else {
+//     player.unMute();
+//     icon.classList.remove('fa-volume-up');
+//     icon.classList.add('fa-volume-mute');
+//   }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".main-video");
+
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.1, 
+      }
+    );
+
+    observer.observe(video);
+  });
+
+
+
+
  function initLoader() {
      let tl = gsap.timeline();
      tl.set(".logo-sec", {
@@ -176,8 +244,6 @@
      });
 
  }
-
-
 
  function initPageTransitions() {
 
