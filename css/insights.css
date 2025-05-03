@@ -1547,6 +1547,7 @@ footer {
 .bg-video {
   object-fit: cover;
   z-index: 0;
+  width: 100%;
 }
 
 .overlay-text {
@@ -2134,9 +2135,7 @@ footer {
   padding: 2rem 4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
-  gap: 2rem;
 }
 
 .list-section li {
@@ -2680,7 +2679,7 @@ footer {
 .faq-section {
   max-width: 100%;
   background-color: #ffffff;
-  padding: 70px 90px 105px 90px;
+  padding: 60px 90px 105px 90px;
 }
 
 /* Title */
@@ -2688,7 +2687,7 @@ footer {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 /* FAQ Container */
@@ -2961,7 +2960,7 @@ th {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-  margin: 2rem 14rem;
+  margin: 1rem 14rem;
 }
 
 .layout-image {
