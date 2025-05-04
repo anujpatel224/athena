@@ -2354,6 +2354,93 @@ footer {
   font-family: 'Playfair Display', serif;
 }
 
+/* room layout css */
+.room-layout-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Archivo;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.room-layout-container {
+  margin-top: 35px;
+  padding: 2rem;
+}
+
+.room-layout-container .description {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid #f4390080;
+  border-radius: 12px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.room-name {
+  color: red;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 1rem 14rem;
+}
+
+.layout-image {
+  width: 250px;
+  height: 250px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.layout-image img {
+  vertical-align: bottom;
+  float: none;
+  height: auto;
+  max-width: 70%;
+  width: auto;
+}
+
+.label {
+  text-align: center;
+  margin-top: 5px;
+}
+
 /* Mobile Screens (Below 768px) */
 @media (max-width: 768px) {
   .christmas-banner {
@@ -2766,6 +2853,10 @@ footer {
 
 /* Tablet Screens (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .overlap-container .image-content .image-container {
+    width: 60%;
+  }
   .content-container {
     height: max-content;
   }
@@ -2783,8 +2874,21 @@ footer {
     line-height: 55px;
   }
 
+  .layout-image {
+    width: 200px;
+    height: 200px;
+  }
+
   .card-container {
-    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .bg-ct{
+    height: 100% !important; 
+  }
+
+  .video-main-container {
+    height: 850px;
   }
 
   .everything-container .button-container button {
@@ -2901,92 +3005,7 @@ footer {
   animation: zoomOut 0.5s forwards;
 }
 
-/* room layout css */
-.room-layout-container h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Archivo;
-  font-size: 4rem;
-  font-weight: 900;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
 
-.room-layout-container {
-  margin-top: 35px;
-  padding: 2rem;
-}
-
-.room-layout-container .description {
-  text-align: center;
-  margin: 20px auto;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-.table-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin: 0 auto;
-  border: 1px solid #f4390080;
-  border-radius: 12px;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 10px;
-}
-
-th {
-  background-color: #f4f4f4;
-}
-
-.room-name {
-  color: red;
-  font-weight: bold;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-  margin: 1rem 14rem;
-}
-
-.layout-image {
-  width: 250px;
-  height: 250px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #666;
-}
-
-.layout-image img {
-  vertical-align: bottom;
-  float: none;
-  height: auto;
-  max-width: 70%;
-  width: auto;
-}
-
-.label {
-  text-align: center;
-  margin-top: 5px;
-}
 
 /* 2K and higher */
 @media (min-width: 2560px) {

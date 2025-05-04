@@ -27,6 +27,374 @@
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
+    <style>
+        .part-process {
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .process-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .part-process .video-container {
+            width: 100%;
+            --ratio: calc(496 / 880 * 100%);
+            height: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            transform: scale(1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rounded-30 {
+            border-radius: 1.875rem;
+        }
+
+        .process-container {
+            text-align: left;
+            padding: 4rem;
+        }
+
+        .service_text {
+            font-family: "Archivo", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            text-align: left;
+            opacity: 0.8;
+        }
+
+        .service_text_p {
+            font-family: "Archivo", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            text-align: left;
+            opacity: 0.8;
+        }
+
+        .services_swiper_heading {
+            font-family: DM Serif Display;
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 52.1px;
+            text-align: left;
+            text-transform: none;
+        }
+
+        .box-style {
+            background-color: white;
+        }
+            .part-process .light-bar {
+                position: sticky;
+                top: 72px;
+                padding-top: calc(166 / 1920 * 100%);
+            }
+
+            .part-process .light-bar .light-item {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 1s linear, transform 0.5s linear;
+                transform: scaleY(0);
+                transform-origin: right top;
+            }
+
+            .part-process .light-bar .light-item.active {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            .part-process .process-container {
+                margin-left: 1.875rem;
+                margin-right: 1.875rem;
+            }
+
+            .part-process .process-wrapper {
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                grid-row-gap: 64px;
+            }
+
+            .part-process .process-wrapper .process-slide {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 21%;
+                overflow: hidden;
+                width: 1860px;
+                max-width: 100%;
+                will-change: transform;
+                transform-style: preserve-3d;
+                margin: 0 auto;
+            }
+
+            .part-process .process-wrapper .process-slide .box-style {
+                border-radius: 3.75rem;
+                background-color: white;
+                padding: 2rem 6rem;
+                width: 100%;
+            }
+
+            .part-process .process-wrapper .process-slide .box-style .box-left {
+                max-width: 60%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .part-process .process-wrapper .process-slide .box-style .box-right {
+                width: 20%;
+                height: 300px;
+            }
+
+            .part-process .swiper-pagination {
+                display: none;
+            }
+
+            .part-assets .assetsSwiper-box {
+                margin: 0 auto;
+                position: relative;
+                --assetIndex: 4;
+            }
+
+            .part-assets .assetsSwiper-box::before {
+                content: "";
+                position: absolute;
+                width: calc(var(--assetIndex) * 6.43%);
+                height: 100%;
+                background-image: linear-gradient(90deg,
+                        rgba(0, 0, 0, 0.9) 0%,
+                        rgba(0, 0, 0, 0) 100%);
+                top: 0;
+                left: 0;
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            .part-assets .assetsSwiper-box::after {
+                content: "";
+                position: absolute;
+                width: calc((8 - var(--assetIndex)) * 6.43%);
+                height: 100%;
+                background-image: linear-gradient(-90deg,
+                        rgba(0, 0, 0, 0.9) 0%,
+                        rgba(0, 0, 0, 0) 100%);
+                top: 0;
+                right: 0;
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            .part-assets .assetsSwiper .swiper-wrapper {
+                aspect-ratio: 1920 / 522;
+                gap: 0.65%;
+                justify-content: space-between;
+            }
+
+            .part-assets .assetsSwiper .swiper-slide {
+                width: 5.8%;
+                display: block;
+                overflow: hidden;
+                border-radius: 1rem;
+                position: relative;
+                transition: 0.8s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+            }
+
+            .part-assets .assetsSwiper .swiper-slide.active {
+                width: 48.4%;
+                opacity: 1;
+            }
+
+            .part-assets .assetsSwiper .box-style {
+                height: 100%;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+            }
+
+            .part-assets .assetsSwiper .swiper-slide.active .assets-title {
+                font-size: 1.5rem;
+            }
+
+            .part-ai .content-wrapper .content-item {
+                width: 18.95%;
+                min-width: 364px;
+                opacity: 1;
+                transition: opacity 0.5s;
+                background: rgba(0, 0, 0, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(12.5px);
+                border-radius: 1rem;
+                padding: 1.25rem 1.125rem;
+            }
+
+            .part-ai .content-wrapper .content-item::before {
+                content: "";
+                width: calc(100% + 22px);
+                height: calc(100% + 22px);
+                top: -11px;
+                left: -11px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 1.5rem;
+                position: absolute;
+                animation: circleOpacity 2.5s linear infinite;
+                pointer-events: none;
+            }
+
+            .part-ai .content-wrapper .content-item::after {
+                content: "";
+                width: calc(100% + 42px);
+                height: calc(100% + 42px);
+                top: -21px;
+                left: -21px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 1.875rem;
+                position: absolute;
+                animation: circleOpacity 3s ease-in infinite;
+                pointer-events: none;
+            }
+
+            .part-ai .content-wrapper .content-item.hideItem {
+                opacity: 0;
+            }
+
+            .part-ai .content-wrapper .content-item.active {
+                background: linear-gradient(249.66deg,
+                        rgba(0, 97, 81, 0.8) 0%,
+                        rgba(0, 53, 50, 0.5) 100%);
+                border-color: #50e3c2;
+                backdrop-filter: blur(7.5px);
+            }
+
+            .part-ai .content-wrapper .content-item.active::before {
+                border-color: rgba(80, 227, 194, 0.7);
+            }
+
+            .part-ai .content-wrapper .content-item.active::after {
+                border-color: rgba(80, 227, 194, 0.3);
+            }
+
+            .part-ai .content-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 3;
+            }
+
+            .part-ai .content-wrapper .content-item {
+                position: absolute;
+            }
+  
+
+        /* filmore section mobile screen */
+        @media (max-width: 768px) {
+            .part-process .process-wrapper .process-slide {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 21%;
+                overflow: hidden;
+                will-change: transform;
+                transform-style: preserve-3d;
+            }
+
+            .process-slide {
+                padding: 1rem;
+                margin: 10rem 2rem 2rem 2rem;
+            }
+
+            .process-slide .box-style {
+                border-radius: 3.75rem;
+                padding: 4rem;
+                width: 100%;
+            }
+
+            .process-box {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .process-slide .box-right {
+                order: -1;
+                width: 50%;
+                margin-bottom: 1rem;
+            }
+
+            .service_text {
+                font-size: 3rem;
+                line-height: 4rem;
+            }
+
+            .servive_text_p {
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+
+            .services_swiper_heading {
+                font-size: 4.5rem;
+            }
+
+            .process-slide .box-right img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .process-slide .box-left {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .box-left .service_text {
+                text-align: center;
+            }
+
+            .explore_btn {
+                margin-top: 1rem !important;
+                margin-bottom: 4rem;
+            }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .part-process .process-wrapper .process-slide {
+                position: sticky;
+                transform: scale(1);
+            }
+
+            .process-slide .box-right {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .process-slide .box-left {
+                width: 100%;
+                text-align: center;
+            }
+            .process-slide .box-right .video-container img{ 
+                width: 200px;
+            }
+        }
+    </style>
 </head>
 
 <body data-barba="wrapper">
@@ -219,153 +587,351 @@
             <p class="">We have hosted a variety of events, from large dinners to weddings to remember. Take a look at
                 what some of our many satisfied clients have said.</p>
         </div>
-        <div class="page-wrap" style="background-color:#F0F0F0;">
-            <main>
-                <div class="list-container flex-container">
-                    <div class="list-section flex-item">
-                        <ul>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1798628273/photo/senior-man-refuses-to-answer-to-a-call-from-unknown-number-scam-and-fraud-prevention-with.jpg?s=1024x1024&w=is&k=20&c=cizGgWiRrB9_1LEUnZs7Et3Li5ZUDlgRmJbK_dDNVGs=">
-                                02 / Telefonica</li>
+        <section class="part-process sec-3">
+            <div style="background-color:#F0F0F0;">
+                <div class="process-container">
+                    <div class="process-wrapper">
+                        <div class="process-slide slide1">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">02 / Telefonica</h3>
+                                        <div class="pb-md-2 service_text">
+                                            It has been stated that the Awards event was the best ever yet. As a venue,
+                                            everyone was totally committed, friendly and their nothing was too much
+                                            bother attitude was a trait in all who work at the Athena. Thank you again
+                                            and looking forward to working with you in the future.
+                                        </div>
+                                        <p class="servive_text_p">Hannah Murphy</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/02.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1500285927/photo/young-woman-a-university-student-studying-online.jpg?s=1024x1024&w=is&k=20&c=CVhpekieDK_UB8vtEDw-dKKGWzDpsxcQt-XEQIkgm3Y=">
-                                Royal Institute of Architects</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1688408070/photo/business-woman-in-casual-clothes-works-with-a-laptop-and-notepad.jpg?s=1024x1024&w=is&k=20&c=zmXYUhdwS8uoIAZnQ3hxx-NRYIZy4207EOtXbJrdyUI=">
-                                England Hockey</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/2191189757/photo/woman-writing-in-notebook-with-dog-by-window-space.jpg?s=1024x1024&w=is&k=20&c=VpWMWiUL8mcBmmWFv41zgTfctjnP_Db7fbU3OlSXzZs=">
-                                National House-Building Council</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                Visit England Awards</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                EAST MIDLANDS TRAINS</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                National Dentistry Awards</li>
+                        <div class="process-slide slide2">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            Royal Institute of Architects</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            We have been made very welcome at the Athena and the staff have been
+                                            exemplary in looking after us. Excellent meals and very pleasant, relaxing
+                                            surroundings all added to our delightful evenings at the Athena.
+                                        </div>
+                                        <p class="servive_text_p">Sandra Hartley</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt2.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide3">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            England Hockey</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            The Athena was a great location to host the England Hockey Awards, it really
+                                            gave a special feel to the evening. The staff were supportive and helpful in
+                                            making the evening a success.
+                                        </div>
+                                        <p class="servive_text_p">Louise Bull</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt3.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide4">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            National House-Building Council</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            Athena is Leicester’s hidden gem. From proposal right through to execution
+                                            the Athena team were great to work with, very flexible and helpful at all
+                                            stages. The service and quality of food on the night was excellent and the
+                                            location is perfect as well.
+                                        </div>
+                                        <p class="servive_text_p">Nikki Frankland</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt4.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide5">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
 
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                National Fitness Awards</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                British Sign Awards</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                University of Leicester</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                Sturgess Motor Group</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                Lord Stafford Awards</li>
-                            <li class="slide-client flex-item"
-                                data-image="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o=">
-                                Vegan Events UK</li>
-                        </ul>
-                    </div>
-                    <div class="list-image-section flex-item">
-                        <img class="slide-right" id="client-image"
-                            src="https://media.istockphoto.com/id/1368031127/photo/e-learning-and-educations-on-the-internet-are-becoming-part-of-everyday-life.jpg?s=1024x1024&w=is&k=20&c=LjsFfNldR-kcH2YQBz6osu0qJx5iPGTwqYsG-sVyt8o="
-                            alt="Client Image" style="float: right; margin-right: 20px; width: 70%; height: 30%;" />
-                        <p class="testimonial-style">
-                            It has been stated that the Awards event was the best ever yet. As a venue, everyone was
-                            totally committed,
-                            friendly and their nothing was too much bother attitude was a trait in all who work at the
-                            Athena.
-                            Thank you again and looking forward to working with you in the future</p>
-                        <p
-                            style="text-align: right;font-size: 1.2rem;font-weight: 600;margin-left: 4rem;">
-                            Hannah Murphy, 02 / Telefonica</p>
+                                            Visit England Awards</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            We could not have wished for a more professional, friendly and skilled team
+                                            to work with.Everything looked amazing and the food including delivery was
+                                            impeccable, but it was your attention to detail, your can do attitude which
+                                            particularly impressed me.
+                                        </div>
+                                        <p class="servive_text_p">
+                                            Ron Glasgow</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt5.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide6">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+
+                                            National Dentistry Awards</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            I think the fact that we chose the Athena to launch the National Dentistry
+                                            Awards, one of our most prestigious and definitely our largest event in the
+                                            diary says it all and, as we are celebrating our 11th consecutive year there
+                                            this December only hi-lights how pleased we are with the excellent customer
+                                            service, the organisation at the venue and the execution of the event
+                                            itself.
+                                        </div>
+                                        <p class="servive_text_p">
+                                            Kate Magee</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt6.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide7">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            National Fitness Awards</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            Just wanted to send across a massive thank you for yet another amazing event
+                                            you have helped us host. We have had some great feedback and the
+                                            entertainment this year was fantastic. As always the whole team couldn’t
+                                            have done enough for us!
+                                        </div>
+                                        <p class="servive_text_p">Lucy</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt7.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide8">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            British Sign Awards</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            It really was an excellent event and I would like to thank you and all the
+                                            staff at Athena for making it such a success. The venue really is the best
+                                            we’ve had for the awards – so much better than the usual ‘corporate’
+                                            facility. Once again, many thanks to you and the whole team.
+                                        </div>
+                                        <p class="servive_text_p">Ray</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt8.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide9">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            University of Leicester</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            The facility was perfect for our event and we have had nothing but wonderful
+                                            feedback from the students and professionals who attended our event.
+                                        </div>
+                                        <p class="servive_text_p">Larissa</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt9.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide10">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            Sturgess Motor Group</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            I wanted to drop you a line to say a huge thank you for the efforts both you
+                                            and your team put in to make our event so special. I will wholeheartedly
+                                            recommend the Athena to anyone, and indeed have been doing so already. In
+                                            fact, I want to come again!
+                                        </div>
+                                        <p class="servive_text_p">Nichola</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt10.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide11">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+                                            Lord Stafford Awards</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            I would like to thank you once again for a superb evening last Thursday –
+                                            the Lord Stafford Awards Dinner. I thought the evening went well and thank
+                                            you to you and your team it went without a hitch.
+                                        </div>
+                                        <p class="servive_text_p">Emma Hinde</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt11.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-slide slide12">
+                            <div class="box-style">
+                                <div class="process-box">
+                                    <div class="box-left">
+                                        <h3 class="services_swiper_heading">
+
+                                            Vegan Events UK</h3>
+                                        <div class=" pb-md-2 service_text">
+                                            We were thrilled with the venue and the venue staff team. The entire team
+                                            went way above and beyond what we would have been expected and helped us out
+                                            so much to make the event a great day. Our stallholders commented on how
+                                            outstanding and lovely the team were. Thank you!
+                                        </div>
+                                        <p class="servive_text_p">Victoria Bryceson</p>
+                                    </div>
+                                    <div class="box-right">
+                                        <div class="video-container rounded-30"><img
+                                                src="../images/brands-testimonials/bt12.png" alt="Raj" /></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- brands section -->
-                <div class="brands-container">
-                    <div class="brands-scroll">
-                        <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/drum.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nva2018silver.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nva2018winner.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/drum.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nva2018silver.png" alt="brand" class="brand-logo">
-                        <img src="../images/brands/nva2018winner.png" alt="brand" class="brand-logo">
-                    </div>
-                </div>
-            </main>
-        </div>
-
-        <!-- footer -->
-        <div class="footer-container">
-            <!-- Logo and Contact Info -->
-            <div class="footer-section">
-                <a href="#">
-                    <img src="../images/footer/logo.svg" alt="Logo"
-                        style="width: 100px; height: auto; margin-bottom: 1rem" />
-                </a>
-                <div class="social-icons">
-                    <a href="#"><img src="../images/footer/x.svg" alt="X" class="social-icon" /></a>
-                    <a href="#"><img src="../images/footer/facebook.svg" alt="Facebook" class="social-icon" /></a>
-                    <a href="#"><img src="../images/footer/instagram.svg" alt="Instagram" class="social-icon" /></a>
-                    <a href="#"><img src="../images/footer/linkdln.svg" alt="LinkedIn" class="social-icon" /></a>
-                    <a href="#"><img src="../images/footer/youtube.svg" alt="YouTube" class="social-icon" /></a>
-                </div>
-                <div class="contact-info">
-                    <p>0116 262 6556</p>
-                    <p>contact@athenacb.co.uk</p>
-                    <p>Queen Street</p>
-                    <p>Leicester, LE1 1QD</p>
-                </div>
             </div>
-
-            <!-- Athena Links -->
-            <!-- Athena Links -->
-            <div class="footer-section">
-                <h3>Athena</h3>
-                <ul>
-                    <li><a href="history.html" class="no-barba">History</a></li>
-                    <li><a href="testimonials.html" class="no-barba">Testimonials</a></li>
-                    <li><a href="../roomlayout.html" class="no-barba">Room Layout</a></li>
-                </ul>
-            </div>
-
-            <!-- Venue Hire Links -->
-            <div class="footer-section venue-hire">
-                <h3>Venue Hire</h3>
-                <ul class="grid-list">
-                    <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
-                    <li><a href="../what-we-do/concerts.html" class="no-barba">Concerts</a></li>
-                    <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
-                    <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
-                    <li><a href="../what-we-do/shows.html" class="no-barba">Shows</a></li>
-                    <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
-                    </li>
-                    <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
-                    <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
-                    <li><a href="../what-we-do/dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
-                </ul>
+        </section>
+        <!-- brands section -->
+        <div class="brands-container">
+            <div class="brands-scroll">
+                <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/drum.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nva2018silver.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nva2018winner.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/candlelight.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/awards.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nicebook.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/drum.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nva2018silver.png" alt="brand" class="brand-logo">
+                <img src="../images/brands/nva2018winner.png" alt="brand" class="brand-logo">
             </div>
         </div>
-        <!-- mobile loader -->
-        <div class="please-rotate" data-lenis-prevent>
-            <div class="branding">
-                <img src="../images/logo-icon.svg" alt="Times Event - Logo" />
+        </main>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-container">
+        <!-- Logo and Contact Info -->
+        <div class="footer-section">
+            <a href="#">
+                <img src="../images/footer/logo.svg" alt="Logo"
+                    style="width: 100px; height: auto; margin-bottom: 1rem" />
+            </a>
+            <div class="social-icons">
+                <a href="#"><img src="../images/footer/x.svg" alt="X" class="social-icon" /></a>
+                <a href="#"><img src="../images/footer/facebook.svg" alt="Facebook" class="social-icon" /></a>
+                <a href="#"><img src="../images/footer/instagram.svg" alt="Instagram" class="social-icon" /></a>
+                <a href="#"><img src="../images/footer/linkdln.svg" alt="LinkedIn" class="social-icon" /></a>
+                <a href="#"><img src="../images/footer/youtube.svg" alt="YouTube" class="social-icon" /></a>
+            </div>
+            <div class="contact-info">
+                <p>0116 262 6556</p>
+                <p>contact@athenacb.co.uk</p>
+                <p>Queen Street</p>
+                <p>Leicester, LE1 1QD</p>
             </div>
         </div>
+
+        <!-- Athena Links -->
+        <!-- Athena Links -->
+        <div class="footer-section">
+            <h3>Athena</h3>
+            <ul>
+                <li><a href="history.html" class="no-barba">History</a></li>
+                <li><a href="testimonials.html" class="no-barba">Testimonials</a></li>
+                <li><a href="../roomlayout.html" class="no-barba">Room Layout</a></li>
+            </ul>
+        </div>
+
+        <!-- Venue Hire Links -->
+        <div class="footer-section venue-hire">
+            <h3>Venue Hire</h3>
+            <ul class="grid-list">
+                <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
+                <li><a href="../what-we-do/concerts.html" class="no-barba">Concerts</a></li>
+                <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
+                <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
+                <li><a href="../what-we-do/shows.html" class="no-barba">Shows</a></li>
+                <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
+                </li>
+                <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
+                <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
+                <li><a href="../what-we-do/dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- mobile loader -->
+    <div class="please-rotate" data-lenis-prevent>
+        <div class="branding">
+            <img src="../images/logo-icon.svg" alt="Times Event - Logo" />
+        </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -378,7 +944,60 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/animation.js"></script>
-    <script src="../js/insight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize GSAP and ScrollTrigger for scaling effect
+            gsap.registerPlugin(ScrollTrigger);
+
+            const slides = document.querySelectorAll('.process-slide');
+
+            slides.forEach((slide, index) => {
+                ScrollTrigger.create({
+                    trigger: slide,
+                    start: 'top 70%',
+                    end: 'bottom 90%',
+                    onLeaveBack: () => {
+                        if (index > 0) {
+                            gsap.to(slides[index - 1], {
+                                scale: 1,
+                                ease: 'power1.out',
+                            });
+                        }
+                    },
+                    onUpdate: (self) => {
+                        if (index > 0) {
+                            const scrollPosition = window.scrollY;
+                            const triggerTop = slide.getBoundingClientRect().top + scrollPosition;
+                            const triggerHeight = slide.offsetHeight;
+                            const slideTop = slides[index - 1].getBoundingClientRect().top + scrollPosition;
+                            const scaleY = 0.7 + 0.28 * ((triggerTop - slideTop) / triggerHeight);
+
+                            gsap.to(slides[index - 1], {
+                                scale: scaleY,
+                                ease: 'power1.out',
+                            });
+                        }
+                    },
+                });
+            });
+
+            // Handle reverse scrolling and refresh ScrollTrigger
+            const scrollElement = document.scrollingElement || document.documentElement || document.body;
+            let isRefresh = false;
+
+            if (scrollElement.scrollTop > document.querySelector('.part-process').offsetTop && !isRefresh) {
+                window.addEventListener('scroll', function () {
+                    if (isRefresh) return;
+                    if (scrollElement.scrollTop < document.querySelector('.part-process').offsetTop + window.innerHeight) {
+                        ScrollTrigger.refresh();
+                        isRefresh = true;
+                    }
+                });
+            } else {
+                isRefresh = true;
+            }
+        });
+    </script>
 </body>
 
 </html>

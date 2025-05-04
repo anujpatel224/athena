@@ -109,3 +109,4 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
     slider.scrollBy({ left: 300, behavior: 'smooth' });
 });
+

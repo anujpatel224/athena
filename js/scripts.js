@@ -1857,6 +1857,7 @@ $(function(){
 
       var slides = document.querySelectorAll('.process-slide');
       slides.forEach((slide, index) => {
+        console.log("hi");
         ScrollTrigger.create({
           trigger: slide,
           start: 'top 70%',
