@@ -3610,15 +3610,15 @@ th {
 
 .close-btn {
   position: absolute;
-  top: -5px;
+  top: 0px;
   right: 20px;
-  font-size: 4rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 #popup-title {
   font-family: DM Serif Display;
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
   font-weight: 400;
   line-height: 1.5rem;
@@ -3628,9 +3628,9 @@ th {
 
 #popup-text {
   font-family: Archivo;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -3640,13 +3640,13 @@ th {
     font-size: 4rem;
   }
   #popup-text{
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
   }
   .close-btn {
-    font-size:8rem;
-    top: -5px;
-    right: 15px;
+    font-size:5rem;
+    top: 0px;
+    right: 10px;
   }
   .popup-content img {
     margin-top:4rem;
