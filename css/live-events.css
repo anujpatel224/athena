@@ -134,6 +134,7 @@
     align-self: stretch;
     border-top: 2px dashed rgba(34, 34, 34, 0.40);
     border-left: 2px dashed rgba(34, 34, 34, 0.40);
+    margin: 40px;
   }
 
   .event-item:hover{
@@ -162,7 +163,7 @@
     color: #222;
     text-overflow: ellipsis;
     font-family: "DM Serif Display";
-    font-size: 60px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 66px */
