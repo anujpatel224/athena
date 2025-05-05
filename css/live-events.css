@@ -58,14 +58,14 @@
     width: 15%;
     gap: 1rem;
     padding: 4px;
-    border-radius: 2.5rem;
+    border-radius: 50px;
   }
   
   .year-btn {
     background: #444444;
     color: #fff;
     border: none;
-    border-radius: 2rem;
+    border-radius: 50px;
     padding: 0.5rem 2rem;
     font-size: 1rem;
     font-family: 'Archivo', sans-serif;
