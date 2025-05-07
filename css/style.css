@@ -6625,9 +6625,9 @@ html {
     height: 100%;
   }
 
-  .video-container video {
+  /* .video-container video {
     height: 100%;
-  }
+  } */
 
   .quickbar .quickbar-inner .menu {
     width: 10rem;
