@@ -58,14 +58,14 @@
     width: 15%;
     gap: 1rem;
     padding: 4px;
-    border-radius: 2.5rem;
+    border-radius: 50px;
   }
   
   .year-btn {
     background: #444444;
     color: #fff;
     border: none;
-    border-radius: 2rem;
+    border-radius: 50px;
     padding: 0.5rem 2rem;
     font-size: 1rem;
     font-family: 'Archivo', sans-serif;
@@ -134,6 +134,7 @@
     align-self: stretch;
     border-top: 2px dashed rgba(34, 34, 34, 0.40);
     border-left: 2px dashed rgba(34, 34, 34, 0.40);
+    margin: 40px;
   }
 
   .event-item:hover{
@@ -162,7 +163,7 @@
     color: #222;
     text-overflow: ellipsis;
     font-family: "DM Serif Display";
-    font-size: 60px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 66px */
@@ -289,20 +290,19 @@
     .year-selector-container {
       margin-top: 1rem;
       margin-bottom: 1rem;
-      border-radius: 10px;
-      padding: 0.5rem;
+      border-radius: 50px;
+      padding: 1.5rem;
     }
 
     .year-selector {
       width: 100%;
       gap: 0.5rem;
-      padding: 2px;
-      border-radius: 1.5rem;
+      border-radius: 50px;
     }
 
     .year-btn {
-      padding: 0.3rem 1rem;
-      font-size: 3rem;
+      font-size: 5rem;
+      border-radius: 50px;
     }
 
     .events-panel {
@@ -327,7 +327,8 @@
 
     .month-btn {
       padding: 0.5rem 0.7rem;
-      font-size: 2rem;
+      font-size: 4.5rem;
+      margin: 3px;
     }
 
     .event-item {
@@ -341,7 +342,7 @@
     .event-info {
       margin-right: 0;
       margin-bottom: 0.5rem;
-      width: 100%;
+      width: 50%;
       padding: 20px;
     }
 
@@ -358,12 +359,12 @@
     .know-more-btn {
       margin-top: 1.5rem;
       padding: 0.5rem 1rem;
-      font-size: 0.95rem;
+      font-size: 1.95rem;
     }
 
     .event-image {
       width: 100%;
-      height: 140px;
+      height: 100px;
       margin-bottom: 0.5rem;
     }
 
