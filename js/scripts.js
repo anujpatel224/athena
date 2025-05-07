@@ -24,36 +24,49 @@ button.addEventListener("click", () => {
     icon.classList.add('fa-volume-mute');
   }
 });
+
+let player; 
+
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-video', {
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+  player = new YT.Player('youtube-video', {
+    videoId: 'dH3QyeyHzwI', 
+    playerVars: {
+      'autoplay': 1,
+      'controls': 0,
+      'rel': 0,
+      'loop': 1,
+      'playlist': 'dH3QyeyHzwI',
+      'mute': 1
+    },
+    events: {
+      'onReady': function(event) {
+        event.target.mute();
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonYt = document.querySelector("#yt-volume-button");
+  if (buttonYt) {
+    buttonYt.addEventListener("click", () => {
+      if (player && typeof player.isMuted === "function") {
+        const icon = buttonYt.querySelector('i');
+        if (player.isMuted()) {
+          player.unMute();
+          icon.classList.remove('fa-volume-mute');
+          icon.classList.add('fa-volume-up');
+        } else {
+          player.mute();
+          icon.classList.remove('fa-volume-up');
+          icon.classList.add('fa-volume-mute');
+        }
       }
     });
   }
-const buttonYt = document.querySelector("#yt-volume-button");
 
-buttonYt.addEventListener("click",() => {
-    console.log("hello")
-    //   if (video.muted) {
-//     player.mute();
-//     icon.classList.remove('fa-volume-mute');
-//     icon.classList.add('fa-volume-up');
-    
-//   } else {
-//     player.unMute();
-//     icon.classList.remove('fa-volume-up');
-//     icon.classList.add('fa-volume-mute');
-//   }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector(".main-video");
-
-    if (!video) return;
-
+  const video = document.querySelector(".main-video");
+  if (video) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -65,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       },
       {
-        threshold: 0.1, 
+        threshold: 0.1,
       }
     );
-
     observer.observe(video);
-  });
+  }
+});
 
 
 
