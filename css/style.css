@@ -6761,3 +6761,34 @@ html {
   border-style: none;
   vertical-align: top;
 }
+
+@media (max-width: 768px) {
+  .lp-whatsapp-icon-bar {
+    height: 6rem;
+    width: 6rem;
+    padding:1.5rem;
+    border-radius: 4rem;
+  }
+  .lp-whatsapp-icon-bar img {
+    height: 6rem;
+    width: 6rem;
+  }
+  .lp-whatsapp-icon-bar a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lp-whatsapp-icon-bar {
+    bottom: 40px;
+    right: 30px; 
+    height: 5rem;
+    width: 5rem;
+    padding:1rem;
+  }
+  .lp-whatsapp-icon-bar img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
