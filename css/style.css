@@ -6734,3 +6734,30 @@ html {
   }
 
 }
+
+.lp-whatsapp-icon-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 9999;
+  background: #25d366;
+  padding: 0.7rem;
+  border-radius: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.lp-whatsapp-icon-bar a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.lp-whatsapp-icon-bar img {
+  height: 2.5rem;
+  width: 2.5rem;
+  height: auto;
+  max-width: 100%;
+  border-style: none;
+  vertical-align: top;
+}
