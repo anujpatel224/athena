@@ -40,7 +40,6 @@ function onYouTubeIframeAPIReady() {
     },
     events: {
       'onReady': function(event) {
-        event.target.unMute();
         event.target.setPlaybackQuality('hd1080');
       }
     }
