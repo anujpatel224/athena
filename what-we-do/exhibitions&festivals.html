@@ -255,16 +255,16 @@
                 <!-- content section -->
                 <div class="content-container">
                     <div class="content-section slide-left">
-                        <h2>Located in the heart of Leicester City’s cultural quarter, Athena is the perfect location
+                        <h2>Located in the heart of Leicester City's cultural quarter, Athena is the perfect location
                             for your exhibition or festival.</h2>
                         <p>Athena is a large blank canvas with an added bonus of being in an historical art deco
                             building. With events such as Comic Con and The Gin Festival returning to the venue year on
-                            year, it’s no surprise when Athena comes equipped with all of the modern AV and technical
+                            year, it's no surprise when Athena comes equipped with all of the modern AV and technical
                             expertise you would expect from a leading event space. With a convenient city centre
                             location, excellent transport links, onsite car parking and within walking distance from a
                             number of hotels, Athena has everything you will need.</p>
-                        <p>For more information about choosing Athena as your venue, please call 0116 2626556 or
-                            email contact@athenacb.co.uk.  </p>
+                        <p>For more information about choosing Athena as your venue, please call 0116 2626556 or
+                            email contact@athenacb.co.uk. </p>
                     </div>
                     <div class="images-section slide-right">
                         <img src="../images/live-events/live-event1.webp" alt="Dinners" />
@@ -278,7 +278,7 @@
                     </div>
                     <div class="button-container">
                         <div class="button-row">
-                            <button>2000sqm of unimpeded & carpeted exhibition space</button>
+                            <button>2000sqm of unimpeded & carpeted exhibition space</button>
                             <button>Uninterrupted views of the stage</button>
                         </div>
                         <div class="button-row">
@@ -408,7 +408,7 @@
                                 <p>contact@athenacb.co.uk</p>
                             </div>
                             <div class="privacy-policy">
-                                <p>For more details about how we use your information, please see our Privacy Policy</p>
+                                <p>For more details about how we use your information, please see our Privacy Policy</p>
                             </div>
                         </div>
                     </div>
@@ -483,6 +483,42 @@
             </a>
         </div>
     </div>
+    <!-- Lightbox popup for exhibition images -->
+    <div id="imgLightbox" style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+        <img id="imgLightboxImg" src="">
+    </div>
+    <style>
+        #imgLightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+        #imgLightbox.active { display: flex; }
+        #imgLightbox img {
+            max-width: 60vw;
+            max-height: 70vh;
+            box-shadow: 0 0 40px #000;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            #imgLightbox img {
+                max-width: 90vw;
+                max-height: 80vh;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('main img').forEach(function(img) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    console.log(img.src);
+                    document.getElementById('imgLightboxImg').src = img.src;
+                    document.getElementById('imgLightbox').classList.add('active');
+                });
+            });
+            document.getElementById('imgLightbox').addEventListener('click', function() {
+                this.classList.remove('active');
+                document.getElementById('imgLightboxImg').src = '';
+            });
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/@barba/core@2.10.0/dist/barba.umd.js"></script>

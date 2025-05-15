@@ -358,7 +358,11 @@
                         </p>
                         <p>Layouts can be tailored to your specific requirements, providing you with a bespoke
                             event no matter how large or small.</p>
+<<<<<<< Updated upstream
                         <button id="roomLayouts" class="slide-left">Room Layoutss</button>
+=======
+                        <!-- <button id="roomLayouts" class="slide-left">Room Layouts</button> -->
+>>>>>>> Stashed changes
                     </div>
                 </div>
                 <!-- Room Layouts-->
@@ -467,7 +471,7 @@
                 </div>
 
                 <!-- faq-->
-                <div class="faq-section">
+                <!-- <div class="faq-section">
                     <h2 class="faq-title">Frequently Asked Questions</h2>
                     <div class="faq-container">
                         <div class="faq-column">
@@ -532,7 +536,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </main>
         </div>
 
@@ -781,6 +785,42 @@
           if (e.target === popup) {
             popup.style.display = 'none';
           }
+        });
+    </script>
+    <!-- Lightbox popup for exhibition images -->
+    <div id="imgLightbox" style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+        <img id="imgLightboxImg" src="">
+    </div>
+    <style>
+        #imgLightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+        #imgLightbox.active { display: flex; }
+        #imgLightbox img {
+            max-width: 60vw;
+            max-height: 70vh;
+            box-shadow: 0 0 40px #000;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            #imgLightbox img {
+                max-width: 90vw;
+                max-height: 80vh;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('img').forEach(function(img) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    console.log(img.src);
+                    document.getElementById('imgLightboxImg').src = img.src;
+                    document.getElementById('imgLightbox').classList.add('active');
+                });
+            });
+            document.getElementById('imgLightbox').addEventListener('click', function() {
+                this.classList.remove('active');
+                document.getElementById('imgLightboxImg').src = '';
+            });
         });
     </script>
 </body>

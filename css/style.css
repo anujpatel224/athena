@@ -1086,10 +1086,10 @@ h6,
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, #cecece 0%, #5e5e5e 100%);
+  background: #f43900;
   background-size: cover;
   background-position: center;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 2;
 }
 
@@ -5355,6 +5355,7 @@ main .btn-secondary:hover,
     will-change: transform;
     transform-style: preserve-3d;
     margin: 0 auto;
+    
   }
 
   .part-process .process-wrapper .process-slide .box-style {
