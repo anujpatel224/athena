@@ -226,8 +226,7 @@
             <div class="events-year" data-year="2025">
               <!-- 2025 events start -->
               <div class="events-list">
-                <div class="events-group" data-month="may">
-
+                <div class="events-group" data-month="may" id="may">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Saturday, May 09, 2025</div>
@@ -309,7 +308,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="events-group" data-month="june" style="display:none;">
+                <div class="events-group" data-month="june" id="june">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Saturday, June 20, 2025</div>
@@ -343,7 +342,7 @@
                   </div>
                 </div>
 
-                <div class="events-group" data-month="september" style="display:none;">
+                <div class="events-group" data-month="september" id="september">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Saturday, September 11, 2025</div>
@@ -355,7 +354,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="events-group" data-month="october" style="display:none;">
+                <div class="events-group" data-month="october" id="october">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Saturday, October 09, 2025</div>
@@ -389,7 +388,7 @@
                   </div>
                 </div>
 
-                <div class="events-group" data-month="november" style="display:none;">
+                <div class="events-group" data-month="november" id="november">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Saturday, November 02, 2025</div>
@@ -435,10 +434,10 @@
               </div>
               <!-- 2025 events end -->
             </div>
-            <div class="events-year" data-year="2026" style="display:none;">
+            <div class="events-year" data-year="2026">
               <!-- 2026 events start -->
               <div class="events-list">
-                <div class="events-group" data-month="february" style="display:none;">
+                <div class="events-group" data-month="february" style="display:none;" id="february">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Thursday, February 19, 2026</div>
@@ -450,7 +449,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="events-group" data-month="june" style="display:none;">
+                <div class="events-group" data-month="june" style="display:none;" id="june">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Thursday, June 18, 2026</div>
@@ -462,7 +461,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="events-group" data-month="september" style="display:none;">
+                <div class="events-group" data-month="september" style="display:none;" id="september">
                   <div class="event-item dashed">
                     <div class="event-info">
                       <div class="event-date">Thursday, September 17, 2026</div>
@@ -547,14 +546,6 @@
     </div>
   </div>
   </div>
-  <script>
-    window.slide = new SlideNav({
-      activeClass: 'active',
-      speed: 1000,
-      changeHash: true,
-      hideAfterSelect: true
-    });
-  </script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/@barba/core@2.10.0/dist/barba.umd.js"></script>
@@ -566,7 +557,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/animation.js"></script>
-  <script src="js/slideNav.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const eventItems = document.querySelectorAll('.event-item');
@@ -633,23 +623,20 @@
             this.classList.add('active');
             this.style.opacity = '1';
 
-            // Show only the selected month group for the selected year
+            // Scroll to the relevant month section
             const yearContainer = document.querySelector('.events-year[data-year="' + selectedYear + '"]');
             if (yearContainer) {
-              const groups = yearContainer.querySelectorAll('.events-group');
-              groups.forEach(g => {
-                if (capitalize(g.getAttribute('data-month')) === this.textContent) {
-                  g.style.display = 'block';
-                } else {
-                  g.style.display = 'none';
-                }
-              });
+              const monthId = this.textContent.trim().toLowerCase();
+              const monthSection = yearContainer.querySelector('.events-group#' + monthId);
+              if (monthSection) {
+                monthSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
             }
           });
         });
       }
 
-      // Show only the selected year and its first month
+      // Show only the selected year and all its months
       function showYear(year) {
         eventsYears.forEach(ey => {
           if (ey.dataset.year === year) {
@@ -661,14 +648,15 @@
         selectedYear = year;
         renderMonths(year);
 
-        // Show first month group for the selected year
+        // Show all month groups for the selected year
         const yearContainer = document.querySelector('.events-year[data-year="' + year + '"]');
         if (yearContainer) {
           const groups = yearContainer.querySelectorAll('.events-group');
-          groups.forEach((g, i) => {
-            g.style.display = i === 0 ? 'block' : 'none';
+          groups.forEach(g => {
+            g.style.display = 'block';
           });
         }
+        setupMonthScrollHighlight(year);
       }
 
       // Year button click
@@ -683,28 +671,93 @@
 
       // Initial show
       showYear('2025');
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      let months = document.querySelectorAll('.month-btn');
-      console.log(months);
-      months.forEach(button => {
-        button.addEventListener('click', function() {
-          console.log('clicked');
-          const selectedMonth = this.textContent.toLowerCase();
-          console.log(selectedMonth);
-          document.querySelectorAll('.events-group').forEach(group => {
-            if (group.dataset.month === selectedMonth) {
-              group.style.display = 'block';
-            } else {
-              group.style.display = 'none';
+
+      // Highlight month and scroll to section if hash is present
+      (function handleHashMonth() {
+        const hash = window.location.hash.replace('#', '').toLowerCase();
+        if (!hash) return;
+
+        // Find the year that contains this month
+        eventsYears.forEach(ey => {
+          if (ey.querySelector(`.events-group#${hash}`)) {
+            // Show the correct year
+            const year = ey.dataset.year;
+            showYear(year);
+
+            // Find and click the correct month button
+            const monthButtons = document.querySelectorAll('.month-btn');
+            monthButtons.forEach(btn => {
+              if (btn.textContent.trim().toLowerCase() === hash) {
+                btn.click();
+              }
+            });
+
+            // Optionally, scroll to the month section
+            const monthSection = ey.querySelector(`.events-group#${hash}`);
+            if (monthSection) {
+              monthSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      })();
+
+      // Highlight the month button based on scroll position
+      function setupMonthScrollHighlight(year) {
+        const yearContainer = document.querySelector('.events-year[data-year="' + year + '"]');
+        if (!yearContainer) return;
+        const groups = yearContainer.querySelectorAll('.events-group');
+        const monthButtons = document.querySelectorAll('.month-btn');
+        const monthMap = {};
+        monthButtons.forEach(btn => {
+          monthMap[btn.textContent.trim().toLowerCase()] = btn;
+        });
+
+        let activeMonth = null;
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const month = entry.target.getAttribute('id');
+              if (month && monthMap[month]) {
+                // Remove active from all
+                monthButtons.forEach(b => {
+                  b.classList.remove('active');
+                  b.style.opacity = '0.5';
+                });
+                // Add active to current
+                monthMap[month].classList.add('active');
+                monthMap[month].style.opacity = '1';
+                activeMonth = month;
+              }
             }
           });
+        }, {
+          root: null,
+          rootMargin: '0px 0px -60% 0px', // triggers when top of section is near top
+          threshold: 0.1
+        });
+        groups.forEach(group => observer.observe(group));
+      }
+
+      // Insert month separators before each .events-group (except the first month of each year)
+      document.querySelectorAll('.events-year').forEach(yearContainer => {
+        const year = yearContainer.getAttribute('data-year');
+        const groups = yearContainer.querySelectorAll('.events-group');
+        groups.forEach((group, idx) => {
+          if (idx === 0) return; // Skip the first month
+          const month = group.getAttribute('data-month');
+          if (month) {
+            // Capitalize month
+            const monthName = month.charAt(0).toUpperCase() + month.slice(1);
+            // Create separator
+            const sep = document.createElement('div');
+            sep.className = 'month-separator';
+            sep.textContent = `${monthName} ${year}`;
+            // Insert before group
+            yearContainer.querySelector('.events-list').insertBefore(sep, group);
+          }
         });
       });
     });
- 
   </script>
 
 </html>
