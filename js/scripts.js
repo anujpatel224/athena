@@ -29,18 +29,19 @@ let player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtube-video', {
-    videoId: 'dH3QyeyHzwI', 
+    videoId: 'wTBUTUMIivI', 
     playerVars: {
       'autoplay': 1,
       'controls': 0,
       'rel': 0,
       'loop': 1,
-      'playlist': 'dH3QyeyHzwI',
-      'mute': 1
+      'playlist': 'wTBUTUMIivI',
+      'mute': 1,
     },
     events: {
       'onReady': function(event) {
-        event.target.mute();
+        event.target.unMute();
+        event.target.setPlaybackQuality('hd1080');
       }
     }
   });
