@@ -3,7 +3,7 @@
     "home": "Home",
     "about_us": {
       "title": "About Us",
-      "subsections": ["History", "Testimonials"]
+      "subsections": ["Heritage", "Testimonials"]
     },
     "what_we_do": {
       "title": "What We Do",
@@ -17,7 +17,7 @@
         "Sporting Events"
       ]
     },
-    "room_layouts": "Room Layouts",
+    "room_layouts": "Room Layoutss",
     "christmas": "Christmas",
     "live_events": "Live Events",
     "news": "News",

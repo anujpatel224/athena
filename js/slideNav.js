@@ -176,7 +176,7 @@ var SlideNav = function () {
 				this.scrollTo(offsetTop, this.speed);
 				if (this.hideAfterSelect) this.hideNavBox();
 				if (this.changeHash) {
-					history.pushState({}, null, "#" + linkHash);
+					Heritage.pushState({}, null, "#" + linkHash);
 				}
 				return true;
 			} else {

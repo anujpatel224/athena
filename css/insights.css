@@ -481,6 +481,8 @@ div.please-rotate {
 .quickbar .quickbar-inner {
   display: flex;
   align-items: center;
+
+
   justify-content: space-between;
   padding: 2rem;
   position: relative;
@@ -500,7 +502,7 @@ div.please-rotate {
 
 @media (min-width: 759px) {
   .quickbar .quickbar-inner .whole-logo {
-    gap: 0.52rem;
+    gap: 1rem;
   }
 }
 
@@ -981,6 +983,8 @@ div.please-rotate {
   display: flex;
   flex-flow: column;
   gap: 2.73rem;
+  font-size: 5rem;
+  padding-top: 2rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li {
@@ -1363,7 +1367,7 @@ footer {
   color: #000;
   display: flex;
   flex-wrap: wrap;
-  gap: 15rem;
+  gap: 12rem;
   margin: 0 auto;
   padding: 2rem 5rem;
   font-size: 14px;
@@ -1526,6 +1530,19 @@ footer {
   font-family: "Archivo";
 }
 
+.header_marquee{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "DM Serif Display";
+  color:white;
+  opacity: 0.5;
+  border-left: 1px solid #ccc;
+  padding-left: 1.5rem;
+}
+
 /* marquee css end */
 
 /* video section css start */
@@ -1615,8 +1632,8 @@ footer {
 .images-section img {
   border-radius: 24px;
   object-fit: cover;
-  width: 319px;
-  height: 421px;
+  width: 350px;
+  height: 300px;
   position: absolute;
   transition: transform 0.3s ease;
 }
@@ -1630,6 +1647,7 @@ footer {
 .images-section img:last-child {
   z-index: 2;
   right: 0;
+  margin-top:5rem;
 }
 
 /* content section ends */
@@ -2188,7 +2206,7 @@ footer {
 }
 
 .form-heading h2 {
-  font-style: "DM Serif Display";
+  font-family: "DM Serif Display";
   font-size: 22px;
   line-height: 24px;
   font-weight: 400;
@@ -2340,7 +2358,7 @@ footer {
 }
 
 .christmas-banner {
-  background: #b7af91;
+  background: #C22d00;
   padding: 1rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -2354,7 +2372,7 @@ footer {
   font-family: 'Playfair Display', serif;
 }
 
-/* room layout css */
+/* Room Layouts css */
 .room-layout-container h1 {
   text-align: center;
   text-transform: uppercase;
@@ -2495,7 +2513,7 @@ th {
 
   .card-container {
     flex-direction: column;
-    padding: 0px 0px;
+    padding: 12rem 0px;
     gap: 0px;
   }
 
@@ -2509,7 +2527,7 @@ th {
 
   .card-container .card {
     height: max-content;
-    width: 85%;
+    width: 92%;
     margin: 2rem;
   }
 
@@ -2527,6 +2545,7 @@ th {
 
   .card-container .card .card-content {
     width: 60%;
+    height:240px;
   }
 
   .card-container .card .card-content button {
@@ -2544,13 +2563,14 @@ th {
 
   .text-container .button-container button {
     border-radius: 4rem;
-    padding: 1.5rem 3rem;
-    font-size: 12px;
+    padding: 2rem 5rem;
+    font-size: 3rem;
+    margin-top: 3rem;
   }
 
   .overlap-container .text-container p {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 4rem;
+    line-height: 6.5rem;
   }
 
   .overlap-container .image-content .heading-container h1 {
@@ -2616,8 +2636,7 @@ th {
   }
 
   .images-section img {
-    width: 240px;
-    height: 300px;
+    height: 250px;
   }
 
   .images-section img:first-child {
@@ -2639,7 +2658,7 @@ th {
   }
 
   .clients-section h1 {
-    font-size: 10rem;
+    font-size: 7rem;
   }
 
   .clients-span {
@@ -2648,7 +2667,7 @@ th {
 
   .list-container {
     flex-direction: column;
-    padding: 12rem 4rem;
+    padding: 6rem 4rem 10rem 4rem;
   }
 
   .list-section {
@@ -2656,7 +2675,7 @@ th {
   }
 
   .list-section li {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 
   .list-image-section img {
@@ -2667,20 +2686,21 @@ th {
 
   .form-heading h2 {
     font-size: 20px;
+    margin-bottom:1rem;
   }
 
   .form-heading p {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .input-field {
     font-size: 3rem;
     padding: 3rem;
-    width: 80%;
+    width: 90%;
   }
 
   .checkbox-container {
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .checkbox-label {
@@ -2715,13 +2735,13 @@ th {
   }
 
   .content-section h2 {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 6rem;
+    line-height: 8rem;
   }
 
   .content-section p {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 4.5rem;
+    line-height: 6.5rem;
   }
 
   .image-marquee img {
@@ -2742,10 +2762,6 @@ th {
     font-size: 2.5rem;
   }
 
-  .clients-section {
-    height: 450px;
-  }
-
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -2756,7 +2772,7 @@ th {
   }
 
   .quickbar .quickbar-inner .menu {
-    width: 10rem;
+    width: 8rem;
   }
 }
 
@@ -2782,7 +2798,7 @@ th {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2rem;
   margin: 0rem 2rem;
 }
 
@@ -2806,10 +2822,6 @@ th {
   cursor: pointer;
   transition: background 0.3s ease-in-out;
   border: 1px solid white;
-}
-
-.faq-item.open {
-  background: #e6e6e6;
 }
 
 .faq-item:hover {
@@ -2846,7 +2858,7 @@ th {
   }
 
   .faq-column {
-    width: 48%;
+    width: 50%;
     /* Two columns on larger screens */
   }
 }
@@ -2857,6 +2869,7 @@ th {
   .overlap-container .image-content .image-container {
     width: 60%;
   }
+
   .content-container {
     height: max-content;
   }
@@ -2883,8 +2896,8 @@ th {
     padding: 4rem;
   }
 
-  .bg-ct{
-    height: 100% !important; 
+  .bg-ct {
+    height: 100% !important;
   }
 
   .video-main-container {
@@ -3258,7 +3271,7 @@ th {
   content: "▶";
   position: absolute;
   left: 0;
-  top: 5px;
+  top: 7px;
   color: white;
   font-size: 2.5rem;
   line-height: 1.5;
@@ -3466,6 +3479,30 @@ th {
 
 /*  mobile device media query */
 @media only screen and (max-width: 768px) {
+  .team-section {
+    padding: 15rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    height: 660px;
+}
+.slider-container{
+  max-height:650px;
+}
+  .clients-section{
+    height: 100px;
+    margin-top:6rem;
+  }
+  .faq-title {
+    margin-bottom:9rem;
+  }
+  .header_marquee{
+    font-size: 6.5rem;
+    padding-left: 3rem;
+    line-height: 6rem;
+  }
+  .quickbar .quickbar-inner .whole-logo {
+    gap:2rem;
+  }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -3488,7 +3525,7 @@ th {
     font-size: 2.5rem;
     gap: 0rem;
     align-items: flex-start;
-    padding: 3rem 5rem;
+    padding: 6rem 5rem;
   }
 
   .footer-section h3 {
@@ -3658,16 +3695,87 @@ th {
   #popup-title {
     font-size: 4rem;
   }
-  #popup-text{
+
+  #popup-text {
     font-size: 2.5rem;
     line-height: 3.5rem;
   }
+
   .close-btn {
-    font-size:5rem;
+    font-size: 5rem;
     top: 0px;
     right: 10px;
   }
+
   .popup-content img {
-    margin-top:4rem;
+    margin-top: 4rem;
   }
+}
+
+.lp-whatsapp-icon-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #25d366;
+  padding: 0.7rem;
+  border-radius: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.lp-whatsapp-icon-bar a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.lp-whatsapp-icon-bar img {
+  height: 2.5rem;
+  width: 2.5rem;
+  height: auto;
+  max-width: 100%;
+  border-style: none;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .lp-whatsapp-icon-bar {
+    height: 6rem;
+    width: 6rem;
+    padding: 1.5rem;
+    border-radius: 5rem;
+  }
+
+  .lp-whatsapp-icon-bar img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .lp-whatsapp-icon-bar a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lp-whatsapp-icon-bar {
+    bottom: 40px;
+    right: 30px;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+  }
+
+  .lp-whatsapp-icon-bar img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+.footer-contact-span{
+  margin-right: 1rem;
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
 }

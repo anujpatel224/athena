@@ -223,6 +223,24 @@ picture {
   display: block;
 }
 
+.footer-contact-span{
+  margin-right: 1rem;
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
+}
+
+.hero-button button{
+  border: 1px solid #f43900;
+  color: #f43900;
+  background: #191919;
+  padding: 16px 32px;
+  border-radius: 86px;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top:2rem;
+}
+
 .line-link {
   position: relative;
   width: -moz-fit-content;
@@ -1848,6 +1866,8 @@ html.open-navi #navigation {
   display: flex;
   flex-flow: column;
   gap: 2.73rem;
+  font-size: 5rem;
+  padding-top: 2rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li {
@@ -2382,21 +2402,27 @@ main .sec-2 .name {
 }
 
 .live_evets_cta {
-  color: white;
-  background: transparent;
+  color: #222;
+  background: white;
   border: 2px solid white;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: 1rem 3rem;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .live_evets_cta {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     border-radius: 6px;
-    padding: 1.5rem 3rem;
+    padding: 2rem 5rem;
+    margin-top: 6rem;
+  }
+
+  main .sec-2 .name {
+    font-size: 13rem;
   }
 }
 
@@ -3198,7 +3224,9 @@ main .sec-6 .reviewsSwiperMobile .swiper-card .text-ct:before {
   z-index: -1;
   transform-origin: top;
 }
-
+.text-ct p{
+  line-height: 1.6rem;
+}
 main .sec-6 .reviewsSwiperMobile .swiper-card .text-ct p:first-of-type {
   transition-delay: 0.2s;
 }
@@ -4205,6 +4233,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .image-container {
   width: 50%;
+  padding: 3rem;
 }
 
 .hero-image {
@@ -4235,7 +4264,6 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 .text-container {
-  margin-top: 1rem;
   max-width: 100%;
   text-align: center;
   padding: 0 1.5rem;
@@ -4271,7 +4299,6 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   }
 
   .text-container {
-    margin-top: 2rem;
     text-align: left;
   }
 
@@ -4321,10 +4348,6 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
     margin-left: 20rem;
   }
 
-  .text-container {
-    margin-top: 5rem;
-  }
-
   .hero-text {
     font-size: 4rem;
   }
@@ -4360,7 +4383,7 @@ footer {
   color: #000;
   display: flex;
   flex-wrap: wrap;
-  gap: 15rem;
+  gap: 12rem;
   margin: 0 auto;
   padding: 2rem 5rem;
   font-size: 14px;
@@ -5553,12 +5576,14 @@ main .btn-secondary:hover,
 
 /* filmore section tablet screen */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .bg-ct .dark-overlay-video{
+  .bg-ct .dark-overlay-video {
     height: 100vh;
   }
-  .dark-overlay-video .bg-video{
-    height:100vh;
+
+  .dark-overlay-video .bg-video {
+    height: 100vh;
   }
+
   .part-process .process-wrapper .process-slide {
     position: -webkit-sticky;
     position: sticky;
@@ -5786,6 +5811,10 @@ main .btn-secondary:hover,
   text-transform: none;
 }
 
+.heading_gap{
+  margin-bottom: 1rem;
+}
+
 .service_text {
   font-family: "Archivo", sans-serif;
   font-size: 1.2rem;
@@ -5884,7 +5913,7 @@ main .btn-secondary:hover,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 3rem;
+  border-radius: 2rem;
   cursor: pointer;
   flex: 1;
   margin-right: 20px;
@@ -5971,7 +6000,7 @@ main .btn-secondary:hover,
 
 .subsubtitle {
   display: block;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .paddT {
@@ -6068,7 +6097,7 @@ html {
   content: "▶";
   position: absolute;
   left: 0;
-  top: 5px;
+  top: 7px;
   color: white;
   font-size: 2.5rem;
   line-height: 1.5;
@@ -6457,6 +6486,33 @@ html {
 
 /*  mobile device media query */
 @media only screen and (max-width: 768px) {
+  .hero-button button{
+    padding: 3rem 5rem;
+    font-size:3rem;
+  }
+  .hero-text{
+    margin-top: 2rem;
+  }
+  .text-ct p{
+    line-height: 6rem;
+  }
+  .bg-ct .dark-overlay-video video {
+    height: 100vh;
+  }
+  .heading_gap{
+    margin-bottom: 4rem;
+  }
+  .explore_btn {
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 2rem 5rem;
+  }
+
+  .heading-container {
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+  }
+
   .quickbar .quickbar-inner {
     padding: 1.5rem 4rem 1rem 2rem;
   }
@@ -6466,7 +6522,7 @@ html {
   }
 
   .welcome-heading {
-    font-size: 7rem;
+    font-size: 10rem;
   }
 
   .process-box {
@@ -6492,16 +6548,12 @@ html {
   }
 
   .features-list li {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   .features-list li::before {
     height: 3rem;
     width: 3rem;
-  }
-
-  .explore_btn {
-    padding: 1rem 4rem;
   }
 
   .process-slide .box-style {
@@ -6541,7 +6593,7 @@ html {
     font-size: 2.5rem;
     gap: 0rem;
     align-items: flex-start;
-    padding: 3rem 5rem;
+    padding: 6rem 5rem;
   }
 
   .footer-section h3 {
@@ -6570,7 +6622,7 @@ html {
   }
 
   .explore_btn {
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
   }
 
   .brand-logo {
@@ -6583,7 +6635,15 @@ html {
   }
 
   .box-left .service_text {
-    margin-bottom: 1rem
+    margin-bottom: 2rem
+  }
+
+  .features-list {
+    margin-bottom: 2rem;
+  }
+
+  .features-list ul {
+    gap: 1.5rem;
   }
 }
 
@@ -6600,11 +6660,11 @@ html {
   }
 
   .general-container label.content {
-    min-width: 28%;
+    min-width: 35%;
     flex-shrink: 0;
     scroll-snap-align: center;
-    border-radius: 10rem;
-    padding: 5rem;
+    border-radius: 7rem;
+    padding: 3rem;
     text-align: center;
     margin-right: 0px;
   }
@@ -6630,7 +6690,7 @@ html {
   } */
 
   .quickbar .quickbar-inner .menu {
-    width: 10rem;
+    width: 8rem;
   }
 
   .overlay-text {
@@ -6640,7 +6700,7 @@ html {
   .card-title {
     text-align: left;
     font-size: 2rem !important;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     bottom: 2rem;
   }
 
@@ -6738,7 +6798,7 @@ html {
 .lp-whatsapp-icon-bar {
   position: fixed;
   bottom: 20px;
-  right: 20px; 
+  right: 20px;
   z-index: 9999;
   background: #25d366;
   padding: 0.7rem;
@@ -6766,27 +6826,31 @@ html {
   .lp-whatsapp-icon-bar {
     height: 6rem;
     width: 6rem;
-    padding:1.5rem;
-    border-radius: 4rem;
+    padding: 1.5rem;
+    border-radius: 5rem;
   }
+
   .lp-whatsapp-icon-bar img {
     height: 6rem;
     width: 6rem;
   }
+
   .lp-whatsapp-icon-bar a {
     display: block;
     text-align: center;
     transition: all 0.3s ease;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .lp-whatsapp-icon-bar {
     bottom: 40px;
-    right: 30px; 
+    right: 30px;
     height: 5rem;
     width: 5rem;
-    padding:1rem;
+    padding: 1rem;
   }
+
   .lp-whatsapp-icon-bar img {
     height: 5rem;
     width: 5rem;
