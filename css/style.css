@@ -6863,11 +6863,6 @@ html {
 }
 
 .card {
-  box-shadow: 0 8px 32px 0 rgba(192, 179, 179, 0.18);
+  box-shadow: 0 8px 26px 0 rgb(0 0 0 / 50%);
   border-radius: 60px;
-}
-
-/* If you want to use a custom class for shadowed boxes: */
-.custom-shadow-box {
-  box-shadow: 0 8px 32px 0 rgba(20,20,20,0.18);
 }
