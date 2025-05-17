@@ -3307,7 +3307,7 @@ th {
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: auto;
-  height: 530px;
+  height: 600px;
 }
 
 .header-row {
@@ -3350,7 +3350,7 @@ th {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: hidden;
 }
 
