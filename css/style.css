@@ -1297,6 +1297,7 @@ body.scrolling-down .quickbar {
 @media (min-width: 759px) {
   .quickbar .quickbar-inner {
     padding: 0.5rem 2.81rem;
+    margin-left: 10px !important;
   }
 }
 

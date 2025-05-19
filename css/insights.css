@@ -481,16 +481,16 @@ div.please-rotate {
 .quickbar .quickbar-inner {
   display: flex;
   align-items: center;
-
-
   justify-content: space-between;
   padding: 2rem;
   position: relative;
+  margin-left: 15px !important;
 }
 
 @media (min-width: 759px) {
   .quickbar .quickbar-inner {
     padding: 1.35rem 2.81rem;
+    margin-left: 10px !important;
   }
 }
 
