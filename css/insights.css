@@ -1530,14 +1530,14 @@ footer {
   font-family: "Archivo";
 }
 
-.header_marquee{
+.header_marquee {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2rem;
   width: -moz-max-content;
   width: max-content;
   font-family: "DM Serif Display";
-  color:white;
+  color: white;
   opacity: 0.5;
   border-left: 1px solid #ccc;
   padding-left: 1.5rem;
@@ -1648,7 +1648,7 @@ footer {
 .images-section img:last-child {
   z-index: 2;
   right: 0;
-  margin-top:5rem;
+  margin-top: 5rem;
 }
 
 /* content section ends */
@@ -2545,7 +2545,7 @@ th {
 
   .card-container .card .card-content {
     width: 60%;
-    height:240px;
+    height: 240px;
   }
 
   .card-container .card .card-content button {
@@ -2686,7 +2686,7 @@ th {
 
   .form-heading h2 {
     font-size: 20px;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
 
   .form-heading p {
@@ -3484,25 +3484,31 @@ th {
     max-width: 1200px;
     margin: auto;
     height: 660px;
-}
-.slider-container{
-  max-height:650px;
-}
-  .clients-section{
+  }
+
+  .slider-container {
+    max-height: 650px;
+  }
+
+  .clients-section {
     height: 100px;
-    margin-top:6rem;
+    margin-top: 6rem;
   }
+
   .faq-title {
-    margin-bottom:9rem;
+    margin-bottom: 9rem;
   }
-  .header_marquee{
+
+  .header_marquee {
     font-size: 6.5rem;
     padding-left: 3rem;
     line-height: 6rem;
   }
+
   .quickbar .quickbar-inner .whole-logo {
-    gap:2rem;
+    gap: 2rem;
   }
+
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -3774,8 +3780,318 @@ th {
   }
 }
 
-.footer-contact-span{
+.footer-contact-span {
   margin-right: 1rem;
   border-right: 1px solid #ccc;
   padding-right: 1rem;
 }
+
+/* career page css */
+.heading-section {
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 8rem;
+}
+
+.heading-section h1 {
+  color: #222;
+  text-align: center;
+  font-family: Archivo;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading-section p {
+  overflow: hidden;
+  color: #444;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: Archivo;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32.64px;
+}
+
+.job-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+.job-card {
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.10);
+  background: #E8E8E8;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  flex-shrink: 0;
+  padding: 30px 70px 30px 30px;
+}
+
+.job-image {
+  width: 548px;
+  height: 365px;
+  flex-shrink: 0;
+  aspect-ratio: 548/365;
+}
+
+.job-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.job-details h2 {
+  color: #222;
+  font-family: "DM Serif Display";
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.job-description,
+.description-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-description p {
+  color: rgba(34, 34, 34, 0.80);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.description-attributes p {
+  color: rgba(34, 34, 34, 0.80);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  display: flex;
+  gap: 0.5rem
+}
+
+.description-attributes span {
+  color: #F43900;
+  font-size: 2rem;
+}
+
+.job-details button {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 86px;
+  background: #F43900;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25.56px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.down-arrow {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/career/icon_arrow_down.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.up-arrow {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/career/icon_arrow_up.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.job-description p:not(:first-child) {
+  display: none;
+  opacity: 1;
+}
+
+.job-card.expanded .job-description p {
+  display: block;
+}
+
+.job-description {
+  max-height: 90px;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.job-card.expanded .job-description {
+  max-height: 1000px;
+}
+
+/* media query for career page */
+
+/* Small devices (phones) */
+@media (max-width: 767px) {
+  .heading-section h1 {
+    font-size: 32px;
+  }
+
+  .heading-section p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .heading-section {
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .job-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .job-details h2 {
+    font-size: 24px;
+  }
+
+  .job-details p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .job-description,
+  .description-attributes {
+    gap: 16px;
+  }
+
+  .description-attributes p {
+    gap: 1rem;
+  }
+
+  .description-attributes span {
+    font-size: 6rem;
+  }
+
+  .job-listings {
+    gap: 6rem;
+  }
+
+  .job-details button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .container{
+    padding: 0px 4rem;
+  }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .job-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .job-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .job-details button {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+
+  .header_marquee {
+    font-size: 2.5rem;
+  }
+
+  .quickbar .quickbar-inner .menu {
+    width: 100%;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+
+  .content-section h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .content-section p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .images-section img:last-child {
+    margin-right: 15rem;
+  }
+
+  .card-container .card .card-content a {
+    width: 30%;
+    font-size: 1.5rem;
+  }
+
+  .overlap-container .text-container p {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
+  .text-container .button-container button {
+    border-radius: 4rem;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .everything-container .button-container button::before {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .everything-container .heading-container h1 {
+    font-size: 4rem;
+  }
+}
+
+/* career page media query css end */
