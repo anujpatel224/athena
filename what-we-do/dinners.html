@@ -85,7 +85,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" title="Work With Us" class="no-barba">
+                                    <a href="../career.html" title="Work With Us" class="no-barba">
                                         <span class="name">
                                             <span class="name"> Work With Us </span>
                                         </span>
@@ -183,7 +183,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Work With Us" class="no-barba">
+                                <a href="../career.html" title="Work With Us" class="no-barba">
                                     <span class="name">
                                         <span class="first"> Work With Us </span>
                                         <span class="second"> Work With Us </span>
@@ -476,7 +476,7 @@
 
         </div>
         <!-- mobile loader -->
-                <div class="please-rotate" data-lenis-prevent>
+        <div class="please-rotate" data-lenis-prevent>
             <div class="branding">
                 <img src="../images/logo-icon.svg" alt="Times Event - Logo" />
             </div>
@@ -489,18 +489,35 @@
         </div>
     </div>
     <!-- Lightbox popup for exhibition images -->
-    <div id="imgLightbox" style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <div id="imgLightbox"
+        style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
         <img id="imgLightboxImg" src="">
     </div>
     <style>
-        #imgLightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-        #imgLightbox.active { display: flex; }
+        #imgLightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        #imgLightbox.active {
+            display: flex;
+        }
+
         #imgLightbox img {
             max-width: 60vw;
             max-height: 70vh;
             box-shadow: 0 0 40px #000;
             border-radius: 10px;
         }
+
         @media (max-width: 600px) {
             #imgLightbox img {
                 max-width: 90vw;
@@ -509,16 +526,16 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('main img').forEach(function(img) {
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('main img').forEach(function (img) {
                 img.style.cursor = 'pointer';
-                img.addEventListener('click', function() {
+                img.addEventListener('click', function () {
                     console.log(img.src);
                     document.getElementById('imgLightboxImg').src = img.src;
                     document.getElementById('imgLightbox').classList.add('active');
                 });
             });
-            document.getElementById('imgLightbox').addEventListener('click', function() {
+            document.getElementById('imgLightbox').addEventListener('click', function () {
                 this.classList.remove('active');
                 document.getElementById('imgLightboxImg').src = '';
             });

@@ -96,214 +96,215 @@
         .box-style {
             background-color: white;
         }
-            .part-process .light-bar {
-                position: sticky;
-                top: 72px;
-                padding-top: calc(166 / 1920 * 100%);
-            }
 
-            .part-process .light-bar .light-item {
-                position: absolute;
-                width: 100%;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: opacity 1s linear, transform 0.5s linear;
-                transform: scaleY(0);
-                transform-origin: right top;
-            }
+        .part-process .light-bar {
+            position: sticky;
+            top: 72px;
+            padding-top: calc(166 / 1920 * 100%);
+        }
 
-            .part-process .light-bar .light-item.active {
-                opacity: 1;
-                transform: scaleY(1);
-            }
+        .part-process .light-bar .light-item {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s linear, transform 0.5s linear;
+            transform: scaleY(0);
+            transform-origin: right top;
+        }
 
-            .part-process .process-container {
-                margin-left: 1.875rem;
-                margin-right: 1.875rem;
-            }
+        .part-process .light-bar .light-item.active {
+            opacity: 1;
+            transform: scaleY(1);
+        }
 
-            .part-process .process-wrapper {
-                position: sticky;
-                top: 0;
-                display: flex;
-                flex-direction: column;
-                grid-row-gap: 64px;
-            }
+        .part-process .process-container {
+            margin-left: 1.875rem;
+            margin-right: 1.875rem;
+        }
 
-            .part-process .process-wrapper .process-slide {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 21%;
-                overflow: hidden;
-                width: 1860px;
-                max-width: 100%;
-                will-change: transform;
-                transform-style: preserve-3d;
-                margin: 0 auto;
-                box-shadow: 0 8px 26px 0 rgb(121 121 121 / 20%);
-                border-radius: 60px;
-            }
+        .part-process .process-wrapper {
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 64px;
+        }
 
-            .part-process .process-wrapper .process-slide .box-style {
-                border-radius: 3.75rem;
-                background-color: white;
-                padding: 2rem 6rem;
-                width: 100%;
-            }
+        .part-process .process-wrapper .process-slide {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 21%;
+            overflow: hidden;
+            width: 1860px;
+            max-width: 100%;
+            will-change: transform;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+            box-shadow: 0 8px 26px 0 rgb(121 121 121 / 20%);
+            border-radius: 60px;
+        }
 
-            .part-process .process-wrapper .process-slide .box-style .box-left {
-                max-width: 60%;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
+        .part-process .process-wrapper .process-slide .box-style {
+            border-radius: 3.75rem;
+            background-color: white;
+            padding: 2rem 6rem;
+            width: 100%;
+        }
 
-            .part-process .process-wrapper .process-slide .box-style .box-right {
-                width: 20%;
-                height: 300px;
-            }
+        .part-process .process-wrapper .process-slide .box-style .box-left {
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
-            .part-process .swiper-pagination {
-                display: none;
-            }
+        .part-process .process-wrapper .process-slide .box-style .box-right {
+            width: 20%;
+            height: 300px;
+        }
 
-            .part-assets .assetsSwiper-box {
-                margin: 0 auto;
-                position: relative;
-                --assetIndex: 4;
-            }
+        .part-process .swiper-pagination {
+            display: none;
+        }
 
-            .part-assets .assetsSwiper-box::before {
-                content: "";
-                position: absolute;
-                width: calc(var(--assetIndex) * 6.43%);
-                height: 100%;
-                background-image: linear-gradient(90deg,
-                        rgba(0, 0, 0, 0.9) 0%,
-                        rgba(0, 0, 0, 0) 100%);
-                top: 0;
-                left: 0;
-                z-index: 2;
-                pointer-events: none;
-            }
+        .part-assets .assetsSwiper-box {
+            margin: 0 auto;
+            position: relative;
+            --assetIndex: 4;
+        }
 
-            .part-assets .assetsSwiper-box::after {
-                content: "";
-                position: absolute;
-                width: calc((8 - var(--assetIndex)) * 6.43%);
-                height: 100%;
-                background-image: linear-gradient(-90deg,
-                        rgba(0, 0, 0, 0.9) 0%,
-                        rgba(0, 0, 0, 0) 100%);
-                top: 0;
-                right: 0;
-                z-index: 2;
-                pointer-events: none;
-            }
+        .part-assets .assetsSwiper-box::before {
+            content: "";
+            position: absolute;
+            width: calc(var(--assetIndex) * 6.43%);
+            height: 100%;
+            background-image: linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0) 100%);
+            top: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
 
-            .part-assets .assetsSwiper .swiper-wrapper {
-                aspect-ratio: 1920 / 522;
-                gap: 0.65%;
-                justify-content: space-between;
-            }
+        .part-assets .assetsSwiper-box::after {
+            content: "";
+            position: absolute;
+            width: calc((8 - var(--assetIndex)) * 6.43%);
+            height: 100%;
+            background-image: linear-gradient(-90deg,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0) 100%);
+            top: 0;
+            right: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
 
-            .part-assets .assetsSwiper .swiper-slide {
-                width: 5.8%;
-                display: block;
-                overflow: hidden;
-                border-radius: 1rem;
-                position: relative;
-                transition: 0.8s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-            }
+        .part-assets .assetsSwiper .swiper-wrapper {
+            aspect-ratio: 1920 / 522;
+            gap: 0.65%;
+            justify-content: space-between;
+        }
 
-            .part-assets .assetsSwiper .swiper-slide.active {
-                width: 48.4%;
-                opacity: 1;
-            }
+        .part-assets .assetsSwiper .swiper-slide {
+            width: 5.8%;
+            display: block;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            transition: 0.8s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        }
 
-            .part-assets .assetsSwiper .box-style {
-                height: 100%;
-                position: relative;
-                border-radius: 1rem;
-                overflow: hidden;
-            }
+        .part-assets .assetsSwiper .swiper-slide.active {
+            width: 48.4%;
+            opacity: 1;
+        }
 
-            .part-assets .assetsSwiper .swiper-slide.active .assets-title {
-                font-size: 1.5rem;
-            }
+        .part-assets .assetsSwiper .box-style {
+            height: 100%;
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
 
-            .part-ai .content-wrapper .content-item {
-                width: 18.95%;
-                min-width: 364px;
-                opacity: 1;
-                transition: opacity 0.5s;
-                background: rgba(0, 0, 0, 0.25);
-                border: 1px solid rgba(255, 255, 255, 0.6);
-                backdrop-filter: blur(12.5px);
-                border-radius: 1rem;
-                padding: 1.25rem 1.125rem;
-            }
+        .part-assets .assetsSwiper .swiper-slide.active .assets-title {
+            font-size: 1.5rem;
+        }
 
-            .part-ai .content-wrapper .content-item::before {
-                content: "";
-                width: calc(100% + 22px);
-                height: calc(100% + 22px);
-                top: -11px;
-                left: -11px;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                border-radius: 1.5rem;
-                position: absolute;
-                animation: circleOpacity 2.5s linear infinite;
-                pointer-events: none;
-            }
+        .part-ai .content-wrapper .content-item {
+            width: 18.95%;
+            min-width: 364px;
+            opacity: 1;
+            transition: opacity 0.5s;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12.5px);
+            border-radius: 1rem;
+            padding: 1.25rem 1.125rem;
+        }
 
-            .part-ai .content-wrapper .content-item::after {
-                content: "";
-                width: calc(100% + 42px);
-                height: calc(100% + 42px);
-                top: -21px;
-                left: -21px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 1.875rem;
-                position: absolute;
-                animation: circleOpacity 3s ease-in infinite;
-                pointer-events: none;
-            }
+        .part-ai .content-wrapper .content-item::before {
+            content: "";
+            width: calc(100% + 22px);
+            height: calc(100% + 22px);
+            top: -11px;
+            left: -11px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1.5rem;
+            position: absolute;
+            animation: circleOpacity 2.5s linear infinite;
+            pointer-events: none;
+        }
 
-            .part-ai .content-wrapper .content-item.hideItem {
-                opacity: 0;
-            }
+        .part-ai .content-wrapper .content-item::after {
+            content: "";
+            width: calc(100% + 42px);
+            height: calc(100% + 42px);
+            top: -21px;
+            left: -21px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.875rem;
+            position: absolute;
+            animation: circleOpacity 3s ease-in infinite;
+            pointer-events: none;
+        }
 
-            .part-ai .content-wrapper .content-item.active {
-                background: linear-gradient(249.66deg,
-                        rgba(0, 97, 81, 0.8) 0%,
-                        rgba(0, 53, 50, 0.5) 100%);
-                border-color: #50e3c2;
-                backdrop-filter: blur(7.5px);
-            }
+        .part-ai .content-wrapper .content-item.hideItem {
+            opacity: 0;
+        }
 
-            .part-ai .content-wrapper .content-item.active::before {
-                border-color: rgba(80, 227, 194, 0.7);
-            }
+        .part-ai .content-wrapper .content-item.active {
+            background: linear-gradient(249.66deg,
+                    rgba(0, 97, 81, 0.8) 0%,
+                    rgba(0, 53, 50, 0.5) 100%);
+            border-color: #50e3c2;
+            backdrop-filter: blur(7.5px);
+        }
 
-            .part-ai .content-wrapper .content-item.active::after {
-                border-color: rgba(80, 227, 194, 0.3);
-            }
+        .part-ai .content-wrapper .content-item.active::before {
+            border-color: rgba(80, 227, 194, 0.7);
+        }
 
-            .part-ai .content-wrapper {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                z-index: 3;
-            }
+        .part-ai .content-wrapper .content-item.active::after {
+            border-color: rgba(80, 227, 194, 0.3);
+        }
 
-            .part-ai .content-wrapper .content-item {
-                position: absolute;
-            }
-  
+        .part-ai .content-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .part-ai .content-wrapper .content-item {
+            position: absolute;
+        }
+
 
         /* filmore section mobile screen */
         @media (max-width: 768px) {
@@ -375,17 +376,21 @@
                 margin-top: 1rem !important;
                 margin-bottom: 4rem;
             }
+
             .part-process .process-wrapper .process-slide .box-style .box-left {
-                max-width:100% !important;
+                max-width: 100% !important;
             }
+
             .part-process .process-wrapper .process-slide .box-style {
                 padding: 6rem;
             }
-            .part-process .process-wrapper .process-slide .box-style .box-right{
+
+            .part-process .process-wrapper .process-slide .box-style .box-right {
                 height: 100px;
             }
+
             .process-container {
-                padding : 6rem;
+                padding: 6rem;
             }
         }
 
@@ -405,7 +410,8 @@
                 width: 100%;
                 text-align: center;
             }
-            .process-slide .box-right .video-container img{ 
+
+            .process-slide .box-right .video-container img {
                 width: 200px;
             }
         }
@@ -433,37 +439,54 @@
                             <ul>
                                 <li class="nav-item start dropdown">
                                     <a href="#" data-anchor-target="no-barba" title="what we do" class="home no-barba">
-                                        
+
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
                                         <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
-                                        <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
+                                        <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a>
+                                        </li>
                                         <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
-                                        <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions &
+                                        <li><a href="../what-we-do/exhibitions&festivals.html"
+                                                class="no-barba">Exhibitions &
                                                 Festivals</a></li>
                                         <li><a href="../what-we-do/concerts.html" class="no-barba">Concerts</a></li>
                                         <li><a href="../what-we-do/shows.html" class="no-barba">Shows</a></li>
-                                        <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
+                                        <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting
+                                                Events</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../roomlayout.html" data-anchor-target="no-barba" data-toggle-nav
                                         title="Room Layouts" class="no-barba">
-                                        
+
                                         <span class="name"> Room Layouts </span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../events.html" data-anchor-target="#liveEvents" data-toggle-nav
                                         title="Live Events" class="no-barba">
-                                        
+
                                         <span class="name"> Live Events </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" title="News" class="no-barba">
+                                        <span class="name">
+                                            <span class="name"> News </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../career.html" title="Work With Us" class="no-barba">
+                                        <span class="name">
+                                            <span class="name"> Work With Us </span>
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown" id="about-us-dropdown">
                                     <a href="#" data-anchor-target="no-barba" title="about us" class="home no-barba">
-                                        
+
                                         <span class="name"> About Us </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
@@ -474,7 +497,7 @@
                                 <li class="nav-item ExploreNow">
                                     <a href="../index.html#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
                                         title="Enquire Now" class="ExploreNow">
-                                        
+
                                         <span class="name"> Enquire Now </span>
                                     </a>
                                 </li>
@@ -496,7 +519,8 @@
         <div class="quickbar">
             <div class="quickbar-inner">
                 <div>
-                    <a href="../../index.html" data-anchor-target="index.html" title="home logo" class="whole-logo no-barba">
+                    <a href="../../index.html" data-anchor-target="index.html" title="home logo"
+                        class="whole-logo no-barba">
                         <div class="branding">
                             <img src="../../images/logo-icon.svg" alt="athena - Logo" />
                         </div>
@@ -517,11 +541,13 @@
                                     <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
                                     <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
                                     <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
-                                    <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions &
+                                    <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions
+                                            &
                                             Festivals</a></li>
                                     <li><a href="../what-we-do/concerts.html" class="no-barba">Concerts</a></li>
                                     <li><a href="../what-we-do/shows.html" class="no-barba">Shows</a></li>
-                                    <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
+                                    <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -534,7 +560,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../events.html" data-anchor-target="#liveEvents" title="Live Events" class="no-barba">
+                                <a href="../events.html" data-anchor-target="#liveEvents" title="Live Events"
+                                    class="no-barba">
                                     <span class="name">
                                         <span class="first"> Live Events </span>
                                         <span class="second"> Live Events </span>
@@ -543,20 +570,20 @@
                             </li>
                             <li>
                                 <a href="#" title="News" class="no-barba">
-                                  <span class="name">
-                                    <span class="first"> News </span>
-                                    <span class="second"> News </span>
-                                  </span>
+                                    <span class="name">
+                                        <span class="first"> News </span>
+                                        <span class="second"> News </span>
+                                    </span>
                                 </a>
-                              </li>
-                              <li>
-                                <a href="#" title="Work With Us" class="no-barba">
-                                  <span class="name">
-                                    <span class="first"> Work With Us </span>
-                                    <span class="second"> Work With Us </span>
-                                  </span>
+                            </li>
+                            <li>
+                                <a href="../career.html" title="Work With Us" class="no-barba">
+                                    <span class="name">
+                                        <span class="first"> Work With Us </span>
+                                        <span class="second"> Work With Us </span>
+                                    </span>
                                 </a>
-                              </li>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" data-anchor-target="no-barba">
                                     <span class="name">
@@ -570,7 +597,8 @@
                                 </ul>
                             </li>
                             <li class="ExploreNow">
-                                <a href="../index.html#EnquireNow" class="no-barba" data-anchor-target="#EnquireNow" title="Enquire Now">
+                                <a href="../index.html#EnquireNow" class="no-barba" data-anchor-target="#EnquireNow"
+                                    title="Enquire Now">
                                     <div class="line"></div>
                                     <div class="line"></div>
                                     <div class="line"></div>
@@ -909,18 +937,18 @@
             </a>
             <div class="social-icons">
                 <a href="https://twitter.com/AthenaLeicester"><img src="../images/footer/x.svg" alt="X"
-                    class="social-icon"></a>
+                        class="social-icon"></a>
                 <a href="https://www.facebook.com/AthenaLeicester/"><img src="../images/footer/facebook.svg"
-                    alt="Facebook" class="social-icon"></a>
+                        alt="Facebook" class="social-icon"></a>
                 <a href="http://www.instagram.com/AthenaLeicester"><img src="../images/footer/instagram.svg"
-                    alt="Instagram" class="social-icon"></a>
+                        alt="Instagram" class="social-icon"></a>
                 <a href="https://www.linkedin.com/company/athenaeventsvenue"><img src="../images/footer/linkdln.svg"
-                    alt="LinkedIn" class="social-icon"></a>
+                        alt="LinkedIn" class="social-icon"></a>
                 <a href="http://www.youtube.com/user/athenaleicester"><img src="../images/footer/youtube.svg"
-                    alt="YouTube" class="social-icon"></a>
-                    <a href="https://www.tiktok.com/@athenaleicester?_t=ZN-8vRxWgE2ixC&_r=1" ><img src="../images/footer/tiktok.svg"
                         alt="YouTube" class="social-icon"></a>
-              </div>
+                <a href="https://www.tiktok.com/@athenaleicester?_t=ZN-8vRxWgE2ixC&_r=1"><img
+                        src="../images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
+            </div>
             <div class="contact-info">
                 <p><span class="footer-contact-span">0116 262 6556</span>contact@athenacb.co.uk</p>
                 <p>Queen Street</p>
