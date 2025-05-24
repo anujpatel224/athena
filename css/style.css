@@ -1297,6 +1297,7 @@ body.scrolling-down .quickbar {
 @media (min-width: 759px) {
   .quickbar .quickbar-inner {
     padding: 0.5rem 2.81rem;
+    margin-left: 10px !important;
   }
 }
 
@@ -5528,14 +5529,13 @@ main .btn-secondary:hover,
   }
 
   .process-slide {
-    padding: 1rem;
     margin: 10rem 2rem 2rem 2rem;
   }
 
   .process-slide .box-style {
     border-radius: 3.75rem;
     background-color: #1F2125;
-    padding: 1.875rem;
+    /* padding: 1.875rem; */
     width: 100%;
   }
 
@@ -6645,6 +6645,11 @@ html {
   .features-list ul {
     gap: 1.5rem;
   }
+
+  .card {
+    box-shadow: 0 8px 26px 0 rgb(0 0 0 / 50%) !important;
+    border-radius: 17px !important;
+  }
 }
 
 @media (max-width: 759px) {
@@ -6855,6 +6860,11 @@ html {
     height: 5rem;
     width: 5rem;
   }
+}
+
+.card {
+  box-shadow: 0 8px 26px 0 rgb(0 0 0 / 50%);
+  border-radius: 60px;
 }
 
 @media (min-width: 1920px) and (max-width: 1920px) {
