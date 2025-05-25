@@ -429,18 +429,17 @@
 
                 // Optional: also toggle button text
                 this.innerHTML = this.innerHTML.includes("Know More")
-                    ? 'Know Less <span class="' + arrowIcon.className + '"></span>'
+                    ? 'Show Less <span class="' + arrowIcon.className + '"></span>'
                     : 'Know More <span class="' + arrowIcon.className + '"></span>';
             });
         });
         document.querySelectorAll(".job-card").forEach(function (card) {
             const btn = card.querySelector(".know-more");
-            const jobDesc = card.querySelector(".job-description");
             btn.addEventListener("click", function () {
                 card.classList.toggle("expanded");
                 const arrowIcon = btn.querySelector("span");
                 if (card.classList.contains("expanded")) {
-                    btn.innerHTML = 'Know Less <span class="up-arrow"></span>';
+                    btn.innerHTML = 'Show Less <span class="up-arrow"></span>';
                 } else {
                     btn.innerHTML = 'Know More <span class="down-arrow"></span>';
                 }

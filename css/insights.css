@@ -3831,7 +3831,7 @@ th {
   background: #E8E8E8;
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 46px;
   flex-shrink: 0;
   padding: 30px 70px 30px 30px;
 }
@@ -3881,6 +3881,8 @@ th {
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .description-attributes p {
@@ -3938,17 +3940,17 @@ th {
   vertical-align: middle;
 }
 
-.job-description p:not(:first-child) {
+/* .job-description p:not(:first-child) {
   display: none;
   opacity: 1;
 }
 
 .job-card.expanded .job-description p {
   display: block;
-}
+} */
 
 .job-description {
-  max-height: 90px;
+  max-height: 70px;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
@@ -4017,7 +4019,8 @@ th {
     font-size: 12px;
     padding: 5px 10px;
   }
-  .container{
+
+  .container {
     padding: 0px 4rem;
   }
 }
@@ -4095,3 +4098,140 @@ th {
 }
 
 /* career page media query css end */
+
+/* heritage page css start */
+
+.history-main {
+  background: #191919;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT gradient */
+.history-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(34, 34, 34, 0.00) 0%, #000000 100%);
+  background-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* RIGHT gradient */
+.history-main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(270deg, #000000 0%, rgba(34, 34, 34, 0.00) 100%);
+  background-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.history-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 36px;
+  gap: 40px;
+}
+
+.history-card {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+.history-image {
+  width: 100%;
+  border-radius: 1rem;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.history-title {
+  color: #FFF;
+  font-family: Archivo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.history-description {
+  color: #FFF;
+  font-family: Archivo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+.slider-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6px;
+  background: #888;
+  padding: 0 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.slider-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #ff4a00;
+  z-index: 1;
+  border-radius: 3px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+  pointer-events: none;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: #888;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.dot.active {
+  background-color: #ff4a00;
+}
+
+@media (max-width: 767px) {
+  .history-title {
+    font-size: 18px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .history-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .history-main::before,
+  .history-main::after {
+    display: none;
+  }
+}
+
+
+/* heritage page css end */
