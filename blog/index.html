@@ -70,7 +70,7 @@
       }
 
       .main-article h1 {
-       overflow: hidden;
+        overflow: hidden;
         color: #000;
         text-overflow: ellipsis;
         font-family: Archivo;
@@ -78,6 +78,10 @@
         font-style: normal;
         font-weight: 700;
         line-height: 136%;
+      }
+
+      .main-article a :hover {
+        color: #ff3d00;
       }
 
       .main-article img {
@@ -206,10 +210,10 @@
 
       .small-card img {
         width: 100%;
-        height: 250px; 
+        height: 250px;
         object-fit: cover;
         display: block;
-        border-radius:15px;
+        border-radius: 15px;
       }
 
       .small-card .text {
@@ -251,91 +255,90 @@
       }
 
       /* Medium screens (tablets, ≤ 992px) */
-@media (max-width: 992px) {
-  .blog-section {
-    flex-direction: column;
-    gap: 20px;
-  }
+      @media (max-width: 992px) {
+        .blog-section {
+          flex-direction: column;
+          gap: 20px;
+        }
 
-  .main-article img {
-    width: 100%;
-    height: auto;
-  }
+        .main-article img {
+          width: 100%;
+          height: auto;
+        }
 
-  .grid {
-    flex-direction: column;
-    gap: 20px;
-  }
+        .grid {
+          flex-direction: column;
+          gap: 20px;
+        }
 
-  .large-card {
-    width: 100%;
-  }
+        .large-card {
+          width: 100%;
+        }
 
-  .small-card {
-    width: 100%;
-  }
+        .small-card {
+          width: 100%;
+        }
 
-  .c_grid {
-    flex-direction: column;
-    align-items: center;
-  }
+        .c_grid {
+          flex-direction: column;
+          align-items: center;
+        }
 
-  .article {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+        .article {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-  .article img {
-    width: 100%;
-    height: auto;
-  }
-}
+        .article img {
+          width: 100%;
+          height: auto;
+        }
+      }
 
-/* Small screens (mobiles, ≤ 576px) */
-@media (max-width: 576px) {
-  .title {
-    font-size: 28px;
-  }
+      /* Small screens (mobiles, ≤ 576px) */
+      @media (max-width: 576px) {
+        .title {
+          font-size: 28px;
+        }
 
-  .main-article h1 {
-    font-size: 24px;
-  }
+        .main-article h1 {
+          font-size: 24px;
+        }
 
-  .large-card img {
-    height: 250px;
-  }
+        .large-card img {
+          height: 250px;
+        }
 
-  .large-card h2 {
-    font-size: 16px;
-  }
+        .large-card h2 {
+          font-size: 16px;
+        }
 
-  .article h3,
-  .article .text {
-    font-size: 16px;
-  }
+        .article h3,
+        .article .text {
+          font-size: 16px;
+        }
 
-  .article p {
-    font-size: 12px;
-  }
+        .article p {
+          font-size: 12px;
+        }
 
-  .small-card h3 {
-    font-size: 14px;
-  }
+        .small-card h3 {
+          font-size: 14px;
+        }
 
-  .small-card p {
-    font-size: 12px;
-  }
+        .small-card p {
+          font-size: 12px;
+        }
 
-  .badge {
-    font-size: 10px;
-    padding: 2px 8px;
-  }
+        .badge {
+          font-size: 10px;
+          padding: 2px 8px;
+        }
 
-  .section-title {
-    font-size: 24px;
-  }
-}
-
+        .section-title {
+          font-size: 24px;
+        }
+      }
     </style>
   </head>
 
@@ -422,7 +425,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" title="News" class="no-barba">
+                    <a href="/blog/index.html" title="News" class="no-barba">
                       <span class="name">
                         <span class="name"> News </span>
                       </span>
@@ -564,7 +567,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="News" class="no-barba">
+                  <a href="/blog/index.html" title="News" class="no-barba">
                     <span class="name">
                       <span class="first"> News </span>
                       <span class="second"> News </span>
@@ -645,12 +648,16 @@
             <h1 class="title">ATHENA BLOG</h1>
             <div class="blog-section">
               <div class="main-article">
-                <h1>
-                  Athena welcomes four hundred guests to this year’s Club Mirror
-                  Awards
-                </h1>
+                <a class="no-barba"
+                  href="./Athena welcomes four hundred guests to this year’s Club Mirror Awards.html"
+                >
+                  <h1>
+                    Athena welcomes four hundred guests to this year’s Club
+                    Mirror Awards
+                  </h1>
+                </a>
                 <span class="badge">Awards</span>
-                <img src="./images/blog/image 12.png" alt="Main Event" />
+                <img src="../images/blog/image 12.png" alt="Main Event" />
               </div>
               <div class="side-articles">
                 <div class="article">
@@ -662,7 +669,7 @@
                     </p>
                     <span class="badge">Awards</span>
                   </div>
-                  <img src="./images/blog/blog10.png" alt="Event 1" />
+                  <img src="../images/blog/blog10.png" alt="Event 1" />
                 </div>
                 <div class="article">
                   <div class="text">
@@ -676,7 +683,7 @@
                     </p>
                     <span class="badge christmas">Christmas</span>
                   </div>
-                  <img src="./images/blog/blog10.png" alt="Event 2" />
+                  <img src="../images/blog/blog10.png" alt="Event 2" />
                 </div>
                 <div class="article">
                   <div class="text">
@@ -690,7 +697,7 @@
                     </p>
                     <span class="badge events">Events</span>
                   </div>
-                  <img src="./images/blog/blog9.png" alt="Event 3" />
+                  <img src="../images/blog/blog9.png" alt="Event 3" />
                 </div>
               </div>
             </div>
@@ -699,14 +706,14 @@
               <div class="grid">
                 <!-- Top two large cards -->
                 <div class="large-card">
-                  <img src="./images/blog/blog2.png" alt="Event 1" />
+                  <img src="../images/blog/blog2.png" alt="Event 1" />
                   <div class="overlay">
                     <span class="badge">Awards</span>
                     <h2>Constructing Excellence Awards 2022</h2>
                   </div>
                 </div>
                 <div class="large-card">
-                  <img src="./images/blog/blog2.png" alt="Event 2" />
+                  <img src="../images/blog/blog2.png" alt="Event 2" />
                   <div class="overlay">
                     <span class="badge">Dinner</span>
                     <h2>AU Ball Returns Once Again</h2>
@@ -716,7 +723,7 @@
               <div class="c_grid">
                 <!-- Smaller cards below -->
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 3" />
+                  <img src="../images/blog/blog4.png" alt="Event 3" />
                   <div class="text">
                     <h3>Athena hosts their 75th Bongo’s Bingo</h3>
                     <p>What an achievement for Team Athena!</p>
@@ -725,7 +732,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 4" />
+                  <img src="../images/blog/blog4.png" alt="Event 4" />
                   <div class="text">
                     <h3>
                       Krispy Kreme Goes ‘Round The World’ at Athena for 2023
@@ -736,7 +743,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 5" />
+                  <img src="../images/blog/blog4.png" alt="Event 5" />
                   <div class="text">
                     <h3>
                       The Roaring 20s Meet The Jungle; Athena meets Blue Diamond
@@ -752,7 +759,7 @@
               <div class="c_grid">
                 <!-- Duplicate Row -->
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 6" />
+                  <img src="../images/blog/blog1.png" alt="Event 6" />
                   <div class="text">
                     <h3>Athena hosts their 75th Bongo’s Bingo</h3>
                     <p>What an achievement for Team Athena!</p>
@@ -761,7 +768,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 7" />
+                  <img src="../images/blog/blog1.png" alt="Event 7" />
                   <div class="text">
                     <h3>
                       Krispy Kreme Goes ‘Round The World’ at Athena for 2023
@@ -772,7 +779,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 8" />
+                  <img src="../images/blog/blog1.png" alt="Event 8" />
                   <div class="text">
                     <h3>
                       The Roaring 20s Meet The Jungle; Athena meets Blue Diamond
@@ -791,14 +798,14 @@
               <div class="grid">
                 <!-- Top two large cards -->
                 <div class="large-card">
-                  <img src="./images/blog/blog2.png" alt="Event 1" />
+                  <img src="../images/blog/blog2.png" alt="Event 1" />
                   <div class="overlay">
                     <span class="badge">Awards</span>
                     <h2>Constructing Excellence Awards 2022</h2>
                   </div>
                 </div>
                 <div class="large-card">
-                  <img src="./images/blog/blog2.png" alt="Event 2" />
+                  <img src="../images/blog/blog2.png" alt="Event 2" />
                   <div class="overlay">
                     <span class="badge">Dinner</span>
                     <h2>AU Ball Returns Once Again</h2>
@@ -808,7 +815,7 @@
               <div class="c_grid">
                 <!-- Smaller cards below -->
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 3" />
+                  <img src="../images/blog/blog4.png" alt="Event 3" />
                   <div class="text">
                     <h3>Athena hosts their 75th Bongo’s Bingo</h3>
                     <p>What an achievement for Team Athena!</p>
@@ -817,7 +824,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 4" />
+                  <img src="../images/blog/blog4.png" alt="Event 4" />
                   <div class="text">
                     <h3>
                       Krispy Kreme Goes ‘Round The World’ at Athena for 2023
@@ -828,7 +835,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog4.png" alt="Event 5" />
+                  <img src="../images/blog/blog4.png" alt="Event 5" />
                   <div class="text">
                     <h3>
                       The Roaring 20s Meet The Jungle; Athena meets Blue Diamond
@@ -844,7 +851,7 @@
               <div class="c_grid">
                 <!-- Duplicate Row -->
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 6" />
+                  <img src="../images/blog/blog1.png" alt="Event 6" />
                   <div class="text">
                     <h3>Athena hosts their 75th Bongo’s Bingo</h3>
                     <p>What an achievement for Team Athena!</p>
@@ -853,7 +860,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 7" />
+                  <img src="../images/blog/blog1.png" alt="Event 7" />
                   <div class="text">
                     <h3>
                       Krispy Kreme Goes ‘Round The World’ at Athena for 2023
@@ -864,7 +871,7 @@
                 </div>
 
                 <div class="small-card">
-                  <img src="./images/blog/blog1.png" alt="Event 8" />
+                  <img src="../images/blog/blog1.png" alt="Event 8" />
                   <div class="text">
                     <h3>
                       The Roaring 20s Meet The Jungle; Athena meets Blue Diamond
