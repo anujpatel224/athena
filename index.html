@@ -533,7 +533,7 @@
             <div class="sec-2" id="liveEvents">
               <div class="sec-2-scroll-wrap">
                 <div class="sec-2-inner">
-                  <h1 class="name">Live Events<button class="live_evets_cta"><a class="no-barba" href="events.html">See
+                  <h1 class="name">Live Events<button class="live_evets_cta"><a class="no-barba" href="events.html">
                         What's On</a></button></h1>
                   <div class="dark-overlay"></div>
                   <div class="bg-imgs-ct fixed-sec">
@@ -1088,21 +1088,36 @@
               <div class="form-box">
                 <h2 class="form-title">Get in touch</h2>
                 <div class="form-content">
-                  <form>
+                  <form id="contactForm" novalidate>
                     <div class="form-row">
-                      <input type="text" placeholder="Full Name" class="input-field" />
-                      <input type="tel" placeholder="Phone" class="input-field" />
+                      <div style="flex:1; display:flex; flex-direction:column;">
+                        <input type="text" placeholder="Full Name*" class="input-field" name="fullName" />
+                        <span class="error-message" style="color:red; font-size:0.9em; display:none;"></span>
+                      </div>
+                      <div style="flex:1; display:flex; flex-direction:column;">
+                        <input type="tel" placeholder="Phone*" class="input-field" name="phone" />
+                        <span class="error-message" style="color:red; font-size:0.9em; display:none;"></span>
+                      </div>
                     </div>
                     <div class="form-row">
-                      <input type="email" placeholder="Email" class="input-field" />
-                      <input type="text" placeholder="Proposed Date" class="input-field" />
+                      <div style="flex:1; display:flex; flex-direction:column;">
+                        <input type="email" placeholder="Email*" class="input-field" name="email" />
+                        <span class="error-message" style="color:red; font-size:0.9em; display:none;"></span>
+                      </div>
+                      <div style="flex:1; display:flex; flex-direction:column;">
+                        <input type="text" placeholder="Proposed Date*" class="input-field" name="proposedDate" id="proposedDate"/>
+                        <span class="error-message" style="color:red; font-size:0.9em; display:none;"></span>
+                      </div>
                     </div>
                     <div class="form-row">
-                      <textarea placeholder="Enter your query here" class="input-field" rows="4"></textarea>
+                      <div style="width:100%; display:flex; flex-direction:column;">
+                        <textarea placeholder="Enter your query here*" class="input-field" rows="4"
+                          name="query"></textarea>
+                        <span class="error-message" style="color:red; font-size:0.9em; display:none;"></span>
+                      </div>
                     </div>
                     <div class="form-row" id="form-button-row"
                       style="display: flex; justify-content: flex-end; margin-bottom:0px">
-                      <!-- <input type="text" placeholder="Proposed Date" class="input-field" /> -->
                       <button style="width:48%" type="submit" class="submit-button">Submit Requirement</button>
                     </div>
                   </form>
@@ -1110,7 +1125,7 @@
                 <div class="contact-footer">
                   <div>
                     <p>0116 262 6556</p>
-                    <p>contact@athenacb.co.uk</p>
+                    <p><a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a></p>
                   </div>
                   <div>
                     <p>Athena, Queen Street</p>
@@ -1120,23 +1135,6 @@
               </div>
             </div>
             <footer>
-              <!-- <div class="lets-talk">
-                <div class="marquee" data-marquee-target data-marquee-duplicate="3" data-marquee-direction="left"
-                  data-marquee-status="normal" data-marquee-speed="25" data-marquee-scroll-speed="12">
-                  <div class="marquee-scroll">
-                    <div class="marquee-content">
-                      <span class="list-item">Get In Touch</span>
-                      <div class="line"></div>
-                      <span class="list-item">Get In Touch</span>
-                      <div class="line"></div>
-                      <span class="list-item">Get In Touch</span>
-                      <div class="line"></div>
-                      <span class="list-item">Get In Touch</span>
-                      <div class="line"></div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="footer-container">
                 <!-- Logo and Contact Info -->
                 <div class="footer-section">
@@ -1159,7 +1157,8 @@
                         src="images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
                   </div>
                   <div class="contact-info">
-                    <p><span class="footer-contact-span">0116 262 6556</span>contact@athenacb.co.uk</p>
+                    <p><span class="footer-contact-span">0116 262 6556<a
+                          href="mailto:contact@athenacb.co.uk"></span>contact@athenacb.co.uk</a></p>
                     <p>Queen Street Leicester, LE1 1QD</p>
                   </div>
                 </div>
@@ -1389,6 +1388,59 @@
           }
         });
       });
+    });
+  </script>
+
+  <script>
+    // Helper function for email validation
+    function isValidEmail(email) {
+      // Simple regex for demonstration
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+      const form = e.target;
+      const fields = [
+        { name: 'fullName', message: 'Full Name is required.' },
+        { name: 'phone', message: 'Phone is required.' },
+        { name: 'email', message: 'Email is required.' },
+        { name: 'proposedDate', message: 'Proposed Date is required.' },
+        { name: 'query', message: 'Query is required.' }
+      ];
+
+      // Clear previous errors
+      form.querySelectorAll('.error-message').forEach(span => {
+        span.style.display = 'none';
+        span.textContent = '';
+      });
+
+      fields.forEach(field => {
+        const input = form.elements[field.name];
+        const errorSpan = input.parentElement.querySelector('.error-message');
+        if (!input.value.trim()) {
+          errorSpan.textContent = field.message;
+          errorSpan.style.display = 'block';
+          valid = false;
+        } else if (field.name === 'email' && !isValidEmail(input.value.trim())) {
+          errorSpan.textContent = 'Please enter a valid email address.';
+          errorSpan.style.display = 'block';
+          valid = false;
+        }
+      });
+
+      if (valid) {
+        const data = {
+          fullName: form.fullName.value,
+          phone: form.phone.value,
+          email: form.email.value,
+          proposedDate: form.proposedDate.value,
+          query: form.query.value
+        };
+        console.log(data);
+        // You can add further submit logic here
+      }
     });
   </script>
 
