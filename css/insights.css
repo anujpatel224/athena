@@ -4217,6 +4217,10 @@ th {
 }
 
 @media (max-width: 767px) {
+  .history-slider {
+    padding: 40px 80px 10px 40px;
+  }
+
   .history-title {
     font-size: 18px;
     margin-top: 4rem;
@@ -4232,7 +4236,12 @@ th {
   .history-main::after {
     display: none;
   }
+
+  .history-image {
+    height: 300px;
+  }
 }
+
 
 
 /* heritage page css end */
