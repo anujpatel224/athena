@@ -59,7 +59,8 @@
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
-                                        <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
+                                        <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners & Awards</a>
+                                        </li>
                                         <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a>
                                         </li>
                                         <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
@@ -154,7 +155,7 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
+                                    <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners & Awards</a></li>
                                     <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
                                     <li><a href="../what-we-do/weddings.html" class="no-barba">Weddings</a></li>
                                     <li><a href="../what-we-do/exhibitions&festivals.html" class="no-barba">Exhibitions
@@ -405,6 +406,8 @@
                         </div>
                     </div>
                 </div>
+                <button class="slider-btn prev-btn">&lt;</button>
+                <button class="slider-btn next-btn">&gt;</button>                 
                 <div class="slider-line">
                     <div class="line-segment active"></div>
                     <div class="dot active"></div>
@@ -449,7 +452,7 @@
                             src="../images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
                 </div>
                 <div class="contact-info">
-                    <p><span class="footer-contact-span">0116 262 6556<a
+                    <p><span class="footer-contact-span"><a href="tel:01162626556">0116 262 6556</a><a
                                 href="mailto:contact@athenacb.co.uk"></span>contact@athenacb.co.uk</a></p>
                     <p>Queen Street</p>
                     <p>Leicester, LE1 1QD</p>
@@ -471,7 +474,7 @@
             <div class="footer-section venue-hire">
                 <h3>Venue Hire</h3>
                 <ul class="grid-list">
-                    <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners</a></li>
+                    <li><a href="../what-we-do/dinners.html" class="no-barba">Dinners & Awards</a></li>
                     <li><a href="../what-we-do/concerts.html" class="no-barba">Concerts</a></li>
                     <li><a href="../what-we-do/sportingevents.html" class="no-barba">Sporting Events</a></li>
                     <li><a href="../what-we-do/conferences.html" class="no-barba">Conferences</a></li>
@@ -514,51 +517,73 @@
             const slider = document.querySelector('.history-slider');
             const lineSegments = Array.from(document.querySelectorAll('.line-segment'));
             const dots = Array.from(document.querySelectorAll('.slider-line .dot'));
+            const cards = document.querySelectorAll('.history-card');
+
+            const nextBtn = document.querySelector('.next-btn');
+            const prevBtn = document.querySelector('.prev-btn');
+
+            let currentSlideIndex = 0;
 
             function updateProgress() {
                 const maxScroll = slider.scrollWidth - slider.clientWidth;
                 let progress = slider.scrollLeft / maxScroll;
                 if (isNaN(progress)) progress = 0;
 
-                // Calculate how many segments should be active
                 const totalSegments = lineSegments.length;
-                const activeSegments = Math.floor(progress * totalSegments) + 1; // +1 to always have at least first segment active
+                const activeSegments = Math.floor(progress * totalSegments) + 1;
 
-                // Update line segments
                 lineSegments.forEach((segment, i) => {
-                    if (i < activeSegments) {
-                        segment.classList.add('active');
-                    } else {
-                        segment.classList.remove('active');
-                    }
+                    segment.classList.toggle('active', i < activeSegments);
                 });
 
-                // Update dots - each dot corresponds to the end of a line segment
                 const totalDots = dots.length;
-                const activeDots = Math.floor(progress * totalDots) + 1; // +1 to always have at least first dot active
+                const activeDots = Math.floor(progress * totalDots) + 1;
 
                 dots.forEach((dot, i) => {
-                    if (i < activeDots) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
+                    dot.classList.toggle('active', i < activeDots);
                 });
             }
 
-            // Initialize
             updateProgress();
-
-            // Update on scroll
             slider.addEventListener('scroll', updateProgress);
 
-            // Click handlers for dots
             dots.forEach((dot, i) => {
                 dot.addEventListener('click', () => {
                     const maxScroll = slider.scrollWidth - slider.clientWidth;
                     const targetScroll = (i / (dots.length - 1)) * maxScroll;
                     slider.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                    currentSlideIndex = i;
                 });
+            });
+
+            function scrollToCard(index) {
+                const card = cards[index];
+                if (card) {
+                    const sliderRect = slider.getBoundingClientRect();
+                    const cardRect = card.getBoundingClientRect();
+
+                    // Add or subtract buffer (positive = scroll further right, negative = leave some gap)
+                    const buffer = -20; // Adjust this value to control spacing
+
+                    const offset = cardRect.left - sliderRect.left + slider.scrollLeft + buffer;
+
+                    slider.scrollTo({ left: offset, behavior: 'smooth' });
+                }
+            }
+
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlideIndex < cards.length - 1) {
+                    currentSlideIndex++;
+                    scrollToCard(currentSlideIndex);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlideIndex > 0) {
+                    currentSlideIndex--;
+                    scrollToCard(currentSlideIndex);
+                }
             });
         });
     </script>
