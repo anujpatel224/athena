@@ -284,11 +284,15 @@
                                 </p>
                                 <p class="job-attribute"><span>•</span> Salary:<strong> £9.60 per hour</strong></p>
                             </div>
-                            <button class="know-more" id="toggleButton">
-                                Know More
-                                <span class="down-arrow"></span>
-                            </button>
-
+                            <div class="know-apply-container">
+                                <a class="know-more" id="toggleButton">
+                                    Know More
+                                    <span class="down-arrow"></span>
+                                </a>
+                                <button class="apply-button" id="applyButton">
+                                    Apply Now
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -330,15 +334,44 @@
                                 <p class="job-attribute"><span>•</span> Job Type:<strong> Part-time</strong></p>
                                 <p class="job-attribute"><span>•</span> Salary:<strong> £11.44 per hour</strong></p>
                             </div>
-                            <button class="know-more" id="toggleButton">
-                                Know More
-                                <span class="down-arrow"></span>
-                            </button>
+                            <div class="know-apply-container">
+                                <a class="know-more" id="toggleButton">
+                                    Know More
+                                    <span class="down-arrow"></span>
+                                </a>
+                                <button class="apply-button" id="applyButton">
+                                    Apply Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </main>
             </div>
         </div>
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <button class="close-button" id="closeButton">&times;</button>
+        
+                <form id="emailForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your email address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address"
+                            required>
+                        <div class="error-message" id="emailError">
+                            Please enter a valid email address
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="submit-button" id="submitButton">
+                        Submit
+                    </button>
+        
+                    <div class="success-message" id="successMessage">
+                        Email submitted successfully!
+                    </div>
+                </form>
+            </div>
+        </div>    
         <!-- footer -->
         <div class="footer-container">
             <!-- Logo and Contact Info -->
@@ -445,6 +478,108 @@
                     btn.innerHTML = 'Know More <span class="down-arrow"></span>';
                 }
             });
+        });
+    </script>
+    <script>
+        // Get elements
+        const applyButton = document.getElementById('applyButton');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeButton = document.getElementById('closeButton');
+        const emailForm = document.getElementById('emailForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        const submitButton = document.getElementById('submitButton');
+        const successMessage = document.getElementById('successMessage');
+
+        // Open modal
+        applyButton.addEventListener('click', () => {
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            emailInput.focus(); // Focus on email input
+        });
+
+        // Close modal function
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+
+            // Reset form
+            emailForm.reset();
+            emailInput.classList.remove('error');
+            emailError.classList.remove('show');
+            successMessage.classList.remove('show');
+            submitButton.disabled = false;
+        }
+
+        // Close modal events
+        closeButton.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Email validation function
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Real-time validation
+        emailInput.addEventListener('input', () => {
+            const email = emailInput.value.trim();
+
+            if (email && !validateEmail(email)) {
+                emailInput.classList.add('error');
+                emailError.classList.add('show');
+            } else {
+                emailInput.classList.remove('error');
+                emailError.classList.remove('show');
+            }
+        });
+
+        // Form submission
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            // Validate email
+            if (!email) {
+                emailInput.classList.add('error');
+                emailError.textContent = 'Email is required';
+                emailError.classList.add('show');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                emailInput.classList.add('error');
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.classList.add('show');
+                return;
+            }
+
+            // Simulate submission
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            setTimeout(() => {
+                successMessage.classList.add('show');
+                submitButton.textContent = 'Submit';
+
+                // Close modal after 1.5 seconds
+                setTimeout(() => {
+                    closeModal();
+                }, 1500);
+            }, 1000);
         });
     </script>
 </body>
