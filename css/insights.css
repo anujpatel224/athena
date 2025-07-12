@@ -4478,7 +4478,7 @@ th {
 }
 
 .submit-button {
-  width: 90%;
+  width: 30%;
   background-color: #333;
   color: white;
   border: none;
@@ -4530,7 +4530,6 @@ th {
 .privacy-policy-container h2 {
   font-family: DM Serif Display;
   font-size: 30px;
-  font-style: italic;
   font-weight: 400;
   line-height: 40px;
   text-align: left;
@@ -4538,7 +4537,6 @@ th {
 }
 
 .privacy-policy-container p {
-  font-family: Archivo;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;

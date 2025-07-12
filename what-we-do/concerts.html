@@ -53,7 +53,7 @@
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
-                                        <li><a href="dinners.html" class="no-barba">Dinners & Awards</a></li>
+                                        <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
                                         <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                         <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                         <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -146,7 +146,7 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="dinners.html" class="no-barba">Dinners & Awards</a></li>
+                                    <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
                                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                     <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                     <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -263,29 +263,29 @@
                             Ranging from state of the art moving heads to a 10m cinema screen, star cloth walling,
                             line-array speakers, extensive lighting and an experienced operations team, Athena gives
                             your concert an amazing foundation for success.</p>
-                            <p style="font-weight:500;">Contact us for more information about choosing Athena as your venue
-                            </p>
-                            <div class="contact-container">
-                                <a href="tel:01162626556" class="contact-item">
-                                    <div class="icon-circle">
-                                        <svg class="phone-icon" viewBox="0 0 24 24">
-                                            <path
-                                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                                        </svg>
-                                    </div>
-                                    <span class="contact-text">0116 262 6556</span>
-                                </a>
-                            
-                                <a href="mailto:contact@athenacb.co.uk" class="contact-item">
-                                    <div class="icon-circle">
-                                        <svg class="email-icon" viewBox="0 0 24 24">
-                                            <path
-                                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                        </svg>
-                                    </div>
-                                    <span class="contact-text">contact@athenacb.co.uk</span>
-                                </a>
+                        <p style="font-weight:500;">Contact us for more information about choosing Athena as your venue
+                        </p>
+                        <div class="contact-container">
+                            <a href="tel:01162626556" class="contact-item">
+                                <div class="icon-circle">
+                                    <svg class="phone-icon" viewBox="0 0 24 24">
+                                        <path
+                                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                    </svg>
                                 </div>
+                                <span class="contact-text">0116 262 6556</span>
+                            </a>
+
+                            <a href="mailto:contact@athenacb.co.uk" class="contact-item">
+                                <div class="icon-circle">
+                                    <svg class="email-icon" viewBox="0 0 24 24">
+                                        <path
+                                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                    </svg>
+                                </div>
+                                <span class="contact-text">contact@athenacb.co.uk</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="images-section slide-right">
                         <div class="image-section-row1">
@@ -390,29 +390,42 @@
                         <div class="form-section">
                             <div class="form-heading slide-left">
                                 <h2>Keep up to date</h2>
-                                <p>join our mailing list for latest news and events at Athena.</p>
+                                <p>Join our mailing list for latest news and events at Athena.</p>
                             </div>
-                            <div class="form-content slide-right">
-                                <input type="email" placeholder="your email address" class="input-field" />
-                                <div class="checkbox-container">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" />
-                                        Corporate Events
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" />
-                                        Events for the Public
-                                    </label>
+                            <form id="mailingForm" novalidate>
+                                <div class="form-content slide-right" style="display: flex; flex-direction: column;">
+                                    <div
+                                        style="display:flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+                                        <input type="email" name="email" placeholder="Your email address"
+                                            class="input-field" />
+                                        <span class="error-message"
+                                            style="color:red; font-size:0.9em; display:none;"></span>
+                                    </div>
+
+                                    <div class="checkbox-container">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="interests" value="Corporate Events" />
+                                            Corporate Events
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="interests" value="Events for the Public" />
+                                            Events for the Public
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="submit-button">Sign up</button>
                                 </div>
-                                <button class="submit-button">Sign up</button>
-                            </div>
+                            </form>
+
                             <div class="form-footer slide-left">
                                 <div>
                                     <p><a href="tel:01162626556">0116 262 6556</a></p>
                                     <p><a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a></p>
                                 </div>
                                 <div class="privacy-policy">
-                                    <p>For more details about how we use your information, please see our Privacy Policy
+                                    <p>For more details about how we use your information,
+                                        <a href="../privacy-policy.html" class="no-barba">Please see our Privacy
+                                            Policy</a>
                                     </p>
                                 </div>
                             </div>
@@ -464,7 +477,7 @@
             <div class="footer-section" id="lastFooterSection">
                 <h3>Venue Hire</h3>
                 <ul class="grid-list">
-                    <li><a href="dinners.html" class="no-barba">Dinners & Awards</a></li>
+                    <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
                     <li><a href="concerts.html" class="no-barba">Concerts</a></li>
                     <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
@@ -555,6 +568,46 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/animation.js"></script>
     <script src="../js//insight.js"></script>
+    <script>
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        document.getElementById('mailingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = e.target;
+            let valid = true;
+
+            const emailInput = form.elements.email;
+            const errorSpan = emailInput.parentElement.querySelector('.error-message');
+            const email = emailInput.value.trim();
+
+            // Reset error
+            errorSpan.textContent = '';
+            errorSpan.style.display = 'none';
+
+            if (!email) {
+                errorSpan.textContent = 'Email is required.';
+                errorSpan.style.display = 'block';
+                valid = false;
+            } else if (!isValidEmail(email)) {
+                errorSpan.textContent = 'Please enter a valid email address.';
+                errorSpan.style.display = 'block';
+                valid = false;
+            }
+
+            if (valid) {
+                const selectedInterests = Array.from(form.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
+
+                const data = {
+                    email,
+                    interests: selectedInterests
+                };
+
+                console.log(data); // You can replace this with an API call later
+            }
+        });
+    </script>
 </body>
 
 </html>
