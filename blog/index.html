@@ -960,38 +960,6 @@
       ">
     <img id="imgLightboxImg" src="" />
   </div>
-  <style>
-    #imgLightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      align-items: center;
-      justify-content: center;
-    }
-
-    #imgLightbox.active {
-      display: flex;
-    }
-
-    #imgLightbox img {
-      max-width: 60vw;
-      max-height: 70vh;
-      box-shadow: 0 0 40px #000;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 600px) {
-      #imgLightbox img {
-        max-width: 90vw;
-        max-height: 80vh;
-      }
-    }
-  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll("main img").forEach(function (img) {

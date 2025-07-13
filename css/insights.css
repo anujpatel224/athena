@@ -4557,7 +4557,7 @@ th {
   list-style-type: disc;
 }
 
-.privacy-policy-container a{
+.privacy-policy-container a {
   font-weight: 500;
 }
 
@@ -4568,7 +4568,7 @@ th {
 @media (max-width: 768px) {
   .privacy-policy-container h2 {
     font-size: 20px;
-    line-height:30px;
+    line-height: 30px;
   }
 
   .privacy-policy-container p,
@@ -4579,5 +4579,36 @@ th {
 
   .privacy-policy-container ul {
     margin-left: 4rem;
+  }
+}
+
+#imgLightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+#imgLightbox.active {
+  display: flex;
+}
+
+#imgLightbox img {
+  max-width: 60vw;
+  max-height: 70vh;
+  box-shadow: 0 0 40px #000;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  #imgLightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
   }
 }

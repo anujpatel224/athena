@@ -16,6 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("main img.img-popup").forEach(function (img) {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", function () {
+      document.getElementById("imgLightboxImg").src = img.src;
+      document.getElementById("imgLightbox").classList.add("active");
+    });
+  });
+  document.getElementById("imgLightbox").addEventListener("click", function () {
+    this.classList.remove("active");
+    document.getElementById("imgLightboxImg").src = "";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const aboutUsNavItem = document.getElementById("about-us-dropdown");
   const aboutdropdownMenu = document.getElementById(
     "aboutusdropdown-menu-mobile"
