@@ -492,10 +492,12 @@
         const successMessage = document.getElementById('successMessage');
 
         // Open modal
-        applyButton.addEventListener('click', () => {
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            emailInput.focus(); // Focus on email input
+        document.querySelectorAll('.apply-button').forEach(function (applyButton) {
+            applyButton.addEventListener('click', () => {
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                emailInput.focus();
+            });
         });
 
         // Close modal function

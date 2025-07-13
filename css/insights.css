@@ -4199,7 +4199,6 @@ th {
   flex: 1;
   height: 6px;
   background: #888;
-  border-radius: 3px;
   position: relative;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
