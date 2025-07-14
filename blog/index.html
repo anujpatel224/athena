@@ -1,953 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Athena Leicester</title>
+    <meta
+      name="description"
+      content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location."
+    />
+    <meta property="og:title" content="Shows| Athena Leicester" />
+    <meta
+      property="og:description"
+      content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location."
+    />
+    <meta property="og:url" content="" />
+    <link rel="canonical" href="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Athena Leicester" />
+    <meta
+      property="og:image"
+      content="https://www.athenacb.co.uk/images/social_branding.png"
+    />
+    <meta
+      name="thumbnail"
+      content="https://www.athenacb.co.uk/images/social_branding.png"
+    />
+    <meta name="theme-color" content="#141414" />
+    <link rel="icon" href="../favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/insights.css" media="screen" />
+    <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
+    <style>
+      .container {
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 60px;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Athena Leicester</title>
-  <meta name="description"
-    content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location." />
-  <meta property="og:title" content="Shows| Athena Leicester" />
-  <meta property="og:description"
-    content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location." />
-  <meta property="og:url" content="" />
-  <link rel="canonical" href="" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Athena Leicester" />
-  <meta property="og:image" content="https://www.athenacb.co.uk/images/social_branding.png" />
-  <meta name="thumbnail" content="https://www.athenacb.co.uk/images/social_branding.png" />
-  <meta name="theme-color" content="#141414" />
-  <link rel="icon" href="../favicon.svg" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
-    rel="stylesheet" />
-  <!-- styles -->
-  <link rel="stylesheet" href="../css/insights.css" media="screen" />
-  <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
-  <style>
-    .container {
-      max-width: 1400px;
-      margin: auto;
-      margin-top: 60px;
-    }
+      .title {
+        color: #444;
+        text-align: center;
+        font-family: Archivo;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+      }
 
-    .title {
-      color: #444;
-      text-align: center;
-      font-family: Archivo;
-      font-size: 42px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: normal;
-      text-transform: uppercase;
-    }
-
-    .blog-section {
-      display: flex;
-      gap: 40px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-
-    .main-article {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .main-article h1 {
-      color: #000;
-      font-family: Archivo;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 136%;
-      margin-top: 20px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-
-    .blog-section a :hover {
-      color: #ff3d00;
-    }
-
-    .main-article img {
-      width: 635px;
-      height: 400px;
-      border-radius: 8px;
-    }
-
-    .side-articles {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .article {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      flex: 1 0 0;
-      align-self: stretch;
-    }
-
-    .article img {
-      width: 304px;
-      height: 172px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .article h3 {
-      font-size: 20px;
-      margin: 0 0 5px 0;
-      line-height: 140%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-
-    .article p {
-      overflow: hidden;
-      color: #666;
-      text-overflow: ellipsis;
-      font-family: Archivo;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 136%;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-
-    .article .text {
-      overflow: hidden;
-      color: #222;
-      text-overflow: ellipsis;
-      font-family: Archivo;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      position: relative;
-      bottom: 14px;
-      line-height: 136%;
-      width: 90%;
-    }
-
-    .blog_img {
-      height: 172px;
-      width: 360px;
-    }
-
-    .badge.christmas {
-      background-color: #ffe7e7;
-      color: #ff3d00;
-    }
-
-    .badge.events {
-      background-color: #e7f5ff;
-      color: #2196f3;
-    }
-
-    .section-title {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
-
-    .grid {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-    }
-
-    .large-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      width: 810px;
-    }
-
-    .large-card img {
-      width: 100%;
-      height: 400px;
-      display: block;
-    }
-
-    .large-card .overlay {
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-      color: white;
-      padding: 20px;
-      width: 100%;
-    }
-
-    .large-card h2 {
-      overflow: hidden;
-      color: #fff;
-      text-overflow: ellipsis;
-      font-family: Archivo;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 136%;
-    }
-
-    .small-card {
-      display: flex;
-      flex-direction: column;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-      width: 33%;
-    }
-
-    .small-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-      border-radius: 15px;
-    }
-
-    .small-card .text {
-      padding: 15px;
-    }
-
-    .small-card h3 {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .small-card p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: #fce7e7;
-      color: #e53935;
-      padding: 3px 10px;
-      font-size: 12px;
-      border-radius: 20px;
-      margin-top: 6px;
-    }
-
-    .badge.dinner {
-      background-color: #e7f5ff;
-      color: #1e88e5;
-    }
-
-    .c_grid {
-      display: flex;
-      justify-content: space-around;
-      gap: 30px;
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 962px) {
       .blog-section {
+        display: flex;
+        gap: 40px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .main-article {
+        flex: 1;
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: flex-start;
+      }
+
+      .main-article h1 {
+        color: #000;
+        font-family: Archivo;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 136%;
+        margin-top: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .blog-section a :hover {
+        color: #ff3d00;
+      }
+
+      .large-card a :hover {
+        color: #ff3d00;
+      }
+      .small-card a :hover {
+        color: #ff3d00;
       }
 
       .main-article img {
-        width: 100%;
-        height: auto;
+        width: 635px;
+        height: 400px;
+        border-radius: 8px;
       }
 
-      .main-article h1 {
-        font-size: 28px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 26px;
-      }
-
-      .article {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        margin-top: 20px;
-      }
-
-      .article img {
-        width: 100%;
-        height: 193px;
-      }
-
-      .article {
-        gap: 0px;
-      }
-
-      .article h3 {
-        font-size: 18px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .article p {
-        font-size: 13px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .article .text {
-        font-size: 18px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-      }
-
-      .grid {
+      .side-articles {
+        flex: 1;
+        display: flex;
         flex-direction: column;
         gap: 20px;
       }
 
-      .large-card {
-        width: 100%;
-      }
-
-      .small-card {
-        width: 100%;
-      }
-
-      .c_grid {
-        flex-direction: column;
+      .article {
+        display: flex;
         align-items: center;
+        gap: 30px;
+        flex: 1 0 0;
+        align-self: stretch;
       }
 
-      .blog_img {
-        height: 216px;
-        width: 395px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .title {
-        font-size: 28px;
+      .article img {
+        width: 304px;
+        height: 172px;
+        object-fit: cover;
+        border-radius: 8px;
       }
 
-      .main-article h1 {
-        font-size: 24px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
+      .article h3 {
+        font-size: 20px;
+        margin: 0 0 5px 0;
+        line-height: 140%;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
-
-      .large-card img {
-        height: 250px;
-      }
-
-      .large-card h2 {
-        font-size: 16px;
-        -webkit-line-clamp: 2;
         display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .article h3,
-      .article .text {
-        font-size: 16px;
         -webkit-line-clamp: 2;
-        display: -webkit-box;
         -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-top: 13px;
       }
 
       .article p {
-        font-size: 12px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
         overflow: hidden;
+        color: #666;
         text-overflow: ellipsis;
-      }
-
-      .small-card h3 {
+        font-family: Archivo;
         font-size: 14px;
-        -webkit-line-clamp: 2;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 136%;
         display: -webkit-box;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
-      .small-card p {
-        font-size: 12px;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
+      .article .text {
         overflow: hidden;
+        color: #222;
         text-overflow: ellipsis;
+        font-family: Archivo;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        position: relative;
+        bottom: 14px;
+        line-height: 136%;
+        width: 90%;
       }
 
-      .badge {
-        font-size: 10px;
-        padding: 2px 8px;
+      .blog_img {
+        height: 172px;
+        width: 360px;
+      }
+
+      .badge.christmas {
+        background-color: #ffe7e7;
+        color: #ff3d00;
+      }
+
+      .badge.events {
+        background-color: #e7f5ff;
+        color: #2196f3;
       }
 
       .section-title {
-        font-size: 24px;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
       }
-    }
-  </style>
-</head>
 
-<body data-barba="wrapper">
-  <!-- main loader -->
-  <div class="page-transition">
-    <div class="transition-overlay"></div>
-    <div class="transition-overlay"></div>
-    <div class="logo-sec">
-      <div class="name">
-        <img src="../images/logo-icon.svg" alt="athena - Logo" />
+      .grid {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+      }
+
+      .large-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        width: 810px;
+      }
+
+      .large-card img {
+        width: 100%;
+        height: 400px;
+        display: block;
+      }
+
+      .large-card .overlay {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        color: white;
+        padding: 20px;
+        width: 100%;
+      }
+
+      .large-card h2 {
+        overflow: hidden;
+        color: #fff;
+        text-overflow: ellipsis;
+        font-family: Archivo;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 136%;
+      }
+
+      .small-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        width: 33%;
+      }
+
+      .small-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 15px;
+      }
+
+      .small-card .text {
+        padding: 15px;
+      }
+
+      .small-card h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .small-card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .badge {
+        display: inline-block;
+        background-color: #fce7e7;
+        color: #e53935;
+        padding: 3px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        margin-top: 6px;
+      }
+
+      .badge.dinner {
+        background-color: #e7f5ff;
+        color: #1e88e5;
+      }
+
+      .c_grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 962px) {
+        .blog-section {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .main-article img {
+          width: 100%;
+          height: auto;
+        }
+
+        .main-article h1 {
+          font-size: 28px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 26px;
+        }
+
+        .article {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          margin-top: 20px;
+        }
+
+        .article img {
+          width: 100%;
+          height: 193px;
+        }
+
+        .article {
+          gap: 0px;
+        }
+
+        .article h3 {
+          font-size: 18px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .article p {
+          font-size: 13px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .article .text {
+          font-size: 18px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+
+        .grid {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .large-card {
+          width: 100%;
+        }
+
+        .small-card {
+          width: 100%;
+        }
+
+        .c_grid {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .blog_img {
+          height: 216px;
+          width: 395px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .title {
+          font-size: 28px;
+        }
+
+        .main-article h1 {
+          font-size: 24px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .large-card img {
+          height: 250px;
+        }
+
+        .large-card h2 {
+          font-size: 16px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .article h3,
+        .article .text {
+          font-size: 16px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-top: 13px;
+        }
+
+        .article p {
+          font-size: 12px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .small-card h3 {
+          font-size: 14px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .small-card p {
+          font-size: 12px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .badge {
+          font-size: 10px;
+          padding: 2px 8px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body data-barba="wrapper">
+    <!-- main loader -->
+    <div class="page-transition">
+      <div class="transition-overlay"></div>
+      <div class="transition-overlay"></div>
+      <div class="logo-sec">
+        <div class="name">
+          <img src="../images/logo-icon.svg" alt="athena - Logo" />
+        </div>
       </div>
     </div>
-  </div>
-  <div data-barba="container" data-barba-namespace="dinners" class="body-start">
-    <!-- mobile navbar -->
-    <div id="navigation" data-lenis-prevent>
-      <div class="row">
-        <div class="col">
-          <div class="navigation-inner">
-            <nav>
-              <ul>
-                <li class="nav-item start dropdown">
-                  <a href="#" data-anchor-target="no-barba" title="what we do" class="home no-barba">
-                    <span class="name"> What We Do </span>
+    <div
+      data-barba="container"
+      data-barba-namespace="dinners"
+      class="body-start"
+    >
+      <!-- mobile navbar -->
+      <div id="navigation" data-lenis-prevent>
+        <div class="row">
+          <div class="col">
+            <div class="navigation-inner">
+              <nav>
+                <ul>
+                  <li class="nav-item start dropdown">
+                    <a
+                      href="#"
+                      data-anchor-target="no-barba"
+                      title="what we do"
+                      class="home no-barba"
+                    >
+                      <span class="name"> What We Do </span>
+                    </a>
+                    <ul class="dropdown-menu-mobile">
+                      <li>
+                        <a href="dinners.html" class="no-barba">Dinners</a>
+                      </li>
+                      <li>
+                        <a href="conferences.html" class="no-barba"
+                          >Conferences</a
+                        >
+                      </li>
+                      <li>
+                        <a href="weddings.html" class="no-barba">Weddings</a>
+                      </li>
+                      <li>
+                        <a href="exhibitions&festivals.html" class="no-barba"
+                          >Exhibitions & Festivals</a
+                        >
+                      </li>
+                      <li>
+                        <a href="concerts.html" class="no-barba">Concerts</a>
+                      </li>
+                      <li><a href="shows.html" class="no-barba">Shows</a></li>
+                      <li>
+                        <a href="sportingevents.html" class="no-barba"
+                          >Sporting Events</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../roomlayout.html"
+                      data-anchor-target="no-barba"
+                      data-toggle-nav
+                      title="Room Layouts"
+                      class="no-barba"
+                    >
+                      <span class="name"> Room Layouts </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../events.html"
+                      data-anchor-target="#liveEvents"
+                      data-toggle-nav
+                      title="Live Events"
+                      class="no-barba"
+                    >
+                      <span class="name"> Live Events </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/blog/index.html" title="News" class="no-barba">
+                      <span class="name">
+                        <span class="name"> News </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" title="Work With Us" class="no-barba">
+                      <span class="name">
+                        <span class="name"> Work With Us </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown" id="about-us-dropdown">
+                    <a
+                      href="#"
+                      data-anchor-target="no-barba"
+                      title="about us"
+                      class="home no-barba"
+                    >
+                      <span class="name"> About Us </span>
+                    </a>
+                    <ul
+                      class="dropdown-menu-mobile"
+                      id="aboutusdropdown-menu-mobile"
+                    >
+                      <li>
+                        <a href="../about-us/heritage.html" class="no-barba"
+                          >Heritage</a
+                        >
+                      </li>
+                      <li>
+                        <a href="../about-us/testimonials.html" class="no-barba"
+                          >Testimonials</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ExploreNow">
+                    <a
+                      href="../index.html#EnquireNow"
+                      data-anchor-target="#EnquireNow"
+                      data-toggle-nav
+                      title="Enquire Now"
+                      class="ExploreNow"
+                    >
+                      <span class="name"> Enquire Now </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="navi-gradients-wrapper">
+          <div class="gradient-ct blue">
+            <div class="gradient-circle blue"></div>
+          </div>
+          <div class="gradient-ct pink">
+            <div class="gradient-circle pink"></div>
+          </div>
+        </div>
+      </div>
+      <!-- dekstop navbar -->
+      <div class="quickbar">
+        <div class="quickbar-inner">
+          <div>
+            <a
+              href="../index.html"
+              data-anchor-target="index.html"
+              title="home logo"
+              class="whole-logo no-barba"
+            >
+              <div class="branding">
+                <img src="../images/logo-icon.svg" alt="athena - Logo" />
+              </div>
+              <p class="header_marquee">Blog</p>
+            </a>
+          </div>
+          <div>
+            <div class="menu">
+              <ul class="desktop-nav">
+                <li class="dropdown">
+                  <a href="#" data-anchor-target="no-barba">
+                    <span class="name">
+                      <span class="first"> What We Do </span>
+                      <span class="second"> What We Do </span>
+                    </span>
                   </a>
-                  <ul class="dropdown-menu-mobile">
+                  <ul class="dropdown-menu">
                     <li>
-                      <a href="dinners.html" class="no-barba">Dinners</a>
+                      <a href="dinners.html" class="no-barba"
+                        >Awards & Dinners</a
+                      >
                     </li>
                     <li>
-                      <a href="conferences.html" class="no-barba">Conferences</a>
+                      <a href="conferences.html" class="no-barba"
+                        >Conferences</a
+                      >
                     </li>
                     <li>
                       <a href="weddings.html" class="no-barba">Weddings</a>
                     </li>
                     <li>
-                      <a href="exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
+                      <a href="exhibitions&festivals.html" class="no-barba"
+                        >Exhibitions & Festivals</a
+                      >
                     </li>
                     <li>
                       <a href="concerts.html" class="no-barba">Concerts</a>
                     </li>
                     <li><a href="shows.html" class="no-barba">Shows</a></li>
                     <li>
-                      <a href="sportingevents.html" class="no-barba">Sporting Events</a>
+                      <a href="sportingevents.html" class="no-barba"
+                        >Sporting Events</a
+                      >
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a href="../roomlayout.html" data-anchor-target="no-barba" data-toggle-nav title="Room Layouts"
-                    class="no-barba">
-                    <span class="name"> Room Layouts </span>
+                <li>
+                  <a
+                    href="../roomlayout.html"
+                    title="roomLayout"
+                    data-anchor-target="roomlayout.html"
+                    class="no-barba"
+                  >
+                    <span class="name">
+                      <span class="first"> Room Layouts </span>
+                      <span class="second"> Room Layouts </span>
+                    </span>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="../events.html" data-anchor-target="#liveEvents" data-toggle-nav title="Live Events"
-                    class="no-barba">
-                    <span class="name"> Live Events </span>
+                <li>
+                  <a
+                    href="../events.html"
+                    data-anchor-target="#liveEvents"
+                    title="Live Events"
+                    class="no-barba"
+                  >
+                    <span class="name">
+                      <span class="first"> Live Events </span>
+                      <span class="second"> Live Events </span>
+                    </span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li>
                   <a href="/blog/index.html" title="News" class="no-barba">
                     <span class="name">
-                      <span class="name"> News </span>
+                      <span class="first"> News </span>
+                      <span class="second"> News </span>
                     </span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li>
                   <a href="#" title="Work With Us" class="no-barba">
                     <span class="name">
-                      <span class="name"> Work With Us </span>
+                      <span class="first"> Work With Us </span>
+                      <span class="second"> Work With Us </span>
                     </span>
                   </a>
                 </li>
-                <li class="nav-item dropdown" id="about-us-dropdown">
-                  <a href="#" data-anchor-target="no-barba" title="about us" class="home no-barba">
-                    <span class="name"> About Us </span>
+                <li class="dropdown">
+                  <a href="#" data-anchor-target="no-barba">
+                    <span class="name">
+                      <span class="first"> About Us </span>
+                      <span class="second"> About Us </span>
+                    </span>
                   </a>
-                  <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
+                  <ul class="dropdown-menu">
                     <li>
-                      <a href="../about-us/heritage.html" class="no-barba">Heritage</a>
+                      <a href="../about-us/heritage.html" class="no-barba"
+                        >Heritage</a
+                      >
                     </li>
                     <li>
-                      <a href="../about-us/testimonials.html" class="no-barba">Testimonials</a>
+                      <a href="../about-us/testimonials.html" class="no-barba"
+                        >Testimonials</a
+                      >
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item ExploreNow">
-                  <a href="../index.html#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
-                    title="Enquire Now" class="ExploreNow">
-                    <span class="name"> Enquire Now </span>
+                <li class="ExploreNow">
+                  <a
+                    href="../index.html#EnquireNow"
+                    class="no-barba"
+                    data-anchor-target="#EnquireNow"
+                    title="Enquire Now"
+                  >
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="name-ct">
+                      <span class="name">
+                        <span class="first"> Enquire Now </span>
+                        <span class="second"> Enquire Now </span>
+                      </span>
+                    </div>
                   </a>
                 </li>
               </ul>
-            </nav>
+              <div class="hamburger" data-toggle-nav>
+                <div class="line">
+                  <div class="line-inner"></div>
+                </div>
+                <div class="line">
+                  <div class="line-inner"></div>
+                </div>
+                <div class="line">
+                  <div class="line-inner"></div>
+                </div>
+              </div>
+              <div class="x" data-toggle-nav>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="navi-gradients-wrapper">
-        <div class="gradient-ct blue">
-          <div class="gradient-circle blue"></div>
-        </div>
-        <div class="gradient-ct pink">
-          <div class="gradient-circle pink"></div>
-        </div>
-      </div>
-    </div>
-    <!-- dekstop navbar -->
-    <div class="quickbar">
-      <div class="quickbar-inner">
-        <div>
-          <a href="../index.html" data-anchor-target="index.html" title="home logo" class="whole-logo no-barba">
-            <div class="branding">
-              <img src="../images/logo-icon.svg" alt="athena - Logo" />
-            </div>
-            <p class="header_marquee">Blog</p>
-          </a>
-        </div>
-        <div>
-          <div class="menu">
-            <ul class="desktop-nav">
-              <li class="dropdown">
-                <a href="#" data-anchor-target="no-barba">
-                  <span class="name">
-                    <span class="first"> What We Do </span>
-                    <span class="second"> What We Do </span>
-                  </span>
+      <div class="page-wrap">
+        <main>
+          <div class="container">
+            <h1 class="title">ATHENA BLOG</h1>
+            <div class="blog-section">
+              <div class="main-article">
+                <img src="../images/blog/blog1.png" alt="Main Event" />
+                <a
+                  class="no-barba"
+                  href="/blog/Athena_welcomes_four_hundred.html"
+                >
+                  <h1>Athena Welcomes 750 for the Fitness Awards 2022</h1>
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
-                  <li>
-                    <a href="conferences.html" class="no-barba">Conferences</a>
-                  </li>
-                  <li>
-                    <a href="weddings.html" class="no-barba">Weddings</a>
-                  </li>
-                  <li>
-                    <a href="exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
-                  </li>
-                  <li>
-                    <a href="concerts.html" class="no-barba">Concerts</a>
-                  </li>
-                  <li><a href="shows.html" class="no-barba">Shows</a></li>
-                  <li>
-                    <a href="sportingevents.html" class="no-barba">Sporting Events</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="../roomlayout.html" title="roomLayout" data-anchor-target="roomlayout.html" class="no-barba">
-                  <span class="name">
-                    <span class="first"> Room Layouts </span>
-                    <span class="second"> Room Layouts </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="../events.html" data-anchor-target="#liveEvents" title="Live Events" class="no-barba">
-                  <span class="name">
-                    <span class="first"> Live Events </span>
-                    <span class="second"> Live Events </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/blog/index.html" title="News" class="no-barba">
-                  <span class="name">
-                    <span class="first"> News </span>
-                    <span class="second"> News </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Work With Us" class="no-barba">
-                  <span class="name">
-                    <span class="first"> Work With Us </span>
-                    <span class="second"> Work With Us </span>
-                  </span>
-                </a>
-              </li>
-              <li class="dropdown">
-                <a href="#" data-anchor-target="no-barba">
-                  <span class="name">
-                    <span class="first"> About Us </span>
-                    <span class="second"> About Us </span>
-                  </span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="../about-us/heritage.html" class="no-barba">Heritage</a>
-                  </li>
-                  <li>
-                    <a href="../about-us/testimonials.html" class="no-barba">Testimonials</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="ExploreNow">
-                <a href="../index.html#EnquireNow" class="no-barba" data-anchor-target="#EnquireNow"
-                  title="Enquire Now">
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="name-ct">
-                    <span class="name">
-                      <span class="first"> Enquire Now </span>
-                      <span class="second"> Enquire Now </span>
-                    </span>
+                <p>
+                  It was Awards galore at this year's prestigious fitness
+                  awards!
+                </p>
+                <span class="badge" style="margin-top: 2px">Awards</span>
+              </div>
+              <div class="side-articles">
+                <div class="article">
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/The_Roaring_20s_Meet_The_Jungle.html"
+                    >
+                      <h3>
+                        The Roaring 20s Meet The Jungle; Athena meets Blue
+                        Diamond
+                      </h3>
+                    </a>
+                    <p>
+                      Team Athena brought the 20s to life for 650 of Blue
+                      Diamond's employees.
+                    </p>
+                    <span class="badge">Awards</span>
                   </div>
-                </a>
-              </li>
-            </ul>
-            <div class="hamburger" data-toggle-nav>
-              <div class="line">
-                <div class="line-inner"></div>
-              </div>
-              <div class="line">
-                <div class="line-inner"></div>
-              </div>
-              <div class="line">
-                <div class="line-inner"></div>
+                  <img src="../images/blog/blog2.png" alt="Event 1" />
+                </div>
+                <div class="article">
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Christmas_Kicks_off_at_Athena_with_a_Festive_&_Fabulous_Build_Week.html"
+                    >
+                      <h3>
+                        Christmas Kicks off at Athena with a Festive & Fabulous
+                        Build Week
+                      </h3>
+                    </a>
+                    <p>
+                      This week, we deck our halls as the festive season fast
+                      approaches.
+                    </p>
+                    <span class="badge christmas">Christmas</span>
+                  </div>
+                  <img src="../images/blog/blog3.jpg" alt="Event 2" />
+                </div>
+                <div class="article">
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/The_Athena_Events_Team_Welcome_Land_Registry_for_a_taste_of_Christmas.html"
+                    >
+                      <h3>
+                        The Athena Events Team Welcome Land Registry for a taste
+                        of Christmas
+                      </h3>
+                    </a>
+                    <p>
+                      The Land Registry guests were hugely impressed with this
+                      year's theme.
+                    </p>
+                    <span class="badge events">Events</span>
+                  </div>
+                  <img src="../images/blog/blog4.jpg" alt="Event 3" />
+                </div>
               </div>
             </div>
-            <div class="x" data-toggle-nav>
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="circle"></div>
+
+            <div>
+              <h1 class="section-title">AWARDS & DINNERS</h1>
+              <div class="grid">
+                <!-- Top two large cards -->
+                <div class="large-card">
+                  <img src="../images/blog/blog5.jpg" alt="Event 1" />
+                  <div class="overlay">
+                    <span class="badge">Awards</span>
+                    <a
+                      class="no-barba"
+                      href="/blog/Constructing_Excellence_Awards_2022.html"
+                    >
+                      <h2>Constructing Excellence Awards 2022</h2>
+                    </a>
+                  </div>
+                </div>
+                <div class="large-card">
+                  <img src="../images/blog/blog6.jpg" alt="Event 2" />
+                  <div class="overlay">
+                    <span class="badge">Dinner</span>
+                    <a
+                      class="no-barba"
+                      href="/blog/AU_Ball_Returns_Once_Again.html"
+                    >
+                      <h2>AU Ball Returns Once Again</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="c_grid">
+                <!-- Smaller cards below -->
+                <div class="small-card">
+                  <img src="../images/blog/blog7.png" alt="Event 3" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Athena_hosts_their_75th_Bongo’s_Bingo.html"
+                    >
+                      <h3>Athena hosts their 75th Bongo's Bingo</h3>
+                    </a>
+                    <p>What an achievement for Team Athena!</p>
+                    <span class="badge">Awards</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/blog8.jpg" alt="Event 4" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Krispy_Kreme_Goes_Round_The_World_at_Athena_for_2023.html"
+                    >
+                      <h3>
+                        Krispy Kreme Goes 'Round The World' at Athena for 2023
+                      </h3>
+                    </a>
+                    <p>Athena go-nuts for donuts.</p>
+                    <span class="badge dinner">Dinner</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/blog9.png" alt="Event 5" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/The_Building_Community_Awards_Celebrate_5_Years_At_Athena.html"
+                    >
+                      <h3>
+                        The Building Community Awards Celebrate 5 Years At
+                        Athena
+                      </h3>
+                    </a>
+                    <p>A night of celebration for everyone involved.</p>
+                    <span class="badge">Awards</span>
+                  </div>
+                </div>
+              </div>
+              <div class="c_grid">
+                <!-- Second row of small cards -->
+                <div class="small-card">
+                  <img src="../images/blog/davidsons.jpg" alt="Event 6" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Davidsons_Homes_Return_for_4th_Visit_to_Athena.html"
+                    >
+                      <h3>Davidsons Homes Return for 4th Visit to Athena</h3>
+                    </a>
+                    <p>
+                      Back again for 2023, Athena is delighted to welcome
+                      Davidsons Homes back to our venue.
+                    </p>
+                    <span class="badge">Awards</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/candlelight.png" alt="Event 7" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Athena_Lit_By_Candlelight_For_Hanz_Zimmer_and_Vivaldi.html"
+                    >
+                      <h3>
+                        Athena Lit By Candlelight For Hanz Zimmer and Vivaldi
+                      </h3>
+                    </a>
+                    <p>How many candles?</p>
+                    <span class="badge dinner">Dinner</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/vet-ball.jpg" alt="Event 8" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Athena_Kicks_off_2023_in_Paris_for_the_Vet_Ball.html"
+                    >
+                      <h3>Athena Kicks off 2023 in Paris for the Vet Ball</h3>
+                    </a>
+                    <p>
+                      This Moulin Rouge themed evening brought a taste of France
+                      to Leicester's cultural quarter!
+                    </p>
+                    <span class="badge dinner">Dinner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h1 class="section-title">EVENTS & FESTIVALS</h1>
+              <div class="grid">
+                <!-- Top two large cards -->
+                <div class="large-card">
+                  <img src="../images/blog/happy-new-year.png" alt="Event 1" />
+                  <div class="overlay">
+                    <span class="badge">Events</span>
+                    <a class="no-barba" href="/blog/Happy_New_Year.html">
+                      <h2>Happy New Year</h2>
+                    </a>
+                  </div>
+                </div>
+                <div class="large-card">
+                  <img src="../images/blog/blog2.png" alt="Event 2" />
+                  <div class="overlay">
+                    <span class="badge">Festivals</span>
+                    <a
+                      class="no-barba"
+                      href="/blog/Tis_Officially_The_Season.html"
+                    >
+                      <h2>Tis Officially The Season</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="c_grid">
+                <!-- Smaller cards below -->
+                <div class="small-card">
+                  <img
+                    src="../images/blog/dentistry-awards.jpg"
+                    alt="Event 3"
+                  />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/The_Dentistry_Awards_Come_Back_to_Athena.html"
+                    >
+                      <h3>The Dentistry Awards Come Back to Athena</h3>
+                    </a>
+                    <p>
+                      Athena is honoured to once again be a part of The
+                      Dentistry Awards and its rich history.
+                    </p>
+                    <span class="badge">Events</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/club-mirror.png" alt="Event 4" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Athena_welcomes_four_hundred_guests_to_this_year’s_Club_Mirror_Awards..html"
+                    >
+                      <h3>
+                        Athena welcomes four hundred guests to this year’s Club
+                        Mirror Awards
+                      </h3>
+                    </a>
+                    <p>
+                      Athena welcomes four hundred guests to this year’s Club
+                      Mirror Awards.
+                    </p>
+                    <span class="badge">Events</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/blog10.jpg" alt="Event 5" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Niche_Business_Awards_take_Athena_‘Back_to_the_Future’.html"
+                    >
+                      <h3>
+                        Niche Business Awards take Athena 'Back to the Future'
+                      </h3>
+                    </a>
+                    <p>
+                      A night of celebrations for businesses across Leicester.
+                    </p>
+                    <span class="badge">Events</span>
+                  </div>
+                </div>
+              </div>
+              <div class="c_grid">
+                <!-- Second row of small cards -->
+                <div class="small-card">
+                  <img
+                    src="../images/blog/leicester-ballroom.jpg"
+                    alt="Event 6"
+                  />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Leicester_Ballroom_Glitz.html"
+                    >
+                      <h3>Leicester Ballroom Glitz</h3>
+                    </a>
+                    <p>
+                      It was 10's across the board for competitors in the
+                      Leicester Ballroom Glitz charity evening.
+                    </p>
+                    <span class="badge">Festivals</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/fashion.jpg" alt="Event 7" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Fashion_Revival_Comes_to_Athena.html"
+                    >
+                      <h3>Fashion Revival Comes to Athena</h3>
+                    </a>
+                    <p>
+                      Fashion Enter and Mode Collective joined forces to
+                      showcase Leicester's expansive fashion industry at Athena.
+                    </p>
+                    <span class="badge">Events</span>
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="../images/blog/jubilee.jpg" alt="Event 8" />
+                  <div class="text">
+                    <a
+                      class="no-barba"
+                      href="/blog/Jubilee_Weekend_at_Athena.html"
+                    >
+                      <h3>Jubilee Weekend at Athena</h3>
+                    </a>
+                    <p>
+                      It was a busy Jubilee Weekend for team Athena, with 4
+                      different events and over 3000 guests through the doors.
+                    </p>
+                    <span class="badge">Festivals</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </main>
+      </div>
+      <!-- footer -->
+      <div class="footer-container">
+        <!-- Logo and Contact Info -->
+        <div class="footer-section">
+          <a href="../index.html" class="no-barba">
+            <img
+              src="../images/footer/logo.svg"
+              alt="Logo"
+              style="width: 100px; height: auto; margin-bottom: 1rem"
+              class="footer-logo"
+            />
+          </a>
+          <div class="social-icons">
+            <a href="https://twitter.com/AthenaLeicester"
+              ><img src="../images/footer/x.svg" alt="X" class="social-icon"
+            /></a>
+            <a href="https://www.facebook.com/AthenaLeicester/"
+              ><img
+                src="../images/footer/facebook.svg"
+                alt="Facebook"
+                class="social-icon"
+            /></a>
+            <a href="http://www.instagram.com/AthenaLeicester"
+              ><img
+                src="../images/footer/instagram.svg"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="https://www.linkedin.com/company/athenaeventsvenue"
+              ><img
+                src="../images/footer/linkdln.svg"
+                alt="LinkedIn"
+                class="social-icon"
+            /></a>
+            <a href="http://www.youtube.com/user/athenaleicester"
+              ><img
+                src="../images/footer/youtube.svg"
+                alt="YouTube"
+                class="social-icon"
+            /></a>
+            <a
+              href="https://www.tiktok.com/@athenaleicester?_t=ZN-8vRxWgE2ixC&_r=1"
+              ><img
+                src="../images/footer/tiktok.svg"
+                alt="YouTube"
+                class="social-icon"
+            /></a>
+          </div>
+          <div class="contact-info">
+            <p>
+              <span class="footer-contact-span">0116 262 6556</span
+              >contact@athenacb.co.uk
+            </p>
+            <p>Queen Street Leicester, LE1 1QD</p>
+          </div>
+        </div>
+
+        <!-- Athena Links -->
+        <div class="footer-section">
+          <h3>Athena</h3>
+          <ul>
+            <li>
+              <a href="../about-us/heritage.html" class="no-barba">Heritage</a>
+            </li>
+            <li>
+              <a href="../about-us/testimonials.html" class="no-barba"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a href="../roomlayout.html" class="no-barba">Room Layouts</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Venue Hire Links -->
+        <div class="footer-section" id="lastFooterSection">
+          <h3>Venue Hire</h3>
+          <ul class="grid-list">
+            <li>
+              <a href="dinners.html" class="no-barba">Awards & Dinners</a>
+            </li>
+            <li><a href="concerts.html" class="no-barba">Concerts</a></li>
+            <li>
+              <a href="sportingevents.html" class="no-barba">Sporting Events</a>
+            </li>
+            <li><a href="conferences.html" class="no-barba">Conferences</a></li>
+            <li><a href="shows.html" class="no-barba">Shows</a></li>
+            <li>
+              <a href="exhibitions&festivals.html" class="no-barba"
+                >Exhibitions & Festivals</a
+              >
+            </li>
+            <li><a href="weddings.html" class="no-barba">Weddings</a></li>
+            <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
+            <li>
+              <a href="./dinners/balls-proms.html" class="no-barba"
+                >Balls and proms</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="page-wrap">
-      <main>
-        <div class="container">
-          <h1 class="title">ATHENA BLOG</h1>
-          <div class="blog-section">
-            <div class="main-article">
-              <img src="../images/blog/blog1.png" alt="Main Event" />
-              <a class="no-barba" href="/blog/Athena_welcomes_four_hundred.html">
-                <h1>Athena Welcomes 750 for the Fitness Awards 2022</h1>
-              </a>
-              <p>It was Awards galore at this year's prestigious fitness awards!</p>
-              <span class="badge" style="margin-top: 2px">Awards</span>
-            </div>
-            <div class="side-articles">
-              <div class="article">
-                <div class="text">
-                  <a class="no-barba" href="/blog/The_Roaring_20s_Meet_The_Jungle.html">
-                  <h3>The Roaring 20s Meet The Jungle; Athena meets Blue Diamond</h3>
-                  </a>
-                  <p>Team Athena brought the 20s to life for 650 of Blue Diamond's employees.</p>
-                  <span class="badge">Awards</span>
-                </div>
-                <img src="../images/blog/blog2.png" alt="Event 1" />
-              </div>
-              <div class="article">
-                <div class="text">
-                  <a class="no-barba" href="/blog/Christmas_Kicks_off_at_Athena_with_a_Festive_&_Fabulous_Build_Week.html">
-                  <h3>Christmas Kicks off at Athena with a Festive & Fabulous Build Week</h3>
-                  </a>
-                  <p>This week, we deck our halls as the festive season fast approaches.</p>
-                  <span class="badge christmas">Christmas</span>
-                </div>
-                <img src="../images/blog/blog3.jpg" alt="Event 2" />
-              </div>
-              <div class="article">
-                <div class="text">
-                  <a class="no-barba" href="/blog/The_Athena_Events_Team_Welcome_Land_Registry_for_a_taste_of_Christmas.html">
-                  <h3>The Athena Events Team Welcome Land Registry for a taste of Christmas</h3>
-                  </a>
-                  <p>The Land Registry guests were hugely impressed with this year's theme.</p>
-                  <span class="badge events">Events</span>
-                </div>
-                <img src="../images/blog/blog4.jpg" alt="Event 3" />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h1 class="section-title">AWARDS & DINNERS</h1>
-            <div class="grid">
-              <!-- Top two large cards -->
-              <div class="large-card">
-                <img src="../images/blog/blog2.png" alt="Event 1" />
-                <div class="overlay">
-                  <span class="badge">Awards</span>
-                  <h2>Constructing Excellence Awards 2022</h2>
-                </div>
-              </div>
-              <div class="large-card">
-                <img src="../images/blog/blog2.png" alt="Event 2" />
-                <div class="overlay">
-                  <span class="badge">Dinner</span>
-                  <h2>AU Ball Returns Once Again</h2>
-                </div>
-              </div>
-            </div>
-            <div class="c_grid">
-              <!-- Smaller cards below -->
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 3" />
-                <div class="text">
-                  <h3>Athena hosts their 75th Bongo's Bingo</h3>
-                  <p>What an achievement for Team Athena!</p>
-                  <span class="badge">Awards</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 4" />
-                <div class="text">
-                  <h3>Krispy Kreme Goes 'Round The World' at Athena for 2023</h3>
-                  <p>Athena go-nuts for donuts.</p>
-                  <span class="badge dinner">Dinner</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 5" />
-                <div class="text">
-                  <h3>The Building Community Awards Celebrate 5 Years At Athena</h3>
-                  <p>A night of celebration for everyone involved.</p>
-                  <span class="badge">Awards</span>
-                </div>
-              </div>
-            </div>
-            <div class="c_grid">
-              <!-- Second row of small cards -->
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 6" />
-                <div class="text">
-                  <h3>Davidsons Homes Return for 4th Visit to Athena</h3>
-                  <p>Back again for 2023, Athena is delighted to welcome Davidsons Homes back to our venue.</p>
-                  <span class="badge">Awards</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 7" />
-                <div class="text">
-                  <h3>Athena Lit By Candlelight For Hanz Zimmer and Vivaldi</h3>
-                  <p>How many candles?</p>
-                  <span class="badge dinner">Dinner</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 8" />
-                <div class="text">
-                  <h3>Athena Kicks off 2023 in Paris for the Vet Ball</h3>
-                  <p>This Moulin Rouge themed evening brought a taste of France to Leicester's cultural quarter!</p>
-                  <span class="badge dinner">Dinner</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h1 class="section-title">EVENTS & FESTIVALS</h1>
-            <div class="grid">
-              <!-- Top two large cards -->
-              <div class="large-card">
-                <img src="../images/blog/blog2.png" alt="Event 1" />
-                <div class="overlay">
-                  <span class="badge">Events</span>
-                  <h2>Global Payments Bring 'The Greatest Show' To Athena</h2>
-                </div>
-              </div>
-              <div class="large-card">
-                <img src="../images/blog/blog2.png" alt="Event 2" />
-                <div class="overlay">
-                  <span class="badge">Festivals</span>
-                  <h2>Miss Great Britain returns to Athena</h2>
-                </div>
-              </div>
-            </div>
-            <div class="c_grid">
-              <!-- Smaller cards below -->
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 3" />
-                <div class="text">
-                  <h3>JD Outdoor Brings their roadshow to Athena</h3>
-                  <p>Three days of JD Outdoor at Athena this October.</p>
-                  <span class="badge">Events</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 4" />
-                <div class="text">
-                  <h3>Athena Makes Turtle Bay History by Being the only Venue Selected Twice in a Row</h3>
-                  <p>Turtle Bay returns in 2022 for a second time!</p>
-                  <span class="badge">Events</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog4.png" alt="Event 5" />
-                <div class="text">
-                  <h3>Niche Business Awards take Athena 'Back to the Future'</h3>
-                  <p>A night of celebrations for businesses across Leicester.</p>
-                  <span class="badge">Events</span>
-                </div>
-              </div>
-            </div>
-            <div class="c_grid">
-              <!-- Second row of small cards -->
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 6" />
-                <div class="text">
-                  <h3>Leicester Ballroom Glitz</h3>
-                  <p>It was 10's across the board for competitors in the Leicester Ballroom Glitz charity evening.</p>
-                  <span class="badge">Festivals</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 7" />
-                <div class="text">
-                  <h3>Fashion Revival Comes to Athena</h3>
-                  <p>Fashion Enter and Mode Collective joined forces to showcase Leicester's expansive fashion industry
-                    at Athena.</p>
-                  <span class="badge">Events</span>
-                </div>
-              </div>
-
-              <div class="small-card">
-                <img src="../images/blog/blog1.png" alt="Event 8" />
-                <div class="text">
-                  <h3>Jubilee Weekend at Athena</h3>
-                  <p>It was a busy Jubilee Weekend for team Athena, with 4 different events and over 3000 guests through
-                    the doors.</p>
-                  <span class="badge">Festivals</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- mobile loader -->
+      <div class="please-rotate" data-lenis-prevent>
+        <div class="branding">
+          <img src="../images/logo-icon.svg" alt="Times Event - Logo" />
         </div>
-      </main>
-    </div>
-    <!-- footer -->
-    <div class="footer-container">
-      <!-- Logo and Contact Info -->
-      <div class="footer-section">
-        <a href="../index.html" class="no-barba">
-          <img src="../images/footer/logo.svg" alt="Logo" style="width: 100px; height: auto; margin-bottom: 1rem"
-            class="footer-logo" />
+      </div>
+      <div class="lp-whatsapp-icon-bar">
+        <a
+          class="no-barba"
+          target="_blank"
+          href="https://web.whatsapp.com/send?phone=+918076865758&amp;text=%F0%9F%91%8B%F0%9F%8F%BB%20Hi%2C%20I%20am%20Interested%20to%20talk.%0A%0A*Page%20URL%3A*%20https%3A%2F%2Fathena-rust.vercel.app%2F"
+        >
+          <img src="../images/footer/whatsapp.webp" width="100" height="100" />
         </a>
-        <div class="social-icons">
-          <a href="https://twitter.com/AthenaLeicester"><img src="../images/footer/x.svg" alt="X"
-              class="social-icon" /></a>
-          <a href="https://www.facebook.com/AthenaLeicester/"><img src="../images/footer/facebook.svg" alt="Facebook"
-              class="social-icon" /></a>
-          <a href="http://www.instagram.com/AthenaLeicester"><img src="../images/footer/instagram.svg" alt="Instagram"
-              class="social-icon" /></a>
-          <a href="https://www.linkedin.com/company/athenaeventsvenue"><img src="../images/footer/linkdln.svg"
-              alt="LinkedIn" class="social-icon" /></a>
-          <a href="http://www.youtube.com/user/athenaleicester"><img src="../images/footer/youtube.svg" alt="YouTube"
-              class="social-icon" /></a>
-          <a href="https://www.tiktok.com/@athenaleicester?_t=ZN-8vRxWgE2ixC&_r=1"><img
-              src="../images/footer/tiktok.svg" alt="YouTube" class="social-icon" /></a>
-        </div>
-        <div class="contact-info">
-          <p>
-            <span class="footer-contact-span">0116 262 6556</span>contact@athenacb.co.uk
-          </p>
-          <p>Queen Street Leicester, LE1 1QD</p>
-        </div>
-      </div>
-
-      <!-- Athena Links -->
-      <div class="footer-section">
-        <h3>Athena</h3>
-        <ul>
-          <li>
-            <a href="../about-us/heritage.html" class="no-barba">Heritage</a>
-          </li>
-          <li>
-            <a href="../about-us/testimonials.html" class="no-barba">Testimonials</a>
-          </li>
-          <li>
-            <a href="../roomlayout.html" class="no-barba">Room Layouts</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Venue Hire Links -->
-      <div class="footer-section" id="lastFooterSection">
-        <h3>Venue Hire</h3>
-        <ul class="grid-list">
-          <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
-          <li><a href="concerts.html" class="no-barba">Concerts</a></li>
-          <li>
-            <a href="sportingevents.html" class="no-barba">Sporting Events</a>
-          </li>
-          <li><a href="conferences.html" class="no-barba">Conferences</a></li>
-          <li><a href="shows.html" class="no-barba">Shows</a></li>
-          <li>
-            <a href="exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a>
-          </li>
-          <li><a href="weddings.html" class="no-barba">Weddings</a></li>
-          <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
-          <li>
-            <a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a>
-          </li>
-        </ul>
       </div>
     </div>
-    <!-- mobile loader -->
-    <div class="please-rotate" data-lenis-prevent>
-      <div class="branding">
-        <img src="../images/logo-icon.svg" alt="Times Event - Logo" />
-      </div>
-    </div>
-    <div class="lp-whatsapp-icon-bar">
-      <a class="no-barba" target="_blank"
-        href="https://web.whatsapp.com/send?phone=+918076865758&amp;text=%F0%9F%91%8B%F0%9F%8F%BB%20Hi%2C%20I%20am%20Interested%20to%20talk.%0A%0A*Page%20URL%3A*%20https%3A%2F%2Fathena-rust.vercel.app%2F">
-        <img src="../images/footer/whatsapp.webp" width="100" height="100" />
-      </a>
-    </div>
-  </div>
-  <!-- Lightbox popup for exhibition images -->
-  <div id="imgLightbox" style="
+    <!-- Lightbox popup for exhibition images -->
+    <div
+      id="imgLightbox"
+      style="
         position: fixed;
         z-index: 9999;
         top: 0;
