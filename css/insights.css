@@ -4599,8 +4599,10 @@ th {
 }
 
 #imgLightbox img {
-  max-width: 60vw;
-  max-height: 70vh;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
   box-shadow: 0 0 40px #000;
   border-radius: 10px;
 }
@@ -4609,5 +4611,7 @@ th {
   #imgLightbox img {
     max-width: 90vw;
     max-height: 80vh;
+    width: auto;
+    height: auto;
   }
 }
