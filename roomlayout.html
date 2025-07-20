@@ -459,37 +459,37 @@
                     <div class="grid-container">
                         <div>
                             <div class="layout-image">
-                                <img src="images/theatre.svg" alt="Theatre"  class="img-popup"/>
+                                <img src="images/theatre.svg" alt="Theatre"/>
                             </div>
                             <p class="label">Theatre</p>
                         </div>
                         <div>
                             <div class="layout-image">
-                                <img src="images/classroom.svg" alt="cabaret"  class="img-popup"/>/>
+                                <img src="images/classroom.svg" alt="cabaret" />
                             </div>
                             <p class="label">Classroom</p>
                         </div>
                         <div>
                             <div class="layout-image">
-                                <img src="images/cabaret.svg" alt="banquet"  class="img-popup"/>
+                                <img src="images/cabaret.svg" alt="banquet" />
                             </div>
                             <p class="label">Cabaret</p>
                         </div>
                         <div>
                             <div class="layout-image">
-                                <img src="images/spriggs.svg" style="height: 95% !important;" alt="Theatre"  class="img-popup"/>/>
+                                <img src="images/spriggs.svg" style="height: 95% !important;" alt="Theatre" />
                             </div>
                             <p class="label">Spriggs</p>
                         </div>
                         <div>
                             <div class="layout-image">
-                                <img src="images/banquet.svg" alt="Theatre" class="img-popup"/> />
+                                <img src="images/banquet.svg" alt="Theatre"/>
                             </div>
                             <p class="label">Banquet</p>
                         </div>
                         <div>
                             <div class="layout-image">
-                                <img src="images/banquet-spriggs.svg" alt="Theatre"  class="img-popup"/>/>
+                                <img src="images/banquet-spriggs.svg" alt="Theatre"/>
                             </div>
                             <p class="label">Banquet with Spriggs</p>
                         </div>
@@ -819,22 +819,6 @@
         style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
         <img id="imgLightboxImg" src="" style="background-color: #fff;">
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('img').forEach(function (img) {
-                img.style.cursor = 'pointer';
-                img.addEventListener('click', function () {
-                    console.log(img.src);
-                    document.getElementById('imgLightboxImg').src = img.src;
-                    document.getElementById('imgLightbox').classList.add('active');
-                });
-            });
-            document.getElementById('imgLightbox').addEventListener('click', function () {
-                this.classList.remove('active');
-                document.getElementById('imgLightboxImg').src = '';
-            });
-        });
-    </script>
 </body>
 
 </html>
