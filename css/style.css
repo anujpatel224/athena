@@ -2301,6 +2301,20 @@ main .sec-1 .wenn-ct {
   gap: 6.56rem;
 }
 
+main .sec-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+main .sec-1>* {
+  position: relative;
+  z-index: 2;
+}
+
 @media (min-width: 759px) {
   main .sec-1 .wenn-ct {
     font-size: 2.66rem;
