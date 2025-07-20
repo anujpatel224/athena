@@ -4599,19 +4599,16 @@ th {
 }
 
 #imgLightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
+  max-width: 60vw;
+  max-height: 70vh;
   box-shadow: 0 0 40px #000;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 @media (max-width: 600px) {
   #imgLightbox img {
     max-width: 90vw;
     max-height: 80vh;
-    width: auto;
-    height: auto;
   }
 }
