@@ -3401,8 +3401,8 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct picture {
 main .reviewsSwiperDesktopCt .imgSwiper .img-ct picture img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
   -o-object-position: top;
   object-position: top;
 }
@@ -6941,4 +6941,9 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
     background-size: unset;
     background-position: unset;
     background-repeat: unset;
+}
+
+.cursor-follow{
+  width: 4rem !important;
+  height: 4rem !important;
 }

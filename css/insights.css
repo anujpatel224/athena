@@ -2128,7 +2128,6 @@ footer {
 
 .clients-section h1 {
   font-family: DM Serif Display;
-  font-style: italic;
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
@@ -3571,6 +3570,8 @@ th {
   .list-section li {
     font-size: 4rem;
     width: 100%;
+    font-family: DM sans-serif;
+    font-style: italic;
   }
 
   .list-container {
