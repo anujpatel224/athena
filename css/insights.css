@@ -4613,3 +4613,14 @@ th {
     max-height: 80vh;
   }
 }
+.image-section-row1 img,
+.image-section-row2 img {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.image-section-row1 img:hover,
+.image-section-row2 img:hover {
+  transform: perspective(600px) rotateY(6deg) scale(0.9);
+}
+
