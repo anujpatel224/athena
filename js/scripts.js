@@ -1916,15 +1916,16 @@ $(function(){
       }
 })
 
-const listItems = document.querySelectorAll('.list-section li');
-const clientImage = document.getElementById('client-image');
+// const listItems = document.querySelectorAll('.list-section li');
+// const clientImage = document.getElementById('client-image');
+// listItems.forEach(item => {
+//     item.addEventListener('mouseenter', function() {
+//         const newImage = item.getAttribute('data-image');
+//         clientImage.src = newImage;
+//     });
+// });
 
-listItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        const newImage = item.getAttribute('data-image');
-        clientImage.src = newImage;
-    });
-});
+
 
 // Live Events Section
 document.addEventListener('DOMContentLoaded', function() {
