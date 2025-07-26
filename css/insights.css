@@ -4613,6 +4613,7 @@ th {
     max-height: 80vh;
   }
 }
+
 .image-section-row1 img,
 .image-section-row2 img {
   transition: transform 0.5s ease;
@@ -4624,3 +4625,50 @@ th {
   transform: perspective(600px) rotateY(6deg) scale(0.9);
 }
 
+/* contact us page css */
+.email-form-container .form-container {
+  background-color: #E8E8E8;
+}
+
+.contact-us-container .contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.contactpage-email-form .form-container .form-section {
+  width: 666px;
+  margin: auto;
+}
+
+.contactpage-email-form .form-container .form-section .form-content {
+  background-color: #F6F6F6;
+}
+
+.contact-page-get-in-touch-form {
+  border-radius: 0 0 12px 12px;
+  background: #F4F4F4;
+}
+
+.contact-page-get-in-touch-form .form-title {
+  border-radius: 12px 12px 0 0;
+  background: #E8E8E8;
+  display: flex;
+  padding: 18px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.contact-page-get-in-touch-form .form-content{
+display: flex;
+  padding: 30px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 0 0 12px 12px;
+  background: #F4F4F4; 
+}
