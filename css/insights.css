@@ -4653,6 +4653,7 @@ th {
 }
 
 .contact-page-get-in-touch-form .form-title {
+  font-family: "DM Serif Display";
   border-radius: 12px 12px 0 0;
   background: #E8E8E8;
   display: flex;
@@ -4660,15 +4661,18 @@ th {
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
-.contact-page-get-in-touch-form .form-content{
-display: flex;
+.contact-page-get-in-touch-form .form-content {
+  display: flex;
   padding: 30px 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
   border-radius: 0 0 12px 12px;
-  background: #F4F4F4; 
+  background: #F4F4F4;
 }
