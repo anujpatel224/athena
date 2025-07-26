@@ -26,6 +26,263 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/insights.css" media="screen" />
     <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .page-wrap {
+            width: 100%;
+        }
+
+        .contact-us-container {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            padding: 4rem;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .container-header,
+        .container-form {
+            width: 50%;
+        }
+
+        .contact-title {
+            color: #222;
+            font-family: Archivo, sans-serif;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .contact-subtitle {
+            overflow: hidden;
+            color: #444;
+            text-overflow: ellipsis;
+            font-family: Archivo, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-items: flex-start;
+            align-items: flex-start;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .phone-icon,
+        .email-icon,
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            fill: #e74c3c;
+        }
+
+        .contact-text {
+            color: #e74c3c;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-text:hover {
+            text-decoration: underline;
+        }
+
+        .form-title {
+            border-radius: 12px 12px 0 0;
+            background: #E8E8E8;
+            display: flex;
+            padding: 18px 24px;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+
+        .form-content {
+            display: flex;
+            padding: 30px 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            align-self: stretch;
+            border-radius: 0 0 12px 12px;
+            background: #F4F4F4;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .form-row>div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+            background: white;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .input-field::placeholder {
+            color: #999;
+        }
+
+        textarea.input-field {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+            min-width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+            margin-top: 5px;
+        }
+
+        #form-button-row {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0px;
+        }
+
+        .submit-button {
+            width: 48%;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .form-content {
+            box-shadow: none;
+        }
+
+        #contactForm {
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-us-container {
+                flex-direction: column;
+                padding: 4rem;
+                gap: 2rem;
+            }
+
+            .container-header,
+            .container-form {
+                width: 100%;
+            }
+
+            .contact-title {
+                font-size: 32px;
+            }
+
+            .contact-subtitle {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .form-content {
+                padding: 20px 16px;
+            }
+
+            #form-button-row .submit-button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body data-barba="wrapper">
@@ -101,16 +358,17 @@
                                     <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
                                         <li><a href="./about-us/heritage.html" class="no-barba">Heritage</a></li>
                                         <li><a href="./about-us/testimonials.html" class="no-barba">Testimonials</a>
-                                        </li>
-                                    </ul>
+                                        <li><a href="./contact-us.html" class="no-barba">Contact Us</a></li>
                                 </li>
-                                <li class="nav-item ExploreNow">
-                                    <a href="#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
-                                        title="Enquire Now" class="ExploreNow">
+                            </ul>
+                            </li>
+                            <li class="nav-item ExploreNow">
+                                <a href="#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
+                                    title="Enquire Now" class="ExploreNow">
 
-                                        <span class="name"> Enquire Now </span>
-                                    </a>
-                                </li>
+                                    <span class="name"> Enquire Now </span>
+                                </a>
+                            </li>
                             </ul>
                         </nav>
                     </div>
@@ -202,6 +460,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="./about-us/heritage.html" class="no-barba">Heritage</a></li>
                                     <li><a href="./about-us/testimonials.html" class="no-barba">Testimonials</a></li>
+                                    <li><a href="./contact-us.html" class="no-barba">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="ExploreNow">
@@ -240,8 +499,114 @@
             </div>
         </div>
         <div class="page-wrap">
-            <div class="container">
-                Privacy Policy
+            <div class="contact-us-container">
+                <div class="container-header">
+                    <h1 class="contact-title">Contact Us</h1>
+                    <p class="contact-subtitle">Feel free to use the form or drop us an email.
+                        Old fashioned phone calls work too!</p>
+                    <div class="contact-container">
+                        <a href="tel:01162626556" class="contact-item">
+                            <div class="icon-circle">
+                                <svg class="phone-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <span class="contact-text">0116 262 6556</span>
+                        </a>
+
+                        <a href="mailto:contact@athenacb.co.uk" class="contact-item">
+                            <div class="icon-circle">
+                                <svg class="email-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <span class="contact-text">contact@athenacb.co.uk</span>
+                        </a>
+
+                        <a class="contact-item"
+                            href="https://www.google.com/maps/search/?api=1&query=Athena,+Queen+Street+Leicester,+LE1+1QD"
+                            target="_blank" rel="noopener noreferrer">
+                            <div class="icon-circle">
+                                <svg class="contact-icon" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="contact-text">Athena, Queen Street Leicester, LE1 1QD</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="container-form contact-page-get-in-touch-form">
+                    <div class="form-box">
+                        <h2 class="form-title">Get in touch</h2>
+                        <div class="form-content">
+                            <form id="contactForm" novalidate>
+                                <div class="form-row">
+                                    <div style="flex:1; display:flex; flex-direction:column;">
+                                        <input type="text" placeholder="Full Name*" class="input-field"
+                                            name="fullName" />
+                                        <span class="error-message"
+                                            style="color:red; font-size:0.9em; display:none;"></span>
+                                    </div>
+                                    <div style="flex:1; display:flex; flex-direction:column;">
+                                        <input type="tel" placeholder="Phone*" class="input-field" name="phone" />
+                                        <span class="error-message"
+                                            style="color:red; font-size:0.9em; display:none;"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div style="flex:1; display:flex; flex-direction:column;">
+                                        <input type="email" placeholder="Email*" class="input-field" name="email" />
+                                        <span class="error-message"
+                                            style="color:red; font-size:0.9em; display:none;"></span>
+                                    </div>
+                                    <div style="flex:1; display:flex; flex-direction:column;">
+                                        <input type="date" placeholder="Proposed Date" class="input-field"
+                                            name="proposedDate" id="proposedDate" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div style="width:100%; display:flex; flex-direction:column;">
+                                        <textarea placeholder="Enter your query here" class="input-field" rows="4"
+                                            name="query"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row" id="form-button-row"
+                                    style="display: flex; justify-content: flex-end; margin-bottom:0px">
+                                    <button style="width:48%" type="submit" class="submit-button">SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="email-form-container contactpage-email-form">
+                <div class="form-container">
+                    <div class="form-section">
+                        <div class="form-heading slide-left">
+                            <h2>Keep up to date</h2>
+                            <p>join our mailing list for latest news and events at Athena.</p>
+                        </div>
+                        <div class="form-content slide-right">
+                            <input type="email" placeholder="your email address" class="input-field" />
+                            <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" />
+                                    Corporate Events
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" />
+                                    Events for the Public
+                                </label>
+                            </div>
+                            <button class="submit-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- footer -->
