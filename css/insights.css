@@ -2127,7 +2127,7 @@ footer {
 }
 
 .clients-section h1 {
-  font-family: DM Serif Display;
+  font-family: Archivo;
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
@@ -2154,10 +2154,12 @@ footer {
 }
 
 .list-section li {
+  font-family: DM Serif Display;
   color: #444444;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 3rem;
   width: 45rem;
+  line-height: 155%;
 }
 
 .list-section li {
