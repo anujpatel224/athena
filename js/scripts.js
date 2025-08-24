@@ -10,7 +10,8 @@
 
 const button = document.querySelector(".volume-button");
 const icon = document.querySelector("#button > i");
-const video = document.querySelector('.main-video');
+const video =
+  document.querySelector(".main-video") || document.querySelector(".bg-video");
 
 button.addEventListener("click", () => {
   if (video.muted) {
@@ -30,7 +31,7 @@ let player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtube-video', {
     videoId: 'wTBUTUMIivI', 
-    playerVars: {
+playerVars: {
       'autoplay': 1,
       'controls': 0,
       'rel': 0,

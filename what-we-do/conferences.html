@@ -30,6 +30,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
@@ -68,7 +70,8 @@
                                         <li><a href="concerts.html" class="no-barba">Concerts</a></li>
                                         <li><a href="shows.html" class="no-barba">Shows</a></li>
                                         <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                        <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
+                                        <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -254,12 +257,17 @@
                 <!-- video section -->
                 <div class="bg-ct">
                     <div class="dark-overlay-video">
-                        <video class="bg-video" autoplay loop playsinline data-parallax-strength="5.5"
+                        <video class="bg-video main-video" autoplay muted loop playsinline data-parallax-strength="5.5"
                             data-parallax-height="5">
                             <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Confrences.mp4"
                                 type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                    </div>
+                    <div class="overlay-text">
+                        <button id="button" class="volume-button">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
                     </div>
                 </div>
                 <!-- content section -->
@@ -302,8 +310,8 @@
                     </div>
                     <div class="images-section slide-right">
                         <div class="image-section-row1">
-                            <img src="../images/what-we-do/awards.jpg" alt="Dinners" class="img-popup" />
-                            <img src="../images/what-we-do/confrences.jpg" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/conf1.jpg" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/conf2.jpg" alt="Dinners" class="img-popup" />
                         </div>
                         <div class="image-section-row2">
                             <img src="../images/live-events/confrences/5.webp" alt="Dinners" class="img-popup" />
@@ -376,49 +384,49 @@
                         </div>
                         <div class="button-row">
                             <button>City centre location with easy transport links</button>
-                            <button>120 car parking spaces</button>
+                            <button>On Site Solar Panels</button>
                         </div>
                     </div>
                     <div class="image-marquee-container">
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-left">
-                                <img src="../images/live-events/confrences/1.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/2.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/3.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/4.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/5.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/6.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/7.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/8.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/1.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/2.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/3.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/4.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/5.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/6.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/7.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/8.webp" class="img-popup"/>
+                                <img src="../images/live-events/confrences/1.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/2.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/3.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/4.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/5.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/6.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/7.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/8.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/1.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/2.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/3.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/4.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/5.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/6.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/7.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/8.webp" class="img-popup" />
                             </div>
                         </div>
 
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-right">
-                                <img src="../images/live-events/confrences/9.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/5.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/10.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/11.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/12.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/13.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/14.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/15.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/9.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/5.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/10.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/11.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/12.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/13.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/16.webp" class="img-popup"/>
-                                <img src="../images/live-events/confrences/5.webp" class="img-popup"/>
+                                <img src="../images/live-events/confrences/9.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/5.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/10.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/11.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/12.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/13.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/14.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/15.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/9.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/5.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/10.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/11.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/12.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/13.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/16.webp" class="img-popup" />
+                                <img src="../images/live-events/confrences/5.webp" class="img-popup" />
                             </div>
                         </div>
                     </div>
@@ -539,11 +547,12 @@
                                     making a booking.</div>
                             </div>
                             <div class="faq-item">
-                                <div class="faq-question">Do you have AV on site?
+                                <div class="faq-question">Can we bring our own catering?
                                     <a class='expand-collapse-icon'></a>
                                 </div>
-                                <div class="faq-answer">We have an extensive AV in-house system, including projectors,
-                                    sound systems, and lighting. Contact us for the latest specifications.</div>
+                                <div class="faq-answer">Yes, you are welcome to bring your own catering. Our team will
+                                    be happy to assist with logistics and setup to ensure
+                                    everything runs smoothly.</div>
                             </div>
                             <div class="faq-item highlighted">
                                 <div class="faq-question">Can we bring our own AV?

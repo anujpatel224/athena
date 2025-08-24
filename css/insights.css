@@ -4678,3 +4678,25 @@ th {
   border-radius: 0 0 12px 12px;
   background: #F4F4F4;
 }
+
+.volume-button {
+  font-size: 16px;
+  color: #eee;
+  position: absolute;
+  bottom: 5px;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: rgba(115, 67, 167, 0.8);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.volume-button.fade:hover {
+  opacity: 0.8;
+}
