@@ -23,7 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
@@ -31,25 +31,25 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".list-section li");
-    const clientImage = document.getElementById("client-image");
+        const listItems = document.querySelectorAll(".list-section li");
+        const clientImage = document.getElementById("client-image");
 
-    if (!clientImage) {
-      console.warn("Image with ID 'client-image' not found.");
-      return;
-    }
-
-    listItems.forEach((item) => {
-      item.addEventListener("mouseenter", function () {
-        const newImage = item.getAttribute("data-image");
-        if (newImage) {
-          clientImage.src = newImage;
-        } else {
-          console.warn("No data-image attribute found on:", item);
+        if (!clientImage) {
+            console.warn("Image with ID 'client-image' not found.");
+            return;
         }
-      });
+
+        listItems.forEach((item) => {
+            item.addEventListener("mouseenter", function () {
+                const newImage = item.getAttribute("data-image");
+                if (newImage) {
+                    clientImage.src = newImage;
+                } else {
+                    console.warn("No data-image attribute found on:", item);
+                }
+            });
+        });
     });
-  });
 </script>
 
 <body data-barba="wrapper">
@@ -86,7 +86,8 @@
                                         <li><a href="concerts.html" class="no-barba">Concerts</a></li>
                                         <li><a href="shows.html" class="no-barba">Shows</a></li>
                                         <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                        <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
+                                        <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -125,17 +126,17 @@
                                     <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
                                         <li><a href="../about-us/heritage.html" class="no-barba">Heritage</a></li>
                                         <li><a href="../about-us/testimonials.html" class="no-barba">Testimonials</a>
-                                            <li><a href="../contact-us.html" class="no-barba">Contact Us</a></li>
-                                        </li>
-                                    </ul>
+                                        <li><a href="../contact-us.html" class="no-barba">Contact Us</a></li>
                                 </li>
-                                <li class="nav-item ExploreNow">
-                                    <a href="../index.html#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
-                                        title="Enquire Now" class="ExploreNow">
+                            </ul>
+                            </li>
+                            <li class="nav-item ExploreNow">
+                                <a href="../index.html#EnquireNow" data-anchor-target="#EnquireNow" data-toggle-nav
+                                    title="Enquire Now" class="ExploreNow">
 
-                                        <span class="name"> Enquire Now </span>
-                                    </a>
-                                </li>
+                                    <span class="name"> Enquire Now </span>
+                                </a>
+                            </li>
                             </ul>
                         </nav>
                     </div>
@@ -323,12 +324,12 @@
                     </div>
                     <div class="images-section slide-right">
                         <div class="image-section-row1">
-                            <img src="../images/live-events/live-event1.webp" alt="Dinners" class="img-popup" />
-                            <img src="../images/live-events/live-event7.webp" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/exhibitions/exhi1.jpg" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/exhibitions/exhi2.jpeg" alt="Dinners" class="img-popup" />
                         </div>
                         <div class="image-section-row2">
-                            <img src="../images/live-events/live-event4.webp" alt="Dinners" class="img-popup" />
-                            <img src="../images/live-events/live-event6.webp" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/exhibitions/exhi3.jpeg" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/exhibitions/exhi4.jpg" alt="Dinners" class="img-popup" />
                         </div>
                     </div>
                 </div>
@@ -350,49 +351,81 @@
                         <div class="button-row">
                             <button>100Mb dedicated fibre leased line</button>
                             <button>Outside caterers welcome</button>
-                            <button>120 car parking spaces</button>
+                            <button>On Site Solar Panels</button>
                         </div>
                     </div>
                     <div class="image-marquee-container">
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-left">
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue1.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue2.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue3.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue4.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue5.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue6.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue13.jpg" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue14.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue15.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue16.jpg" class="img-popup"/>
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue1.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue2.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue3.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue4.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue5.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue6.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg"
+                                    class="img-popup" />
+                                <img
+                                    src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue13.jpg" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue14.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue15.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue16.jpg"
+                                    class="img-popup" />
                             </div>
                         </div>
 
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-right">
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue17.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue18.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue19.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue20.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue21.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue22.jpeg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue23.jpeg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue24.jpeg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue25.jpeg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue26.jpeg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg" class="img-popup"/>
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg" class="img-popup"/>
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue17.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue18.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue19.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue20.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue21.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue22.jpeg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue23.jpeg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue24.jpeg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue25.jpeg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue26.jpeg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg"
+                                    class="img-popup" />
+                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg"
+                                    class="img-popup" />
                             </div>
                         </div>
                     </div>
@@ -416,7 +449,8 @@
                         </ul>
                     </div>
                     <div class="list-image-section">
-                        <img id="client-image" class="slide-right" src="../images/what-we-do/gin-fest.jpg" alt="Dinners" />
+                        <img id="client-image" class="slide-right" src="../images/what-we-do/gin-fest.jpg"
+                            alt="Dinners" />
                     </div>
                 </div>
                 <div class="brands-container">
@@ -486,7 +520,75 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- faq-->
+                <div class="faq-section">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <div class="faq-container">
+                        <div class="faq-column">
+                            <div class="faq-item">
+                                <div class="faq-question">Can I provisionally book the venue?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, you can hold a date provisionally while you finalize the
+                                    arrangements. Contact us via phone or email for further details.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can I get WiFi at the venue?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, complimentary high-speed WiFi is available throughout the
+                                    venue.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">What are the dimensions of rooms & are there cloakroom
+                                    facilities available?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">The rooms vary in size to accommodate different events.
+                                    Cloakroom facilities are available for guests.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can we set up the day before the event?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, early setup can be arranged based on availability. Please
+                                    coordinate with our team in advance.</div>
+                            </div>
+                        </div>
+                        <div class="faq-column">
+                            <div class="faq-item">
+                                <div class="faq-question">Can I view Athena?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Absolutely! You can schedule a guided tour of Athena before
+                                    making a booking.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Can we bring our own catering?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, you are welcome to bring your own catering. Our team will
+                                    be happy to
+                                    assist with logistics and setup to ensure
+                                    everything runs smoothly.</div>
+                            </div>
+                            <div class="faq-item highlighted">
+                                <div class="faq-question">Can we bring our own AV?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, you are welcome to bring your own AV equipment. Our team
+                                    can assist with setup if needed.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Do you have on-site catering?
+                                    <a class='expand-collapse-icon'></a>
+                                </div>
+                                <div class="faq-answer">Yes, we offer a variety of catering options, including buffets
+                                    and plated meals.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
         <!-- footer -->
@@ -611,7 +713,7 @@
                     interests: selectedInterests
                 };
 
-                console.log(data); 
+                console.log(data);
             }
         });
     </script>
