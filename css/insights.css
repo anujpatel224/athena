@@ -4715,3 +4715,105 @@ th {
 .volume-button.fade:hover {
   opacity: 0.8;
 }
+
+.hr_box_1 img {
+  max-width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  width: 200px;
+  height: 260px;
+}
+
+.hr_potential {
+  float: left;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.hr_text_box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hr_box_text_open_box {
+  gap: 10px;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hr_hd {
+  width: 100%;
+}
+
+.hr_box_1 {
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  width: 45%;   
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.text_slide_1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  /* flex: 0 0 100%; */
+  opacity: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.text_slide_1.active {
+  opacity: 1;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+/* text animation */
+.text {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(50px);
+}
+
+.zoom-in {
+  transform: scale(0.8);
+}
+
+.in-view {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+/* Mobile responsive styles for hr_box layout */
+@media (max-width: 768px) {
+  .hr_box_1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .hr_box_text_open_box {
+    gap: 15px;
+  }
+  
+  .hr_text_box {
+    flex-direction: column;
+  }
+  
+  .hr_hd {
+    width: 100%;
+  }
+}

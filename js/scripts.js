@@ -1959,3 +1959,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+var lp = lp || {};
+
+lp.tjUrl = "<?= $base_url ?>";
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const { target } = entry;
+        target.style.transitionDelay = target.dataset.delay || "0s";
+        target.style.transitionDuration = target.dataset.duration || "1s";
+        target.classList.add("in-view");
+        observer.unobserve(target);
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+document.querySelectorAll(".text").forEach((el) => observer.observe(el));
+
+document.querySelectorAll(".hr_box_1").forEach((box) => {
+    const slider = box.querySelector(".slider");
+    const slides = slider.querySelectorAll(".text_slide_1");
+    let index = 0;
+
+    function showSlide(i) {
+      slider.style.transform = `translateX(-${i * 100}%)`;
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle("active", idx === i);
+      });
+    }
+
+    showSlide(index);
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+  });
