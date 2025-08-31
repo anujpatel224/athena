@@ -47,7 +47,7 @@
             display: flex;
             width: 100%;
             flex-direction: row;
-            padding: 4rem;
+            padding: 8rem 4rem;
             gap: 2rem;
             justify-content: center;
             align-items: flex-start;
@@ -121,18 +121,26 @@
         .contact-icon {
             width: 24px;
             height: 24px;
-            fill: #e74c3c;
+            fill: #000;
+            transition: fill 0.3s ease;
         }
 
         .contact-text {
-            color: #e74c3c;
+            color: #000;
             font-size: 18px;
             font-weight: 600;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .contact-text:hover {
-            text-decoration: underline;
+        .contact-item:hover .contact-text {
+            color: #e74c3c;
+        }
+
+        .contact-item:hover .phone-icon,
+        .contact-item:hover .email-icon,
+        .contact-item:hover .contact-icon {
+            fill: #e74c3c;
         }
 
         .form-title {
@@ -591,7 +599,7 @@
                     </div>
                 </div>
             </div>
-            <div class="email-form-container contactpage-email-form">
+            <!-- <div class="email-form-container contactpage-email-form">
                 <div class="form-container">
                     <div class="form-section">
                         <div class="form-heading slide-left">
@@ -614,7 +622,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- footer -->
         <div class="footer-container">

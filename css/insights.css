@@ -4299,14 +4299,15 @@ th {
   align-items: center;
   gap: 15px;
   text-decoration: none;
-  color: inherit;
   transition: transform 0.2s ease;
+  color: #000;
 }
 
 .contact-item:hover {
   transform: translateY(-2px);
 }
 
+/* Circle background */
 .icon-circle {
   width: 50px;
   height: 50px;
@@ -4318,26 +4319,40 @@ th {
   flex-shrink: 0;
 }
 
+/* Contact text */
 .contact-text {
   font-size: 18px;
   font-weight: 500;
-  color: #e74c3c;
+  color: #000;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
 /* Phone icon */
 .phone-icon {
   width: 24px;
   height: 24px;
-  fill: #e74c3c;
+  fill: #000;
+  transition: fill 0.3s ease;
 }
 
 /* Email icon */
 .email-icon {
   width: 24px;
   height: 24px;
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.contact-item:hover .contact-text {
+  color: #e74c3c;
+}
+
+.contact-item:hover .phone-icon,
+.contact-item:hover .email-icon {
   fill: #e74c3c;
 }
+
 
 /* Responsive design */
 @media (max-width: 768px) {
