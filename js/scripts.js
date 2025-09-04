@@ -1981,8 +1981,8 @@ const observer = new IntersectionObserver(
   }
 );
 document.querySelectorAll(".text").forEach((el) => observer.observe(el));
-
-document.querySelectorAll(".hr_box_1").forEach((box) => {
+    
+document.querySelectorAll(".hr_box_1").forEach((box, boxIndex) => {
     const slider = box.querySelector(".slider");
     const slides = slider.querySelectorAll(".text_slide_1");
     let index = 0;
@@ -1996,8 +1996,18 @@ document.querySelectorAll(".hr_box_1").forEach((box) => {
 
     showSlide(index);
 
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    }, 5000);
+
+    let groupDelay;
+    if (boxIndex < 2) {
+      groupDelay = 0;
+    } else {
+      groupDelay = 1500;
+    }
+    
+    setTimeout(() => {
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 5000);
+    }, groupDelay);
   });

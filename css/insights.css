@@ -4782,8 +4782,8 @@ th {
 
 /* text animation */
 .text {
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
   transition: opacity 0.3s, transform 0.3s;
   transform: translateY(50px);
 }

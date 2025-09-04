@@ -3485,6 +3485,8 @@ main .reviewsSwiperDesktopCt .swiper-slide:not(.swiper-slide-next) .img-ct:befor
 main .reviewsSwiperDesktopCt .swiper-slide:not(.swiper-slide-next) .img-ct picture {
   height: 60%;
   filter: saturate(0);
+  filter: blur(4px);
+  opacity: 0.2;
 }
 
 main .reviewsSwiperDesktopCt .swiper-buttons-ct {
