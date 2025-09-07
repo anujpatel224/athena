@@ -3292,13 +3292,13 @@ th {
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: auto;
-  height: 600px;
+  min-height: 600px;
 }
 
 .header-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -3308,47 +3308,24 @@ th {
   color: #fff;
 }
 
-.arrows {
-  display: flex;
-  gap: 10px;
-}
 
-.arrow {
-  background: #111;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 4px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s ease;
-}
-
-.arrow:hover {
-  background: #333;
-  color: red;
-}
-
-.slider-container {
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-  max-height: 600px;
-  overflow-y: hidden;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px 0;
 }
 
 .team-member {
   background: #222222;
   border-radius: 10px;
-  flex: 0 0 auto;
-  width: 209px;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
   isolation: isolate;
   height: max-content;
+  width: 100%;
 }
 
 .team-member:hover {
@@ -3468,11 +3445,22 @@ th {
     padding: 15rem 2rem;
     max-width: 1200px;
     margin: auto;
-    height: 660px;
+    min-height: 660px;
   }
 
-  .slider-container {
-    max-height: 650px;
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Very small mobile screens */
+@media only screen and (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
   }
 
   .clients-section {
@@ -4034,7 +4022,7 @@ th {
   }
 
   .container {
-    padding: 0px 4rem;
+    padding: 4px 4rem;
   }
 }
 
@@ -4815,5 +4803,14 @@ th {
   
   .hr_hd {
     width: 100%;
+  }
+
+  .hr_box_text_open_box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images-section{
+    display: contents !important;
   }
 }
