@@ -1117,7 +1117,7 @@
         </main>
         <div class="footer-wrapper" id="EnquireNow">
           <div class="footer fixed-sec">
-            <div class="contact-container">
+            <!-- <div class="contact-container">
               <div class="form-box">
                 <h2 class="form-title">Get in touch</h2>
                 <div class="form-content">
@@ -1165,7 +1165,51 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+            <div class="form-container">
+              <div class="form-section">
+                  <div class="form-heading slide-left">
+                      <h2 style="color: #000;">Keep up to date</h2>
+                      <p>Join our mailing list for latest news and events at Athena.</p>
+                  </div>
+                  <form id="mailingForm" novalidate>
+                      <div class="form-content slide-right" style="display: flex; flex-direction: column;">
+                          <div
+                              style="display:flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+                              <input type="email" name="email" placeholder="Your email address"
+                                  class="input-field" />
+                              <span class="error-message"
+                                  style="color:red; font-size:0.9em; display:none;"></span>
+                          </div>
+
+                          <div class="checkbox-container">
+                              <label class="checkbox-label">
+                                  <input type="checkbox" name="interests" value="Corporate Events" />
+                                  Corporate Events
+                              </label>
+                              <label class="checkbox-label">
+                                  <input type="checkbox" name="interests" value="Events for the Public" />
+                                  Events for the Public
+                              </label>
+                          </div>
+
+                          <button type="submit" class="submit-button">Sign up</button>
+                      </div>
+                  </form>
+
+                  <div class="form-footer slide-left">
+                      <div>
+                          <p><a href="tel:01162626556">0116 262 6556</a></p>
+                          <p><a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a></p>
+                      </div>
+                      <div class="privacy-policy">
+                          <p>For more details about how we use your information,
+                              <a href="../privacy-policy.html" class="no-barba">Please see our Privacy Policy</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
             <footer>
               <div class="footer-container">
                 <!-- Logo and Contact Info -->
@@ -1201,7 +1245,8 @@
                   <ul>
                     <li><a href="./about-us/heritage.html" class="no-barba">Heritage</a></li>
                     <li><a href="./about-us/testimonials.html" class="no-barba">Testimonials</a></li>
-                    <li><a href="blog/index.html" class="no-barba">News</a></li>
+                    <li><a href="blog/index.html" class="no-barba">Blog</a></li>
+                    <li><a href="./privacy-policy.html" class="no-barba">Privacy Policy</a></li>
                   </ul>
                 </div>
 

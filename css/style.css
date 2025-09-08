@@ -4430,6 +4430,10 @@ footer {
   align-items: center;
 }
 
+.footer-section:nth-child(2){
+  margin-top: 13px;
+}
+
 .footer-section h3 {
   font-size: 14px;
   margin-bottom: 1rem;
@@ -6950,3 +6954,127 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
   width: 4rem !important;
   height: 4rem !important;
 }
+
+
+/* contact form start */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+}
+
+.form-heading {
+  display: flex;
+  text-align: left;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.form-heading h2 {
+  font-family: "DM Serif Display";
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.form-heading p {
+  color: #444444;
+  size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1rem;
+  color: #000000;
+  font-size: 14px;
+}
+
+.form-footer div {
+  width: 50%;
+}
+
+.privacy-policy {
+  text-align: right;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #d3d3d3;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.submit-button {
+  padding: 0.75rem 6rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #444;
+}
+
+#roomLayouts {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid white;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+#roomLayouts:hover {
+  background: white;
+  color: black;
+}
+
+/* contact form end */

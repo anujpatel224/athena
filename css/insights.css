@@ -1388,6 +1388,9 @@ footer {
 .footer-section ul li {
   margin-bottom: 0.5rem;
 }
+.footer-section:nth-child(2){
+  margin-top: 13px;
+}
 
 .footer-section ul li a {
   text-decoration: none;
