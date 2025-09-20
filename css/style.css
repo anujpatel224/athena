@@ -1761,8 +1761,8 @@ html.open-navi .quickbar .quickbar-inner .menu .x .line:nth-of-type(2) {
 
 html.open-navi .quickbar .quickbar-inner .menu .x .circle {
   transform: translate(-50%, -50%);
-  width: 11.67rem;
-  height: 11.67rem;
+  width: 10rem;
+  height: 10rem;
   transition-delay: 0.2s;
 }
 
@@ -1874,9 +1874,9 @@ html.open-navi #navigation {
 #navigation .row .col .navigation-inner nav ul {
   display: flex;
   flex-flow: column;
-  gap: 2.73rem;
-  font-size: 5rem;
-  padding-top: 2rem;
+  gap: 6rem;
+  font-size: 4rem;
+  padding-top: 0rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li {
@@ -2036,7 +2036,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li .a {
   color: #f2f2f2;
   line-height: 100%;
   position: relative;
-  font-size: 9.1rem;
+  font-size: 5rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li a span.name .second,
@@ -4430,7 +4430,7 @@ footer {
   align-items: center;
 }
 
-.footer-section:nth-child(2){
+.footer-section:nth-child(2) {
   margin-top: 20px;
 }
 
@@ -4641,7 +4641,7 @@ footer {
 
 /* Submit button styling */
 .submit-button {
-  width: 100%;
+  width: 50%;
   /* Same as input fields */
   background-color: black;
   color: white;
@@ -6163,6 +6163,10 @@ html {
   opacity: 1;
 }
 
+.dropdown-menu-mobile> :first-child {
+  margin-top: 2rem;
+}
+
 .dropdown-menu-mobile li a {
   display: block;
   padding: 0;
@@ -6940,17 +6944,17 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
 main .sec-6 .reviewsSwiperMobile .swiper-card .img-ct img,
 main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
   object-fit: contain;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    background-size: unset;
-    background-position: unset;
-    background-repeat: unset;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: unset;
+  background-position: unset;
+  background-repeat: unset;
 }
 
-.cursor-follow{
+.cursor-follow {
   width: 4rem !important;
   height: 4rem !important;
 }
@@ -7078,3 +7082,35 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
 }
 
 /* contact form end */
+
+@media (max-width: 768px) {
+  .form-container {
+    margin-top: 30rem;
+  }
+
+  .input-field {
+    font-size: 3rem;
+    padding: 2rem;
+  }
+
+  .checkbox-label {
+    font-size: 3rem;
+  }
+
+  .checkbox-container {
+    gap: 2rem;
+  }
+
+  .submit-button {
+    padding: 2rem;
+    font-size: 3rem;
+  }
+
+  .form-content {
+    gap: 4rem;
+  }
+
+  .form-footer div{
+    font-size: 2rem;
+  }
+}

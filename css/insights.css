@@ -982,9 +982,9 @@ div.please-rotate {
 #navigation .row .col .navigation-inner nav ul {
   display: flex;
   flex-flow: column;
-  gap: 2.73rem;
-  font-size: 5rem;
-  padding-top: 2rem;
+  gap: 6rem;
+  font-size: 4rem;
+  padding-top: 0rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li {
@@ -1034,7 +1034,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li a {
   color: #f2f2f2;
   line-height: 100%;
   position: relative;
-  font-size: 9.1rem;
+  font-size: 5rem;
 }
 
 #navigation .row .col .navigation-inner nav ul li .a span.name .second,
@@ -1330,8 +1330,8 @@ html.open-navi .quickbar .quickbar-inner .menu .x .line:nth-of-type(2) {
 
 html.open-navi .quickbar .quickbar-inner .menu .x .circle {
   transform: translate(-50%, -50%);
-  width: 11.67rem;
-  height: 11.67rem;
+  width: 10rem;
+  height: 10rem;
   transition-delay: 0.2s;
 }
 
@@ -1388,7 +1388,8 @@ footer {
 .footer-section ul li {
   margin-bottom: 0.5rem;
 }
-.footer-section:nth-child(2){
+
+.footer-section:nth-child(2) {
   margin-top: 20px;
 }
 
@@ -3269,6 +3270,11 @@ th {
 .dropdown-menu-mobile.active {
   max-height: 500px;
   opacity: 1;
+  gap: 4rem !important;
+}
+
+.dropdown-menu-mobile> :first-child {
+  margin-top: 2rem;
 }
 
 .dropdown-menu-mobile li a {
@@ -4743,7 +4749,7 @@ th {
   padding: 5px;
   display: flex;
   gap: 10px;
-  width: 45%;   
+  width: 45%;
   position: relative;
   height: auto;
   overflow: hidden;
@@ -4795,25 +4801,25 @@ th {
     width: 100%;
     margin-bottom: 10px;
   }
-  
+
   .hr_box_text_open_box {
     gap: 15px;
   }
-  
+
   .hr_text_box {
     flex-direction: column;
   }
-  
+
   .hr_hd {
     width: 100%;
   }
 
-  .hr_box_text_open_box{
+  .hr_box_text_open_box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .images-section{
+  .images-section {
     display: contents !important;
   }
 }
