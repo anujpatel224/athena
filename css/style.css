@@ -169,8 +169,8 @@ h6,
   font-family: Archivo SemiExpanded, sans-serif;
   font-weight: 800;
   letter-spacing: -0.04em;
-  /* text-transform: uppercase; */
-  text-transform: capitalize;
+  text-transform: uppercase;
+  /* text-transform: capitalize; */
 }
 
 html {
@@ -857,7 +857,7 @@ h6,
   hyphens: auto;
   font-weight: 800;
   line-height: 1em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* Use this to let headlines break in Chrome Desktop
   body.platformWindows.chrome &, body.platformLinux.chrome & {
       word-break: break-all;
@@ -1858,8 +1858,8 @@ html.open-navi #navigation {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding-bottom: 14.75rem;
+  justify-content: flex-start;
+  padding-top: 20rem
 }
 
 @media (min-width: 759px) {
@@ -1874,7 +1874,7 @@ html.open-navi #navigation {
 #navigation .row .col .navigation-inner nav ul {
   display: flex;
   flex-flow: column;
-  gap: 6rem;
+  gap: 8rem;
   font-size: 4rem;
   padding-top: 0rem;
 }
@@ -2037,6 +2037,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li .a {
   line-height: 100%;
   position: relative;
   font-size: 5rem;
+  font-weight: 500;
 }
 
 #navigation .row .col .navigation-inner nav ul li a span.name .second,
@@ -4623,15 +4624,11 @@ footer {
 /* Input fields styling */
 .input-field {
   width: 100%;
-  /* 2 fields in one row (adjustable for spacing) */
-  color: black;
+  max-width: 400px;
   padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 0.5);
-  font-family: "Archivo", sans-serif;
-  box-sizing: border-box;
 }
 
 .input-field:focus {
@@ -4641,18 +4638,16 @@ footer {
 
 /* Submit button styling */
 .submit-button {
-  width: 50%;
-  /* Same as input fields */
-  background-color: black;
+  width: 30%;
+  background-color: #333;
   color: white;
-  font-weight: 600;
-  padding: 1rem;
+  border: none;
+  padding: 16px;
   border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
-  text-align: center;
-  border: 1px solid white;
-  box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
@@ -6757,7 +6752,7 @@ html {
   } */
 
   .quickbar .quickbar-inner .menu {
-    width: 8rem;
+    width: 6rem;
   }
 
   .overlay-text {
@@ -6987,6 +6982,7 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
   font-size: 22px;
   line-height: 24px;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .form-heading p {
@@ -7049,21 +7045,6 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
   color: #000;
 }
 
-.submit-button {
-  padding: 0.75rem 6rem;
-  font-size: 1rem;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #444;
-}
-
 #roomLayouts {
   padding: 10px 20px;
   font-size: 16px;
@@ -7101,16 +7082,52 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
     gap: 2rem;
   }
 
-  .submit-button {
-    padding: 2rem;
-    font-size: 3rem;
-  }
-
   .form-content {
     gap: 4rem;
   }
 
-  .form-footer div{
+  .form-footer div {
     font-size: 2rem;
+  }
+
+  .form-heading h2 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .form-heading p {
+    font-size: 14px;
+  }
+
+  .input-field {
+    font-size: 3rem;
+    padding: 3rem;
+    width: 90%;
+  }
+
+  .checkbox-container {
+    gap: 4rem;
+  }
+
+  .checkbox-label {
+    font-size: 3rem;
+  }
+
+  .form-content {
+    padding: 4rem;
+    gap: 3rem;
+  }
+
+  .form-heading {
+    padding: 3rem;
+  }
+
+  .form-footer {
+    padding: 3rem;
+    font-size: 9px;
+  }
+
+  .form-container {
+    padding: 20rem 4rem;
   }
 }

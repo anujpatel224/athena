@@ -966,8 +966,8 @@ div.please-rotate {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding-bottom: 14.75rem;
+  justify-content: flex-start;
+  padding-top: 20rem;
 }
 
 @media (min-width: 759px) {
@@ -982,7 +982,7 @@ div.please-rotate {
 #navigation .row .col .navigation-inner nav ul {
   display: flex;
   flex-flow: column;
-  gap: 6rem;
+  gap: 8rem;
   font-size: 4rem;
   padding-top: 0rem;
 }
@@ -1035,6 +1035,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li a {
   line-height: 100%;
   position: relative;
   font-size: 5rem;
+  font-weight: 500;
 }
 
 #navigation .row .col .navigation-inner nav ul li .a span.name .second,
@@ -2761,7 +2762,7 @@ th {
   }
 
   .quickbar .quickbar-inner .menu {
-    width: 8rem;
+    width: 6rem;
   }
 }
 
