@@ -5052,6 +5052,177 @@ footer {
   }
 }
 
+/* Some of Our Clients Section */
+.clients-section {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.clients-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.clients-heading {
+  font-family: "Fira Sans Condensed", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 62px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  color: #000000 !important;
+  margin: 0 0 2rem 0;
+  text-transform: none !important;
+}
+
+.clients-description {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 24px !important;
+  line-height: 160% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  color: #000000 !important;
+  max-width: 800px;
+  margin: 0 0 3rem 0;
+}
+
+.clients-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+}
+
+.clients-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.clients-marquee-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+  left: 0%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.clients-marquee {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+
+.client-marquee-logo {
+  height: 80px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.client-marquee-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(calc(100vw - 50%));
+  }
+}
+
+@media (min-width: 768px) {
+  .clients-heading {
+    font-size: 62px !important;
+  }
+
+  .clients-description {
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clients-heading {
+    font-size: 62px !important;
+  }
+
+  .clients-marquee-content {
+    gap: 5rem;
+  }
+
+  .client-marquee-logo {
+    height: 100px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .clients-heading {
+    font-size: 42px !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .clients-description {
+    font-size: 20px !important;
+    margin-bottom: 2rem;
+  }
+
+  .clients-button {
+    padding: 0.875rem 2rem;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .clients-marquee-content {
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .client-marquee-logo {
+    height: 60px;
+    max-width: 150px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
 
 main {
