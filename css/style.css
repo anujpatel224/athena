@@ -2273,7 +2273,7 @@ main [class*="sec-"]:not([class*="sec-2"]) {
   background-color: #141414;
   position: relative;
   z-index: 2;
-  padding-bottom: 4rem;
+  padding-bottom:0rem;
 }
 
 main .sec-1 {
@@ -4396,6 +4396,135 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   }
 }
 
+/* Designed to Host Events Section */
+.designed-to-host-section {
+  background-color: #ffffff !important;
+  padding: 4rem 0;
+  min-height: auto;
+  position: relative;
+  z-index: 10;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.designed-to-host-section::before {
+  display: none !important;
+}
+
+.designed-to-host-section::after {
+  display: none !important;
+}
+
+.designed-to-host-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.designed-to-host-section .section-heading {
+  font-family: "Fira Sans Condensed", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 62px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  color: #1a1a1a !important;
+  margin: 0;
+  opacity: 1 !important;
+  text-transform: none !important;
+}
+
+.designed-to-host-section .text-content-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 4px;
+  margin: 1rem 0;
+  background-color: transparent;
+  opacity: 1 !important;
+}
+
+.designed-to-host-section .heritage-text {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 24px !important;
+  line-height: 160% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  color: #1a1a1a !important;
+  margin: 0;
+  opacity: 1 !important;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+.designed-to-host-section .heritage-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 1px solid #000000 !important;
+  color: #1a1a1a !important;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  line-height: 20px !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+.designed-to-host-section .heritage-button:hover {
+  background-color: #F43900 !important;
+  color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+  .designed-to-host-section {
+    padding: 6rem 0;
+  }
+
+  .designed-to-host-section .section-heading {
+    font-size: 62px !important;
+  }
+
+  .designed-to-host-section .heritage-text {
+    font-size: 24px !important;
+  }
+
+  .designed-to-host-section .heritage-button {
+    padding: 1rem 2.5rem;
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .designed-to-host-section .section-heading {
+    font-size: 62px !important;
+  }
+
+
+  .designed-to-host-section .heritage-text {
+    font-size: 24px !important;
+  }
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -4411,7 +4540,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 /* footer section css start */
 footer {
   width: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
 
@@ -4720,7 +4849,7 @@ footer {
   background-color: white;
   overflow: hidden;
   padding: 2rem;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 .brands-scroll {
@@ -4742,6 +4871,515 @@ footer {
 
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Why Athena Section */
+.why-athena-section {
+  background-color: #141414;
+  background-image: url("../images/why_athen_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem 6rem 2rem;
+  position: relative;
+  min-height: auto;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.why-athena-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.why-athena-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.why-athena-heading {
+  font-family: "Fira Sans Condensed", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 62px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  color: #ffffff !important;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-transform: none !important;
+}
+
+.why-athena-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+.why-athena-card {
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  transition: border 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.why-athena-card:hover {
+  transform: none;
+  border: 1px solid #FFFFFF66;
+}
+
+.why-athena-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-athena-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.why-athena-card:hover .why-athena-icon img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(7158%) hue-rotate(358deg) brightness(99%) contrast(97%);
+}
+
+.why-athena-title {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  font-size: 22px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  margin: 0 0 1rem 0 !important;
+  width: 100%;
+}
+
+.why-athena-description {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .why-athena-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 2.5rem;
+  }
+
+  .why-athena-heading {
+    font-size: 62px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-athena-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5rem 3rem;
+  }
+
+  .why-athena-heading {
+    font-size: 62px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .why-athena-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 3.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-athena-section {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .why-athena-heading {
+    font-size: 42px !important;
+    margin-bottom: 3rem;
+  }
+
+  .why-athena-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 100%;
+  }
+
+  .why-athena-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .why-athena-title {
+    font-size: 22px !important;
+  }
+
+  .why-athena-description {
+    font-size: 16px;
+  }
+
+  .why-athena-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Some of Our Clients Section */
+.clients-section {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.clients-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.clients-heading {
+  font-family: "Fira Sans Condensed", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 62px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  color: #000000 !important;
+  margin: 0 0 2rem 0;
+  text-transform: none !important;
+}
+
+.clients-description {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 24px !important;
+  line-height: 160% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  color: #000000 !important;
+  max-width: 800px;
+  margin: 0 0 3rem 0;
+}
+
+.clients-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+}
+
+.clients-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.clients-marquee-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+  left: 0%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.clients-marquee {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+
+.client-marquee-logo {
+  height: 80px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* .client-marquee-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+} */
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(calc(100vw - 50%));
+  }
+}
+
+@media (min-width: 768px) {
+  .clients-heading {
+    font-size: 62px !important;
+  }
+
+  .clients-description {
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clients-heading {
+    font-size: 62px !important;
+  }
+
+  .clients-marquee-content {
+    gap: 5rem;
+  }
+
+  .client-marquee-logo {
+    height: 80px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .clients-heading {
+    font-size: 42px !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .clients-description {
+    font-size: 20px !important;
+    margin-bottom: 2rem;
+  }
+
+  .clients-button {
+    padding: 0.875rem 2rem;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .clients-marquee-content {
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .client-marquee-logo {
+    height: 60px;
+    max-width: 150px;
+  }
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  width: 100%;
+  height: 840px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/dmam_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  opacity: 1;
+  border-radius: 0 0 20px 20px;
+}
+
+.newsletter-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.newsletter-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.newsletter-heading {
+  font-family: "Fira Sans Condensed", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 62px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  color: #ffffff !important;
+  margin: 0;
+}
+
+.newsletter-description {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 24px !important;
+  line-height: 160% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  margin: 0;
+  max-width: 600px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background-color: rgba(40, 40, 40, 0.8);
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  background-color: rgba(50, 50, 50, 0.9);
+  border-color: #ffffff;
+}
+
+.newsletter-button {
+  padding: 1rem 2.5rem;
+  background-color: rgba(40, 40, 40, 0.8);
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-button:hover {
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+
+@media (max-width: 767px) {
+  .newsletter-section {
+    min-height: 400px;
+    padding: 4rem 1.5rem;
+  }
+
+  .newsletter-heading {
+    font-size: 36px !important;
+  }
+
+  .newsletter-description {
+    font-size: 16px !important;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    width: 100%;
   }
 }
 
@@ -5868,18 +6506,19 @@ main .btn-secondary:hover,
 
 .explore_btn {
   padding: 12px 45px;
-  border-radius: 86px;
   background-color: #F43900;
   color: white;
-  border: none;
+  border: 1px solid transparent;
   font-family: "Archivo", sans-serif;
+  
 }
 
 .explore_btn:hover {
-  background-color: white;
+  background-color: transparent;
   color: #F43900;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  border: 1px solid #F43900;
 }
 
 .features-list ul {
@@ -5976,9 +6615,13 @@ main .btn-secondary:hover,
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.90) 10%, rgba(0, 0, 0, 0.8) 20%,rgba(0, 0, 0, 0.5) 40%,rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
 }
 
 .content::before {
@@ -6039,16 +6682,36 @@ main .btn-secondary:hover,
   transition: 290ms cubic-bezier(0.05, 0.62, 0.40, 0.95) 300ms;
   transition-property: opacity, transform;
   user-select: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  overflow: visible;
+  white-space: normal;
   display: block;
   max-width: 90%;
+  z-index: 2;
+  margin-bottom: 35px;
+}
+
+.card-title > span:not(.subsubtitle) {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  white-space: normal;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .subsubtitle {
   display: block;
-  font-size: 2.5rem;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 44px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-variant: small-caps;
 }
 
 .paddT {
