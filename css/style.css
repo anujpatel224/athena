@@ -2433,22 +2433,22 @@ main .sec-2 .name {
 }
 
 .live_evets_cta {
-  color: #222;
-  background: white;
+  color: #fff;
+  background: transparent;
   border: 2px solid white;
-  border-radius: 10px;
   cursor: pointer;
   margin-top: 3rem;
   padding: 1rem 2.4rem;
   font-size: 1.2rem;
   font-weight: 500;
+  border: 1px solid #fff;
 }
 
 .live_evets_cta:hover {
-  background: #f43900;
-  color: #fff;
+  background: #fff;
+  color: #000;
   transition: all 0.3s ease-in-out;
-  border: 2px solid #f43900;
+  border: 1px solid #fff;
 }
 
 @media (max-width: 768px) {
@@ -4491,7 +4491,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 
 .designed-to-host-section .heritage-button:hover {
-  background-color: #F43900 !important;
+  background-color: #000 !important;
   color: #ffffff !important;
 }
 
@@ -4977,11 +4977,11 @@ footer {
 .why-athena-title {
   font-family: "Fira Sans", sans-serif !important;
   font-weight: 500 !important;
-  font-style: italic !important;
   font-size: 22px !important;
   line-height: 100% !important;
   letter-spacing: 0% !important;
   text-align: center !important;
+  text-transform: none !important;
   color: #ffffff !important;
   margin: 0 0 1rem 0 !important;
   width: 100%;
@@ -5173,10 +5173,10 @@ footer {
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw - 50%));
+    transform: translateX(-50%);
   }
 }
 
@@ -6506,19 +6506,18 @@ main .btn-secondary:hover,
 
 .explore_btn {
   padding: 12px 45px;
-  background-color: #F43900;
   color: white;
-  border: 1px solid transparent;
+  border: 1px solid #F43900;
   font-family: "Archivo", sans-serif;
   
 }
 
 .explore_btn:hover {
-  background-color: transparent;
-  color: #F43900;
+  background-color: #F43900 !important;
+  color: white;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #F43900;
+
 }
 
 .features-list ul {
@@ -6733,6 +6732,20 @@ main .btn-secondary:hover,
 .radio:hover+.content>.title-card {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Hide text in other cards when hovering over one */
+.general-container:hover .content:not(:hover) .card-title {
+  opacity: 0 !important;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show text in the hovered card */
+.general-container:hover .content:hover .card-title {
+  opacity: 1 !important;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .marg-bott {
