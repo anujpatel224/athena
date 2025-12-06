@@ -4429,7 +4429,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .designed-to-host-section .section-heading {
   font-family: "Fira Sans Condensed", sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 550 !important;
   font-style: normal !important;
   font-size: 62px !important;
   line-height: 100% !important;
@@ -4831,8 +4831,8 @@ footer {
 }
 
 .welcome-heading {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 62px !important;
+  font-weight: 550 !important;
   margin-bottom: 1rem;
 }
 
@@ -4971,12 +4971,13 @@ footer {
 }
 
 .why-athena-card:hover .why-athena-icon img {
-  filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(7158%) hue-rotate(358deg) brightness(99%) contrast(97%);
+  filter: brightness(400%) saturate(300%) invert(27%) sepia(100%) saturate(5000%) hue-rotate(4deg) brightness(100%) contrast(150%);
 }
 
 .why-athena-title {
   font-family: "Fira Sans", sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
   font-size: 22px !important;
   line-height: 100% !important;
   letter-spacing: 0% !important;
@@ -4985,6 +4986,7 @@ footer {
   color: #ffffff !important;
   margin: 0 0 1rem 0 !important;
   width: 100%;
+  transition: color 0.3s ease;
 }
 
 .why-athena-description {
@@ -4998,6 +5000,7 @@ footer {
   text-align: center;
   margin: 0;
   width: 100%;
+  opacity: 0.8;
 }
 
 @media (min-width: 768px) {
@@ -5111,18 +5114,23 @@ footer {
 
 .clients-button {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  color: #000000;
+  padding: 0.75rem 2rem;
+  border: 1px solid #000000 !important;
+  color: #1a1a1a !important;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Archivo", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  margin-bottom: 4rem;
-  transition: all 0.3s ease;
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  line-height: 20px !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s 
+ease;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+  margin-bottom: 3.75rem !important;
 }
 
 .clients-button:hover {
@@ -6038,7 +6046,7 @@ main .btn-secondary:hover,
   }
 
   .part-process .process-wrapper .process-slide .box-style {
-    border-radius: 3.75rem;
+    border-radius: 3.2rem;
     background-color: #1F2125;
     padding: 1.5rem 1.5rem 1.5rem 3rem;
     width: 100%;
@@ -6481,10 +6489,10 @@ main .btn-secondary:hover,
 }
 
 .services_swiper_heading {
-  font-family: DM Serif Display;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 52.1px;
   text-align: left;
   text-transform: none;
@@ -6495,10 +6503,10 @@ main .btn-secondary:hover,
 }
 
 .service_text {
-  font-family: "Archivo", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.8rem;
+  line-height: 160%;
   text-align: left;
   opacity: 0.8;
 
@@ -6509,6 +6517,7 @@ main .btn-secondary:hover,
   color: white;
   border: 1px solid #F43900;
   font-family: "Archivo", sans-serif;
+  margin-top: 1rem;
   
 }
 
@@ -6593,20 +6602,7 @@ main .btn-secondary:hover,
   display: none;
 }
 
-.content {
-  background: transparent;
-  background-image: url("../images/usp/USP1.webp?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 2rem;
-  cursor: pointer;
-  flex: 1;
-  margin-right: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.05, 0.60, 0.39, 0.94);
-}
+
 
 .content::after {
   content: "";
@@ -6642,9 +6638,24 @@ main .btn-secondary:hover,
   box-shadow: 0.7rem 0.7rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
+.content {
+  background: transparent;
+  background-image: url("../images/service/img_usp1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.05, 0.60, 0.39, 0.94);
+}
+
 .content:nth-of-type(2) {
   background: transparent;
-  background-image: url("../images/usp/USP2.webp?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/service/img_usp2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -6652,7 +6663,7 @@ main .btn-secondary:hover,
 
 .content:nth-of-type(3) {
   background: transparent;
-  background-image: url("../images/usp/USP3.webp?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/service/img_usp3.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -6660,7 +6671,7 @@ main .btn-secondary:hover,
 
 .content:nth-of-type(4) {
   background: transparent;
-  background-image: url("../images/usp/USP4.webp?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/service/img_usp4.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -6700,6 +6711,7 @@ main .btn-secondary:hover,
   white-space: normal;
   display: block;
   margin-top: 0.5rem;
+  opacity: 0.8;
 }
 
 .subsubtitle {
@@ -6724,28 +6736,29 @@ main .btn-secondary:hover,
   flex: 9;
 }
 
-/* .radio:hover + .content > .card-title {
+.radio:hover + .content > .card-title {
   opacity: 1;
-  transform: translateX(0);
-} */
+  transform: translateX(4rem);
+}
 
 .radio:hover+.content>.title-card {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Hide text in other cards when hovering over one */
-.general-container:hover .content:not(:hover) .card-title {
+/* Hide text in other cards when hovering over one - only when a card is actually hovered */
+.general-container:has(.content:hover) .content:not(:hover) .card-title {
   opacity: 0 !important;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 /* Show text in the hovered card */
-.general-container:hover .content:hover .card-title {
+.content:hover .card-title {
   opacity: 1 !important;
   visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateX(4rem);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 .marg-bott {
