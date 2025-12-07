@@ -1483,23 +1483,20 @@ body.scrolling-down .quickbar {
 
 .quickbar .quickbar-inner .menu .desktop-nav li a,
 .quickbar .quickbar-inner .menu .desktop-nav li .a {
-  color: #f2f2f2;
+  color: #FFFFFF;
   position: relative;
   display: block;
   cursor: pointer;
   line-height: 1.2em;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li a .name span,
 .quickbar .quickbar-inner .menu .desktop-nav li .a .name span {
   display: block;
-}
-
-.quickbar .quickbar-inner .menu .desktop-nav li a .name span.first,
-.quickbar .quickbar-inner .menu .desktop-nav li .a .name span.first {
-  opacity: 0.75;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li a .name span.second,
@@ -1513,6 +1510,35 @@ body.scrolling-down .quickbar {
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow:hover a .line:nth-of-type(1):before,
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow.active a .line:nth-of-type(1):before {
   transform: scaleX(1);
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .enquire_now_btn {
+  color: black !important;
+  background-color: #FFFFFF;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn {
+  color: black !important;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .first {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .second {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow:hover a .line:nth-of-type(2):before,
@@ -4550,14 +4576,65 @@ footer {
   background-color: #f2f2f2;
   color: #000;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12rem;
+  gap: 2rem;
   margin: 0 auto;
   padding: 2rem 5rem;
   font-size: 14px;
   line-height: 16px;
-  padding: 1.5rem 1rem 1rem 6rem;
   align-items: center;
+  flex-direction: column;
+}
+
+.footer-container .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: row;
+}
+
+.footer-container .footer-links a {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.footer-container .footer-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  color: #858585;
+}
+
+.footer-container .footer-address .address-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: row;
+  color: #000000;
+}
+
+.footer-container .footer-address .address-links a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  position: relative;
+  color: #858585;
+}
+
+.footer-container .footer-address .address-links a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 12px;
+  width: 1px;
+  background-color: #F43900;
 }
 
 .footer-section:nth-child(2) {
@@ -4589,39 +4666,19 @@ footer {
 
 .social-icons {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
 }
 
 .social-icon {
-  filter: brightness(0) saturate(100%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: grayscale(100%) brightness(0) saturate(100%);
   width: 40px;
   height: 40px;
+  transition: 0.3s ease-in-out;
 }
 
 .social-icon:hover {
   transform: scale(1.1);
-}
-
-.social-icon[alt="Facebook"]:hover {
-  filter: brightness(1) hue-rotate(240deg) saturate(3);
-}
-
-.social-icon[alt="Instagram"]:hover {
-  filter: brightness(1) hue-rotate(-30deg) saturate(2);
-}
-
-.social-icon[alt="LinkedIn"]:hover {
-  filter: brightness(1) hue-rotate(210deg) saturate(1.5);
-}
-
-.social-icon[alt="YouTube"]:hover {
-  filter: brightness(1) hue-rotate(-10deg) saturate(2);
-}
-
-.social-icon[alt="X"]:hover {
-  filter: brightness(1) hue-rotate(160deg) saturate(1.8);
+  filter: invert(43%) sepia(96%) saturate(2688%) hue-rotate(2deg) brightness(97%) contrast(102%);
 }
 
 .social-icons a img {
@@ -4656,18 +4713,13 @@ footer {
     position: fixed;
   }
 
-  .footer-container {
-    flex-direction: column;
-    padding: 4rem;
-  }
-
   .social-icons a img {
     width: 15px;
     height: 15px;
   }
 
   .social-icons {
-    gap: 2rem;
+    gap: 5rem;
   }
 
   .footer-section h3 {
@@ -6206,6 +6258,36 @@ main .btn-secondary:hover,
 
 /* filmore section mobile screen */
 @media (max-width: 768px) {
+  .footer-container {
+    padding: 2rem 5rem;
+    gap: 3rem;
+  }
+
+  .footer-container .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-container .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-container .footer-address .address-links {
+    gap: 4rem;
+  }
+
+  .footer-container .footer-address .address-links a {
+    font-size: 12px;
+  }
+
+  .footer-container .footer-address .address-links a:not(:last-child)::after {
+    right: -2rem;
+  }
+
+  .address-text {
+    font-size: 12px;
+  }
+
   .part-process .process-wrapper .process-slide {
     position: -webkit-sticky;
     position: sticky;
@@ -6263,6 +6345,23 @@ main .btn-secondary:hover,
 
 /* filmore section tablet screen */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .form-container{
+    margin-top: 20rem;
+  }
+  .footer-container {
+    gap: 2rem;
+    padding: 2rem 4rem 7rem 0rem
+  }
+
+  .footer-container .footer-links {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .social-icons {
+    gap: 3rem;
+  }
+
   .bg-ct .dark-overlay-video {
     height: 100vh;
   }
@@ -6925,12 +7024,6 @@ html {
     width: 4rem;
   }
 
-  .footer-container {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding: 1.5rem 0rem 1rem 8rem;
-  }
-
   .bg-video {
     width: 100%;
   }
@@ -7058,12 +7151,6 @@ html {
     width: 4rem;
   }
 
-  .footer-container {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding: 2rem 1rem 2rem 6rem;
-  }
-
   .footer-section h3 {
     font-size: 1rem;
   }
@@ -7082,10 +7169,6 @@ html {
   .general-container {
     width: 80%;
     height: 70vh;
-  }
-
-  .footer-container {
-    padding: 1.5rem 1rem 1rem 10rem;
   }
 
   .form-row {
@@ -7129,11 +7212,6 @@ html {
     width: 4rem;
   }
 
-  .footer-container {
-    font-size: 14px;
-    line-height: 16px;
-  }
-
   .footer-section h3 {
     font-size: 14px;
   }
@@ -7155,12 +7233,6 @@ html {
 
   .part-process .process-wrapper .process-slide {
     width: 80%;
-  }
-
-  .footer-container {
-    padding: 1.5em 1rem 1rem 5rem;
-    font-size: 1rem;
-    flex-direction: row;
   }
 
   .footer-section h3 {
@@ -7216,12 +7288,6 @@ html {
 
   .form-box {
     width: 3500px;
-  }
-
-  .footer-container {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding: 1.5rem 1rem 1rem 7rem;
   }
 }
 
@@ -7332,14 +7398,6 @@ html {
 
   .submit-button {
     padding: 2.5rem;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    font-size: 2.5rem;
-    gap: 0rem;
-    align-items: flex-start;
-    padding: 6rem 5rem;
   }
 
   .footer-section h3 {
@@ -7754,10 +7812,6 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
 /* contact form end */
 
 @media (max-width: 768px) {
-  .form-container {
-    margin-top: 30rem;
-  }
-
   .input-field {
     font-size: 3rem;
     padding: 2rem;
