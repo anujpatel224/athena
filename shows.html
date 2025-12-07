@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exhibitions & Festivals | Athena Leicester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shows | Athena Leicester</title>
     <meta name="description"
         content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location." />
-    <meta property="og:title" content="Exhibitions & Festivals | Athena Leicester" />
+    <meta property="og:title" content="Shows| Athena Leicester" />
     <meta property="og:description"
         content="Host unique exhibitions and festivals at Athena Leicester – offering over 1500sqm of flexible space in a central location." />
     <meta property="og:url" content="" />
@@ -27,32 +28,31 @@
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/144091879.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/144091879.js"></script>
 
-</head>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const listItems = document.querySelectorAll(".list-section li");
-        const clientImage = document.getElementById("client-image");
-
-        if (!clientImage) {
-            console.warn("Image with ID 'client-image' not found.");
-            return;
+    <style>
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .bg-video {
+                height: 40vh !important;
+            }
         }
 
-        listItems.forEach((item) => {
-            item.addEventListener("mouseenter", function () {
-                const newImage = item.getAttribute("data-image");
-                if (newImage) {
-                    clientImage.src = newImage;
-                } else {
-                    console.warn("No data-image attribute found on:", item);
-                }
-            });
-        });
-    });
-</script>
+        @media only screen and (max-width: 768px) {
+            .bg-ct {
+                height: 25vh !important;
+            }
+
+            .dark-overlay-video {
+                height: 100% !important;
+            }
+
+            .bg-video {
+                height: 100% !important;
+            }
+        }
+    </style>
+</head>
 
 <body data-barba="wrapper">
     <!-- main loader -->
@@ -62,7 +62,6 @@
         <div class="logo-sec">
             <div class="name">
                 <img src="../images/logo-icon.svg" alt="athena - Logo" />
-                <p>
             </div>
         </div>
     </div>
@@ -76,7 +75,6 @@
                             <ul>
                                 <li class="nav-item start dropdown">
                                     <a href="#" data-anchor-target="no-barba" title="what we do" class="home no-barba">
-
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
@@ -84,64 +82,64 @@
                                         <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                         <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                         <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
-                                                Festivals</a></li>
+                                                Festivals</a>
+                                        </li>
                                         <li><a href="concerts.html" class="no-barba">Concerts</a></li>
                                         <li><a href="shows.html" class="no-barba">Shows</a></li>
                                         <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                        <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a>
-                                            <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
-                                        </li>
+                                        <li><a href="balls-proms.html" class="no-barba">Balls & Proms</a></li>
+                                        <li><a href="christmas.html" class="no-barba">Christmas</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../roomlayout.html" data-anchor-target="no-barba" data-toggle-nav
+                                    <a href="roomlayout.html" data-anchor-target="no-barba" data-toggle-nav
                                         title="Room Layouts" class="no-barba">
-
                                         <span class="name"> Room Layouts </span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../events.html" data-anchor-target="#liveEvents" data-toggle-nav
-                                        title="Live Events" class="no-barba">
-
+                                    <a href="events.html" data-anchor-target="no-barba" class="no-barba" data-toggle-nav
+                                        title="Live Events">
                                         <span class="name"> Live Events </span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/blog/index.html" title="Blog" class="no-barba">
+                                    <a href="/blog/index.html" title="News" class="no-barba">
                                         <span class="name">
                                             <span class="name"> Blog </span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../career.html" title="Work With Us" class="no-barba">
+                                    <a href="career.html" title="Work With Us" class="no-barba">
                                         <span class="name">
-                                            <span class="name"> Work With Us </span>
+                                            <span class="name"> Case Studies </span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown" id="about-us-dropdown">
                                     <a href="#" data-anchor-target="no-barba" title="about us" class="home no-barba">
-
                                         <span class="name"> About Us </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile" id="aboutusdropdown-menu-mobile">
-                                        <li><a href="../about-us/heritage.html" class="no-barba">Heritage</a></li>
-                                        <li><a href="../about-us/testimonials.html" class="no-barba">Testimonials</a>
-                                            <li><a href="../about-us/meet-the-team.html" class="no-barba">Meet the Team</a></li>
-                                        <li><a href="../contact-us.html" class="no-barba">Contact Us</a></li>
-                                        
+                                        <li><a href="heritage.html" class="no-barba">Heritage</a></li>
+                                        <li><a href="testimonials.html" class="no-barba">Testimonials</a>
+                                        </li>
+                                        <li><a href="meet-the-team.html" class="no-barba">Meet the Team</a>
+                                        </li>
+                                        <li><a href="./contact-us.html" class="no-barba">Contact Us</a></li>
+                                    </ul>
                                 </li>
-                            </ul>
-                            </li>
-                            <li class="nav-item ExploreNow">
-                                <a href="../contact-us.html" data-anchor-target="#EnquireNow" data-toggle-nav
-                                    title="Enquire Now" class="ExploreNow">
-
-                                    <span class="name"> Enquire Now </span>
-                                </a>
-                            </li>
+                                <li class="nav-item ExploreNow">
+                                    <a href="./contact-us.html" data-toggle-nav title="Enquire Now"
+                                        class="ExploreNow no-barba">
+                                        <span class="name"> Enquire Now </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ExploreNow">
+                                    <a href="tel:01162626556" class="ExploreNow no-barba"><span class="name">0116 262
+                                            6556</span></a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -160,12 +158,10 @@
         <div class="quickbar">
             <div class="quickbar-inner">
                 <div>
-                    <a href="../index.html" data-anchor-target="index.html" title="home logo"
-                        class="whole-logo no-barba">
+                    <a href="index.html" data-anchor-target="index.html" title="Home Page" class="whole-logo no-barba">
                         <div class="branding">
-                            <img src="../images/logo-icon.svg" alt="athena - Logo" />
+                            <img src="images/logo-icon.svg" alt="athena - Logo" />
                         </div>
-                        <p class="header_marquee">Expo & Festivals</p>
                     </a>
                 </div>
                 <div>
@@ -187,12 +183,12 @@
                                     <li><a href="concerts.html" class="no-barba">Concerts</a></li>
                                     <li><a href="shows.html" class="no-barba">Shows</a></li>
                                     <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                    <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
-                                    <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
+                                    <li><a href="/balls-proms.html" class="no-barba">Balls & Proms</a></li>
+                                    <li><a href="christmas.html" class="no-barba">Christmas</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../roomlayout.html" title="roomLayout" data-anchor-target="roomlayout.html"
+                                <a href="roomlayout.html" title="roomLayout" data-anchor-target="roomlayout.html"
                                     class="no-barba">
                                     <span class="name">
                                         <span class="first"> Room Layouts </span>
@@ -201,7 +197,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../events.html" data-anchor-target="#liveEvents" title="Live Events"
+                                <a href="events.html" data-anchor-target="#liveEvents" title="Live Events"
                                     class="no-barba">
                                     <span class="name">
                                         <span class="first"> Live Events </span>
@@ -210,7 +206,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/blog/index.html" title="Blog" class="no-barba">
+                                <a href="/blog/index.html" title="News" class="no-barba">
                                     <span class="name">
                                         <span class="first"> Blog </span>
                                         <span class="second"> Blog </span>
@@ -218,10 +214,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../career.html" title="Work With Us" class="no-barba">
+                                <a href="career.html" title="case studies" class="no-barba">
                                     <span class="name">
-                                        <span class="first"> Work With Us </span>
-                                        <span class="second"> Work With Us </span>
+                                        <span class="first"> Case Studies </span>
+                                        <span class="second"> Case Studies </span>
                                     </span>
                                 </a>
                             </li>
@@ -233,16 +229,14 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="../about-us/heritage.html" class="no-barba">Heritage</a></li>
-                                    <li><a href="../about-us/testimonials.html" class="no-barba">Testimonials</a></li>
-                                    <li><a href="../about-us/meet-the-team.html" class="no-barba">Meet the Team</a></li>
-                                    <li><a href="../contact-us.html" class="no-barba">Contact Us</a></li>
-                                   
+                                    <li><a href="heritage.html" class="no-barba">Heritage</a></li>
+                                    <li><a href="testimonials.html" class="no-barba">Testimonials</a></li>
+                                    <li><a href="meet-the-team.html" class="no-barba">Meet the Team</a></li>
+                                    <li><a href="./contact-us.html" class="no-barba">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="ExploreNow">
-                                <a href="../contact-us.html" class="no-barba" data-anchor-target="#EnquireNow"
-                                    title="Enquire Now">
+                                <a href="./contact-us.html" class="no-barba enquire_now_btn" title="Enquire Now">
                                     <div class="line"></div>
                                     <div class="line"></div>
                                     <div class="line"></div>
@@ -255,6 +249,24 @@
                                     </div>
                                 </a>
                             </li>
+                            <li class="ExploreNow"><a href="#" class="no-barba call_now_btn" title="call">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="name-ct">
+                                        <span class="name">
+                                            <span class="first"> <i style="display:flex;align-items:center">
+                                                    📞
+                                                </i>
+                                                0116 262 6556 </span>
+                                            <span class="second"> <i style="display:flex;align-items:center">
+                                                    📞
+                                                </i>
+                                                0116 262 6556 </span>
+                                        </span>
+                                    </div>
+                                </a></li>
                         </ul>
                         <div class="hamburger" data-toggle-nav>
                             <div class="line">
@@ -282,9 +294,8 @@
                 <div class="bg-ct">
                     <div class="dark-overlay-video">
                         <video class="bg-video main-video" autoplay muted loop playsinline data-parallax-strength="5.5"
-                            data-parallax-height="5">
-                            <source
-                                src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Festivals+and+Exhibitions.mp4"
+                            data-parallax-height="5" style="width:100%; height:100vh">
+                            <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Shows.mp4"
                                 type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -298,14 +309,12 @@
                 <!-- content section -->
                 <div class="content-container">
                     <div class="content-section slide-left">
-                        <h2>Located in the heart of Leicester City's cultural quarter, Athena is the perfect location
-                            for your exhibition or festival.</h2>
-                        <p>Athena is a large blank canvas with an added bonus of being in an historical art deco
-                            building. With events such as Comic Con and The Gin Festival returning to the venue year on
-                            year, it's no surprise when Athena comes equipped with all of the modern AV and technical
-                            expertise you would expect from a leading event space. With a convenient city centre
-                            location, excellent transport links, onsite car parking and within walking distance from a
-                            number of hotels, Athena has everything you will need.</p>
+                        <h2>With a completely flexible venue, state-of-the-art technology and unique architecture,
+                            Athena is the perfect venue for a dazzling show</h2>
+                        <p>Located in the heart of Leicester City’s cultural quarter, Athena is the perfect location for
+                            your exhibition or show. Local hotels and multiple transport connections within the vicinity
+                            of the venue, your guests and clients will have no issues accessing our iconic landmark
+                            building.</p>
                         <p style="font-weight:500;">Contact us for more information about choosing Athena as your venue
                         </p>
                         <div class="contact-container">
@@ -329,90 +338,85 @@
                                 <span class="contact-text">contact@athenacb.co.uk</span>
                             </a>
                         </div>
+                        </p>
                     </div>
+                    <!-- <div class="images-section slide-right">
+                        <div class="image-section-row1">
+                            <img src="../images/what-we-do/shows/1.jpg" alt="shows" class="img-popup" />
+                            <img src="../images/what-we-do/shows/2.jpeg" alt="shows" class="img-popup" />
+                        </div>
+                        <div class="image-section-row2">
+                            <img src="../images/what-we-do/shows/3.jpg" alt="Dinners" class="img-popup" />
+                            <img src="../images/what-we-do/shows/4.jpg" alt="Dinners" class="img-popup" />
+                        </div>
+                    </div> -->
                     <div class="images-section slide-right">
                         <div class="container">
                             <div class="hr_text_box">
-                              <div class="hr_hd">
-                                <div class="hr_box_text_open_box">
-                                  <div class="hr_box_1">
-                                    <div class="slider">
-                                      <div class="text_slide_1">
-                                        <img
-                                          src="../images/what-we-do/exhibitions/exhi1.jpg"
-                                          alt="a"
-                                          class="img-popup"
-                                        />
-                                      </div>
-                    
-                                      <div class="text_slide_1">
-                                        <img
-                                          src="../images/what-we-do/exhibitions/exhi2.jpeg"
-                                          alt="b"
-                                          class="img-popup"
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                    
-                                  <div class="hr_box_1">
-                                    <div class="slider">
-                                      <div class="text_slide_1">
-                                        <img
-                                          src="../images/what-we-do/exhibitions/exhi3.jpeg"
-                                          alt="c"
-                                          class="img-popup"
-                                        />
-                                      </div>
-                    
-                                      <div class="text_slide_1">
-                                        <img
-                                          src="../images/what-we-do/exhibitions/exhi4.jpg"
-                                          alt="d"
-                                          class="img-popup"
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                    
-                                  <div class="hr_box_1">
-                                    <div class="slider">
-                                      <div class="text_slide_1">
-                                        <img
-                                          src="../images/what-we-do/exhibitions/exhi2.jpeg"
-                                          alt="aa"
-                                          class="img-popup"
-                                        />
-                                      </div>
-                    
-                                      <div class="text_slide_1">
-                                        <div class="hr_box_text">
-                                            <img
-                                            src="../images/what-we-do/exhibitions/exhi3.jpeg"
-                                            alt="bb"
-                                            class="img-popup"
-                                          />
+                                <div class="hr_hd">
+                                    <div class="hr_box_text_open_box">
+                                        <div class="hr_box_1">
+                                            <div class="slider">
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/1.jpg" alt="a"
+                                                        class="img-popup" />
+                                                </div>
+
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/2.jpeg" alt="b"
+                                                        class="img-popup" />
+                                                </div>
+                                            </div>
                                         </div>
-                                      </div>
+
+                                        <div class="hr_box_1">
+                                            <div class="slider">
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/3.jpg" alt="c"
+                                                        class="img-popup" />
+                                                </div>
+
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/4.jpg" alt="d"
+                                                        class="img-popup" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr_box_1">
+                                            <div class="slider">
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/5.jpg" alt="aa"
+                                                        class="img-popup" />
+                                                </div>
+
+                                                <div class="text_slide_1">
+                                                    <div class="hr_box_text">
+                                                        <img src="../images/what-we-do/shows/15.jpg" alt="bb"
+                                                            class="img-popup" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr_box_1">
+                                            <div class="slider">
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/16.jpg" alt="ab"
+                                                        class="img-popup" />
+
+                                                </div>
+
+                                                <div class="text_slide_1">
+                                                    <img src="../images/what-we-do/shows/12.jpg" alt="bc"
+                                                        class="img-popup" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
-                    
-                                  <div class="hr_box_1">
-                                    <div class="slider">
-                                      <div class="text_slide_1">
-                                        <img src="../images/what-we-do/exhibitions/exhi4.jpg" alt="ab" class="img-popup" />
-                    
-                                      </div>
-                    
-                                      <div class="text_slide_1">
-                                        <img src="../images/what-we-do/exhibitions/exhi1.jpg" alt="bc" class="img-popup" />
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <!-- everything section -->
@@ -422,118 +426,64 @@
                     </div>
                     <div class="button-container">
                         <div class="button-row">
-                            <button>2000sqm of unimpeded & carpeted exhibition space</button>
-                            <button>Uninterrupted views of the stage</button>
+                            <button>2000sqm of floor space</button>
+                            <button>2000 guest capacity</button>
+                            <button>Multiple zoning</button>
+                            <button>3 high-volume, high-speed designed bars</button>
                         </div>
                         <div class="button-row">
-                            <button>Flexible layout and multiple zoning</button>
-                            <button>Exclusive venue hire</button>
-                            <button>In-house AV system with turn-key branding opportunities</button>
-                        </div>
-                        <div class="button-row">
+                            <button>City centre location</button>
                             <button>100Mb dedicated fibre leased line</button>
-                            <button>Outside caterers welcome</button>
-                            <button>On Site Solar Panels</button>
+                            <button>Flexible layout</button>
+                            <button>4 en-suite dressing rooms</button>
+                        </div>
+                        <div class="button-row">
+                            <button>AV included</button>
+                            <button>Exclusive venue hire</button>
                         </div>
                     </div>
                     <div class="image-marquee-container">
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-left">
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue1.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue2.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue3.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue4.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue5.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue6.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg"
-                                    class="img-popup" />
-                                <img
-                                    src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue13.jpg" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue14.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue15.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue16.jpg"
-                                    class="img-popup" />
+                                <img src="../images/what-we-do/shows/1.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/2.jpeg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/3.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/4.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/5.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/6.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/7.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/8.jpeg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/9.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/10.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/11.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/12.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/13.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/14.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/15.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/16.jpg" class="img-popup" />
                             </div>
                         </div>
 
                         <div class="image-marquee-wrapper">
                             <div class="image-marquee image-marquee-right">
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue17.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue18.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue19.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue20.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue21.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue1.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue2.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue24.jpeg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue25.jpeg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue26.jpeg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue7.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue8.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue9.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue10.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue11.jpg"
-                                    class="img-popup" />
-                                <img src="https://anuj-personal.s3.ap-south-1.amazonaws.com/images/exhibition_marqueue12.jpg"
-                                    class="img-popup" />
+                                <img src="../images/what-we-do/shows/17.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/2.jpeg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/5.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/3.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/15.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/4.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/14.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/5.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/12.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/6.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/11.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/7.jpg" class="img-popup" />
+                                <img src="../images/what-we-do/shows/9.jpg" class="img-popup" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- clients section -->
-                <div class="clients-section">
-                    <h1 class="slide-right">
-                        <span class="happy-span">SOME SATISFIED</span> <br>
-                        <span class="clients-span">CUSTOMERS</span>
-                    </h1>
-                </div>
-                <!-- lists section -->
-                <div class="list-container">
-                    <div class="list-section">
-                        <ul>
-                            <li data-image="../images/what-we-do/Prosecco.jpeg">Prosecco Festival</li>
-                            <li data-image="../images/what-we-do/gin fest.jpg">Gin Festival</li>
-                            <li data-image="../images/what-we-do/Freshers Festival .jpg">Freshers Festival </li>
-                            <li data-image="../images/what-we-do/elior 1.JPG">Elior- Festival of Colour</li>
-                            <li data-image="../images/what-we-do/Comiccon.jpg">Comic Con</li>
-                        </ul>
-                    </div>
-                    <div class="list-image-section">
-                        <img id="client-image" class="slide-right" src="../images/what-we-do/gin-fest.jpg"
-                            alt="Dinners" />
-                    </div>
+
+
                 </div>
                 <div class="brands-container">
                     <div class="brands-scroll">
@@ -562,42 +512,29 @@
                     <div class="form-section">
                         <div class="form-heading slide-left">
                             <h2>Keep up to date</h2>
-                            <p>Join our mailing list for latest news and events at Athena.</p>
+                            <p>join our mailing list for latest news and events at Athena.</p>
                         </div>
-                        <form id="mailingForm" novalidate>
-                            <div class="form-content slide-right" style="display: flex; flex-direction: column;">
-                                <div
-                                    style="display:flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
-                                    <input type="email" name="email" placeholder="Your email address"
-                                        class="input-field" />
-                                    <span class="error-message"
-                                        style="color:red; font-size:0.9em; display:none;"></span>
-                                </div>
-
-                                <div class="checkbox-container">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="interests" value="Corporate Events" />
-                                        Corporate Events
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="interests" value="Events for the Public" />
-                                        Events for the Public
-                                    </label>
-                                </div>
-
-                                <button type="submit" class="submit-button">Sign up</button>
+                        <div class="form-content slide-right">
+                            <input type="email" placeholder="your email address" class="input-field" />
+                            <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" />
+                                    Corporate Events
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" />
+                                    Events for the Public
+                                </label>
                             </div>
-                        </form>
-
+                            <button class="submit-button">Sign up</button>
+                        </div>
                         <div class="form-footer slide-left">
                             <div>
                                 <p><a href="tel:01162626556">0116 262 6556</a></p>
                                 <p><a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a></p>
                             </div>
                             <div class="privacy-policy">
-                                <p>For more details about how we use your information,
-                                    <a href="../privacy-policy.html" class="no-barba">Please see our Privacy Policy</a>
-                                </p>
+                                <p>For more details about how we use your information, please see our Privacy Policy</p>
                             </div>
                         </div>
                     </div>
@@ -674,63 +611,47 @@
             </main>
         </div>
         <!-- footer -->
-        <div class="footer-container">
-            <!-- Logo and Contact Info -->
-            <div class="footer-section">
-                <a href="../index.html" class="no-barba">
-                    <img src="../images/footer/logo.svg" alt="Logo"
-                        style="width: 100px; height: auto; margin-bottom: 1rem;" class="footer-logo">
-                </a>
+        <footer>
+            <div class="footer-container">
+                <div><a href="index.html" class="no-barba">
+                        <img src="images/footer/logo.svg" alt="Logo" style="width: 100px; height: auto;"
+                            class="footer-logo">
+                    </a></div>
+                <div class="footer-links">
+                    <a href="./contact-us.html" class="no-barba">Contact Us</a>
+                    <a href="./history.html" class="no-barba">History</a>
+                    <a href="./testimonials.html" class="no-barba">Testimonials</a>
+                    <a href="./room-layout.html" class="no-barba">Room Layout</a>
+                    <a href="./blog.html" class="no-barba">Blog</a>
+                    <a href="./faq.html" class="no-barba">FAQ</a>
+                    <a href="./career.html" class="no-barba">Career</a>
+                </div>
                 <div class="social-icons">
-                    <a href="https://twitter.com/AthenaLeicester"><img src="../images/footer/x.svg" alt="X"
+                    <a href="https://twitter.com/AthenaLeicester"><img src="images/footer/x.svg" alt="X"
                             class="social-icon"></a>
-                    <a href="https://www.facebook.com/AthenaLeicester/"><img src="../images/footer/facebook.svg"
+                    <a href="https://www.facebook.com/AthenaLeicester/"><img src="images/footer/facebook.svg"
                             alt="Facebook" class="social-icon"></a>
-                    <a href="http://www.instagram.com/AthenaLeicester"><img src="../images/footer/instagram.svg"
+                    <a href="http://www.instagram.com/AthenaLeicester"><img src="images/footer/instagram.svg"
                             alt="Instagram" class="social-icon"></a>
-                    <a href="https://www.linkedin.com/company/athenaeventsvenue"><img src="../images/footer/linkdln.svg"
+                    <a href="https://www.linkedin.com/company/athenaeventsvenue/"><img src="images/footer/linkdln.svg"
                             alt="LinkedIn" class="social-icon"></a>
-                    <a href="http://www.youtube.com/user/athenaleicester"><img src="../images/footer/youtube.svg"
+                    <a href="http://www.youtube.com/user/athenaleicester"><img src="images/footer/youtube.svg"
                             alt="YouTube" class="social-icon"></a>
                     <a href="https://www.tiktok.com/@athenaleicester?_t=ZN-8vRxWgE2ixC&_r=1"><img
-                            src="../images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
+                            src="images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
                 </div>
-                <div class="contact-info">
-                    <p><span class="footer-contact-span"><a href="tel:01162626556">0116 262 6556</a><a
-                                href="mailto:contact@athenacb.co.uk"></span>contact@athenacb.co.uk</a></p>
-                    <p>Queen Street Leicester, LE1 1QD</p>
+                <div class="footer-address">
+                    <div class="address-links">
+                        <a href="../privacy-policy.html" class="no-barba">Privacy Policy</a>
+                        <a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a>
+                        <a href="tel:01162626556">0116 262 6556</a>
+                    </div>
+                    <div class="address-text">
+                        Queen Street Leicester, LE1 1QD
+                    </div>
                 </div>
             </div>
-
-            <!-- Athena Links -->
-            <div class="footer-section">
-                <h3>Athena</h3>
-                <ul>
-                    <li><a href="../about-us/heritage.html" class="no-barba">Heritage</a></li>
-                    <li><a href="../about-us/testimonials.html" class="no-barba">Testimonials</a></li>
-                    <li><a href="../blog/index.html" class="no-barba">Blog</a></li>
-                    <li><a href="../privacy-policy.html" class="no-barba">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- Venue Hire Links -->
-            <div class="footer-section" id="lastFooterSection">
-                <h3>Venue Hire</h3>
-                <ul class="grid-list">
-                    <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
-                    <li><a href="concerts.html" class="no-barba">Concerts</a></li>
-                    <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                    <li><a href="conferences.html" class="no-barba">Conferences</a></li>
-                    <li><a href="shows.html" class="no-barba">Shows</a></li>
-                    <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions & Festivals</a></li>
-                    <li><a href="weddings.html" class="no-barba">Weddings</a></li>
-                    <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
-                    <li><a href="./dinners/balls-proms.html" class="no-barba">Balls and proms</a></li>
-                    <li><a href="../christmas.html" class="no-barba">Christmas</a></li>
-                </ul>
-            </div>
-
-        </div>
+        </footer>
         <!-- mobile loader -->
         <div class="please-rotate" data-lenis-prevent>
             <div class="branding">
@@ -761,47 +682,6 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/animation.js"></script>
     <script src="../js//insight.js"></script>
-    <script>
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        document.getElementById('mailingForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const form = e.target;
-            let valid = true;
-
-            const emailInput = form.elements.email;
-            const errorSpan = emailInput.parentElement.querySelector('.error-message');
-            const email = emailInput.value.trim();
-
-            // Reset error
-            errorSpan.textContent = '';
-            errorSpan.style.display = 'none';
-
-            if (!email) {
-                errorSpan.textContent = 'Email is required.';
-                errorSpan.style.display = 'block';
-                valid = false;
-            } else if (!isValidEmail(email)) {
-                errorSpan.textContent = 'Please enter a valid email address.';
-                errorSpan.style.display = 'block';
-                valid = false;
-            }
-
-            if (valid) {
-                const selectedInterests = Array.from(form.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
-
-                const data = {
-                    email,
-                    interests: selectedInterests
-                };
-
-                console.log(data);
-            }
-        });
-    </script>
-
 </body>
 
 </html>
