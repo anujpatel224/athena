@@ -1537,17 +1537,102 @@ footer {
 
 .overlay-text {
   position: absolute;
-  bottom: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   color: white;
   padding: 0 16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .welcome-heading {
   font-family: "DM Serif Display";
   font-size: 2rem;
   font-weight: 400;
+}
+
+.video-hero-heading {
+  font-family: "Fira Sans Condensed";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+}
+
+.video-hero-underline {
+  width: 200px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+.video-hero-subtext {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  opacity: 0.95;
+}
+
+
+@media (min-width: 768px) {
+  .video-hero-heading {
+    font-size: 5rem;
+  }
+
+  .video-hero-subtext {
+    font-size: 1.5rem;
+  }
+
+  .video-hero-underline {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-hero-heading {
+    font-size: 6rem;
+  }
+
+  .video-hero-subtext {
+    font-size: 1.75rem;
+  }
+
+  .video-hero-underline {
+    width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .video-hero-subtext {
+    font-size: 1rem;
+  }
+
+  .video-hero-underline {
+    width: 150px;
+    height: 1px;
+  }
+
+  .overlay-text {
+    gap: 0.75rem;
+  }
 }
 
 /* videos section css end */
@@ -5670,18 +5755,29 @@ th {
   font-size: 16px;
   color: #eee;
   position: absolute;
-  bottom: 5px;
-  left: 1%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  padding: 15px;
-  border: none;
-  border-radius: 2px;
+  bottom: 2rem;
+  left: 2rem;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
-  background: rgba(115, 67, 167, 0.8);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   opacity: 0.8;
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.volume-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
 }
 
 .volume-button.fade:hover {
