@@ -23,6 +23,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- styles -->
     <link rel="stylesheet" href="css/insights.css" media="screen" />
     <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
@@ -46,125 +48,34 @@
             width: 100%;
         }
 
-        .contact-us-container {
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            padding: 8rem 4rem;
-            gap: 2rem;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .container-header,
-        .container-form {
-            width: 50%;
-        }
-
-        .contact-title {
-            color: #222;
-            font-family: Archivo, sans-serif;
-            font-size: 42px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: normal;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .contact-subtitle {
-            overflow: hidden;
-            color: #444;
-            text-overflow: ellipsis;
-            font-family: Archivo, sans-serif;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 36px;
-            margin-bottom: 2rem;
-        }
-
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-items: flex-start;
-            align-items: flex-start;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 6px 0;
-            text-decoration: none;
-            transition: transform 0.2s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(5px);
-            color: #e74c3c !important;
-        }
-
-        .icon-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #ffe8e1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .phone-icon,
-        .email-icon,
-        .contact-icon {
-            width: 24px;
-            height: 24px;
-            fill: #000;
-            transition: fill 0.3s ease;
-        }
-
-        .contact-text {
-            color: #000;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-text:hover {
-            text-decoration: underline;
-            color: #e74c3c !important;
-        }
-
         .form-title {
-            border-radius: 12px 12px 0 0;
-            background: #E8E8E8;
-            display: flex;
-            padding: 18px 24px;
-            align-items: center;
-            gap: 10px;
-            align-self: stretch;
-            font-size: 24px;
-            font-weight: 700;
-            color: #333;
-            margin: 0;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 100%;
+            text-align: center;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            font-family: 'Fira Sans Condensed';
         }
 
-        .form-content {
-            display: flex;
-            padding: 30px 24px;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            align-self: stretch;
-            border-radius: 0 0 12px 12px;
-            background: #F4F4F4;
+        .form-subtitle {
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            line-height: 160%;
+            letter-spacing: 0%;
+            text-align: center;
+            font-family: 'Fira Sans';
+        }
+
+        .container-of-form {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+            width: 100%;
+            margin-top: 2rem
         }
 
         .form-row {
@@ -221,62 +132,113 @@
             margin-bottom: 0px;
         }
 
-        .submit-button {
-            width: 48%;
-            background: #f43900;
-            color: white;
-            border: none;
-            padding: 15px 24px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+        .enquire-now-button {
+            gap: 10px;
+            border-width: 1px;
+            padding: 1rem 2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .submit-button:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
-        }
-
-        .submit-button:active {
-            transform: translateY(0);
-        }
-
-        .form-content {
-            box-shadow: none;
+            cursor: pointer;
+            background: white;
         }
 
         #contactForm {
             width: 100%;
+            font-family: 'Fira Sans Condensed';
         }
 
-        .contact-page-get-in-touch-form {
-            border-radius: 12px;
+        .company-contact-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .con-item {
+            display: flex;
+            flex-direction: column;
+            padding: 0rem 3rem;
+            border-right: 1px solid #F43900;
+            gap: 1rem;
+        }
+
+        .con-item:last-child {
+            border-right: none;
+        }
+
+        .con-item h3 {
+            font-family: "Playfair Display";
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .con-item p {
+            font-family: "Fira Sans";
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-family: "Playfair Display";
+            font-weight: 600;
+        }
+
+        .contact-detail {
+            font-family: "Fira Sans";
+            font-weight: 400;
+        }
+
+        .address-icon {
+            width: 32px;
+            height: auto;
+            align-self: center;
+        }
+
+        .hero-section,
+        .contact-us-container {
+            margin-bottom: 4rem;
+        }
+
+        .map-title {
+            font-family: Fira Sans Condensed;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 62px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            font-variant: small-caps;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .map-section {
+            background-color: black;
+            padding: 4rem 12rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .contact-us-container {
-                flex-direction: column;
-                padding: 4rem;
-                gap: 2rem;
+            .form-title {
+                font-size: 36px;
             }
 
-            .container-header,
+            .form-subtitle {
+                font-size: 16px;
+            }
+
             .container-form {
                 width: 100%;
             }
 
-            .contact-title {
-                font-size: 32px;
-            }
-
-            .contact-subtitle {
-                font-size: 20px;
-                line-height: 30px;
+            .enquire-now-button {
+                padding: 2rem 0rem;
             }
 
             .form-row {
@@ -284,12 +246,39 @@
                 gap: 16px;
             }
 
-            .form-content {
-                padding: 20px 16px;
-            }
-
             #form-button-row .submit-button {
                 width: 100%;
+            }
+
+            .hero-section,
+            .contact-us-container {
+                margin-bottom: 8rem;
+            }
+
+            .map-title {
+                font-size: 36px;
+                margin-bottom: 6rem;
+            }
+
+            .map-section {
+                background-color: black;
+                padding: 10rem 5rem;
+            }
+
+            .company-contact-container{
+                margin-top: 10rem;
+            }
+
+            .con-item p {
+                font-size: 10px;
+            }
+
+            .con-item h3 {
+                font-size: 16px;
+            }
+
+            .address-icon{
+                width: 20px;
             }
         }
     </style>
@@ -476,38 +465,40 @@
                                     <li><a href="./contact-us.html" class="no-barba">Contact Us</a></li>
                                 </ul>
                             </li>
-                            <li class="ExploreNow">
-                                <a href="./contact-us.html" class="no-barba enquire_now_btn" title="Enquire Now">
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="name-ct">
-                                        <span class="name">
-                                            <span class="first"> Enquire Now </span>
-                                            <span class="second"> Enquire Now </span>
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="ExploreNow"><a href="#" class="no-barba call_now_btn" title="call">
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="name-ct">
-                                        <span class="name">
-                                            <span class="first"> <i style="display:flex;align-items:center">
-                                                    📞
-                                                </i>
-                                                0116 262 6556 </span>
-                                            <span class="second"> <i style="display:flex;align-items:center">
-                                                    📞
-                                                </i>
-                                                0116 262 6556 </span>
-                                        </span>
-                                    </div>
-                                </a></li>
+                            <div class="navbar-exporenow-cta">
+                                <li class="ExploreNow">
+                                    <a href="./contact-us.html" class="no-barba enquire_now_btn" title="Enquire Now">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="name-ct">
+                                            <span class="name">
+                                                <span class="first"> Enquire Now </span>
+                                                <span class="second"> Enquire Now </span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ExploreNow"><a href="#" class="no-barba call_now_btn" title="call">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="name-ct">
+                                            <span class="name">
+                                                <span class="first"> <i style="display:flex;align-items:center">
+                                                        📞
+                                                    </i>
+                                                    0116 262 6556 </span>
+                                                <span class="second"> <i style="display:flex;align-items:center">
+                                                        📞
+                                                    </i>
+                                                    0116 262 6556 </span>
+                                            </span>
+                                        </div>
+                                    </a></li>
+                            </div>
                         </ul>
                         <div class="hamburger" data-toggle-nav>
                             <div class="line">
@@ -530,51 +521,15 @@
             </div>
         </div>
         <div class="page-wrap">
+            <div class="hero-section">
+                <img src="images/contact-us/hero.png" alt="Contact Us Hero Image" class="hero-image" />
+            </div>
             <div class="contact-us-container">
-                <div class="container-header">
-                    <h1 class="contact-title">Contact Us</h1>
-                    <p class="contact-subtitle">Feel free to use the form or drop us an email.</br>
-                        Old fashioned phone calls work too!</p>
-                    <div class="contact-container">
-                        <a href="tel:01162626556" class="contact-item">
-                            <div class="icon-circle">
-                                <svg class="phone-icon" viewBox="0 0 24 24">
-                                    <path
-                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                                </svg>
-                            </div>
-                            <span class="contact-text">0116 262 6556</span>
-                        </a>
-
-                        <a href="mailto:contact@athenacb.co.uk" class="contact-item">
-                            <div class="icon-circle">
-                                <svg class="email-icon" viewBox="0 0 24 24">
-                                    <path
-                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                </svg>
-                            </div>
-                            <span class="contact-text">contact@athenacb.co.uk</span>
-                        </a>
-
-                        <a class="contact-item"
-                            href="https://www.google.com/maps/search/?api=1&query=Athena,+Queen+Street+Leicester,+LE1+1QD"
-                            target="_blank" rel="noopener noreferrer">
-                            <div class="icon-circle">
-                                <svg class="contact-icon" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            <span class="contact-text">Athena, Queen Street Leicester, LE1 1QD</span>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="container-form contact-page-get-in-touch-form">
+                <div class="container-form">
                     <div class="form-box">
                         <h2 class="form-title">Get in touch</h2>
-                        <div class="form-content">
+                        <p class="form-subtitle">We’d love to hear from you...</p>
+                        <div class="container-of-form">
                             <form id="contactForm" novalidate>
                                 <div class="form-row">
                                     <div style="flex:1; display:flex; flex-direction:column;">
@@ -607,38 +562,42 @@
                                     </div>
                                 </div>
                                 <div class="form-row" id="form-button-row"
-                                    style="display: flex; justify-content: flex-end; margin-bottom:0px">
-                                    <button style="width:48%" type="submit" class="submit-button">SUBMIT</button>
+                                    style="display: flex; justify-content: center; margin: 2rem 0rem">
+                                    <button type="submit" class="enquire-now-button">Enquire
+                                        Now</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="email-form-container contactpage-email-form">
-                <div class="form-container">
-                    <div class="form-section">
-                        <div class="form-heading slide-left">
-                            <h2>Keep up to date</h2>
-                            <p>join our mailing list for latest news and events at Athena.</p>
-                        </div>
-                        <div class="form-content slide-right">
-                            <input type="email" placeholder="your email address" class="input-field" />
-                            <div class="checkbox-container">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" />
-                                    Corporate Events
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" />
-                                    Events for the Public
-                                </label>
-                            </div>
-                            <button class="submit-button">Submit</button>
-                        </div>
+                <div class="company-contact-container">
+                    <div class="con-item">
+                        <img src="images/icons/phoneicon.svg" alt="X" class="address-icon">
+                        <h3 class="contact-title">Phone</h3>
+                        <p class="contact-detail">0116 262 6556</p>
+                    </div>
+
+                    <div class="con-item">
+                        <img src="images/icons/locationicon.svg" alt="X" class="address-icon">
+                        <h3 class="contact-title">Address</h3>
+                        <p class="contact-detail">Athena, Queen Street Leicester,<br>LE1 1QD</p>
+                    </div>
+
+                    <div class="con-item">
+                        <img src="images/icons/gmailicon.svg" alt="X" class="address-icon">
+                        <h3 class="contact-title">Email</h3>
+                        <p class="contact-detail">contact@athenacb.co.uk</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
+            <div id="map-section" class="map-section">
+                <h2 class="map-title">GETTING HERE</h2>
+                <iframe width="100%" height="400" style="border:0; filter:brightness(0.7) invert(1) contrast(1.3);"
+                    loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Athena%20Queen%20Street%20Leicester%20LE1%201QD&output=embed">
+                </iframe>
+
+            </div>
         </div>
         <!-- footer -->
         <footer>
@@ -707,6 +666,48 @@
     <script src="js/scripts.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/insight.js"></script>
+    <script>
+        // Dark theme styles (you can tweak these)
+        const darkStyle = [
+            { "elementType": "geometry", "stylers": [{ "color": "#212121" }] },
+            { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
+            { "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
+            { "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }] },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [{ "color": "#4a4033" }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [{ "color": "#181818" }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{ "color": "#000000" }]
+            }
+        ];
+
+        function initMap() {
+            // Set this to your venue’s coordinates
+            const venue = { lat: 52.6336, lng: -1.1230 }; // example: Leicester center
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: venue,
+                zoom: 15,
+                styles: darkStyle,
+                disableDefaultUI: false,
+            });
+
+            new google.maps.Marker({
+                position: venue,
+                map,
+                title: "Your Venue Name",
+            });
+        }
+    </script>
 </body>
 
 </html>
