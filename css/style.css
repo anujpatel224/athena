@@ -5010,9 +5010,21 @@ footer {
   box-sizing: border-box;
 }
 
+.why-athena-card.highlighted {
+  border: 1px solid #f43900;
+}
+
+.why-athena-card.highlighted .why-athena-icon img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(5000%) hue-rotate(4deg) brightness(100%) contrast(150%);
+}
+
 .why-athena-card:hover {
   transform: none;
   border: 1px solid #FFFFFF66;
+}
+
+.why-athena-card.highlighted:hover {
+  border: 1px solid #f43900;
 }
 
 .why-athena-icon {
