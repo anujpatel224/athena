@@ -199,6 +199,7 @@ html {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  overflow-x: hidden;
 }
 
 * {
@@ -437,6 +438,7 @@ ol {
   margin-left: -4.92rem;
   max-width: calc(100% + 9.84rem);
   width: calc(100% + 9.84rem);
+  box-sizing: border-box;
 }
 
 @media (min-width: 759px) {
@@ -444,6 +446,7 @@ ol {
     margin-left: -0.94rem;
     max-width: calc(100% + 1.88rem);
     width: calc(100% + 1.88rem);
+    box-sizing: border-box;
   }
 }
 
@@ -4575,7 +4578,8 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-
+  margin-top: auto;
+  z-index: 1;
 }
 
 .footer-container {
@@ -4721,7 +4725,16 @@ footer {
 
 @media (max-width: 768px) {
   footer {
-    position: fixed;
+    position: relative;
+  }
+
+  .footer-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-bg {
+    position: relative;
+    margin-top: 0;
   }
 
   .social-icons a img {
@@ -4738,6 +4751,29 @@ footer {
     margin-bottom: 1rem;
     margin-top: 2rem;
   }
+}
+
+/* Footer background positioning */
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-bg img,
+.footer-bg picture,
+.footer-bg picture img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* footer section css end */
@@ -5223,14 +5259,14 @@ footer {
 }
 
 .clients-marquee-wrapper {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   margin-top: 2rem;
-  left: 0%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .clients-marquee {
@@ -6139,7 +6175,7 @@ main .btn-secondary:hover,
     will-change: transform;
     transform-style: preserve-3d;
     margin: 0 auto;
-
+    box-sizing: border-box;
   }
 
   .part-process .process-wrapper .process-slide .box-style {
