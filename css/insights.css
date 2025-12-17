@@ -1552,7 +1552,7 @@ footer {
 }
 
 .welcome-heading {
-  font-family: "DM Serif Display";
+  font-family: "Fira Sans Condensed" !important;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -2153,6 +2153,32 @@ footer {
 .our-work-btn:hover {
   background-color: #ffffff;
   color: #000000;
+}
+
+.our-work-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.our-work-logo {
+  height: 60px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.our-work-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
 }
 
 .our-work-marquee {
@@ -2950,6 +2976,199 @@ footer {
   .menu-button {
     padding: 2rem 3rem;
     font-size: 2rem;
+  }
+}
+
+/* Conference Content Section */
+.conference-content-section {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.conference-content-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 35px;
+  height: 580px;
+}
+
+.conference-image-wrapper {
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 580px;
+  overflow: hidden;
+}
+
+.conference-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+
+.conference-content-wrapper {
+  position: absolute;
+  left: 650px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 640px;
+}
+
+.conference-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.conference-heading {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+  color: #222222;
+  margin: 0;
+  width: 100%;
+}
+
+.conference-line {
+  width: 100%;
+  height: 1px;
+  background-color: #f43900;
+  margin: 0;
+}
+
+.conference-text {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0;
+  width: 100%;
+}
+
+.conference-button {
+  border: 1px solid #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 48px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 0;
+}
+
+.conference-button span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.conference-button:hover {
+  background-color: #222222;
+}
+
+.conference-button:hover span {
+  color: #ffffff;
+}
+
+/* Responsive styles for Conference Content Section */
+@media (max-width: 1400px) {
+  .conference-content-container {
+    padding: 0 2rem;
+  }
+
+  .conference-image-wrapper {
+    left: 2rem;
+  }
+
+  .conference-content-wrapper {
+    left: 550px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .conference-content-container {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .conference-image-wrapper {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 500px;
+    height: 580px;
+    margin: 0 auto 2rem;
+  }
+
+  .conference-content-wrapper {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .conference-heading {
+    width: 100%;
+    font-size: 42px;
+  }
+
+  .conference-line {
+    width: 100%;
+  }
+
+  .conference-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .conference-content-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .conference-content-container {
+    padding: 0;
+  }
+
+  .conference-image-wrapper {
+    width: 100%;
+    height: 400px;
+  }
+
+  .conference-heading {
+    font-size: 32px;
+  }
+
+  .conference-text {
+    font-size: 18px;
+  }
+
+  .conference-button {
+    width: 100%;
+    padding: 16px 32px;
   }
 }
 
