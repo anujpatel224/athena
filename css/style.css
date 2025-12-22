@@ -5455,6 +5455,9 @@ footer {
   .newsletter-section {
     min-height: 400px;
     padding: 4rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .newsletter-container {
