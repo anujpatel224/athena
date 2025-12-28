@@ -4575,7 +4575,7 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-
+  margin-top: auto;
 }
 
 .footer-container {
@@ -4721,7 +4721,8 @@ footer {
 
 @media (max-width: 768px) {
   footer {
-    position: fixed;
+    position: relative;
+    bottom: auto;
   }
 
   .social-icons a img {
