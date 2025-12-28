@@ -2377,10 +2377,8 @@ footer {
 }
 
 .testimonial-logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: #0066CC;
+  width: 200px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
