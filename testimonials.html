@@ -24,12 +24,35 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Fira+Sans+Condensed:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
     <style>
+        .dark-overlay-img {
+            height: 400px;
+        }
+
+        .overlay-text {
+            width: 100%;
+            background: #191919CC;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: contain;
+        }
+
+        .video-hero-subtext{
+            width: 50%;
+        }
+
         .part-process {
             display: block;
             box-sizing: border-box;
@@ -656,12 +679,17 @@
                 </div>
             </div>
         </div>
-        <div class="testimonial-section">
-            <h1>
-                Testimonials
-            </h1>
-            <p class="">We have hosted a variety of events, from large dinners to weddings to remember. Take a look at
-                what some of our many satisfied clients have said.</p>
+        <div class="bg-ct">
+            <div class="dark-overlay-img">
+                <img src="../images/testihero.jpg" alt="hero-img">
+            </div>
+            <div class="overlay-text">
+                <h1 class="video-hero-heading">Testimonials</h1>
+                <div class="video-hero-underline"></div>
+                <p class="video-hero-subtext">We have hosted a variety of events, from large dinners to weddings to
+                    remember. Take a look at what some of our many
+                    satisfied clients have said.</p>
+            </div>
         </div>
         <section class="part-process sec-3">
             <div style="background-color:#F0F0F0;">
