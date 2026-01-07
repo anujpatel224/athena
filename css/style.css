@@ -199,7 +199,6 @@ html {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   position: relative;
-  overflow-x: hidden;
 }
 
 * {
@@ -6197,7 +6196,6 @@ main .btn-secondary:hover,
     will-change: transform;
     transform-style: preserve-3d;
     margin: 0 auto;
-    box-sizing: border-box;
   }
 
   .part-process .process-wrapper .process-slide .box-style {
