@@ -2,15 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      var isOpen = this.classList.contains("open");
-      faqItems.forEach(function (el) {
-        el.classList.remove("open");
-        el.querySelector(".expand-collapse-icon").classList.remove("collapsed");
-      });
-      if (!isOpen) {
-        this.classList.add("open");
-        this.querySelector(".expand-collapse-icon").classList.add("collapsed");
-      }
+      // Toggle the 'open' class - CSS handles the icon and answer display
+      this.classList.toggle("open");
     });
   });
 });
