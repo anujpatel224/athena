@@ -3734,18 +3734,16 @@ th {
 }
 
 .christmas-banner-link {
-  color: #222;
+  color: white;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: 'Fira Sans', sans-serif;
-  transition: opacity 0.3s ease;
+  font-family: 'Playfair Display';
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .christmas-banner-link:hover {
-  opacity: 0.8;
+  color: #f43900;
 }
 
 /* Mobile Screens (Below 768px) */
@@ -5292,6 +5290,9 @@ th {
   line-height: 25.56px;
   margin-top: 0.5rem;
   cursor: pointer;
+  font-family: "Fira Sans";
+  font-weight: 500;
+
 }
 
 .job-details button {
@@ -5300,16 +5301,22 @@ th {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  border-radius: 86px;
   background: #F43900;
   color: #fff;
   border: none;
   font-size: 18px;
   font-weight: 500;
-  font-style: normal;
   line-height: 25.56px;
   margin-top: 0.5rem;
   cursor: pointer;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-style: Medium;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
 }
 
 .down-arrow {
