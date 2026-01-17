@@ -4638,6 +4638,11 @@ footer {
 
 .address-text {
   font-size: 14px;
+  display: none;
+}
+
+.dev-address {
+  display: block;
 }
 
 .footer-container .footer-address .address-links a:not(:last-child)::after {
@@ -6366,8 +6371,8 @@ main .btn-secondary:hover,
 
   .footer-container .footer-links {
     text-align: center;
-      width: 80%;
-      gap: 2.5rem 10rem;
+    width: 80%;
+    gap: 2.5rem 10rem;
   }
 
   .footer-container .footer-links a {
@@ -6388,6 +6393,15 @@ main .btn-secondary:hover,
 
   .address-text {
     font-size: 12px;
+    display: block;
+  }
+
+  .dev-address {
+    display: none;
+  }
+
+  .footer-container .footer-address .address-links a:nth-last-child(2)::after {
+    display: none;
   }
 
   .part-process .process-wrapper .process-slide {
@@ -7581,7 +7595,7 @@ html {
   }
 
   /* USP Cards Mobile Styles */
-  .card-title > span:not(.subsubtitle) {
+  .card-title>span:not(.subsubtitle) {
     font-size: 14px !important;
   }
 
