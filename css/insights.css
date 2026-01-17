@@ -4083,6 +4083,7 @@ th {
   text-align: center;
   color: #222;
   text-transform: none;
+  text-transform: uppercase;
 }
 
 /* FAQ Container */
@@ -4110,7 +4111,7 @@ th {
   transition: all 0.3s ease;
 }
 
-.faq-item.highlighted {
+.faq-item:hover {
   border: 1px solid #f43900;
 }
 
