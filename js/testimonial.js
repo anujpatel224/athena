@@ -39,7 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 20,
       loop: true,
       speed: 600,
-      autoplay: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       pagination: {
         el: ".service-images-pagination",
         clickable: true,

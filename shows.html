@@ -322,7 +322,7 @@
                             experiences that captivate and inspire. Every detail is thoughtfully crafted to engage the
                             senses and leave a lasting impression.</p>
                         <!-- <p class="our-work-subheadline-2">Click below to view more of our work.</p> -->
-                        <a href="#" class="our-work-btn no-barba">DISCOVER MORE</a>
+                        <a href="./shows.html" class="our-work-btn no-barba">DISCOVER MORE</a>
                         <div class="our-work-track">
                             <img src="images/workwithus/davidson homes.png" alt="brand">
                             <img src="images/workwithus/england hockey.png" alt="brand">
@@ -913,7 +913,11 @@
                     spaceBetween: 20,
                     loop: true,
                     speed: 600,
-                    autoplay: false,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
                     pagination: {
                         el: '.service-images-pagination',
                         clickable: true,
