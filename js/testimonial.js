@@ -44,12 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-      pagination: {
-        el: ".service-images-pagination",
-        clickable: true,
-        bulletClass: "swiper-pagination-bullet",
-        bulletActiveClass: "swiper-pagination-bullet-active",
-      },
       breakpoints: {
         320: {
           slidesPerView: "auto",

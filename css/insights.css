@@ -2100,54 +2100,53 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
+  gap: 40px;
 }
 
 .our-work-headline {
   font-family: "Fira Sans Condensed";
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 62px;
+  font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
+  font-variant: small-caps;
+}
+
+.our-work-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1046px;
 }
 
 .our-work-subheadline {
   font-family: "Fira Sans";
-  font-size: 1.25rem;
+  font-size: 24px;
   font-weight: 400;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-.our-work-subheadline-2 {
-  font-family: "Fira Sans";
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #ffffff;
-  margin: 0;
-  max-width: 800px;
+  max-width: 1046px;
   line-height: 1.6;
 }
 
 .our-work-btn {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 16px 48px;
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Fira Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
   width: fit-content;
   transition: all 0.3s ease;
-  margin-top: 1rem;
+  line-height: 20px;
 }
 
 .our-work-btn:hover {
@@ -2184,28 +2183,23 @@ footer {
 .our-work-marquee {
   overflow: hidden;
   width: 100%;
-  margin: 4rem auto 0;
+  margin-top: 80px;
   filter: grayscale(100%);
+  opacity: 0.8;
 }
 
 .our-work-track {
   display: flex;
-  gap: 3rem;
+  gap: 58px;
   width: max-content;
   animation: marquee 25s linear infinite;
 }
 
 .our-work-track img {
-  height: 60px;
+  height: 80px;
   width: auto;
-  max-width: 150px;
   object-fit: contain;
-  opacity: 0.9;
   transition: opacity 0.3s ease;
-}
-
-.our-work-track img:hover {
-  opacity: 1;
 }
 
 /* Animation */
@@ -2221,12 +2215,15 @@ footer {
 
 @media (max-width: 968px) {
   .our-work-headline {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
-  .our-work-subheadline,
-  .our-work-subheadline-2 {
-    font-size: 1.1rem;
+  .our-work-subheadline {
+    font-size: 20px;
+  }
+
+  .our-work-text-group {
+    max-width: 90%;
   }
 
   .our-work-logos {
@@ -2238,6 +2235,14 @@ footer {
     height: 50px;
     max-width: 120px;
   }
+
+  .our-work-track {
+    gap: 40px;
+  }
+
+  .our-work-track img {
+    height: 60px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2247,21 +2252,24 @@ footer {
 
   .our-work-content {
     padding: 3rem 1.5rem;
-    gap: 4rem;
+    gap: 30px;
   }
 
   .our-work-headline {
-    font-size: 8rem;
+    font-size: 36px;
   }
 
-  .our-work-subheadline,
-  .our-work-subheadline-2 {
-    font-size: 2.5rem;
+  .our-work-subheadline {
+    font-size: 16px;
+  }
+
+  .our-work-text-group {
+    gap: 16px;
   }
 
   .our-work-btn {
-    padding: 2rem 3rem;
-    font-size: 2.5rem;
+    padding: 14px 32px;
+    font-size: 14px;
   }
 
   .our-work-logos {
@@ -2272,6 +2280,18 @@ footer {
   .our-work-logo {
     height: 40px;
     max-width: 100px;
+  }
+
+  .our-work-marquee {
+    margin-top: 40px;
+  }
+
+  .our-work-track {
+    gap: 30px;
+  }
+
+  .our-work-track img {
+    height: 50px;
   }
 }
 
@@ -2608,7 +2628,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 600px;
+  min-height: 540px;
   overflow-x: hidden;
   width: 100%;
 }
@@ -3750,7 +3770,7 @@ th {
 /* Christmas Banner Section */
 .christmas-banner-section {
   width: 100%;
-  background-color: #c6bfa1;
+  background-color: #222;
   padding: 12px 0;
   text-align: center;
   display: flex;
