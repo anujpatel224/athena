@@ -2069,7 +2069,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li .a {
   color: #f2f2f2;
   line-height: 100%;
   position: relative;
-  font-size: 5rem;
+  font-size: 4rem !important;
   font-weight: 500;
 }
 
@@ -2095,7 +2095,7 @@ html:not(.open-navi) #navigation .row .col .navigation-inner nav ul li .a {
   font-family: ivyora-display, serif;
   font-style: italic;
   color: #b3b3b3;
-  font-size: 5rem;
+  font-size: 4rem !important;
   margin-right: 2.75rem;
 }
 
@@ -4433,7 +4433,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 /* Designed to Host Events Section */
 .designed-to-host-section {
   background-color: #ffffff !important;
-  padding: 4rem 0;
+  padding: 10rem 0;
   min-height: auto;
   position: relative;
   z-index: 10;
@@ -4507,7 +4507,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 
 .designed-to-host-section .heritage-button {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 2rem 6rem;
   border: 1px solid #000000 !important;
   color: #1a1a1a !important;
   text-decoration: none;
@@ -4934,14 +4934,16 @@ footer {
 }
 
 .welcome-heading {
-  font-size: 62px !important;
+  font-size: 42px !important;
   font-weight: 550 !important;
   font-family: "Fira Sans Condensed" !important;
+  padding-top: 6rem;
 }
 
 @media (min-width: 768px) {
   .welcome-heading {
-    font-size: 5rem;
+    padding-top: 2rem;
+    font-size: 42px !important;
     font-family: "Fira Sans Condensed" !important;
   }
 }
@@ -5340,23 +5342,23 @@ footer {
 
 @media (max-width: 767px) {
   .clients-section {
-    padding: 4rem 1.5rem;
+    padding: 10rem 1.5rem;
   }
 
   .clients-heading {
     font-size: 42px !important;
-    margin-bottom: 1.5rem;
+    margin-bottom: 6rem;
   }
 
   .clients-description {
     font-size: 16px !important;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
 
   .clients-button {
-    padding: 0.875rem 2rem;
+    padding: 2rem 6rem;
     font-size: 14px !important;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem !important;
   }
 
   .clients-marquee-content {
@@ -5367,6 +5369,7 @@ footer {
   .client-marquee-logo {
     height: 60px;
     max-width: 150px;
+    margin-right: 32px;
   }
 }
 
@@ -5502,7 +5505,7 @@ footer {
 
 @media (max-width: 767px) {
   .newsletter-section {
-    min-height: 400px;
+    min-height: 650px;
     padding: 4rem 1.5rem;
     width: 100%;
     max-width: 100%;
@@ -5518,17 +5521,14 @@ footer {
     max-width: 100% !important;
     padding: 0;
     gap: 1.5rem;
-  }
-
-  .newsletter-heading {
-    font-size: 32px !important;
-    line-height: 1.2 !important;
+    margin-bottom: 6rem;
   }
 
   .newsletter-description {
     font-size: 16px !important;
     line-height: 1.5 !important;
     padding: 0 0.5rem;
+    margin-bottom: 6rem;
   }
 
   .newsletter-form {
@@ -5540,13 +5540,14 @@ footer {
   .newsletter-input {
     width: 100%;
     font-size: 14px !important;
-    padding: 0.75rem 1rem;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
   }
 
   .newsletter-button {
     width: 100%;
     font-size: 14px !important;
-    padding: 0.75rem 2rem;
+    padding: 3rem 6rem;
   }
 }
 
@@ -6397,10 +6398,6 @@ main .btn-secondary:hover,
   }
 
   .dev-address {
-    display: none;
-  }
-
-  .footer-container .footer-address .address-links a:nth-last-child(2)::after {
     display: none;
   }
 
@@ -7413,7 +7410,7 @@ html {
   .ExploreNow {
     color: black !important;
     background-color: #FFFFFF;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -7602,10 +7599,12 @@ html {
   /* General Mobile Typography */
   .designed-to-host-section .section-heading {
     font-size: 42px !important;
+    margin-bottom: 6rem;
   }
 
   .designed-to-host-section .heritage-text {
     font-size: 16px !important;
+    margin-bottom: 6rem;
   }
 
   .designed-to-host-section .heritage-button {
@@ -7678,9 +7677,9 @@ html {
     margin-bottom: 10rem;
   }
 
-  main [class*="sec-"]:not([class*="sec-2"]) {
+  /* main [class*="sec-"]:not([class*="sec-2"]) {
     padding-bottom: 10rem;
-  }
+  } */
 }
 
 

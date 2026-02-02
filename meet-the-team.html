@@ -26,17 +26,244 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
     <!-- styles -->
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
     <style>
         body {
-            background: #140b0b;
+            background: #111;
         }
 
-        @media (max-width: 768px) {
-            .slider-btn {
+        /* Meet the Team Section Styles */
+        .team-section-new {
+            background: #111;
+            padding: 88px 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 51px;
+        }
+
+        .team-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .team-header h2 {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: 500;
+            font-size: 54px;
+            line-height: 1.2;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .team-nav-arrows {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .team-nav-btn {
+            width: 32px;
+            height: 32px;
+            background: #191919;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease;
+        }
+
+        .team-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .team-nav-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .team-grid-new {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+
+        .team-card {
+            width: 100%;
+            height: 436px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .team-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.50) 50%), linear-gradient(180deg, rgba(38, 12, 4, 0.00) 0%, rgba(38, 12, 4, 0.90) 50%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .team-card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .team-card-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 26px;
+            line-height: 1;
+            color: #fff;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        .team-card-role {
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f43900;
+            margin: 0;
+        }
+
+        .team-card-bio {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #fff;
+            margin: 0;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+        }
+
+        /* Hover State - Show bio with dark overlay */
+        .team-card:hover .team-card-overlay {
+            background: rgba(61, 14, 0, 0.95);
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .team-card:hover .team-card-bio {
+            opacity: 1;
+            max-height: 250px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .team-section-new {
+                padding: 60px 60px;
+            }
+
+            .team-header h2 {
+                font-size: 42px;
+            }
+
+            .team-grid-new {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .team-card {
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .team-section-new {
+                padding: 40px 30px;
+            }
+
+            .team-header h2 {
+                font-size: 32px;
+            }
+
+            .team-grid-new {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .team-card {
+                height: 340px;
+            }
+
+            .team-card-name {
+                font-size: 22px;
+            }
+
+            .team-card-role {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-section-new {
+                padding: 30px 20px;
+                gap: 30px;
+            }
+
+            .team-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .team-header h2 {
+                font-size: 28px;
+            }
+
+            .team-nav-arrows {
                 display: none;
+            }
+
+            .team-grid-new {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                height: 400px;
+            }
+
+            .team-card-name {
+                font-size: 24px;
+            }
+
+            .team-card-bio {
+                font-size: 13px;
             }
         }
     </style>
@@ -272,78 +499,93 @@
         </div>
         <div class="page-wrap">
             <main>
-                <div class="team-slider-container">
-                    <div class="team-section">
-                        <div class="header-row">
-                            <h2>MEET THE TEAM</h2>
+                <section class="team-section-new">
+                    <div class="team-header">
+                        <h2>Meet the Team</h2>
+                        <div class="team-nav-arrows">
+                            <button class="team-nav-btn" id="teamPrevBtn" disabled>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="team-nav-btn" id="teamNextBtn">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="team-grid-new" id="teamGrid">
+                        <!-- Row 1 -->
+                        <div class="team-card" data-bio="Dylan brings flavor and flair, running our most loved event bars with exceptional service and creativity.">
+                            <img src="../images/team/Dylan.webp" alt="Dylan Neville" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Dylan Neville</h3>
+                                    <p class="team-card-role">Bar Manager</p>
+                                </div>
+                                <p class="team-card-bio">Dylan brings flavor and flair, running our most loved event bars with exceptional service and creativity.</p>
+                            </div>
                         </div>
 
-                        <div class="team-grid" id="team-grid">
-                            <div class="team-member">
-                                <img src="../images/team/Sandeep.webp" alt="Sandeep Singh" height="100px"
-                                    width="100px" />
-                                <div class="overlay">
-                                    <h3><em>Sandeep Singh</em></h3>
-                                    <p>Managing Director</p>
-                                    <div class="bio">Sandeep leads the vision of the company and keeps everything on
-                                        track.</div>
+                        <div class="team-card" data-bio="Behind every smooth event at Athena is a force of nature who thrives on turning the impossible into the unforgettable. With a mix of sharp strategy and infectious energy, she makes magic happen behind the scenes!">
+                            <img src="../images/team/Hira ram.webp" alt="Hira Ram" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Hira Ram</h3>
+                                    <p class="team-card-role">Events Director</p>
                                 </div>
+                                <p class="team-card-bio">Behind every smooth event at Athena is a force of nature who thrives on turning the impossible into the unforgettable. With a mix of sharp strategy and infectious energy, she makes magic happen behind the scenes!</p>
                             </div>
-                            <div class="team-member">
-                                <img src="../images/team/Hira ram.webp" alt="Hira Ram" />
-                                <div class="overlay">
-                                    <h3><em>Hira Ram</em></h3>
-                                    <p>Events Director</p>
-                                    <div class="bio">
-                                        Behind every smooth event at Athena is a force of nature who thrives on turning
-                                        the impossible
-                                        into the unforgettable. With a mix of sharp strategy and infectious energy, she
-                                        makes magic
-                                        happen behind the scenes!
-                                    </div>
+                        </div>
+
+                        <div class="team-card" data-bio="Simrin crafts powerful campaigns and brings the brand to life with creative marketing strategies.">
+                            <img src="../images/team/Simrin.webp" alt="Simrin Singh" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Simrin Singh</h3>
+                                    <p class="team-card-role">Marketing Director</p>
                                 </div>
+                                <p class="team-card-bio">Simrin crafts powerful campaigns and brings the brand to life with creative marketing strategies.</p>
                             </div>
-                            <div class="team-member">
-                                <img src="../images/team/Simrin.webp" alt="Simrin Singh" />
-                                <div class="overlay">
-                                    <h3><em>Simrin Singh</em></h3>
-                                    <p>Marketing Director</p>
-                                    <div class="bio">Simrin crafts powerful campaigns and brings the brand to life.
-                                    </div>
+                        </div>
+
+                        <div class="team-card" data-bio="Sandeep leads the vision of the company with passion and dedication, ensuring Athena continues to deliver exceptional experiences for every client.">
+                            <img src="../images/team/Sandeep.webp" alt="Sandeep Singh" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Sandeep Singh</h3>
+                                    <p class="team-card-role">Managing Director</p>
                                 </div>
+                                <p class="team-card-bio">Sandeep leads the vision of the company with passion and dedication, ensuring Athena continues to deliver exceptional experiences for every client.</p>
                             </div>
-                            <div class="team-member">
-                                <img src="../images/team/Dylan.webp" alt="Dylan Neville" />
-                                <div class="overlay">
-                                    <h3><em>Dylan Neville</em></h3>
-                                    <p>Bar Manager</p>
-                                    <div class="bio">Dylan brings flavor and flair, running our most loved event bars.
-                                    </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="team-card" data-bio="Gary ensures smooth operations and maintains the highest standards across all events with meticulous attention to detail.">
+                            <img src="../images/team/gary sands.webp" alt="Gary Sands" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Gary Sands</h3>
+                                    <p class="team-card-role">Operations Director</p>
                                 </div>
+                                <p class="team-card-bio">Gary ensures smooth operations and maintains the highest standards across all events with meticulous attention to detail.</p>
                             </div>
-                            <div class="team-member">
-                                <img src="../images/team/gary sands.webp" alt="Gary Sands" />
-                                <div class="overlay">
-                                    <h3><em>Gary Sands</em></h3>
-                                    <p>Operations Director</p>
-                                    <div class="bio">Gary ensures smooth operations and maintains the highest standards
-                                        across all events.
-                                    </div>
+                        </div>
+
+                        <div class="team-card" data-bio="Megha coordinates events with precision and ensures every detail is perfectly executed for memorable experiences.">
+                            <img src="../images/team/Megha.webp" alt="Megha" />
+                            <div class="team-card-overlay">
+                                <div class="team-card-info">
+                                    <h3 class="team-card-name">Megha</h3>
+                                    <p class="team-card-role">Events Coordinator</p>
                                 </div>
-                            </div>
-                            <div class="team-member">
-                                <img src="../images/team/Megha.webp" alt="Megha" />
-                                <div class="overlay">
-                                    <h3><em>Megha</em></h3>
-                                    <p>Events Coordinator</p>
-                                    <div class="bio">Megha coordinates events with precision and ensures every detail is
-                                        perfectly executed.
-                                    </div>
-                                </div>
+                                <p class="team-card-bio">Megha coordinates events with precision and ensures every detail is perfectly executed for memorable experiences.</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
         </div>
         <!-- faq section -->
@@ -547,77 +789,20 @@
     <script src="../js/insight.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const slider = document.querySelector('.history-slider');
-            const lineSegments = Array.from(document.querySelectorAll('.line-segment'));
-            const dots = Array.from(document.querySelectorAll('.slider-line .dot'));
-            const cards = document.querySelectorAll('.history-card');
-
-            const nextBtn = document.querySelector('.next-btn');
-            const prevBtn = document.querySelector('.prev-btn');
-
-            let currentSlideIndex = 0;
-
-            function updateProgress() {
-                const maxScroll = slider.scrollWidth - slider.clientWidth;
-                let progress = slider.scrollLeft / maxScroll;
-                if (isNaN(progress)) progress = 0;
-
-                const totalSegments = lineSegments.length;
-                const activeSegments = Math.floor(progress * totalSegments) + 1;
-
-                lineSegments.forEach((segment, i) => {
-                    segment.classList.toggle('active', i < activeSegments);
+            // Navigation buttons (for future pagination if needed)
+            const prevBtn = document.getElementById('teamPrevBtn');
+            const nextBtn = document.getElementById('teamNextBtn');
+            
+            if (prevBtn && nextBtn) {
+                // These can be used for pagination in the future
+                prevBtn.addEventListener('click', function() {
+                    // Placeholder for pagination
                 });
-
-                const totalDots = dots.length;
-                const activeDots = Math.floor(progress * totalDots) + 1;
-
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i < activeDots);
+                
+                nextBtn.addEventListener('click', function() {
+                    // Placeholder for pagination
                 });
             }
-
-            updateProgress();
-            slider.addEventListener('scroll', updateProgress);
-
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', () => {
-                    const maxScroll = slider.scrollWidth - slider.clientWidth;
-                    const targetScroll = (i / (dots.length - 1)) * maxScroll;
-                    slider.scrollTo({ left: targetScroll, behavior: 'smooth' });
-                    currentSlideIndex = i;
-                });
-            });
-
-            function scrollToCard(index) {
-                const card = cards[index];
-                if (card) {
-                    const sliderRect = slider.getBoundingClientRect();
-                    const cardRect = card.getBoundingClientRect();
-
-                    // Add or subtract buffer (positive = scroll further right, negative = leave some gap)
-                    const buffer = -20; // Adjust this value to control spacing
-
-                    const offset = cardRect.left - sliderRect.left + slider.scrollLeft + buffer;
-
-                    slider.scrollTo({ left: offset, behavior: 'smooth' });
-                }
-            }
-
-
-            nextBtn.addEventListener('click', () => {
-                if (currentSlideIndex < cards.length - 1) {
-                    currentSlideIndex++;
-                    scrollToCard(currentSlideIndex);
-                }
-            });
-
-            prevBtn.addEventListener('click', () => {
-                if (currentSlideIndex > 0) {
-                    currentSlideIndex--;
-                    scrollToCard(currentSlideIndex);
-                }
-            });
         });
     </script>
 </body>

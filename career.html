@@ -407,25 +407,44 @@
             </div>
         </div>
         <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-content">
-                <button class="close-button" id="closeButton">&times;</button>
-
-                <form id="emailForm">
-                    <div class="form-group">
-                        <label for="email" class="form-label">Your email address</label>
-                        <input type="email" id="email" name="email" class="form-input"
-                            placeholder="Enter your email address" required>
-                        <div class="error-message" id="emailError">
-                            Please enter a valid email address
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-button" id="submitButton">
-                        Submit
+            <div class="job-popup">
+                <div class="job-popup-header">
+                    <h3 class="job-popup-title">Submit Application</h3>
+                    <button class="job-popup-close" id="closeButton">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
-
+                </div>
+                <form id="emailForm" class="job-popup-form">
+                    <div class="job-popup-fields">
+                        <div class="job-popup-input-wrapper">
+                            <input type="text" id="fullName" name="fullName" class="job-popup-input" placeholder="Full Name*" required>
+                        </div>
+                        <div class="job-popup-input-wrapper">
+                            <input type="tel" id="phone" name="phone" class="job-popup-input" placeholder="Phone*" required>
+                        </div>
+                        <div class="job-popup-input-wrapper">
+                            <input type="email" id="email" name="email" class="job-popup-input" placeholder="Email*" required>
+                        </div>
+                        <div class="job-popup-input-wrapper job-popup-attachment">
+                            <input type="file" id="attachment" name="attachment" class="job-popup-file-input" accept=".pdf,.doc,.docx">
+                            <label for="attachment" class="job-popup-input job-popup-attachment-label">
+                                <span>Attachment</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 9.31066L10.1247 16.6859C8.40639 18.4042 5.59361 18.4042 3.87531 16.6859C2.15702 14.9676 2.15702 12.1549 3.87531 10.4366L11.2506 3.06131C12.3975 1.91439 14.2441 1.91439 15.391 3.06131C16.538 4.20822 16.538 6.05483 15.391 7.20175L8.01319 14.5796C7.43974 15.1531 6.51644 15.1531 5.94298 14.5796C5.36952 14.0062 5.36952 13.0829 5.94298 12.5094L12.5 5.95241" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <button type="submit" class="job-popup-submit" id="submitButton">
+                            SUBMIT
+                        </button>
+                    </div>
+                    <div class="error-message" id="emailError">
+                        Please fill in all required fields correctly
+                    </div>
                     <div class="success-message" id="successMessage">
-                        Email submitted successfully!
+                        Application submitted successfully!
                     </div>
                 </form>
             </div>
@@ -524,11 +543,13 @@
     </script>
     <script>
         // Get elements
-        const applyButton = document.getElementById('applyButton');
         const modalOverlay = document.getElementById('modalOverlay');
         const closeButton = document.getElementById('closeButton');
         const emailForm = document.getElementById('emailForm');
+        const fullNameInput = document.getElementById('fullName');
+        const phoneInput = document.getElementById('phone');
         const emailInput = document.getElementById('email');
+        const attachmentInput = document.getElementById('attachment');
         const emailError = document.getElementById('emailError');
         const submitButton = document.getElementById('submitButton');
         const successMessage = document.getElementById('successMessage');
@@ -538,21 +559,26 @@
             applyButton.addEventListener('click', () => {
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                emailInput.focus();
+                fullNameInput.focus();
             });
         });
 
         // Close modal function
         function closeModal() {
             modalOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
 
             // Reset form
             emailForm.reset();
-            emailInput.classList.remove('error');
+            document.querySelectorAll('.job-popup-input').forEach(input => input.classList.remove('error'));
             emailError.classList.remove('show');
             successMessage.classList.remove('show');
             submitButton.disabled = false;
+            submitButton.textContent = 'SUBMIT';
+            
+            // Reset file input label
+            const attachmentLabel = document.querySelector('.job-popup-attachment-label span');
+            if (attachmentLabel) attachmentLabel.textContent = 'Attachment';
         }
 
         // Close modal events
@@ -577,16 +603,19 @@
             return emailRegex.test(email);
         }
 
-        // Real-time validation
-        emailInput.addEventListener('input', () => {
-            const email = emailInput.value.trim();
+        // Phone validation function
+        function validatePhone(phone) {
+            const phoneRegex = /^[\d\s\-\+\(\)]{7,}$/;
+            return phoneRegex.test(phone);
+        }
 
-            if (email && !validateEmail(email)) {
-                emailInput.classList.add('error');
-                emailError.classList.add('show');
+        // Update file input label when file is selected
+        attachmentInput.addEventListener('change', () => {
+            const attachmentLabel = document.querySelector('.job-popup-attachment-label span');
+            if (attachmentInput.files.length > 0) {
+                attachmentLabel.textContent = attachmentInput.files[0].name;
             } else {
-                emailInput.classList.remove('error');
-                emailError.classList.remove('show');
+                attachmentLabel.textContent = 'Attachment';
             }
         });
 
@@ -594,30 +623,46 @@
         emailForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const fullName = fullNameInput.value.trim();
+            const phone = phoneInput.value.trim();
             const email = emailInput.value.trim();
 
-            // Validate email
-            if (!email) {
-                emailInput.classList.add('error');
-                emailError.textContent = 'Email is required';
-                emailError.classList.add('show');
-                return;
+            // Reset error states
+            document.querySelectorAll('.job-popup-input').forEach(input => input.classList.remove('error'));
+            emailError.classList.remove('show');
+
+            let hasError = false;
+
+            // Validate full name
+            if (!fullName) {
+                fullNameInput.classList.add('error');
+                hasError = true;
             }
 
-            if (!validateEmail(email)) {
+            // Validate phone
+            if (!phone || !validatePhone(phone)) {
+                phoneInput.classList.add('error');
+                hasError = true;
+            }
+
+            // Validate email
+            if (!email || !validateEmail(email)) {
                 emailInput.classList.add('error');
-                emailError.textContent = 'Please enter a valid email address';
+                hasError = true;
+            }
+
+            if (hasError) {
                 emailError.classList.add('show');
                 return;
             }
 
             // Simulate submission
             submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
+            submitButton.textContent = 'SUBMITTING...';
 
             setTimeout(() => {
                 successMessage.classList.add('show');
-                submitButton.textContent = 'Submit';
+                submitButton.textContent = 'SUBMIT';
 
                 // Close modal after 1.5 seconds
                 setTimeout(() => {

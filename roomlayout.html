@@ -30,6 +30,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/insights.css" media="screen" />
     <link rel="stylesheet" href="css/lazy-animations.css" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         .card-container {
             padding: 2rem 0px 0px 0px;
@@ -270,242 +271,106 @@
         </div>
         <div class="page-wrap">
             <main>
-                <!-- video section -->
-                <div class="bg-ct">
-                    <div class="dark-overlay-video">
-                        <video class="bg-video main-video" autoplay muted loop playsinline data-parallax-strength="5.5"
-                            data-parallax-height="5">
-                            <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Room+Layout+BG+Video.mp4"
-                                type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                <!-- Hero Section -->
+                <section class="rl-hero-section">
+                    <div class="rl-hero-bg">
+                        <img src="./images/room_layout_3.jpg" alt="Room Layout Hero" class="rl-hero-bg-img" />
+                        <div class="rl-hero-overlay"></div>
                     </div>
-                    <div class="overlay-text">
-                        <button id="button" class="volume-button">
-                            <i class="fas fa-volume-mute"></i>
-                        </button>
+                    <div class="rl-hero-content">
+                        <div class="rl-hero-title-wrapper">
+                            <h1 class="rl-hero-title">Room Layout</h1>
                     </div>
+                        <p class="rl-hero-subtitle">Versatile Spaces for Events of Every Scale</p>
                 </div>
-                <!-- content section -->
-                <div class="content-container">
-                    <div class="content-section slide-left slide-in-left">
-                        <h2>Our facilities and the flexibility of our building mean Athena is ideal for dinners,
-                            conferences, weddings, concerts, festivals and virtually any other event you can think of.
-                        </h2>
-                        <p>Flexible to Your Requirements. Located in the heart of Leicester’s cultural quarter, Athena
-                            is a
-                            landmark venue that blends historic Art Deco charm with modern innovation. With exceptional
-                            acoustics,
-                            cutting-edge technology, and adaptable layouts, it provides the perfect setting for
-                            everything from
-                            exhibitions and conferences to gala dinners and private celebrations. Guided by our
-                            award-winning team,
-                            every event is delivered with precision and style.</p>
-                        <p>Each space adds its own character: the Cinema Suite brings cinematic glamour for screenings
-                            or presentations,
-                            the Gallery mezzanine offers an elegant backdrop for networking, the City View Lounge opens
-                            to
-                            sweeping skyline views, and the Deco Bar creates a stylish social hub at the heart of the
-                            venue.</p>
-                        <p style="font-weight:500;">Contact us for more information about choosing Athena as your venue
-                        </p>
-                        <div class="contact-container">
-                            <a href="tel:01162626556" class="contact-item">
-                                <div class="icon-circle">
-                                    <svg class="phone-icon" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                                    </svg>
-                                </div>
-                                <span class="contact-text">0116 262 6556</span>
-                            </a>
+                </section>
 
-                            <a href="mailto:contact@athenacb.co.uk" class="contact-item">
-                                <div class="icon-circle">
-                                    <svg class="email-icon" viewBox="0 0 24 24">
-                                        <path
-                                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                    </svg>
+                <!-- Versatile Event Venue Section -->
+                <section class="rl-venue-section">
+                    <div class="rl-venue-container">
+                        <div class="rl-venue-image-wrapper">
+                            <img src="./images/athena now.jpg" alt="Athena Venue" class="rl-venue-image" />
                                 </div>
-                                <span class="contact-text">contact@athenacb.co.uk</span>
-                            </a>
+                        <div class="rl-venue-content">
+                            <h2 class="rl-venue-title">Versatile Event Venue</h2>
+                            <div class="rl-venue-line"></div>
+                            <p class="rl-venue-text">At Athena, we offer a range of flexible room layouts that can be tailored to suit every event. Whether you're planning a corporate conference, an elegant wedding, or an intimate gathering, our adaptable spaces provide the perfect setting. With a seamless blend of modern innovation and historic charm, each room can be configured to match your unique vision, ensuring your event is nothing short of exceptional.</p>
+                            <div class="rl-venue-buttons">
+                                <a href="./contact-us.html" class="rl-venue-btn">Enquire Now</a>
+                                <a href="./contact-us.html" class="rl-venue-btn">Schedule a Site Visit</a>
                         </div>
                     </div>
-                    <!-- <div class="images-section slide-right">
-                        <div class="image-section-row1">
-                            <img src="./images/room_layout_3.jpg" alt="Dinners" class="img-popup" />
-                            <img src="./images/room_layout_4.jpg" alt="Dinners" class="img-popup" />
                         </div>
-                        <div class="image-section-row2">
-                            <img src="../images/live-events/live-event9.webp" alt="Dinners" class="img-popup" />
-                            <img src="../images/live-events/live-event10.webp" alt="Dinners" class="img-popup" />
-                        </div>
-                    </div> -->
+                </section>
 
-                    <div class="images-section slide-right">
-                        <div class="container">
-                            <div class="hr_text_box">
-                                <div class="hr_hd">
-                                    <div class="hr_box_text_open_box">
-                                        <div class="hr_box_1">
-                                            <div class="slider">
-                                                <div class="text_slide_1">
-                                                    <img src="./images/room_layout_3.jpg" alt="a" class="img-popup" />
+                <!-- Room Cards Section -->
+                <section class="rl-rooms-section">
+                    <div class="rl-rooms-grid">
+                        <div class="rl-room-card">
+                            <div class="rl-room-card-image">
+                                <img src="./images/athena now.jpg" alt="The Cinema Suite" />
                                                 </div>
-
-                                                <div class="text_slide_1">
-                                                    <img src="./images/room_layout_1.jpg" alt="b" class="img-popup" />
+                            <div class="rl-room-card-content">
+                                <h3 class="rl-room-card-title">The Cinema Suite</h3>
+                                <p class="rl-room-card-text">A unique hall capable of seating up to 1000 guests ideal for banquets, conferences, exhibitions, presentations, award ceremonies, and dinner dances.</p>
+                                <a href="#" class="rl-room-card-btn explore_btn" data-id="0">Explore More</a>
                                                 </div>
                                             </div>
+                        <div class="rl-room-card">
+                            <div class="rl-room-card-image">
+                                <img src="./images/room_layout_3.jpg" alt="The Gallery" />
                                         </div>
-
-                                        <div class="hr_box_1">
-                                            <div class="slider">
-                                                <div class="text_slide_1">
-                                                    <img src="./images/DSC_6044-5.jpg" alt="c" class="img-popup" />
+                            <div class="rl-room-card-content">
+                                <h3 class="rl-room-card-title">The Gallery</h3>
+                                <p class="rl-room-card-text">The Gallery is tiered and can seat up to 300 guests. Benefiting from a bar, two 10ft x 10ft projector screens, and a ceiling multi-colourwash facility.</p>
+                                <a href="#" class="rl-room-card-btn explore_btn" data-id="1">Explore More</a>
                                                 </div>
-
-                                                <div class="text_slide_1">
-                                                    <img src="./images/room_layout_4.jpg" alt="d" class="img-popup" />
                                                 </div>
+                        <div class="rl-room-card">
+                            <div class="rl-room-card-image">
+                                <img src="./images/Athena Pic 4 (Deco Bar Lounge).png" alt="The Deco Lounge" />
                                             </div>
+                            <div class="rl-room-card-content">
+                                <h3 class="rl-room-card-title">The Deco Lounge</h3>
+                                <p class="rl-room-card-text">A versatile suite, ideal for use in conjunction with The Cinema Suite and The Gallery as a break-out room or as a drinks reception. The Deco Lounge can also </p>
+                                <a href="#" class="rl-room-card-btn explore_btn" data-id="2">Explore More</a>
                                         </div>
-
-                                        <div class="hr_box_1">
-                                            <div class="slider">
-                                                <div class="text_slide_1">
-                                                    <img src="./images/_Athena_Cirque.jpg" alt="aa" class="img-popup" />
                                                 </div>
-
-                                                <div class="text_slide_1">
-                                                    <div class="hr_box_text">
-                                                        <img src="./images/balcony view.JPG" alt="bb"
-                                                            class="img-popup" />
+                        <div class="rl-room-card">
+                            <div class="rl-room-card-image">
+                                <img src="./images/room_layout_5.jpg" alt="The City View Lounge" />
                                                     </div>
+                            <div class="rl-room-card-content">
+                                <h3 class="rl-room-card-title">The City View Lounge</h3>
+                                <p class="rl-room-card-text">A truly unique, versatile lounge with ample natural daylight. Benefiting from outstanding views through the city centre. The City View Lounge can </p>
+                                <a href="#" class="rl-room-card-btn explore_btn" data-id="3">Explore More</a>
                                                 </div>
                                             </div>
+                        <div class="rl-room-card">
+                            <div class="rl-room-card-image">
+                                <img src="./images/room_layout_1.jpg" alt="The Foyer" />
                                         </div>
-
-                                        <div class="hr_box_1">
-                                            <div class="slider">
-                                                <div class="text_slide_1">
-                                                    <img src="./images/room_layout_2.jpg" alt="ab" class="img-popup" />
-
+                            <div class="rl-room-card-content">
+                                <h3 class="rl-room-card-title">The Foyer</h3>
+                                <p class="rl-room-card-text">A stunning reception, ideal for meeting and greeting your guests. A large bar and cloakroom facilities are available along with a plasma screen</p>
+                                <a href="#" class="rl-room-card-btn explore_btn" data-id="4">Explore More</a>
                                                 </div>
-
-                                                <div class="text_slide_1">
-                                                    <img src="./images/room_layout_3.jpg" alt="bc" class="img-popup" />
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- card section -->
-                <div class="card-container" id="card-container-top" style="padding-left:4rem; padding-right:4rem;">
-                    <div class="card slide-left">
-                        <div class="card-image">
-                            <img src="./images/athena now.jpg" alt="Dinners" />
-                        </div>
-                        <div class="card-content">
-                            <h3>The Cinema Suite</h3>
-                            <p>A unique hall capable of seating up to 1000 guests ideal for banquets,
-                                conferences, exhibitions, presentations, award ceremonies, and dinner dances.</p>
-                            <a class="explore_btn" data-id="0">Explore More</a>
-                        </div>
-                    </div>
-                    <div class="card slide-right">
-                        <div class="card-image">
-                            <img src="./images/room_layout_3.jpg" alt="Dinners" />
-                        </div>
-                        <div class="card-content">
-                            <h3>The Gallery</h3>
-                            <p>The Gallery is tiered and can seat up to 300 guests. Benefiting from a bar,
-                                two 10ft x 10ft projector screens, and a ceiling multi-colourwash facility.</p>
-                            <a href="#" class="explore_btn" data-id="1">Explore More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container" style="padding-left:4rem; padding-right:4rem;">
-                    <div class="card slide-left">
-                        <div class="card-image">
-                            <img src="./images/Athena Pic 4 (Deco Bar Lounge).png" alt="Dinners" />
-                        </div>
-                        <div class="card-content">
-                            <h3>The Deco Lounge</h3>
-                            <p>A versatile suite, ideal for use in conjunction with the Cinema Suite and
-                                the Gallery as a break-out room or as a drinks reception. The Deco Lounge can also </p>
-                            <a href="#" class="explore_btn" data-id="2">Explore More</a>
-                        </div>
-                    </div>
-                    <div class="card slide-right">
-                        <div class="card-image">
-                            <img src="./images/room_layout_5.jpg" alt="Dinners" />
-                        </div>
-                        <div class="card-content">
-                            <h3>The City View Lounge</h3>
-                            <p>A truly unique, versatile lounge with ample natural daylight.
-                                Benefiting from outstanding views through the city centre. The City View Lounge can </p>
-                            <a href="#" class="explore_btn" data-id="3">Explore More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container " id="card-container-bottom" style="padding-left:4rem; padding-right:4rem;">
-                    <div class="card single slide-left">
-                        <div class="card-image">
-                            <img src="./images/room_layout_1.jpg" alt="Dinners" />
-                        </div>
-                        <div class="card-content">
-                            <h3>The Foyer</h3>
-                            <p>A stunning reception, ideal for meeting and greeting your guests.
-                                A large bar and cloakroom facilities are available along with a plasma screen</p>
-                            <a href="#" class="explore_btn" data-id="4">Explore More</a>
-                        </div>
+                </section>
+
+                <!-- Room and Seating Layouts Section -->
+                <section class="rl-layouts-section">
+                    <div class="rl-layouts-header">
+                        <h2 class="rl-layouts-title">Room and Seating Layouts</h2>
+                        <div class="rl-layouts-description">
+                            <p>Please note the Gallery (balcony) space can be used in conjunction with the cinema suite, as it oversees the stage. This will allow additional capacity if required.</p>
+                            <p>All the spaces benefit from no fixed seating so the layouts can be flexible and adjusted to individual requirements, including using a mixture of tables and formations.</p>
                     </div>
                 </div>
 
-                <!-- Room Layouts-->
-                <div class="video-main-container">
-                    <video class="lazy rounded-30 bg-video" autoplay muted loop playsinline>
-                        <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Room+Layout+BG+Video.mp4"
-                            type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="content-container">
-                        <h1 class="slide-left">Flexible to your requirements</h1>
-                        <p class="slide-right">As a landmark building situated within the cultural quarter of the city
-                            centre, Athena
-                            combines
-                            original features such as its exceptional acoustic insulation
-                            with state of the art technology, to provide an ideal venue for exhibitions, concerts or
-                            festivals.</p>
-                        <p>
-                            Experienced award-winning staff will work with you to ensure all your requirements are
-                            met, & you can be assured of a professional, slick operation ensuring your event will be
-                            a success.
-                        </p>
-                        <p>Layouts can be tailored to your specific requirements, providing you with a bespoke
-                            event no matter how large or small.</p>
-                        <!-- <button id="roomLayouts" class="slide-left">Room Layouts</button> -->
-
-                    </div>
-                </div>
-                <!-- Room Layouts-->
-
-                <div class="room-layout-container">
-                    <h1>Room and Seating Layouts</h1>
-                    <p class="description">
-                        Please note the Gallery (balcony) space can be used in conjunction with the cinema suite, as it
-                        oversees the stage. This will allow additional capacity if required.<br>
-                        All the spaces benefit from no fixed seating so the layouts can be flexible and adjusted to
-                        individual requirements, including using a mixture of tables and formations.
-                    </p>
-
-                    <div class="table-container">
-                        <table>
+                    <div class="rl-table-wrapper">
+                        <table class="rl-table">
                             <thead>
                                 <tr>
                                     <th>Room</th>
@@ -519,8 +384,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="room-name"><a href="#" class="explore_btn" data-id="0">Cinema Suite</a>
-                                    </td>
+                                    <td class="rl-room-name"><a href="#" class="explore_btn" data-id="0">Cinema Suite</a></td>
                                     <td>1000</td>
                                     <td>1300</td>
                                     <td>450</td>
@@ -529,8 +393,7 @@
                                     <td>30.0m x 28.8m</td>
                                 </tr>
                                 <tr>
-                                    <td class="room-name"><a href="#" class="explore_btn" data-id="2">Deco Lounge</a>
-                                    </td>
+                                    <td class="rl-room-name"><a href="#" class="explore_btn" data-id="2">Deco Lounge</a></td>
                                     <td>-</td>
                                     <td>250</td>
                                     <td>-</td>
@@ -539,8 +402,7 @@
                                     <td>16.5m x 6.8m</td>
                                 </tr>
                                 <tr>
-                                    <td class="room-name"><a href="#" class="explore_btn" data-id="3">City View
-                                            Lounge</a></td>
+                                    <td class="rl-room-name"><a href="#" class="explore_btn" data-id="3">City View Lounge</a></td>
                                     <td>50</td>
                                     <td>60</td>
                                     <td>-</td>
@@ -549,7 +411,7 @@
                                     <td>10.0m x 10.4m</td>
                                 </tr>
                                 <tr>
-                                    <td class="room-name"><a href="#" class="explore_btn" data-id="1">Gallery</a></td>
+                                    <td class="rl-room-name"><a href="#" class="explore_btn" data-id="1">Gallery</a></td>
                                     <td>250</td>
                                     <td>600</td>
                                     <td>-</td>
@@ -561,214 +423,79 @@
                         </table>
                     </div>
 
-                    <div class="grid-container">
-                        <div>
-                            <div class="layout-image">
+                    <div class="rl-diagrams-row">
+                        <div class="rl-diagram-item">
+                            <div class="rl-diagram-image">
                                 <img src="images/theatre.svg" alt="Theatre" />
                             </div>
-                            <p class="label">Theatre</p>
+                            <p class="rl-diagram-label">Theatre</p>
                         </div>
-                        <div>
-                            <div class="layout-image">
-                                <img src="images/classroom.svg" alt="cabaret" />
+                        <div class="rl-diagram-item">
+                            <div class="rl-diagram-image">
+                                <img src="images/classroom.svg" alt="Classroom" />
                             </div>
-                            <p class="label">Classroom</p>
+                            <p class="rl-diagram-label">Classroom</p>
                         </div>
-                        <div>
-                            <div class="layout-image">
-                                <img src="images/cabaret.svg" alt="banquet" />
+                        <div class="rl-diagram-item">
+                            <div class="rl-diagram-image">
+                                <img src="images/cabaret.svg" alt="Cabaret" />
                             </div>
-                            <p class="label">Cabaret</p>
+                            <p class="rl-diagram-label">Cabaret</p>
                         </div>
-                        <div>
-                            <div class="layout-image">
-                                <img src="images/spriggs.svg" style="height: 95% !important;" alt="Theatre" />
                             </div>
-                            <p class="label">Spriggs</p>
+                    <div class="rl-diagrams-row rl-diagrams-single">
+                        <div class="rl-diagram-item">
+                            <div class="rl-diagram-image">
+                                <img src="images/banquet.svg" alt="Banquet" />
                         </div>
-                        <div>
-                            <div class="layout-image">
-                                <img src="images/banquet.svg" alt="Theatre" />
+                            <p class="rl-diagram-label">Banquet</p>
                             </div>
-                            <p class="label">Banquet</p>
                         </div>
-                        <div>
-                            <div class="layout-image">
-                                <img src="images/banquet-spriggs.svg" alt="Theatre" />
-                            </div>
-                            <p class="label">Banquet with Spriggs</p>
-                        </div>
-                    </div>
-                </div>
+                </section>
 
-                <!-- faq-->
-                <!-- <div class="faq-section">
-                    <h2 class="faq-title">Frequently Asked Questions</h2>
-                    <div class="faq-container">
-                        <div class="faq-column">
-                            <div class="faq-item open">
-                                <div class="faq-question">Can I provisionally book the venue?
-                                    <a class='expand-collapse-icon'></a>
+                <!-- Service Image Carousel Section -->
+                <div class="service-images-slider-section">
+                    <div class="service-images-swiper-container">
+                        <div class="swiper service-images-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/room_layout_1.jpg" alt="Room Layout" class="service-carousel-image" />
                                 </div>
-                                <div class="faq-answer">Yes, you can hold a date provisionally while you finalize the
-                                    arrangements. Contact us via phone or email for further details.</div>
                             </div>
-                            <div class="faq-item">
-                                <div class="faq-question">Can I get WiFi at the venue?
-                                    <a class='expand-collapse-icon'></a>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/room_layout_3.jpg" alt="Room Layout" class="service-carousel-image" />
                                 </div>
-                                <div class="faq-answer">Yes, complimentary high-speed WiFi is available throughout the
-                                    venue.</div>
                             </div>
-                            <div class="faq-item">
-                                <div class="faq-question">What are the dimensions of rooms & are there cloakroom
-                                    facilities available?
-                                    <a class='expand-collapse-icon'></a>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/room_layout_4.jpg" alt="Room Layout" class="service-carousel-image" />
                                 </div>
-                                <div class="faq-answer">The rooms vary in size to accommodate different events.
-                                    Cloakroom facilities are available for guests.</div>
                             </div>
-                            <div class="faq-item">
-                                <div class="faq-question">Can we set up the day before the event?
-                                    <a class='expand-collapse-icon'></a>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/room_layout_2.jpg" alt="Room Layout" class="service-carousel-image" />
                                 </div>
-                                <div class="faq-answer">Yes, early setup can be arranged based on availability. Please
-                                    coordinate with our team in advance.</div>
                             </div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/room_layout_5.jpg" alt="Room Layout" class="service-carousel-image" />
                         </div>
-                        <div class="faq-column">
-                            <div class="faq-item">
-                                <div class="faq-question">Can I view Athena?
-                                    <a class='expand-collapse-icon'></a>
                                 </div>
-                                <div class="faq-answer">Absolutely! You can schedule a guided tour of Athena before
-                                    making a booking.</div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="./images/athena now.jpg" alt="Room Layout" class="service-carousel-image" />
                             </div>
-                            <div class="faq-item open">
-                                <div class="faq-question">Can we bring our own catering?
-                                    <a class='expand-collapse-icon'></a>
                                 </div>
-                                <div class="faq-answer">We have an extensive AV in-house system, including projectors,
-                                    sound systems, and lighting. Contact us for the latest specifications.</div>
                             </div>
-                            <div class="faq-item">
-                                <div class="faq-question">Can we bring our own AV?
-                                    <a class='expand-collapse-icon'></a>
                                 </div>
-                                <div class="faq-answer">Yes, you are welcome to bring your own AV equipment. Our team
-                                    can assist with setup if needed.</div>
                             </div>
-                            <div class="faq-item">
-                                <div class="faq-question">Do you have on-site catering?
-                                    <a class='expand-collapse-icon'></a>
-                                </div>
-                                <div class="faq-answer">Yes, we offer a variety of catering options, including buffets
-                                    and plated meals.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+        </div>
+
             </main>
         </div>
 
-        <!-- overlap section -->
-        <div class="hero-section">
-            <div class="overlap-container">
-                <div class="image-content">
-                    <div class="image-container">
-                        <img src="./images/what-we-do/fish-and-tomato-salad.jpg" alt="Athena Leicester" />
-                    </div>
-                    <div class="heading-container">
-                        <h1 id="image-container-h1">
-                            A sumptuous menu <br /><span>to indulge the senses</span>
-                        </h1>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        Whether you would like a full three-course dinner or a simple buffet lunch for your
-                        guests, we offer a full in-house catering service for you and your guests. Feel free to
-                        download our sample buffet menu or banqueting menu or contact us for more information.
-                    </p>
-                    <div class="button-container">
-                        <a href="./pdf/sample-buffet-menu.pdf" target="_blank">
-                            <button>Sample Buffet Menu</button>
-                        </a>
-                        <a href="./pdf/sample-banqueting-menu.pdf" target="_blank">
-                            <button>Sample Banqueting Menu</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- everything section -->
-        <div class="everything-container">
-            <div class="heading-container">
-                <h1>Everything you need in a venue</h1>
-            </div>
-            <div class="button-container">
-                <div class="button-row">
-                    <button>100Mb dedicated fibre leased line</button>
-                    <button>Exquisite award-winning catering</button>
-                    <button>Uninterrupted views through the venue</button>
-                </div>
-                <div class="button-row">
-                    <button>In-house AV system including technical support</button>
-                    <button>Centrally located</button>
-                    <button>Flexible layout</button>
-                    <button>700 dining capacity</button>
-                </div>
-                <div class="button-row">
-                    <button>Easy transport links</button>
-                    <button>On Site Solar Panels</button>
-                </div>
-            </div>
-            <main>
-                <div class="image-marquee-container">
-                    <div class="image-marquee-wrapper">
-                        <div class="image-marquee image-marquee-left">
-                            <img src="../images/live-events/live-event1.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event2.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event3.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event4.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event5.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event6.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event7.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event8.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event1.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event2.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event3.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event4.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event5.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event6.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event7.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event8.webp" class="img-popup" />
-                        </div>
-                    </div>
-
-                    <div class="image-marquee-wrapper">
-                        <div class="image-marquee image-marquee-right">
-                            <img src="../images/live-events/live-event9.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event5.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event2.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event11.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event12.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event13.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event14.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event5.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event9.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event4.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event3.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event11.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event12.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event13.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event14.webp" class="img-popup" />
-                            <img src="../images/live-events/live-event1.webp" class="img-popup" />
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
         <!-- popup -->
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
@@ -778,12 +505,11 @@
                 <p id="popup-text"></p>
             </div>
         </div>
-        </main>
     </div>
 
     <!-- faq section -->
     <div class="faq-section">
-        <h2 class="faq-title">Frequently asked questions</h2>
+        <h2 class="faq-title">Frequently Asked Questions</h2>
         <div class="faq-container">
             <div class="faq-column">
                 <div class="faq-item open">
@@ -1054,6 +780,36 @@
                 popup.style.display = 'none';
             }
         });
+
+        // Initialize Service Images Swiper
+        if (document.querySelector('.service-images-swiper')) {
+            const serviceImagesSwiper = new Swiper('.service-images-swiper', {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 20,
+                loop: true,
+                speed: 600,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 30,
+                    }
+                }
+            });
+        }
     </script>
     <!-- Lightbox popup for exhibition images -->
     <div id="imgLightbox"
