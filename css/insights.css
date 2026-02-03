@@ -2253,30 +2253,31 @@ footer {
   }
 
   .our-work-content {
-    padding: 3rem 1.5rem;
-    gap: 30px;
+    padding: 10rem 2rem;
+    gap: 4rem;
   }
 
   .our-work-headline {
-    font-size: 36px;
+    font-size: 5rem;
   }
 
   .our-work-subheadline {
-    font-size: 16px;
+    font-size: 3rem;
+    line-height: 150%;
   }
 
   .our-work-text-group {
-    gap: 16px;
+    gap: 3rem;
   }
 
   .our-work-btn {
-    padding: 14px 32px;
-    font-size: 14px;
+    padding: 2rem 3rem;
+    font-size: 3rem;
   }
 
   .our-work-logos {
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2rem;
+    margin-top: 3rem;
   }
 
   .our-work-logo {
@@ -2580,8 +2581,8 @@ footer {
   }
 
   .testimonials-heading {
-    font-size: 36px;
-    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    margin-bottom: 3rem;
     font-weight: 500;
   }
 
@@ -2978,8 +2979,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .menu-section {
+    padding: 10rem 0;
+  }
+
   .menu-container {
-    padding: 0 4rem;
+    padding: 0 2rem;
+    gap: 4rem;
   }
 
   .menu-content {
@@ -2995,20 +3001,26 @@ footer {
     font-size: 5rem;
   }
 
+  .menu-line {
+    margin: 2rem 0;
+  }
+
   .menu-text {
     font-size: 3rem;
-    padding: 3rem 0;
+    line-height: 150%;
   }
 
   .menu-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
     width: 100%;
+    margin-top: 3rem;
   }
 
   .menu-button {
     padding: 2rem 3rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    width: fit-content;
   }
 }
 
@@ -3179,29 +3191,44 @@ footer {
 
 @media (max-width: 768px) {
   .conference-content-section {
-    padding: 3rem 1.5rem;
+    padding: 10rem 0rem;
   }
 
   .conference-content-container {
-    padding: 0;
+    padding: 0 2rem;
   }
 
   .conference-image-wrapper {
     width: 100%;
-    height: 400px;
+    height: 300px;
+    margin-bottom: 4rem;
+  }
+
+  .conference-image {
+    height: 300px;
+    object-fit: cover;
   }
 
   .conference-heading {
-    font-size: 32px;
+    font-size: 5rem;
   }
 
   .conference-text {
-    font-size: 18px;
+    font-size: 3rem;
+    line-height: 150%;
+  }
+
+  .conference-line {
+    margin: 2rem 0;
   }
 
   .conference-button {
-    width: 100%;
-    padding: 16px 32px;
+    width: fit-content;
+    padding: 2rem 3rem;
+  }
+
+  .conference-button span {
+    font-size: 3rem;
   }
 }
 
@@ -4231,18 +4258,18 @@ th {
 /* Responsive Design */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 80px 20px;
-    gap: 30px;
+    padding: 10rem 2rem;
+    gap: 4rem;
   }
 
   .faq-title {
-    font-size: 36px;
+    font-size: 5rem;
     font-weight: 500;
   }
 
   .faq-container {
     flex-direction: column;
-    gap: 16px;
+    gap: 3rem;
   }
 
   .faq-column {
@@ -4254,11 +4281,12 @@ th {
   }
 
   .faq-question {
-    font-size: 18px;
+    font-size: 3.5rem;
   }
 
   .faq-answer {
-    font-size: 16px;
+    font-size: 3rem;
+    line-height: 150%;
   }
 }
 
@@ -6652,17 +6680,19 @@ th {
 
 @media (max-width: 767px) {
   .why-athena-section {
-    padding: 10rem 1.5rem;
+    padding: 3rem 1.5rem;
     min-height: auto;
   }
 
   .why-athena-heading {
     font-size: 42px !important;
-    margin-bottom: 3rem;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
   }
 
   .why-athena-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
     gap: 2.5rem;
     max-width: 100%;
   }
@@ -6673,11 +6703,14 @@ th {
   }
 
   .why-athena-title {
-    font-size: 22px !important;
+    font-size: 18px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
   .why-athena-description {
-    font-size: 16px;
+    font-size: 14px !important;
+    line-height: 150% !important;
   }
 
   .why-athena-icon {
@@ -7434,36 +7467,90 @@ footer {
 
 @media (max-width: 768px) {
   .rl-hero-section {
-    height: 500px;
+    height: auto;
+    min-height: 750px;
+    padding: 12rem 1.5rem 3rem 1.5rem;
   }
   
   .rl-hero-title {
-    font-size: 40px;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   
   .rl-hero-subtitle {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  
+  .rl-hero-title-wrapper {
+    padding: 10px 0;
   }
   
   .rl-venue-section {
-    padding: 40px 20px;
+    padding: 10rem 0rem;
     min-height: auto;
   }
   
+  .rl-venue-container {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .rl-venue-image-wrapper {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+  
+  .rl-venue-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .rl-venue-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  
   .rl-venue-title {
-    font-size: 36px;
+    font-size: 5rem;
+  }
+  
+  .rl-venue-line {
+    margin: 2rem 0;
   }
   
   .rl-venue-text {
-    font-size: 16px;
+    font-size: 3rem;
+    line-height: 150%;
   }
   
   .rl-venue-buttons {
     flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-start;
   }
   
   .rl-venue-btn {
-    width: 100%;
+    width: fit-content;
+    padding: 2rem 3rem;
+    font-size: 3rem;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .rl-rooms-section {
+    padding: 10rem 2rem;
+  }
+  
+  .rl-rooms-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
   
   .rl-room-card {
@@ -7474,58 +7561,81 @@ footer {
   
   .rl-room-card-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
   
   .rl-room-card-image img {
     width: 100%;
+    height: 100%;
   }
   
   .rl-room-card-content {
-    padding: 24px;
+    padding: 3rem;
     width: 100%;
   }
   
   .rl-room-card-title {
     white-space: normal;
+    font-size: 4rem;
+  }
+  
+  .rl-room-card-text {
+    font-size: 3rem;
+    line-height: 150%;
+    -webkit-line-clamp: 4;
+  }
+  
+  .rl-room-card-btn {
+    padding: 2rem 3rem;
+    font-size: 3rem;
+  }
+  
+  .rl-layouts-section {
+    padding: 10rem 2rem;
   }
   
   .rl-layouts-title {
-    font-size: 32px;
+    font-size: 5rem;
+    margin-bottom: 3rem;
   }
   
   .rl-layouts-description p {
-    font-size: 16px;
+    font-size: 3rem;
+    line-height: 150%;
   }
   
   .rl-table-wrapper {
-    padding: 8px;
+    padding: 1rem;
+    overflow-x: auto;
   }
   
   .rl-table thead th,
   .rl-table tbody td {
-    font-size: 12px;
-    padding: 8px 6px;
+    font-size: 2.5rem;
+    padding: 1.5rem 1rem;
   }
   
   .rl-diagrams-row {
-    gap: 20px;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .rl-diagram-image {
-    width: 140px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
   
   .rl-diagram-label {
-    font-size: 14px;
+    font-size: 2.5rem;
   }
   
 }
 
 @media (max-width: 480px) {
   .rl-hero-section {
-    height: 400px;
+    min-height: 850px;
+    padding: 10rem 1rem 2rem 1rem;
   }
   
   .rl-hero-title {
@@ -7533,41 +7643,7 @@ footer {
   }
   
   .rl-hero-subtitle {
-    font-size: 18px;
+    font-size: 16px;
   }
   
-  .rl-venue-image-wrapper {
-    height: 300px;
-  }
-  
-  .rl-venue-title {
-    font-size: 28px;
-  }
-  
-  .rl-rooms-section {
-    padding: 30px 16px;
-  }
-  
-  .rl-room-card-title {
-    font-size: 22px;
-    white-space: normal;
-  }
-  
-  .rl-room-card-text {
-    font-size: 14px;
-    -webkit-line-clamp: 4;
-  }
-  
-  .rl-room-card-btn {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-  
-  .rl-layouts-section {
-    padding: 30px 16px;
-  }
-  
-  .rl-layouts-title {
-    font-size: 26px;
-  }
 }
