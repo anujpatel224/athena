@@ -5725,7 +5725,7 @@ th {
 
 @media (max-width: 767px) {
   .history-slider {
-    padding: 40px 80px 10px 40px;
+    padding: 24px 16px 10px 16px;
   }
 
   .history-title {
@@ -7039,6 +7039,44 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .gallery-scroll-track img {
+    height: 100px;
+  }
+
+  /* Hide the 3rd column */
+  .gallery-scroll-col:nth-child(3) {
+    display: none;
+  }
+
+  /* Adjust layout */
+  .gallery-scroll {
+    gap: 12px;
+  }
+
+  .gallery-scroll-col {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .page-wrap,
+  .history-main,
+  .gallery-scroll {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .history-slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+}
+
 /* ============================================
    ROOM LAYOUT PAGE STYLES
    ============================================ */
@@ -7653,4 +7691,36 @@ footer {
     font-size: 16px;
   }
 
+}
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .page-wrap {
+    overflow-x: hidden;
+  }
+
+  .history-slider {
+    padding: 24px 16px 10px 16px;
+    overflow-x: auto;
+  }
+
+  .history-main::before,
+  .history-main::after {
+    display: none;
+  }
+
+  .gallery-scroll {
+    padding: 20px 16px;
+  }
+
+  .gallery-scroll-track {
+    contain: paint;
+    will-change: transform;
+  }
 }
