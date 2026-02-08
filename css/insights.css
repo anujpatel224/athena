@@ -6997,6 +6997,7 @@ footer {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -7006,6 +7007,7 @@ footer {
   0% {
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -7024,7 +7026,7 @@ footer {
     gap: 10px;
     height: 500px;
   }
-  
+
   .gallery-scroll-track {
     gap: 10px;
   }
@@ -7425,231 +7427,230 @@ footer {
   .rl-venue-section {
     padding: 60px 40px;
   }
-  
+
   .rl-venue-container {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .rl-venue-image-wrapper {
     flex: none;
     width: 100%;
     max-width: 600px;
     height: 400px;
   }
-  
+
   .rl-venue-content {
     max-width: 640px;
   }
-  
+
   .rl-rooms-section {
     padding: 40px 30px;
   }
-  
+
   .rl-room-card {
     width: 100%;
     max-width: 615px;
   }
-  
+
   .rl-layouts-section {
     padding: 40px 30px;
   }
-  
+
   .rl-layouts-title {
     font-size: 48px;
   }
-  
+
   .rl-diagrams-row {
     flex-wrap: wrap;
     gap: 30px;
   }
-  
+
   .rl-diagram-image {
     width: 200px;
     height: 180px;
   }
-  
+
 }
 
 @media (max-width: 768px) {
   .rl-hero-section {
     height: auto;
     min-height: 750px;
-    padding: 12rem 1.5rem 3rem 1.5rem;
   }
-  
+
   .rl-hero-title {
     font-size: 42px;
     margin-top: 0;
     margin-bottom: 10px;
   }
-  
+
   .rl-hero-subtitle {
     font-size: 18px;
   }
-  
+
   .rl-hero-title-wrapper {
     padding: 10px 0;
   }
-  
+
   .rl-venue-section {
     padding: 10rem 0rem;
     min-height: auto;
   }
-  
+
   .rl-venue-container {
     flex-direction: column;
     gap: 4rem;
     align-items: center;
     padding: 0 2rem;
   }
-  
+
   .rl-venue-image-wrapper {
     flex: none;
     width: 100%;
     height: auto;
   }
-  
+
   .rl-venue-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
   }
-  
+
   .rl-venue-content {
     width: 100%;
     max-width: 100%;
   }
-  
+
   .rl-venue-title {
-    font-size: 5rem;
+    font-size: 22px;
   }
-  
+
   .rl-venue-line {
     margin: 2rem 0;
   }
-  
+
   .rl-venue-text {
-    font-size: 3rem;
+    font-size: 13px;
     line-height: 150%;
   }
-  
+
   .rl-venue-buttons {
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
     align-items: flex-start;
   }
-  
+
   .rl-venue-btn {
     width: fit-content;
     padding: 2rem 3rem;
-    font-size: 3rem;
+    font-size: 12px;
+    font-weight: 600;
     text-align: center;
     display: inline-block;
   }
-  
+
   .rl-rooms-section {
-    padding: 10rem 2rem;
+    padding: 10rem 5rem;
   }
-  
+
   .rl-rooms-grid {
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
-  
+
   .rl-room-card {
     flex-direction: column;
     width: 100%;
     height: auto;
   }
-  
+
   .rl-room-card-image {
     width: 100%;
     height: 300px;
   }
-  
+
   .rl-room-card-image img {
     width: 100%;
     height: 100%;
   }
-  
+
   .rl-room-card-content {
     padding: 3rem;
     width: 100%;
   }
-  
+
   .rl-room-card-title {
     white-space: normal;
-    font-size: 4rem;
+    font-size: 32px;
   }
-  
+
   .rl-room-card-text {
-    font-size: 3rem;
+    font-size: 13px;
     line-height: 150%;
     -webkit-line-clamp: 4;
   }
-  
+
   .rl-room-card-btn {
     padding: 2rem 3rem;
     font-size: 3rem;
   }
-  
+
   .rl-layouts-section {
     padding: 10rem 2rem;
   }
-  
+
   .rl-layouts-title {
     font-size: 5rem;
     margin-bottom: 3rem;
   }
-  
+
   .rl-layouts-description p {
     font-size: 3rem;
     line-height: 150%;
   }
-  
+
   .rl-table-wrapper {
     padding: 1rem;
     overflow-x: auto;
   }
-  
+
   .rl-table thead th,
   .rl-table tbody td {
     font-size: 2.5rem;
     padding: 1.5rem 1rem;
   }
-  
+
   .rl-diagrams-row {
     gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .rl-diagram-image {
     width: 150px;
     height: 150px;
   }
-  
+
   .rl-diagram-label {
     font-size: 2.5rem;
   }
-  
+
 }
 
 @media (max-width: 480px) {
   .rl-hero-section {
     min-height: 850px;
-    padding: 10rem 1rem 2rem 1rem;
   }
-  
+
   .rl-hero-title {
     font-size: 32px;
   }
-  
+
   .rl-hero-subtitle {
     font-size: 16px;
   }
-  
+
 }
