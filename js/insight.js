@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("main img.img-popup").forEach(function (img) {
+  document.querySelectorAll("main img").forEach(function (img) {
     img.style.cursor = "pointer";
     img.addEventListener("click", function () {
+      console.log(img.src);
       document.getElementById("imgLightboxImg").src = img.src;
       document.getElementById("imgLightbox").classList.add("active");
     });
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const aboutUsNavItem = document.getElementById("about-us-dropdown");
   const aboutdropdownMenu = document.getElementById(
-    "aboutusdropdown-menu-mobile"
+    "aboutusdropdown-menu-mobile",
   );
 
   if (aboutUsNavItem && aboutdropdownMenu) {
