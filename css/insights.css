@@ -2044,16 +2044,17 @@ footer {
   }
 
   .celebration-headline {
-    font-size: 5rem;
+    font-size: 22px;
   }
 
   .celebration-text {
-    font-size: 3rem;
+    font-size: 13px;
   }
 
   .celebration-btn {
     padding: 2rem 3rem;
-    font-size: 3rem;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
 
@@ -2258,7 +2259,7 @@ footer {
   }
 
   .our-work-headline {
-    font-size: 5rem;
+    font-size: 32px;
   }
 
   .our-work-subheadline {
@@ -2286,7 +2287,7 @@ footer {
   }
 
   .our-work-marquee {
-    margin-top: 40px;
+    margin-top: 80px;
   }
 
   .our-work-track {
@@ -2581,7 +2582,7 @@ footer {
   }
 
   .testimonials-heading {
-    font-size: 5rem;
+    font-size: 32px;
     margin-bottom: 3rem;
     font-weight: 500;
   }
@@ -2998,7 +2999,7 @@ footer {
   }
 
   .menu-heading {
-    font-size: 5rem;
+    font-size: 22px;
   }
 
   .menu-line {
@@ -3006,7 +3007,7 @@ footer {
   }
 
   .menu-text {
-    font-size: 3rem;
+    font-size: 13px;
     line-height: 150%;
   }
 
@@ -3019,8 +3020,9 @@ footer {
 
   .menu-button {
     padding: 2rem 3rem;
-    font-size: 3rem;
+    font-size: 12px;
     width: fit-content;
+    font-weight: 600;
   }
 }
 
@@ -4262,7 +4264,7 @@ th {
   }
 
   .faq-title {
-    font-size: 5rem;
+    font-size: 32px;
     font-weight: 500;
   }
 
@@ -6683,7 +6685,7 @@ th {
   }
 
   .why-athena-heading {
-    font-size: 42px !important;
+    font-size: 32px !important;
     margin-top: 40px !important;
     margin-bottom: 20px !important;
   }
