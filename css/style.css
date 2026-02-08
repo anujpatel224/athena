@@ -2572,6 +2572,32 @@ main .sec-2 .bg-imgs-ct .imgs-row.third {
   }
 }
 
+@media (max-width: 768px) {
+  main .sec-2 .bg-imgs-ct {
+    gap: 1.5rem;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+  }
+
+  main .sec-2 .bg-imgs-ct .imgs-row .row-inner {
+    gap: 1.5rem;
+  }
+
+  main .sec-2 .bg-imgs-ct .imgs-row picture {
+    height: 25vh;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  main .sec-2 .bg-imgs-ct .imgs-row.first {
+    transform: translateY(10%);
+  }
+
+  main .sec-2 .bg-imgs-ct .imgs-row.second {
+    transform: translateY(-10%);
+  }
+}
+
 main .sec-2 .bg-imgs-ct .imgs-row picture {
   height: 33vh;
   width: 100%;
