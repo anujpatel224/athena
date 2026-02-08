@@ -5490,16 +5490,20 @@ th {
   }
 
   .job-details a {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .job-details button {
-    font-size: 12px;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .container {
     padding: 4px 4rem;
+  }
+
+  .know-apply-container {
+    gap: 6rem;
   }
 }
 
@@ -7723,4 +7727,23 @@ footer {
     contain: paint;
     will-change: transform;
   }
+}
+
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-input-wrapper .input-field {
+  padding-right: 45px;
+}
+
+.date-input-wrapper .calendar-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }
