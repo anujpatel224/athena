@@ -412,27 +412,36 @@
                     <h3 class="job-popup-title">Submit Application</h3>
                     <button class="job-popup-close" id="closeButton">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </button>
                 </div>
                 <form id="emailForm" class="job-popup-form">
                     <div class="job-popup-fields">
                         <div class="job-popup-input-wrapper">
-                            <input type="text" id="fullName" name="fullName" class="job-popup-input" placeholder="Full Name*" required>
+                            <input type="text" id="fullName" name="fullName" class="job-popup-input"
+                                placeholder="Full Name*" required>
                         </div>
                         <div class="job-popup-input-wrapper">
-                            <input type="tel" id="phone" name="phone" class="job-popup-input" placeholder="Phone*" required>
+                            <input type="tel" id="phone" name="phone" class="job-popup-input" placeholder="Phone*"
+                                required>
                         </div>
                         <div class="job-popup-input-wrapper">
-                            <input type="email" id="email" name="email" class="job-popup-input" placeholder="Email*" required>
+                            <input type="email" id="email" name="email" class="job-popup-input" placeholder="Email*"
+                                required>
                         </div>
                         <div class="job-popup-input-wrapper job-popup-attachment">
-                            <input type="file" id="attachment" name="attachment" class="job-popup-file-input" accept=".pdf,.doc,.docx">
+                            <input type="file" id="attachment" name="attachment" class="job-popup-file-input"
+                                accept=".pdf,.doc,.docx">
                             <label for="attachment" class="job-popup-input job-popup-attachment-label">
                                 <span>Attachment</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.5 9.31066L10.1247 16.6859C8.40639 18.4042 5.59361 18.4042 3.87531 16.6859C2.15702 14.9676 2.15702 12.1549 3.87531 10.4366L11.2506 3.06131C12.3975 1.91439 14.2441 1.91439 15.391 3.06131C16.538 4.20822 16.538 6.05483 15.391 7.20175L8.01319 14.5796C7.43974 15.1531 6.51644 15.1531 5.94298 14.5796C5.36952 14.0062 5.36952 13.0829 5.94298 12.5094L12.5 5.95241" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5 9.31066L10.1247 16.6859C8.40639 18.4042 5.59361 18.4042 3.87531 16.6859C2.15702 14.9676 2.15702 12.1549 3.87531 10.4366L11.2506 3.06131C12.3975 1.91439 14.2441 1.91439 15.391 3.06131C16.538 4.20822 16.538 6.05483 15.391 7.20175L8.01319 14.5796C7.43974 15.1531 6.51644 15.1531 5.94298 14.5796C5.36952 14.0062 5.36952 13.0829 5.94298 12.5094L12.5 5.95241"
+                                        stroke="#888888" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </label>
                         </div>
@@ -458,10 +467,10 @@
                     </a></div>
                 <div class="footer-links">
                     <a href="./contact-us.html" class="no-barba">Contact Us</a>
-                    <a href="./history.html" class="no-barba">History</a>
+                    <a href="./heritage.html" class="no-barba">History</a>
                     <a href="./testimonials.html" class="no-barba">Testimonials</a>
-                    <a href="./room-layout.html" class="no-barba">Room Layout</a>
-                    <a href="./blog.html" class="no-barba">Blog</a>
+                    <a href="roomlayout.html" class="no-barba">Room Layout</a>
+                    <a href="./blog/index.html" class="no-barba">Blog</a>
                     <a href="./faq.html" class="no-barba">FAQ</a>
                     <a href="./career.html" class="no-barba">Career</a>
                 </div>
@@ -575,7 +584,7 @@
             successMessage.classList.remove('show');
             submitButton.disabled = false;
             submitButton.textContent = 'SUBMIT';
-            
+
             // Reset file input label
             const attachmentLabel = document.querySelector('.job-popup-attachment-label span');
             if (attachmentLabel) attachmentLabel.textContent = 'Attachment';

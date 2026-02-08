@@ -3571,7 +3571,6 @@ footer {
   gap: 1rem;
   background-color: #d3d3d3;
   padding: 2rem;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -6356,7 +6355,6 @@ th {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
-  border-radius: 0 0 12px 12px;
   background: #F4F4F4;
 }
 
@@ -6940,6 +6938,12 @@ footer {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .first {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .second {
   display: flex;
   justify-content: center;
   gap: 0.5rem;

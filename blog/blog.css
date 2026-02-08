@@ -32,12 +32,11 @@
 
 /* Blog Title */
 .blog-content .event-title {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 30px;
+  font-family: Fira Sans Condensed;
   font-weight: 700;
-  line-height: 1.36;
-  color: #222;
-  margin: 0;
+  font-size: 30px;
+  line-height: 136%;
+  letter-spacing: 0.5px;
 }
 
 /* Date Badge */
@@ -92,16 +91,25 @@
   margin: 0;
 }
 
+.form-content form{
+  width:100%;
+}
+
 /* Form Header */
 .form-box .form-title {
+  font-family: "Playfair Display";
   background: #efedef;
   padding: 16px 24px;
   margin: 0;
-  font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 700;
   color: #222;
   line-height: 23px;
+  text-transform: lowercase;
+}
+
+.form-box .form-title::first-letter {
+  text-transform: uppercase;
 }
 
 /* Form Content Area */
@@ -164,7 +172,7 @@
 
 /* Submit Button */
 .form-box .submit-button {
-  width: 100%;
+  width: 90%;
   background: #141414;
   border: none;
   border-radius: 8px;
