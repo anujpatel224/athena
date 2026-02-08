@@ -4969,7 +4969,7 @@ footer {
 @media (min-width: 768px) {
   .welcome-heading {
     padding-top: 2rem;
-    font-size: 42px !important;
+    font-size: 32px !important;
     font-family: "Fira Sans Condensed" !important;
   }
 }
@@ -5183,7 +5183,7 @@ footer {
   }
 
   .why-athena-heading {
-    font-size: 42px !important;
+    font-size: 32px !important;
     margin-top: 40px !important;
     margin-bottom: 20px !important;
   }
@@ -5368,23 +5368,24 @@ footer {
 
 @media (max-width: 767px) {
   .clients-section {
-    padding: 10rem 1.5rem;
+    padding: 20px 1.5rem;
   }
 
   .clients-heading {
-    font-size: 42px !important;
-    margin-bottom: 6rem;
+    font-size: 32px !important;
+    margin-bottom: 0px;
   }
 
   .clients-description {
     font-size: 16px !important;
     margin-bottom: 6rem;
+    padding : 0rem 5rem;
   }
 
   .clients-button {
     padding: 2rem 6rem;
     font-size: 14px !important;
-    margin-bottom: 6rem !important;
+    margin-bottom: 12rem !important;
   }
 
   .clients-marquee-content {
@@ -5543,7 +5544,7 @@ footer {
   }
 
   .newsletter-heading {
-    font-size: 42px !important;
+    font-size: 32px !important;
     max-width: 100% !important;
     padding: 0;
     gap: 1.5rem;
@@ -7624,7 +7625,7 @@ html {
 
   /* General Mobile Typography */
   .designed-to-host-section .section-heading {
-    font-size: 42px !important;
+    font-size: 32px !important;
     margin-bottom: 6rem;
   }
 
