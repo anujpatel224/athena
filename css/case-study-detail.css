@@ -1,0 +1,358 @@
+/* Case Study Detail Page - Blue Diamond / Figma design */
+
+.case-study-detail-page {
+  padding-top: 0;
+  background: #fff;
+}
+
+/* Hero */
+.case-study-detail-hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.case-study-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.case-study-detail-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.case-study-detail-hero-title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem 0;
+}
+
+.case-study-detail-hero-title-line2 {
+  display: block;
+  margin-top: 0.15em;
+}
+
+.case-study-detail-hero-divider {
+  width: 80px;
+  height: 1px;
+  background: #ffffff;
+  margin: 1.25rem auto 1rem;
+}
+
+.case-study-detail-hero-subtitle {
+  font-family: "Fira Sans", sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.case-study-detail-hero-subtitle--plain {
+  font-style: normal;
+}
+
+/* Description section */
+.case-study-detail-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.case-study-detail-description h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+  color: #141414;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.3;
+}
+
+.case-study-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.case-study-detail-tag {
+  display: inline-block;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.case-study-detail-tag--category {
+  background: #e85d34;
+  color: #ffffff;
+}
+
+.case-study-detail-tag--date {
+  background: #e8e8e8;
+  color: #141414;
+}
+
+.case-study-detail-description p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 1rem 0;
+}
+
+.case-study-detail-description p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-detail-description h3 {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #141414;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.case-study-detail-description h3:first-of-type {
+  margin-top: 0;
+}
+
+.case-study-detail-description blockquote {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #333333;
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid #e85d34;
+}
+
+.case-study-detail-tag--weddings {
+  background: #E91E63;
+  color: #ffffff;
+}
+
+.case-study-detail-tag--sporting {
+  background: #2196F3;
+  color: #ffffff;
+}
+
+/* Event highlights */
+.case-study-detail-highlights {
+  background: #000000;
+  padding: 4rem 1.5rem;
+}
+
+.case-study-detail-highlights h2 {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 3rem 0;
+}
+
+.case-study-detail-highlights-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 3rem;
+}
+
+.case-study-detail-highlights-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.case-study-detail-highlights-column ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.case-study-detail-highlights-column li {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.case-study-detail-highlights-column li::marker {
+  color: #555555;
+}
+
+/* Event highlights – light grey background variant */
+.case-study-detail-highlights--light {
+  background: #e8e8e8;
+}
+
+.case-study-detail-highlights--light h2 {
+  color: #141414;
+}
+
+.case-study-detail-highlights--light .case-study-detail-highlights-column li {
+  color: #333333;
+}
+
+.case-study-detail-highlights--light .case-study-detail-highlights-column li::marker {
+  color: #141414;
+}
+
+/* Event highlights – white background, no bullets */
+.case-study-detail-highlights--white {
+  background: #ffffff;
+}
+
+.case-study-detail-highlights--white h2 {
+  color: #141414;
+}
+
+.case-study-detail-highlights--white .case-study-detail-highlights-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.case-study-detail-highlights--white .case-study-detail-highlights-column li {
+  color: #333333;
+  padding-left: 0;
+}
+
+.case-study-detail-highlights--white .case-study-detail-highlights-column li::marker {
+  content: none;
+}
+
+/* Client feedback */
+.case-study-detail-feedback {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.case-study-detail-feedback h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: #141414;
+  margin: 0 0 1.5rem 0;
+}
+
+.case-study-detail-feedback p:not(.case-study-detail-feedback-citation) {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 1rem 0;
+}
+
+.case-study-detail-feedback blockquote {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 1.25rem 0;
+}
+
+.case-study-detail-feedback-citation {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #e85d34;
+  margin: 0;
+}
+
+.case-study-detail-feedback-item {
+  margin-bottom: 2.5rem;
+}
+
+.case-study-detail-feedback-item:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-detail-feedback-item blockquote {
+  margin: 0 0 0.75rem 0;
+}
+
+/* Why Athena Leicester (promo section) */
+.case-study-detail-why {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: #ffffff;
+}
+
+.case-study-detail-why h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: #141414;
+  margin: 0 0 1.5rem 0;
+}
+
+.case-study-detail-why p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .case-study-detail-hero {
+    min-height: 55vh;
+  }
+
+  .case-study-detail-description,
+  .case-study-detail-highlights,
+  .case-study-detail-feedback,
+  .case-study-detail-why {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .case-study-detail-description {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .case-study-detail-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .case-study-detail-highlights h2 {
+    margin-bottom: 2rem;
+  }
+
+  .case-study-detail-feedback blockquote {
+    font-size: 16px;
+  }
+}
