@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   var faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach(function (item) {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (e) {
+      // Prevent event bubbling
+      e.stopPropagation();
       // Toggle the 'open' class - CSS handles the icon and answer display
       this.classList.toggle("open");
     });

@@ -1955,7 +1955,7 @@ footer {
 
 .celebration-image img {
   width: 100%;
-  height: auto;
+  height: 580px;
   object-fit: cover;
 }
 
@@ -4169,11 +4169,13 @@ th {
   width: 100%;
   background: #f2f2f2;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
 
 .faq-item:hover {
-  border: 1px solid #f43900;
+  border-color: #f43900;
 }
 
 /* FAQ Content */
@@ -4211,11 +4213,19 @@ th {
   font-size: 18px;
   line-height: 1.6;
   color: #444;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease 0.1s, margin-top 0.3s ease;
+  margin-top: 0;
+  will-change: max-height, opacity;
 }
 
 .faq-item.open .faq-answer {
-  display: block;
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 10px;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin-top 0.3s ease;
 }
 
 /* FAQ Icon Wrapper */
@@ -4226,34 +4236,58 @@ th {
 .faq-icon-bg {
   width: 26px;
   height: 26px;
+  min-width: 26px;
+  min-height: 26px;
   background: white;
   border-radius: 31px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  flex-shrink: 0;
+  overflow: visible;
+  contain: layout style paint;
 }
 
 .faq-icon {
   width: 10px;
   height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+  object-fit: contain;
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: middle;
 }
 
 .faq-icon-open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
 .faq-icon-close {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
 }
 
 .faq-item.open .faq-icon-open {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .faq-item.open .faq-icon-close {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Responsive Design */
