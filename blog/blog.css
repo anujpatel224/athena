@@ -10,8 +10,7 @@
 
 /* Left Content - Main Blog Area */
 .left-content {
-  flex: 0 0 860px;
-  max-width: 860px;
+  width: 100%;
   color: #222;
 }
 
