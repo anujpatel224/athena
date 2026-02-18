@@ -7797,3 +7797,7 @@ footer {
     line-height: 1.4;
   }
 }
+
+.phone-nowrap {
+  white-space: nowrap;
+}

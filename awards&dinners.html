@@ -56,7 +56,7 @@
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
-                                        <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                        <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
                                         <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                         <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                         <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -151,7 +151,7 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                    <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
                                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                     <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                     <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -318,6 +318,14 @@
                                 <p class="why-athena-description">Maximum 920 guests, including balcony and limited
                                     dancefloor.</p>
                             </div>
+                            <div class="why-athena-card">
+                                <div class="why-athena-icon">
+                                    <img src="../images/everything-you-need/production_facilities.svg"
+                                        alt="Production Facilities" />
+                                </div>
+                                <h3 class="why-athena-title">Production</h3>
+                                <p class="why-athena-description">Full access to in-house RCF sound system.</p>
+                            </div>
 
                             <div class="why-athena-card">
                                 <div class="why-athena-icon">
@@ -374,15 +382,6 @@
                                 <p class="why-athena-description">Three changing rooms with en-suite bathroom
                                     facilities.</p>
                             </div>
-
-                            <div class="why-athena-card">
-                                <div class="why-athena-icon">
-                                    <img src="../images/everything-you-need/production_facilities.svg"
-                                        alt="Production Facilities" />
-                                </div>
-                                <h3 class="why-athena-title">Production Facilities</h3>
-                                <p class="why-athena-description">Full access to in-house RCF sound system.</p>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -425,7 +424,7 @@
                             <p class="our-work-subheadline">We've proudly hosted some of the most prestigious award
                                 ceremonies and dinners. Click below to view more of our work.</p>
                         </div>
-                        <a href="#" class="our-work-btn no-barba">Case Studies</a>
+                        <a href="./case-studies.html" class="our-work-btn no-barba">Discover More</a>
                         <div class="our-work-marquee">
                             <div class="our-work-track">
                                 <img src="images/workwithus/davidson homes.png" alt="brand">
@@ -703,6 +702,17 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="slider-btn prev-btn">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M20 8L12 16L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="slider-btn next-btn">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M12 8L20 16L12 24" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg> </button>
                     </div>
                 </div>
                 <!-- faq section -->
@@ -996,6 +1006,10 @@
                             delay: 3000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
+                        },
+                        navigation: {
+                            nextEl: '.next-btn',
+                            prevEl: '.prev-btn',
                         },
                         pagination: {
                             el: '.service-images-pagination',

@@ -52,7 +52,7 @@
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
-                                        <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                        <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
                                         <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                         <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                         <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -147,7 +147,7 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                    <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
                                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
                                     <li><a href="weddings.html" class="no-barba">Weddings</a></li>
                                     <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
@@ -777,6 +777,15 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="slider-btn prev-btn">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M20 8L12 16L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="slider-btn next-btn">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M12 8L20 16L12 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> </button>
                     </div>
                 </div>
 
@@ -1047,6 +1056,10 @@
                         delay: 3000,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: '.next-btn',
+                        prevEl: '.prev-btn',
                     },
                     pagination: {
                         el: '.service-images-pagination',
