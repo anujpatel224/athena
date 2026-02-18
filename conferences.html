@@ -39,6 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
     <script type="text/javascript" id="hs-script-loader" async defer
@@ -653,6 +654,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-button-prev service-images-swiper-button-prev"></div>
+                            <div class="swiper-button-next service-images-swiper-button-next"></div>
                         </div>
                         <button class="slider-btn prev-btn">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -912,6 +915,10 @@
                     spaceBetween: 20,
                     loop: true,
                     speed: 600,
+                    navigation: {
+                        nextEl: '.service-images-swiper-button-next',
+                        prevEl: '.service-images-swiper-button-prev',
+                    },
                     autoplay: {
                         delay: 3000,
                         disableOnInteraction: false,

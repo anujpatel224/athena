@@ -459,7 +459,8 @@ div.please-rotate {
   width: 100%;
   z-index: 99999;
   transition: 0.4s ease-out;
-  background-color: #140b0b;
+  background-color: #141414;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .quickbar:before {
@@ -708,8 +709,9 @@ div.please-rotate {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a {
-  padding: 0.8rem 2rem;
+  padding: 0;
   position: relative;
+  text-decoration: none;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .name-ct {
@@ -718,18 +720,11 @@ div.please-rotate {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .line {
-  background-color: #929292;
-  position: absolute;
+  display: none;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .line:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background-color: #f2f2f2;
+  display: none;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .line:nth-of-type(1) {
@@ -2766,6 +2761,28 @@ footer {
   width: 8px;
   height: 8px;
   transform: scale(1.2);
+}
+
+/* Service Images Swiper navigation arrows */
+.service-images-swiper .service-images-swiper-button-prev,
+.service-images-swiper .service-images-swiper-button-next {
+  color: #141414;
+  background: rgba(255, 255, 255, 0.9);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.service-images-swiper .service-images-swiper-button-prev:hover,
+.service-images-swiper .service-images-swiper-button-next:hover {
+  background: #f43900;
+  color: #fff;
+}
+.service-images-swiper .service-images-swiper-button-prev::after,
+.service-images-swiper .service-images-swiper-button-next::after {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* Responsive styles for Service Images Carousel */
@@ -6967,25 +6984,59 @@ footer {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .enquire_now_btn {
-  color: black !important;
+  color: #141414 !important;
   background-color: #FFFFFF;
+  border-radius: 0;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .enquire_now_btn:hover {
+  opacity: 0.9;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .enquire_now_btn .name {
+  color: #141414 !important;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn {
-  color: black !important;
-  background-color: #FFFFFF;
-  opacity: 0.7;
+  color: #FFFFFF !important;
+  background-color: #4a4a4a;
+  border-radius: 0;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn:hover {
+  background-color: #5a5a5a;
+}
+
+.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .name {
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .first {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .second {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
