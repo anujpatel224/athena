@@ -1546,8 +1546,7 @@ body.scrolling-down .quickbar {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn {
-  color: #FFFFFF !important;
-  background-color: #4a4a4a;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 0;
   padding: 0.8rem 2rem;
   text-transform: uppercase;
@@ -1555,14 +1554,10 @@ body.scrolling-down .quickbar {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-
-.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn:hover {
-  background-color: #5a5a5a;
+  color: #141414 !important;
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .name {
-  color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5002,7 +4997,7 @@ footer {
 @media (min-width: 768px) {
   .welcome-heading {
     padding-top: 2rem;
-    font-size: 32px !important;
+    font-size: 62px !important;
     font-family: "Fira Sans Condensed" !important;
   }
 }
@@ -8095,5 +8090,11 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
 
   .form-container {
     padding: 20rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-heading{
+    font-size: 32px !important;
   }
 }
