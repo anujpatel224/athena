@@ -11,17 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("main img").forEach(function (img) {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", function () {
-      console.log(img.src);
-      document.getElementById("imgLightboxImg").src = img.src;
-      document.getElementById("imgLightbox").classList.add("active");
+  const lightbox = document.getElementById("imgLightbox");
+  const lightboxImg = document.getElementById("imgLightboxImg");
+
+  // ONLY slider images and heritage slider image
+  document
+    .querySelectorAll(".service-carousel-image, .gallery-scroll img")
+    .forEach(function (img) {
+      img.style.cursor = "pointer";
+
+      img.addEventListener("click", function () {
+        lightboxImg.src = this.src;
+        lightbox.classList.add("active");
+      });
     });
-  });
-  document.getElementById("imgLightbox").addEventListener("click", function () {
+
+  // close lightbox
+  lightbox.addEventListener("click", function () {
     this.classList.remove("active");
-    document.getElementById("imgLightboxImg").src = "";
+    lightboxImg.src = "";
   });
 });
 

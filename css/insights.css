@@ -1608,7 +1608,7 @@ footer {
   }
 
   .video-hero-underline {
-    width: 400px;
+    width: 500px;
   }
 }
 
@@ -2774,11 +2774,13 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background 0.2s ease, color 0.2s ease;
 }
+
 .service-images-swiper .service-images-swiper-button-prev:hover,
 .service-images-swiper .service-images-swiper-button-next:hover {
   background: #f43900;
   color: #fff;
 }
+
 .service-images-swiper .service-images-swiper-button-prev::after,
 .service-images-swiper .service-images-swiper-button-next::after {
   font-size: 20px;
@@ -3152,6 +3154,7 @@ footer {
 
 /* Responsive – match celebration-section breakpoints */
 @media (max-width: 968px) {
+
   .conference-image-wrapper,
   .conference-content-wrapper {
     width: 100%;
@@ -5694,9 +5697,9 @@ th {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #fff;
+  color: #F43900;
+  border: 3px solid #F43900;
   border-radius: 50%;
   font-size: 1.5rem;
   width: 40px;
@@ -5706,21 +5709,20 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  backdrop-filter: blur(4px);
 }
 
 .slider-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background-color: #F43900;
   transform: translateY(-50%) scale(1.1);
 }
 
 .prev-btn {
-  left: 10px;
+  left: 50px;
 }
 
 .next-btn {
-  right: 10px;
+  right: 50px;
 }
 
 @media (max-width: 767px) {
@@ -5746,6 +5748,21 @@ th {
 
   .history-image {
     height: 300px;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+  }
+
+  .prev-btn {
+    left: 12px;
+  }
+
+  .next-btn {
+    right: 12px;
   }
 }
 
@@ -6949,8 +6966,8 @@ footer {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn {
-  color: #FFFFFF !important;
-  background-color: #4a4a4a;
+  color: #141414 !important;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 0;
   padding: 0.8rem 2rem;
   text-transform: uppercase;
@@ -6960,12 +6977,7 @@ footer {
   transition: all 0.2s ease;
 }
 
-.quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn:hover {
-  background-color: #5a5a5a;
-}
-
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow .call_now_btn .name {
-  color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7220,12 +7232,14 @@ footer {
 }
 
 .rl-venue-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 48px;
-  font-weight: 500;
+  font-family: "Fira Sans Condensed";
+  font-size: 42px;
+  font-weight: 700;
   color: #222;
-  line-height: 1;
+  line-height: 1.2;
   margin: 0;
+  text-transform: uppercase;
+  font-variant: small-caps;
 }
 
 .rl-venue-line {
@@ -7235,11 +7249,11 @@ footer {
 }
 
 .rl-venue-text {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 20px;
+  font-family: "Fira Sans";
+  font-size: 1.25rem;
   font-weight: 400;
-  color: #444;
   line-height: 1.6;
+  color: #000000;
   margin: 0;
 }
 
@@ -7386,6 +7400,7 @@ footer {
   color: #222;
   line-height: 1;
   margin: 0 0 30px;
+  text-transform: uppercase;
 }
 
 .rl-layouts-description {
@@ -7654,7 +7669,7 @@ footer {
 
   .rl-room-card-title {
     white-space: normal;
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .rl-room-card-text {
@@ -7673,7 +7688,7 @@ footer {
   }
 
   .rl-layouts-title {
-    font-size: 5rem;
+    font-size: 32px;
     margin-bottom: 3rem;
   }
 
@@ -7791,6 +7806,10 @@ footer {
   .testimonial-company-name {
     font-size: 18px;
     line-height: 1.4;
+  }
+
+  .job-popup-submit {
+    padding: 12px 0px;
   }
 }
 
