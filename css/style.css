@@ -1259,17 +1259,17 @@ div.please-rotate {
   transition: 0.4s ease-out;
 }
 
-body.scrolling-down .quickbar {
+/* body.scrolling-down .quickbar {
   transform: translateY(-100%) !important;
-}
+} */
 
-html.open-navi .quickbar {
+/* html.open-navi .quickbar {
   transform: translateY(0%) !important;
-}
+} */
 
-html.bottom .quickbar {
+/* html.bottom .quickbar {
   transform: translateY(-100%) !important;
-}
+} */
 
 .quickbar:before {
   content: "";
@@ -1291,9 +1291,9 @@ html.fixed:not(.open-navi) .quickbar:before {
   opacity: 1;
 }
 
-body.scrolling-down .quickbar {
+/* body.scrolling-down .quickbar {
   transform: translateY(-100%) !important;
-}
+} */
 
 .quickbar .quickbar-inner {
   display: flex;
