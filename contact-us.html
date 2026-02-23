@@ -22,7 +22,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Fira+Sans+Condensed:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- styles -->
@@ -59,13 +64,13 @@
         }
 
         .form-subtitle {
+            font-family: 'Fira Sans';
             font-weight: 400;
             font-style: Regular;
             font-size: 20px;
             line-height: 160%;
             letter-spacing: 0%;
             text-align: center;
-            font-family: 'Fira Sans';
         }
 
         .container-of-form {
@@ -154,9 +159,9 @@
         .con-item {
             display: flex;
             flex-direction: column;
-            padding: 0rem 3rem;
             border-right: 1px solid #F43900;
             gap: 1rem;
+            width: 300px;
         }
 
         .con-item:last-child {
@@ -228,6 +233,7 @@
             .dark-overlay-img {
                 height: 400px !important;
             }
+
             .bg-ct {
                 height: 400px !important;
                 margin-bottom: 50px;
@@ -602,7 +608,8 @@
                     <div class="con-item">
                         <img src="images/icons/phoneicon.svg" alt="X" class="address-icon">
                         <h3 class="contact-title">Phone</h3>
-                        <p class="contact-detail">0116 262 6556</p>
+                        <p class="contact-detail"><a href="tel:01162626556" class="dev-address">0116 262 6556</a></p>
+
                     </div>
 
                     <div class="con-item">
@@ -614,7 +621,7 @@
                     <div class="con-item">
                         <img src="images/icons/gmailicon.svg" alt="X" class="address-icon">
                         <h3 class="contact-title">Email</h3>
-                        <p class="contact-detail">contact@athenacb.co.uk</p>
+                        <p class="contact-detail"><a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a></p>
                     </div>
                 </div>
             </div>
@@ -658,80 +665,79 @@
                             src="images/footer/tiktok.svg" alt="YouTube" class="social-icon"></a>
                 </div>
                 <div class="footer-address">
-
                     <div class="address-links">
+                        <a href="../terms-and-condition.html">Terms & Conditions</a>
                         <a href="../privacy-policy.html">Privacy Policy</a>
-                        <a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a>
-                        <a href="tel:01162626556" class="dev-address">0116 262 6556</a>
+                        <a href="../terms-of-use.html">Terms of Use</a>
                     </div>
-
-                    <div class="address-text">
+                    <div class="address-links">
+                        <a href="tel:01162626556" class="dev-address">0116 262 6556</a>
+                        <a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a>
                         <a href="#">Queen Street Leicester, LE1 1QD</a>
                     </div>
                 </div>
+                <footer>
+                    <div class="lp-whatsapp-icon-bar">
+                        <a class="no-barba" target="_blank"
+                            href="https://web.whatsapp.com/send?phone=+918076865758&amp;text=%F0%9F%91%8B%F0%9F%8F%BB%20Hi%2C%20I%20am%20Interested%20to%20talk.%0A%0A*Page%20URL%3A*%20https%3A%2F%2Fathena-rust.vercel.app%2F">
+                            <img src="../images/footer/whatsapp.webp" width="100" height="100" alt="send whatsapp msg">
+                        </a>
+                    </div>
             </div>
-            <footer>
-                <div class="lp-whatsapp-icon-bar">
-                    <a class="no-barba" target="_blank"
-                        href="https://web.whatsapp.com/send?phone=+918076865758&amp;text=%F0%9F%91%8B%F0%9F%8F%BB%20Hi%2C%20I%20am%20Interested%20to%20talk.%0A%0A*Page%20URL%3A*%20https%3A%2F%2Fathena-rust.vercel.app%2F">
-                        <img src="../images/footer/whatsapp.webp" width="100" height="100" alt="send whatsapp msg">
-                    </a>
-                </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/@barba/core@2.10.0/dist/barba.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/animation.js"></script>
-    <script src="js/insight.js"></script>
-    <script>
-        // Dark theme styles (you can tweak these)
-        const darkStyle = [
-            { "elementType": "geometry", "stylers": [{ "color": "#212121" }] },
-            { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
-            { "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
-            { "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }] },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [{ "color": "#4a4033" }]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [{ "color": "#181818" }]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{ "color": "#000000" }]
-            }
-        ];
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+            <script src="https://unpkg.com/@barba/core@2.10.0/dist/barba.umd.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="js/scripts.js"></script>
+            <script src="js/animation.js"></script>
+            <script src="js/insight.js"></script>
+            <script>
+                // Dark theme styles (you can tweak these)
+                const darkStyle = [
+                    { "elementType": "geometry", "stylers": [{ "color": "#212121" }] },
+                    { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
+                    { "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
+                    { "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }] },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{ "color": "#4a4033" }]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [{ "color": "#181818" }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{ "color": "#000000" }]
+                    }
+                ];
 
-        function initMap() {
-            // Set this to your venue’s coordinates
-            const venue = { lat: 52.6336, lng: -1.1230 }; // example: Leicester center
+                function initMap() {
+                    // Set this to your venue’s coordinates
+                    const venue = { lat: 52.6336, lng: -1.1230 }; // example: Leicester center
 
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: venue,
-                zoom: 15,
-                styles: darkStyle,
-                disableDefaultUI: false,
-            });
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: venue,
+                        zoom: 15,
+                        styles: darkStyle,
+                        disableDefaultUI: false,
+                    });
 
-            new google.maps.Marker({
-                position: venue,
-                map,
-                title: "Your Venue Name",
-            });
-        }
-    </script>
+                    new google.maps.Marker({
+                        position: venue,
+                        map,
+                        title: "Your Venue Name",
+                    });
+                }
+            </script>
 </body>
 
 </html>

@@ -70,24 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let lastScrollTop = 0;
-  const header = document.querySelector(".quickbar");
+// document.addEventListener("DOMContentLoaded", function () {
+//   let lastScrollTop = 0;
+//   const header = document.querySelector(".quickbar");
 
-  window.addEventListener("scroll", function () {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   window.addEventListener("scroll", function () {
+//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      header.style.transform = "translateY(-100%)";
-    } else {
-      // Scrolling up
-      header.style.transform = "translateY(0)";
-    }
+//     if (scrollTop > lastScrollTop) {
+//       // Scrolling down
+//       header.style.transform = "translateY(-100%)";
+//     } else {
+//       // Scrolling up
+//       header.style.transform = "translateY(0)";
+//     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-});
+//     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+//   });
+// });
 
 function adjustBgHeight() {
   const header = document.querySelector(".quickbar");
