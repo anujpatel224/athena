@@ -5396,7 +5396,7 @@ footer {
 
 @media (max-width: 767px) {
   .clients-section {
-    padding: 20px 1.5rem;
+    padding: 60px 1.5rem;
   }
 
   .clients-heading {
@@ -5407,6 +5407,7 @@ footer {
   .clients-description {
     font-size: 16px !important;
     margin-bottom: 6rem;
+    margin-top: 6rem;
     padding : 0rem 5rem;
   }
 
