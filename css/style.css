@@ -4695,10 +4695,6 @@ footer {
   display: none;
 }
 
-.dev-address {
-  display: block;
-}
-
 .footer-container .footer-address .address-links a:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -6444,10 +6440,6 @@ main .btn-secondary:hover,
     font-size: 12px;
   }
 
-  .footer-container .footer-address .address-links {
-    gap: 4rem;
-  }
-
   .footer-container .footer-address .address-links a {
     font-size: 12px;
   }
@@ -6459,10 +6451,6 @@ main .btn-secondary:hover,
   .address-text {
     font-size: 12px;
     display: block;
-  }
-
-  .dev-address {
-    display: none;
   }
 
   .part-process .process-wrapper .process-slide {
@@ -8097,5 +8085,13 @@ main .reviewsSwiperDesktopCt .imgSwiper .img-ct img {
 @media (max-width: 768px) {
   .welcome-heading{
     font-size: 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .address-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 }

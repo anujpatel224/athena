@@ -6920,10 +6920,6 @@ footer {
     gap: 5rem;
   }
 
-  .footer-container .footer-address .address-links {
-    gap: 4rem;
-  }
-
   .footer-container .footer-address .address-links a {
     font-size: 12px;
   }
@@ -7437,7 +7433,7 @@ footer {
   font-size: 14px;
   font-weight: 500;
   color: #666;
-  text-align: left;
+  text-align: center;
   padding: 10px 10px 10px 10px;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -7815,4 +7811,16 @@ footer {
 
 .phone-nowrap {
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .address-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.quickbar {
+  will-change: transform;
+  transform: translateZ(0);
 }
