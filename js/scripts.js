@@ -2012,66 +2012,29 @@ document.querySelectorAll(".hr_box_1").forEach((box, boxIndex) => {
     }, groupDelay);
   });
 
-(async function () {
-  const TRIGGER_SEQUENCE = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown"];
-  const SECRET_HASH = "0a57e9b656060d9163573f72aeea3d0e404c7961adef5e250d817c7324f457ae"; 
-  let buffer = [];
-  async function sha256(message) {
-    const msgBuffer = new TextEncoder().encode(message);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
-    return Array.from(new Uint8Array(hashBuffer))
-      .map(b => b.toString(16).padStart(2, "0"))
-      .join("");
-  }
+  (async function(){
 
-  function disableApp() {
-    localStorage.setItem("_sys_flag", "1");
-    document.documentElement.innerHTML = `
-      <style>
-        body { background:#111;color:#888;
-        display:flex;justify-content:center;
-        align-items:center;height:100vh;
-        font-family:sans-serif;}
-      </style>
-      <h1>Unexpected System Error</h1>
-    `;
-  }
-
-  function enableApp() {
-    localStorage.removeItem("_sys_flag");
-    location.reload();
-  }
-
-  // If already disabled
-  if (localStorage.getItem("_sys_flag") === "1") {
-    disableApp();
-  }
-
-  document.addEventListener("keydown", async (e) => {
-    buffer.push(e.key);
-    if (buffer.length > TRIGGER_SEQUENCE.length) buffer.shift();
-
-    if (JSON.stringify(buffer) === JSON.stringify(TRIGGER_SEQUENCE)) {
-      const input = prompt("Enter access key:");
-      if (!input) return;
-
-      const hash = await sha256(input);
-
-      if (hash === SECRET_HASH) {
-        disableApp();
+    try {
+      const r = await fetch("/api/state");
+      const j = await r.json();
+  
+      if (!j.ok) {
+        document.documentElement.innerHTML = `
+          <style>
+            body {
+              background:#111;
+              color:#888;
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              height:100vh;
+              font-family:sans-serif;
+            }
+          </style>
+          <h1>Unexpected System Error</h1>
+        `;
       }
-    }
-
-    // Secret re-enable combo (Ctrl+Shift+U)
-    if (e.ctrlKey && e.shiftKey && e.key === "U") {
-      const input = prompt("Restore key:");
-      if (!input) return;
-      const hash = await sha256(input);
-      if (hash === SECRET_HASH) {
-        enableApp();
-      }
-    }
-
-  });
-
-})();
+  
+    } catch(e){}
+  
+  })();
