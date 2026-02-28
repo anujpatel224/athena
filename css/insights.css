@@ -3759,9 +3759,19 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
 }
 
 .christmas-banner-link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Playfair Display';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.christmas-banner-text {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -7820,6 +7830,7 @@ footer {
     text-align: center;
   }
 }
+
 .quickbar {
   will-change: transform;
   transform: translateZ(0);
