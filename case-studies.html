@@ -72,54 +72,57 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
     .case-study-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      /* transform: translateY(-8px); */
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
 
     .case-study-image {
-      width: 100%;
+      width: calc(100% - 40px);
       height: 246px;
       overflow: hidden;
       position: relative;
+      margin: 20px auto 0;
     }
 
     .case-study-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      /* transition: transform 0.3s ease; */
     }
 
     .case-study-card:hover .case-study-image img {
-      transform: scale(1.05);
+      /* transform: scale(1.05); */
     }
 
     .case-study-content {
-      padding: 20px;
+      padding: 24px 28px 28px;
     }
 
     .case-study-category {
       display: inline-block;
-      background: #FF5733;
-      color: #ffffff;
+      background: #fde8e0;
+      color: #F43900;
       font-family: 'Fira Sans Condensed', sans-serif;
       font-size: 13px;
-      font-weight: 500;
-      padding: 6px 18px;
+      font-weight: 600;
+      padding: 7px 20px;
       border-radius: 20px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      text-transform: capitalize;
+      letter-spacing: 0.3px;
     }
 
     .case-study-title-text {
       font-family: 'DM Serif Display', serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 400;
-      color: #141414;
+      color: #1a1a1a;
       margin-bottom: 12px;
       line-height: 1.3;
       min-height: 60px;
@@ -127,9 +130,9 @@
 
     .case-study-description {
       font-family: 'Fira Sans', sans-serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
-      color: #666666;
+      color: #555555;
       line-height: 1.6;
       min-height: 65px;
     }
@@ -463,7 +466,7 @@
                   alt="A Love Story Brought to Life at Athena Leicester">
               </div>
               <div class="case-study-content">
-                <span class="case-study-category" style="background: #E91E63;">Weddings</span>
+                <span class="case-study-category">Weddings</span>
                 <h2 class="case-study-title-text">A Love Story Brought to Life at Athena Leicester</h2>
                 <p class="case-study-description">From breathtaking décor to seamless coordination, Athena became more
                   than just a venue — it was the heartbeat of a celebration filled with colour, joy, and togetherness.
@@ -507,7 +510,7 @@
                   alt="British Physique Alliance Bodybuilding Show 2025">
               </div>
               <div class="case-study-content">
-                <span class="case-study-category" style="background: #2196F3;">Sporting Events</span>
+                <span class="case-study-category">Sporting Events</span>
                 <h2 class="case-study-title-text">British Physique Alliance Bodybuilding Show 2025</h2>
                 <p class="case-study-description">An electrifying live showcase that brought together the UK's best
                   physiques in a day of competition and camaraderie.</p>
