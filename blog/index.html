@@ -38,7 +38,7 @@
     .container {
       max-width: 1400px;
       margin: auto;
-      margin-top: 60px;
+      margin-top: 85px;
     }
 
     .title {
@@ -360,7 +360,7 @@
       }
 
       .article {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: flex-start;
         margin-top: 20px;
       }
@@ -372,6 +372,10 @@
 
       .article {
         gap: 0px;
+      }
+
+      .side-articles {
+        gap: 0px
       }
 
       .article h3 {
@@ -463,7 +467,15 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-top: 13px;
+        margin-top: 20px;
+      }
+
+      .blog-section {
+        margin-bottom: 25px;
+      }
+
+      .awards-dinners {
+        margin-bottom: 30px;
       }
 
       .article p {
@@ -722,7 +734,17 @@
         <div class="container">
           <h1 class="title">ATHENA BLOG</h1>
           <div class="blog-section">
-
+            <div class="main-article">
+              <img src="../images/blog/blog1.png" alt="Main Event" />
+              <a class="no-barba" href="/blog/Athena_welcomes_four_hundred.html">
+                <h1>Athena Welcomes 750 for the Fitness Awards 2022</h1>
+              </a>
+              <p>
+                It was Awards galore at this year's prestigious fitness
+                awards!
+              </p>
+              <span class="badge" style="margin-top: 2px">Awards</span>
+            </div>
             <div class="side-articles">
               <div class="article">
                 <img src="../images/blog/blog2.png" alt="Event 1" />
@@ -777,17 +799,7 @@
 
               </div>
             </div>
-            <div class="main-article">
-              <img src="../images/blog/blog1.png" alt="Main Event" />
-              <a class="no-barba" href="/blog/Athena_welcomes_four_hundred.html">
-                <h1>Athena Welcomes 750 for the Fitness Awards 2022</h1>
-              </a>
-              <p>
-                It was Awards galore at this year's prestigious fitness
-                awards!
-              </p>
-              <span class="badge" style="margin-top: 2px">Awards</span>
-            </div>
+
           </div>
 
           <div class="awards-dinners">
