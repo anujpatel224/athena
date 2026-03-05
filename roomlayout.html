@@ -21,11 +21,11 @@
     <link rel="icon" href="favicon.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Fira+Sans+Condensed:wght@500;700&display=swap"
         rel="stylesheet">
     <!-- styles -->
     <link rel="stylesheet" href="css/insights.css" media="screen" />
@@ -263,19 +263,24 @@
         </div>
         <div class="page-wrap">
             <main>
-                <!-- Hero Section -->
-                <section class="rl-hero-section">
-                    <div class="rl-hero-bg">
-                        <img src="./images/room_layout_3.jpg" alt="Room Layout Hero" class="rl-hero-bg-img" />
-                        <div class="rl-hero-overlay"></div>
+                <div class="bg-ct">
+                    <div class="dark-overlay-video video-container">
+                        <video class="bg-video main-video" autoplay muted loop playsinline data-parallax-strength="5.5"
+                            data-parallax-height="5">
+                            <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/room_layout.mp4"
+                                type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class="rl-hero-content">
-                        <div class="rl-hero-title-wrapper">
-                            <h1 class="rl-hero-title">Room Layout</h1>
-                        </div>
-                        <p class="rl-hero-subtitle">Versatile Spaces for Events of Every Scale</p>
+                    <div class="overlay-text">
+                        <h1 class="video-hero-heading">Room Layouts</h1>
+                        <div class="video-hero-underline"></div>
+                        <p class="video-hero-subtext">Versatile Spaces for Events of Every Scale</p>
                     </div>
-                </section>
+                    <button id="button" class="volume-button">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
 
                 <!-- Versatile Event Venue Section -->
                 <section class="rl-venue-section">
@@ -284,8 +289,8 @@
                             <img src="./images/athena now.jpg" alt="Athena Venue" class="rl-venue-image" />
                         </div>
                         <div class="rl-venue-content">
-                            <h2 class="rl-venue-title">Versatile Event Venue</h2>
-                            <div class="rl-venue-line"></div>
+                            <h2 class="rl-venue-title">Versatile Events Venue</h2>
+                            <div class="rl-venue-line"></div>   
                             <p class="rl-venue-text">At Athena, we offer a range of flexible room layouts that can be
                                 tailored to suit every event. Whether you're planning a corporate conference, an elegant
                                 wedding, or an intimate gathering, our adaptable spaces provide the perfect setting.
@@ -294,7 +299,7 @@
                                 exceptional.</p>
                             <div class="rl-venue-buttons">
                                 <a href="./contact-us.html" class="celebration-btn no-barba">Enquire Now</a>
-                                <a href="#" class="celebration-btn">Schedule a Site Visit</a>
+                                <a class="celebration-btn" id="scheduleSiteVisit">Schedule a Site Visit</a>
                             </div>
                         </div>
                     </div>
@@ -309,9 +314,7 @@
                             </div>
                             <div class="rl-room-card-content">
                                 <h3 class="rl-room-card-title">The Cinema Suite</h3>
-                                <p class="rl-room-card-text">A unique hall capable of seating up to 1000 guests ideal
-                                    for banquets, conferences, exhibitions, presentations, award ceremonies, and dinner
-                                    dances.</p>
+                                <p class="rl-room-card-text">A unique space capable of seating up to 1000 guests, ideal for Awards & Dinners, Conferences, Exhibitions, Presentations, Award ceremonies, and Dinner dances. The Cinema Suite is a tiered suite and includes a large stage, dance floor, large bar, a broadcast-quality RCF Sound System,10m x 5m Cinema Screen capable of projecting an array of images, a fully equipped lighting rig and system, and a wireless data connection facility throughout.</p>
                                 <a href="#" class="rl-room-card-btn explore_btn" data-id="0">Explore More</a>
                             </div>
                         </div>
@@ -321,9 +324,7 @@
                             </div>
                             <div class="rl-room-card-content">
                                 <h3 class="rl-room-card-title">The Gallery</h3>
-                                <p class="rl-room-card-text">The Gallery is tiered and can seat up to 300 guests.
-                                    Benefiting from a bar, two 10ft x 10ft projector screens, and a ceiling
-                                    multi-colourwash facility.</p>
+                                <p class="rl-room-card-text">The Gallery is tiered and can seat up to 300 guests. The Gallery overlooks the stage and can be used in conjunction with The Cinema Suite, making it ideal for larger dinners, award ceremonies, presentations, and dinner dances. An ideal breakout space or pre-dinner drinks area.</p>
                                 <a href="#" class="rl-room-card-btn explore_btn" data-id="1">Explore More</a>
                             </div>
                         </div>
@@ -333,9 +334,7 @@
                             </div>
                             <div class="rl-room-card-content">
                                 <h3 class="rl-room-card-title">The Deco Lounge</h3>
-                                <p class="rl-room-card-text">A versatile suite, ideal for use in conjunction with The
-                                    Cinema Suite and The Gallery as a break-out room or as a drinks reception. The Deco
-                                    Lounge can also </p>
+                                <p class="rl-room-card-text">A versatile suite, ideal for use in conjunction with The Cinema Suite and The Gallery as a break-out room or as a drinks reception. The Deco Lounge can also be used alongside The CityView Lounge or in isolation for smaller events. The lounge benefits from a dual aspect bar, a plasma screen capable of projecting an array of images, and wireless data connection.</p>
                                 <a href="#" class="rl-room-card-btn explore_btn" data-id="2">Explore More</a>
                             </div>
                         </div>
@@ -345,9 +344,7 @@
                             </div>
                             <div class="rl-room-card-content">
                                 <h3 class="rl-room-card-title">The City View Lounge</h3>
-                                <p class="rl-room-card-text">A truly unique, versatile lounge with ample natural
-                                    daylight. Benefiting from outstanding views through the city centre. The City View
-                                    Lounge can </p>
+                                <p class="rl-room-card-text">A truly unique, versatile lounge with ample natural daylight. Benefiting from outstanding views through the city centre. The City View Lounge can be used in conjunction with The Cinema Suite and The Gallery as a break-out room or can also be used as a suite for smaller events. </p>
                                 <a href="#" class="rl-room-card-btn explore_btn" data-id="3">Explore More</a>
                             </div>
                         </div>
@@ -357,9 +354,7 @@
                             </div>
                             <div class="rl-room-card-content">
                                 <h3 class="rl-room-card-title">The Foyer</h3>
-                                <p class="rl-room-card-text">A stunning reception, ideal for meeting and greeting your
-                                    guests. A large bar and cloakroom facilities are available along with a plasma
-                                    screen</p>
+                                <p class="rl-room-card-text">A stunning reception space, ideal for meeting and greeting your guests, as well as a flexible guest registration desk area. A striking bar and convenient cloakroom facilities are available along with a LED welcome screen capable of displaying images of your event/ table plans/  The decor includes a spectacular chandelier and chrome doors leading into The Cinema Suite.</p>
                                 <a href="#" class="rl-room-card-btn explore_btn" data-id="4">Explore More</a>
                             </div>
                         </div>
@@ -397,7 +392,7 @@
                                             Suite</a></td>
                                     <td>1000</td>
                                     <td>1300</td>
-                                    <td>450</td>
+                                    <td>550</td>
                                     <td>700</td>
                                     <td>G</td>
                                     <td>30.0m x 28.8m</td>
@@ -532,6 +527,50 @@
                 <h2 id="popup-title"></h2>
                 <p id="popup-text"></p>
             </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay"  id="modalOverlay">
+        <div class="job-popup">
+            <div class="job-popup-header">
+                <h3 class="job-popup-title">Schedule a Visit</h3>
+                <button class="job-popup-close" id="closeButton">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <form id="emailForm" class="job-popup-form">
+                <div class="job-popup-fields">
+                    <div class="job-popup-input-wrapper">
+                        <input type="text" id="fullName" name="fullName" class="job-popup-input"
+                            placeholder="Full Name*" required>
+                    </div>
+                    <div class="job-popup-input-wrapper">
+                        <input type="tel" id="phone" name="phone" class="job-popup-input" placeholder="Phone*" required>
+                    </div>
+                    <div class="job-popup-input-wrapper">
+                        <input type="email" id="email" name="email" class="job-popup-input" placeholder="Email*"
+                            required>
+                    </div>
+                    <div class="job-popup-input-wrapper job-popup-attachment">
+                        <input type="date" id="preferred-date" name="preferred_date" class="job-popup-input" />
+                        <label for="preferred-date" class="job-popup-attachment-label">
+                        </label>
+                    </div>
+                    <button type="submit" class="job-popup-submit" id="submitButton">
+                        SUBMIT
+                    </button>
+                </div>
+                <div class="error-message" id="emailError">
+                    Please fill in all required fields correctly
+                </div>
+                <div class="success-message" id="successMessage">
+                   <p class="success-header">Thank you for sharing your details.</p>
+                   <p class="success-body">Our team will contact you shortly to confirm <br> your site visit dates.</p>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -708,6 +747,127 @@
         style="position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
         <img id="imgLightboxImg" src="" style="background-color: #fff;">
     </div>
+
+    <script>
+        // Get elements
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeButton = document.getElementById('closeButton');
+        const emailForm = document.getElementById('emailForm');
+        const fullNameInput = document.getElementById('fullName');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const preferredDateInput = document.getElementById('preferred-date');
+        const emailError = document.getElementById('emailError');
+        const submitButton = document.getElementById('submitButton');
+        const successMessage = document.getElementById('successMessage');
+
+
+        document.querySelectorAll('#scheduleSiteVisit').forEach(function (scheduleSiteVisit) {
+            scheduleSiteVisit.addEventListener('click', () => {
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                fullNameInput.focus();
+            });
+        });
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+
+            // Reset form
+            emailForm.reset();
+            document.querySelectorAll('.job-popup-input').forEach(input => input.classList.remove('error'));
+            emailError.classList.remove('show');
+            successMessage.classList.remove('show');
+            submitButton.disabled = false;
+            submitButton.textContent = 'SUBMIT';
+
+            const fields = emailForm.querySelector('.job-popup-fields');
+            if (fields) fields.style.display = 'block';
+        }
+
+        // Close modal events
+        closeButton.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Email validation function
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Phone validation function
+        function validatePhone(phone) {
+            const phoneRegex = /^[\d\s\-\+\(\)]{7,}$/;
+            return phoneRegex.test(phone);
+        }
+
+
+
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const fullName = fullNameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const email = emailInput.value.trim();
+            const preferredDate = preferredDateInput.value;
+
+            document.querySelectorAll('.job-popup-input').forEach(input => input.classList.remove('error'));
+            emailError.classList.remove('show');
+
+            let hasError = false;
+
+            if (!fullName) {
+                fullNameInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (!phone || !validatePhone(phone)) {
+                phoneInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (!email || !validateEmail(email)) {
+                emailInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (!preferredDate) {
+                preferredDateInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (hasError) {
+                emailError.classList.add('show');
+                return;
+            }
+            submitButton.disabled = true;
+            submitButton.textContent = 'SUBMITTING...';
+
+            setTimeout(() => {
+                const fields = emailForm.querySelector('.job-popup-fields');
+                if (fields) fields.style.display = 'none';
+                successMessage.classList.add('show');
+                submitButton.textContent = 'SUBMIT';
+                setTimeout(() => {
+                    closeModal();
+                    if (fields) fields.style.display = 'block';
+                }, 4000);
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>
