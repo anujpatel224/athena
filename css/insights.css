@@ -4298,6 +4298,18 @@ th {
     font-size: 3rem;
     line-height: 150%;
   }
+
+  .christmas-banner-section {
+    flex-direction: column;
+  }
+
+  .christmas-banner-text {
+    font-size: 14px;
+  }
+
+  .christmas-banner-link {
+    font-size: 10px;
+  }
 }
 
 /* Tablet Screens (768px to 1024px) */
@@ -7314,7 +7326,7 @@ footer {
   margin: 0 auto;
 }
 
-.celebration-btn{
+.celebration-btn {
   cursor: pointer;
 }
 
@@ -7626,7 +7638,8 @@ footer {
     gap: 1.5rem;
     align-items: flex-start;
   }
-  .rl-venue-container{
+
+  .rl-venue-container {
     max-width: 85%;
     margin: 0 auto;
     padding: 0 4rem;
@@ -7858,23 +7871,24 @@ footer {
   transform: translateZ(0);
 }
 
-.success-header{
-color: #222;
-text-align: center;
-font-family: "Fira Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 140%;
-margin-bottom: 8px;
+.success-header {
+  color: #222;
+  text-align: center;
+  font-family: "Fira Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 8px;
 }
 
-.success-body{
-color: #222;
-text-align: center;
-font-family: "Fira Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; /* 32px */
+.success-body {
+  color: #222;
+  text-align: center;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 32px */
 }
