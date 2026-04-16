@@ -10,21 +10,51 @@
 
 const button = document.querySelector(".volume-button");
 const icon = document.querySelector("#button > i");
-const video =
+const heroMedia =
   document.querySelector(".main-video") || document.querySelector(".bg-video");
 
-button.addEventListener("click", () => {
-  if (video.muted) {
-    video.muted = false;
-    icon.classList.remove('fa-volume-mute');
-    icon.classList.add('fa-volume-up');
-    
-  } else {
-    video.muted = true;
-    icon.classList.remove('fa-volume-up');
-    icon.classList.add('fa-volume-mute');
-  }
-});
+if (button && icon && heroMedia) {
+  const isIframe = heroMedia.tagName === "IFRAME";
+  let iframeMuted = true;
+
+  const postToYouTube = (func) => {
+    if (!isIframe || !heroMedia.contentWindow) return;
+    heroMedia.contentWindow.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: func,
+        args: [],
+      }),
+      "*"
+    );
+  };
+
+  button.addEventListener("click", () => {
+    if (!isIframe) {
+      if (heroMedia.muted) {
+        heroMedia.muted = false;
+        icon.classList.remove("fa-volume-mute");
+        icon.classList.add("fa-volume-up");
+      } else {
+        heroMedia.muted = true;
+        icon.classList.remove("fa-volume-up");
+        icon.classList.add("fa-volume-mute");
+      }
+      return;
+    }
+
+    if (iframeMuted) {
+      postToYouTube("unMute");
+      icon.classList.remove("fa-volume-mute");
+      icon.classList.add("fa-volume-up");
+    } else {
+      postToYouTube("mute");
+      icon.classList.remove("fa-volume-up");
+      icon.classList.add("fa-volume-mute");
+    }
+    iframeMuted = !iframeMuted;
+  });
+}
 
 let player; 
 
