@@ -6791,12 +6791,21 @@ th {
   transition: filter 0.3s ease;
 }
 
+/* Full-colour SVGs (e.g. location pin) — skip white mono filter */
+.why-athena-icon img[src*="locationicon"] {
+  filter: none;
+}
+
 .why-athena-card.highlighted .why-athena-icon img {
   filter: none;
 }
 
 .why-athena-card:hover .why-athena-icon img {
   filter: brightness(400%) saturate(300%) invert(27%) sepia(100%) saturate(5000%) hue-rotate(4deg) brightness(100%) contrast(150%);
+}
+
+.why-athena-card:hover .why-athena-icon img[src*="locationicon"] {
+  filter: brightness(1.12);
 }
 
 .why-athena-title {
