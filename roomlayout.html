@@ -783,7 +783,7 @@
             submitButton.textContent = 'SUBMIT';
 
             const fields = emailForm.querySelector('.job-popup-fields');
-            if (fields) fields.style.display = 'block';
+            if (fields) fields.style.display = '';
         }
 
         // Close modal events
@@ -863,7 +863,7 @@
                 submitButton.textContent = 'SUBMIT';
                 setTimeout(() => {
                     closeModal();
-                    if (fields) fields.style.display = 'block';
+                    if (fields) fields.style.display = '';
                 }, 4000);
             }, 1000);
         });

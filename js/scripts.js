@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const video = document.querySelector(".main-video");
-  if (video) {
+  // YouTube heroes use an iframe with .main-video; only <video> supports play()/pause().
+  if (video && video.tagName === "VIDEO") {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
