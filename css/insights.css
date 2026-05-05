@@ -6792,9 +6792,9 @@ th {
 }
 
 /* Full-colour SVGs (e.g. location pin) — skip white mono filter */
-.why-athena-icon img[src*="locationicon"] {
+/* .why-athena-icon img[src*="locationicon"] {
   filter: none;
-}
+} */
 
 .why-athena-card.highlighted .why-athena-icon img {
   filter: none;
