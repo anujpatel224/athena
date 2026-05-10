@@ -682,7 +682,7 @@
 
                     <div class="why-athena-card">
                       <div class="why-athena-icon">
-                        <img src="images/icons/Parking.svg" alt="Catering" />
+                        <img src="images/icons/parking.svg" alt="Catering" />
                       </div>
                       <h3 class="why-athena-title">Parking</h3>
                       <p class="why-athena-description">Athena Car Park & NCP Car Park directly adjacent to the venue
@@ -758,7 +758,7 @@
                   </p>
                   <form class="newsletter-form">
                     <input type="email" class="newsletter-input" placeholder="Your email here" required>
-                    <button type="submit" class="newsletter-button">SUBMIT</button>
+                    <button class="newsletter-button">SUBMIT</button>
                   </form>
                 </div>
               </section>
@@ -1497,48 +1497,75 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      let valid = true;
-      const form = e.target;
-      const fields = [
-        { name: 'fullName', message: 'Full Name is required.' },
-        { name: 'phone', message: 'Phone is required.' },
-        { name: 'email', message: 'Email is required.' },
-      ];
+    var contactFormEl = document.getElementById('contactForm');
+    if (contactFormEl) {
+      contactFormEl.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+        const form = e.target;
+        const fields = [
+          { name: 'fullName', message: 'Full Name is required.' },
+          { name: 'phone', message: 'Phone is required.' },
+          { name: 'email', message: 'Email is required.' },
+        ];
 
-      // Clear previous errors
-      form.querySelectorAll('.error-message').forEach(span => {
-        span.style.display = 'none';
-        span.textContent = '';
-      });
+        // Clear previous errors
+        form.querySelectorAll('.error-message').forEach(span => {
+          span.style.display = 'none';
+          span.textContent = '';
+        });
 
-      fields.forEach(field => {
-        const input = form.elements[field.name];
-        const errorSpan = input.parentElement.querySelector('.error-message');
-        if (!input.value.trim()) {
-          errorSpan.textContent = field.message;
-          errorSpan.style.display = 'block';
-          valid = false;
-        } else if (field.name === 'email' && !isValidEmail(input.value.trim())) {
-          errorSpan.textContent = 'Please enter a valid email address.';
-          errorSpan.style.display = 'block';
-          valid = false;
+        fields.forEach(field => {
+          const input = form.elements[field.name];
+          const errorSpan = input.parentElement.querySelector('.error-message');
+          if (!input.value.trim()) {
+            errorSpan.textContent = field.message;
+            errorSpan.style.display = 'block';
+            valid = false;
+          } else if (field.name === 'email' && !isValidEmail(input.value.trim())) {
+            errorSpan.textContent = 'Please enter a valid email address.';
+            errorSpan.style.display = 'block';
+            valid = false;
+          }
+        });
+
+        if (valid) {
+          const data = {
+            fullName: form.fullName.value,
+            phone: form.phone.value,
+            email: form.email.value,
+            proposedDate: form.proposedDate.value,
+            query: form.query.value
+          };
+          console.log(data);
+          // You can add further submit logic here
         }
       });
+    }
 
-      if (valid) {
-        const data = {
-          fullName: form.fullName.value,
-          phone: form.phone.value,
-          email: form.email.value,
-          proposedDate: form.proposedDate.value,
-          query: form.query.value
-        };
-        console.log(data);
-        // You can add further submit logic here
-      }
-    });
+    (function () {
+      var newsletterForm = document.querySelector('.newsletter-form');
+      if (!newsletterForm) return;
+      newsletterForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!newsletterForm.checkValidity()) {
+          newsletterForm.reportValidity();
+          return;
+        }
+        var container = newsletterForm.closest('.newsletter-container');
+        if (!container) return;
+        var heading = container.querySelector('.newsletter-heading');
+        var desc = container.querySelector('.newsletter-description');
+        if (heading) {
+          heading.textContent = "You're Officially On the List";
+        }
+        if (desc) {
+          desc.innerHTML =
+            'Thank you for subscribing to Athena Events Venue.<br>You\'ll now be the first to hear about our latest events, exclusive offers, and venue updates.';
+        }
+        newsletterForm.style.display = 'none';
+      });
+    })();
   </script>
 
 </body>
