@@ -756,9 +756,9 @@
                     Sign up for our newsletter to get the latest event news, exclusive offers, and insider
                     updates—straight to your inbox.
                   </p>
-                  <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Your email here" required>
-                    <button class="newsletter-button">SUBMIT</button>
+                  <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" name="email" placeholder="Your email here" required>
+                    <button type="submit" class="newsletter-button">SUBMIT</button>
                   </form>
                 </div>
               </section>
@@ -1544,26 +1544,86 @@
     }
 
     (function () {
-      var newsletterForm = document.querySelector('.newsletter-form');
+      var newsletterForm = document.getElementById('newsletterForm');
       if (!newsletterForm) return;
-      newsletterForm.addEventListener('submit', function (e) {
+
+      newsletterForm.addEventListener('submit', async function (e) {
         e.preventDefault();
+
         if (!newsletterForm.checkValidity()) {
           newsletterForm.reportValidity();
           return;
         }
+
+        var emailField = newsletterForm.elements.email;
+        var submitButton = newsletterForm.querySelector('.newsletter-button');
         var container = newsletterForm.closest('.newsletter-container');
-        if (!container) return;
-        var heading = container.querySelector('.newsletter-heading');
-        var desc = container.querySelector('.newsletter-description');
-        if (heading) {
-          heading.textContent = "You're Officially On the List";
+        var heading = container ? container.querySelector('.newsletter-heading') : null;
+        var desc = container ? container.querySelector('.newsletter-description') : null;
+        var originalButtonText = submitButton ? submitButton.textContent : '';
+
+        var payload = {
+          fields: [
+            {
+              name: 'email',
+              value: emailField.value
+            }
+          ],
+          context: {
+            pageUri: window.location.href,
+            pageName: document.title
+          }
+        };
+
+        try {
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'SUBMITTING...';
+          }
+
+          var response = await fetch(
+            'https://api.hsforms.com/submissions/v3/integration/submit/5128788/ef6e83c6-f27c-4cd4-9047-2e1f83aa74e5',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            }
+          );
+
+          if (!response.ok) {
+            var error = await response.json();
+            console.error('HubSpot newsletter submission failed:', error);
+            throw new Error('Newsletter submission failed');
+          }
+
+          if (heading) {
+            heading.textContent = "You're Officially On the List";
+          }
+
+          if (desc) {
+            desc.innerHTML =
+              'Thank you for subscribing to Athena Events Venue.<br>You\'ll now be the first to hear about our latest events, exclusive offers, and venue updates.';
+          }
+
+          newsletterForm.reset();
+          newsletterForm.style.display = 'none';
+        } catch (err) {
+          console.error(err);
+
+          if (desc) {
+            desc.innerHTML =
+              'We couldn\'t submit your signup right now. Please try again in a moment.';
+          } else {
+            alert('Submission failed. Please try again.');
+          }
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
         }
-        if (desc) {
-          desc.innerHTML =
-            'Thank you for subscribing to Athena Events Venue.<br>You\'ll now be the first to hear about our latest events, exclusive offers, and venue updates.';
-        }
-        newsletterForm.style.display = 'none';
       });
     })();
   </script>
