@@ -596,7 +596,87 @@
                                     <button type="submit" class="enquire-now-button">Enquire
                                         Now</button>
                                 </div>
+                                <div id="form-success-message" style="display:none; color: green; text-align: center; margin-top: 1rem; font-family: 'Fira Sans';">
+                                    Thank you! Your inquiry has been submitted successfully.
+                                </div>
+                                <div id="form-error-message" style="display:none; color: red; text-align: center; margin-top: 1rem; font-family: 'Fira Sans';">
+                                    Something went wrong. Please try again.
+                                </div>
                             </form>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    var form = document.getElementById('contactForm');
+                                    if (!form) return;
+                                    
+                                    form.addEventListener('submit', function (e) {
+                                        e.preventDefault();
+
+                                        var isValid = true;
+                                        var inputs = form.querySelectorAll('.input-field');
+
+                                        inputs.forEach(function (input) {
+                                            var errorMessage = input.nextElementSibling;
+                                            if (!input.value.trim()) {
+                                                isValid = false;
+                                                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                                                    errorMessage.style.display = 'block';
+                                                    errorMessage.textContent = 'This field is required';
+                                                }
+                                            } else {
+                                                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                                                    errorMessage.style.display = 'none';
+                                                }
+                                            }
+                                        });
+
+                                        if (!isValid) return;
+
+                                        var button = form.querySelector('button[type="submit"]');
+                                        var originalText = button.textContent;
+                                        button.textContent = 'Sending...';
+                                        button.disabled = true;
+
+                                        var formData = new FormData(form);
+                                        var data = {
+                                            fields: [
+                                                { name: "firstname", value: formData.get("fullName") },
+                                                { name: "email", value: formData.get("email") },
+                                                { name: "phone", value: formData.get("phone") },
+                                                { name: "message", value: formData.get("query") }
+                                            ]
+                                        };
+
+                                        fetch('https://api.hsforms.com/submissions/v3/integration/submit/5128788/c0fbef80-6e70-43b4-a81a-914748fc2f36', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify(data)
+                                        })
+                                        .then(function (response) {
+                                            if (response.ok) {
+                                                var successMsg = document.getElementById('form-success-message');
+                                                if (successMsg) successMsg.style.display = 'block';
+                                                var errorMsg = document.getElementById('form-error-message');
+                                                if (errorMsg) errorMsg.style.display = 'none';
+                                                form.reset();
+                                            } else {
+                                                throw new Error('Network response was not ok');
+                                            }
+                                        })
+                                        .catch(function (error) {
+                                            var errorMsg = document.getElementById('form-error-message');
+                                            if (errorMsg) errorMsg.style.display = 'block';
+                                            var successMsg = document.getElementById('form-success-message');
+                                            if (successMsg) successMsg.style.display = 'none';
+                                        })
+                                        .finally(function () {
+                                            button.textContent = originalText;
+                                            button.disabled = false;
+                                        });
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
