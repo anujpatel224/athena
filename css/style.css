@@ -122,7 +122,6 @@ main .sec-6 .reviewsSwiperMobile .swiper-card .img-ct,
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .line:before,
 .quickbar .quickbar-inner .menu .desktop-nav li a .name span,
 .quickbar .quickbar-inner .menu .desktop-nav li .a .name span,
-.quickbar .quickbar-inner .menu .desktop-nav li:not(.ExploreNow):before,
 .quickbar .quickbar-inner .menu .desktop-nav li,
 .quickbar .quickbar-inner .whole-logo .logo-name span,
 .line-link:before {
@@ -1403,20 +1402,6 @@ html.fixed:not(.open-navi) .quickbar:before {
   position: relative;
 }
 
-.quickbar .quickbar-inner .menu .desktop-nav li:not(.ExploreNow):before {
-  content: "";
-  position: absolute;
-  width: 0.52rem;
-  height: 0.42rem;
-  bottom: -0.21rem;
-  left: 50%;
-  transform: translate(-50%, 200%);
-  background-color: #929292;
-  opacity: 0;
-  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-}
-
 .quickbar .quickbar-inner .menu .desktop-nav li:nth-child(0) {
   transition-delay: 0.35s;
 }
@@ -1463,12 +1448,6 @@ html.fixed:not(.open-navi) .quickbar:before {
 
 .quickbar .quickbar-inner .menu .desktop-nav li:hover,
 .quickbar .quickbar-inner .menu .desktop-nav li.active {
-  opacity: 1;
-}
-
-.quickbar .quickbar-inner .menu .desktop-nav li:hover:before,
-.quickbar .quickbar-inner .menu .desktop-nav li.active:before {
-  transform: translate(-50%, 100%);
   opacity: 1;
 }
 

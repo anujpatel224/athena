@@ -60,7 +60,6 @@ h3 {
 .quickbar .quickbar-inner .menu .desktop-nav li .a .name span,
 .quickbar .quickbar-inner .menu .desktop-nav li a .name span,
 .quickbar .quickbar-inner .menu .desktop-nav li.ExploreNow a .line:before,
-.quickbar .quickbar-inner .menu .desktop-nav li:not(.ExploreNow):before,
 .quickbar .quickbar-inner .menu .div-line,
 .quickbar .quickbar-inner .menu .hamburger,
 .quickbar .quickbar-inner .menu .x .circle,
@@ -586,20 +585,6 @@ div.please-rotate {
   position: relative;
 }
 
-.quickbar .quickbar-inner .menu .desktop-nav li:not(.ExploreNow):before {
-  content: "";
-  position: absolute;
-  width: 0.52rem;
-  height: 0.42rem;
-  bottom: -0.21rem;
-  left: 50%;
-  transform: translate(-50%, 200%);
-  background-color: #929292;
-  opacity: 0;
-  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
-  clip-path: polygon(50% 0, 0 100%, 100% 100%);
-}
-
 .quickbar .quickbar-inner .menu .desktop-nav li:nth-child(0) {
   transition-delay: 0.35s;
 }
@@ -645,11 +630,6 @@ div.please-rotate {
 }
 
 .quickbar .quickbar-inner .menu .desktop-nav li:hover {
-  opacity: 1;
-}
-
-.quickbar .quickbar-inner .menu .desktop-nav li:hover:before {
-  transform: translate(-50%, 100%);
   opacity: 1;
 }
 
@@ -6388,12 +6368,13 @@ th {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin-top:72px !important;
 }
 
 .privacy-policy-container h2 {
-  font-family: DM Serif Display;
+  font-family: Fira Sans Condensed !important;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 5ss00;
   line-height: 40px;
   text-align: left;
   margin-bottom: 1rem;
@@ -6412,7 +6393,6 @@ th {
 }
 
 .privacy-policy-container li {
-  font-family: Archivo;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
@@ -7636,10 +7616,13 @@ footer {
 
 /* Diagrams */
 .rl-diagrams-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 900px;
   margin: 0 auto 40px auto;
 }
 
@@ -7648,12 +7631,17 @@ footer {
 }
 
 .rl-diagram-item {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 280px;
   text-align: center;
 }
 
 .rl-diagram-image {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   height: 236px;
+  margin: 0 auto;
   padding: 25px;
   display: flex;
   align-items: center;

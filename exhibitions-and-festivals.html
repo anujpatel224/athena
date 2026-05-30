@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sporting Events | Athena Events Venue</title>
+    <title>Exhibitions & Festivals | Athena Events Venue</title>
     <meta name="description"
-        content="Experience high-energy sporting events at Athena Events Venue with exceptional catering, flexible seating, and a 2000 guest capacity." />
-    <meta property="og:title" content="Sporting Events | Athena Events Venue" />
+        content="Host unique exhibitions and festivals at Athena Events Venue – offering over 1500sqm of flexible space in a central location." />
+    <meta property="og:title" content="Exhibitions & Festivals | Athena Events Venue" />
     <meta property="og:description"
-        content="Experience high-energy sporting events at Athena Events Venue with exceptional catering, flexible seating, and a 2000 guest capacity." />
-    <meta property="og:url" content="" />
-    <link rel="canonical" href="" />
+        content="Host unique exhibitions and festivals at Athena Events Venue – offering over 1500sqm of flexible space in a central location." />
+    <meta property="og:url" content="https://www.athenacb.co.uk/exhibitions-and-festivals.html" />
+    <link rel="canonical" href="https://www.athenacb.co.uk/exhibitions-and-festivals.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Athena Events Venue" />
     <meta property="og:image" content="https://www.athenacb.co.uk/images/social_branding.png" />
@@ -33,21 +33,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/insights.css" media="screen" />
     <link rel="stylesheet" href="../css/lazy-animations.css" media="screen" />
-    <style>
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .content-container {
-                height: 50vh !important;
-            }
-        }
-    </style>
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/144091879.js"></script>
 
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const listItems = document.querySelectorAll(".list-section li");
+        const clientImage = document.getElementById("client-image");
+
+        if (!clientImage) {
+            console.warn("Image with ID 'client-image' not found.");
+            return;
+        }
+
+        listItems.forEach((item) => {
+            item.addEventListener("mouseenter", function () {
+                const newImage = item.getAttribute("data-image");
+                if (newImage) {
+                    clientImage.src = newImage;
+                } else {
+                    console.warn("No data-image attribute found on:", item);
+                }
+            });
+        });
+    });
+</script>
+
 <body data-barba="wrapper">
     <!-- main loader -->
-
     <div data-barba="container" data-barba-namespace="dinners" class="body-start">
         <!-- mobile navbar -->
         <div id="navigation" data-lenis-prevent>
@@ -61,12 +76,12 @@
                                         <span class="name"> What We Do </span>
                                     </a>
                                     <ul class="dropdown-menu-mobile">
-                                        <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                        <li><a href="awards-and-dinners.html" class="no-barba">Awards & Dinners</a></li>
                                         <li><a href="conferences.html" class="no-barba">Conferences</a></li>
-                                        <li><a href="weddings.html" class="no-barba">Weddings</a></li><li><a href="concerts&shows.html" class="no-barba">Concerts & Shows</a></li>
-                                        <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
+                                        <li><a href="weddings.html" class="no-barba">Weddings</a></li><li><a href="concerts-and-shows.html" class="no-barba">Concerts & Shows</a></li>
+                                        <li><a href="sporting-events.html" class="no-barba">Sporting Events</a></li>
                                         <li><a href="balls-proms.html" class="no-barba">Balls & Proms</a></li>
-                                        <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
+                                        <li><a href="exhibitions-and-festivals.html" class="no-barba">Exhibitions &
                                                 Festivals</a>
                                         </li>
                                         
@@ -74,7 +89,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="roomlayout.html" data-anchor-target="no-barba" data-toggle-nav
+                                    <a href="room-layout.html" data-anchor-target="no-barba" data-toggle-nav
                                         title="Room Layouts" class="no-barba">
                                         <span class="name"> Room Layouts </span>
                                     </a>
@@ -156,19 +171,19 @@
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="awards&dinners.html" class="no-barba">Awards & Dinners</a></li>
+                                    <li><a href="awards-and-dinners.html" class="no-barba">Awards & Dinners</a></li>
                                     <li><a href="conferences.html" class="no-barba">Conferences</a></li>
-                                    <li><a href="weddings.html" class="no-barba">Weddings</a></li><li><a href="concerts&shows.html" class="no-barba">Concerts & Shows</a></li>
-                                    <li><a href="sportingevents.html" class="no-barba">Sporting Events</a></li>
-                                    <li><a href="balls-proms.html" class="no-barba">Balls & Proms</a></li>
-                                    <li><a href="exhibitions&festivals.html" class="no-barba">Exhibitions &
+                                    <li><a href="weddings.html" class="no-barba">Weddings</a></li><li><a href="concerts-and-shows.html" class="no-barba">Concerts & Shows</a></li>
+                                    <li><a href="sporting-events.html" class="no-barba">Sporting Events</a></li>
+                                    <li><a href="/balls-proms.html" class="no-barba">Balls & Proms</a></li>
+                                    <li><a href="exhibitions-and-festivals.html" class="no-barba">Exhibitions &
                                             Festivals</a></li>
                                     
                                     <li><a href="christmas.html" class="no-barba">Christmas</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="roomlayout.html" title="roomLayout" data-anchor-target="roomlayout.html"
+                                <a href="room-layout.html" title="Room Layouts" data-anchor-target="room-layout.html"
                                     class="no-barba">
                                     <span class="name">
                                         <span class="first"> Room Layouts </span>
@@ -265,6 +280,7 @@
                 </div>
             </div>
         </div>
+        <!-- main page start here -->
         <div class="page-wrap">
             <main>
                 <!-- video section -->
@@ -272,15 +288,14 @@
                     <div class="dark-overlay-video video-container">
                         <video class="bg-video main-video" autoplay muted loop playsinline data-parallax-strength="5.5"
                             data-parallax-height="5">
-                            <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Sports.mp4"
-                                type="video/mp4" />
-                            Your browser does not support the video tag.
+                            <source src="https://anuj-personal.s3.ap-south-1.amazonaws.com/Exhibitions+%26+Festivals.mp4"
+                                type="video/mp4">
                         </video>
                     </div>
                     <div class="overlay-text">
-                        <h1 class="video-hero-heading">SPORTING EVENTS</h1>
+                        <h1 class="video-hero-heading">EXHIBITIONS & FESTIVALS</h1>
                         <div class="video-hero-underline"></div>
-                        <p class="video-hero-subtext">Precision, Passion, and Performance in Every Event</p>
+                        <p class="video-hero-subtext">Your vision, your layout — fully flexible exhibitions.</p>
                     </div>
                     <button id="button" class="volume-button">
                         <i class="fas fa-volume-mute"></i>
@@ -290,17 +305,19 @@
                 <div class="conference-content-section">
                     <div class="conference-content-container">
                         <div class="conference-image-wrapper">
-                            <img src="../images/sporting_events/sporting_events_01.png" alt="Athena Conference"
+                            <img src="../images/what-we-do/conf1.png" alt="Athena Conference"
                                 class="conference-image" />
                         </div>
                         <div class="conference-content-wrapper">
                             <div class="conference-content">
-                                <h2 class="conference-heading">THE ULTIMATE DESTINATION FOR SPORTING EXCELLENCE</h2>
+                                <h2 class="conference-heading">ENDLESS POSSIBILITIES, ONE EXTRAORDINARY SPACE</h2>
                                 <div class="conference-line"></div>
-                                <p class="conference-text">Stage unforgettable tournaments, championships, and training
-                                    events in a venue built for peak performance. Featuring state-of-the-art facilities,
-                                    lightning-fast connectivity, and adaptable spaces, Athena delivers an experience
-                                    that keeps every player, coach, and spectator inspired and engaged.</p>
+                                <p class="conference-text">The venue’s adaptable layout provides limitless opportunities
+                                    to bring your ideas to life. Whether you’re planning an intimate showcase, a grand
+                                    exhibition, or a themed experience, the space can be tailored to reflect your
+                                    creative vision and brand identity. With seamless flexibility and modern
+                                    infrastructure, it’s a canvas ready to be transformed into something truly
+                                    remarkable.</p>
                                 <a href="../contact-us.html" class="conference-button no-barba">
                                     <span>Enquire Now</span>
                                 </a>
@@ -315,20 +332,11 @@
                         <div class="why-athena-grid">
                             <div class="why-athena-card">
                                 <div class="why-athena-icon">
-                                    <img src="/images/icons/Capacity.svg"
-                                        alt="Capacity" />
+                                    <img src="/images/icons/Exhibition Space.svg"
+                                        alt="Exhibition space" />
                                 </div>
-                                <h3 class="why-athena-title">Capacity</h3>
-                                <p class="why-athena-description">Up to 2,000 guests with flexible layout.</p>
-                            </div>
-
-                            <div class="why-athena-card">
-                                <div class="why-athena-icon">
-                                    <img src="/images/icons/Event Space.svg"
-                                        alt="Event space" />
-                                </div>
-                                <h3 class="why-athena-title">Event Space</h3>
-                                <p class="why-athena-description">2000 sqm of floor space, extendable staging options.</p>
+                                <h3 class="why-athena-title">Exhibition Space</h3>
+                                <p class="why-athena-description">2000 sqm of unimpeded and carpeted exhibition space.</p>
                             </div>
 
                             <div class="why-athena-card">
@@ -342,20 +350,43 @@
 
                             <div class="why-athena-card">
                                 <div class="why-athena-icon">
-                                    <img src="/images/icons/Bar Service.svg"
-                                        alt="Bar service" />
+                                    <img src="/images/icons/Flexible Layouts.svg"
+                                        alt="Flexible layouts" />
                                 </div>
-                                <h3 class="why-athena-title">Bar Service</h3>
-                                <p class="why-athena-description">3 high-volume, high-speed designed bars.</p>
+                                <h3 class="why-athena-title">Flexible Layouts</h3>
+                                <p class="why-athena-description">Adaptable floor plans, extendable staging &amp; foyer space for exhibits.</p>
                             </div>
 
                             <div class="why-athena-card">
                                 <div class="why-athena-icon">
-                                    <img src="/images/icons/Changing & Prep.svg"
-                                        alt="Changing and prep" />
+                                    <img src="/images/icons/Exclusive Venue Hire.svg" alt="Exclusive venue hire" />
+                                </div>
+                                <h3 class="why-athena-title">Exclusive Venue Hire</h3>
+                                <p class="why-athena-description">Full venue access with 120 parking spaces.</p>
+                            </div>
+
+                            <div class="why-athena-card">
+                                <div class="why-athena-icon">
+                                    <img src="/images/icons/Set Up.svg" alt="Set up" />
+                                </div>
+                                <h3 class="why-athena-title">Set Up</h3>
+                                <p class="why-athena-description">Complete venue setup with chiavari chairs, tables, and stalls.</p>
+                            </div>
+
+                            <div class="why-athena-card">
+                                <div class="why-athena-icon">
+                                    <img src="images/icons/locationicon.svg" alt="Prime location" />
+                                </div>
+                                <h3 class="why-athena-title">Prime Location</h3>
+                                <p class="why-athena-description">Centrally located with easy transport links.</p>
+                            </div>
+
+                            <div class="why-athena-card">
+                                <div class="why-athena-icon">
+                                    <img src="/images/icons/Changing & Prep.svg" alt="Changing and prep" />
                                 </div>
                                 <h3 class="why-athena-title">Changing &amp; Prep</h3>
-                                <p class="why-athena-description">4 en-suite dressing rooms.</p>
+                                <p class="why-athena-description">4 changing rooms, with en-suite bathroom facilities.</p>
                             </div>
 
                             <div class="why-athena-card">
@@ -366,53 +397,37 @@
                                 <h3 class="why-athena-title">Fibre Connectivity</h3>
                                 <p class="why-athena-description">100 Mb dedicated fibre leased line.</p>
                             </div>
-
-                            <div class="why-athena-card">
-                                <div class="why-athena-icon">
-                                    <img src="../images/icons/locationicon.svg" alt="Prime location" />
-                                </div>
-                                <h3 class="why-athena-title">Prime Location</h3>
-                                <p class="why-athena-description">Centrally located with easy transport links.</p>
-                            </div>
-
-                            <div class="why-athena-card">
-                                <div class="why-athena-icon">
-                                    <img src="/images/icons/Venue Support.svg"
-                                        alt="Venue support" />
-                                </div>
-                                <h3 class="why-athena-title">Venue Support</h3>
-                                <p class="why-athena-description">End-to-end technical and event support.</p>
-                            </div>
                         </div>
                     </div>
                 </section>
 
-              <!-- Talent at Athena -->
-              <section class="talent-athena-section" aria-labelledby="talent-athena-heading">
-                <div class="talent-athena-inner">
-                    <div class="talent-athena-image-wrap">
-                        <img src="images/sporting_events/talent-sport.png" alt="Live performance at Athena with crowd"
-                            class="talent-athena-image" width="800" height="600" loading="lazy" />
-                    </div>
-                    <div class="talent-athena-content">
-                        <h2 id="talent-athena-heading" class="talent-athena-heading">Talent at Athena</h2>
-                        <div class="talent-athena-line" role="presentation"></div>
-                        <div class="talent-athena-columns">
-                            <ul class="talent-athena-list">
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> Antony Joshua</li>
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> Floyd Mayweather</li>
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> Bobby George</li>
-                            </ul>
-                            <ul class="talent-athena-list">
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> Louis Walsh</li>
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> David Seaman</li>
-                                <li><span class="talent-athena-check" aria-hidden="true"></span> James Corden</li>
-                                
-                            </ul>
+                <!-- Menu Section -->
+                <div class="menu-section">
+                    <div class="menu-container">
+                        <div class="menu-image-wrapper">
+                            <img src="../images/what-we-do/fish-and-tomato-salad.jpg" alt="Athena Menu"
+                                class="menu-image" />
+                        </div>
+                        <div class="menu-content-wrapper">
+                            <div class="menu-content">
+                                <h2 class="menu-heading">A sumptuous menu to indulge the senses</h2>
+                                <div class="menu-line"></div>
+                                <p class="menu-text">Whether you would like a quick-serve grab-and-go lunch or an
+                                    elaborate buffet for your delegates, Athena boasts an award-winning in-house
+                                    catering service. You can download our sample buffet menu or banqueting menu or
+                                    contact us for more information.</p>
+                                <div class="menu-buttons">
+                                    <a href="../pdf/sample-buffet-menu.pdf" target="_blank" class="menu-button">
+                                        <span>Sample Buffet Menu</span>
+                                    </a>
+                                    <a href="../pdf/sample-banqueting-menu.pdf" target="_blank" class="menu-button">
+                                        <span>Sample Banqueting Menu</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
                 <!-- our work section -->
                 <div class="our-work-section">
@@ -423,10 +438,10 @@
                     <div class="our-work-content">
                         <div class="our-work-text-group">
                             <h2 class="our-work-headline">Our Work</h2>
-                            <p class="our-work-subheadline">From high-energy boxing nights and dart tournaments to
-                                East Balls 2024, wrestling showcases, and bodybuilding events — Athena has hosted some of
-                                the most thrilling moments in sporting excellence. Discover how we transform our stage
-                                into an arena built for champions.</p>
+                            <p class="our-work-subheadline">Every event tells a story. From Comic Con to Leicester Made,
+                                Gin Festivals to the Freshers Festival, Athena has been the backdrop for the UK's most
+                                dynamic and memorable celebrations. Explore below to see the experiences we bring to
+                                life.</p>
                         </div>
                         <a href="./case-studies.html" class="our-work-btn no-barba">Discover More</a>
                         <div class="our-work-marquee">
@@ -480,16 +495,17 @@
                                         <div class="testimonial-header" style="margin-bottom: 0rem;">
                                             <div class="testimonial-company">
                                                 <p style="
-                                                    font-size: 25px;
+                                                    font-size: 20px;
                                                     font-weight: 900;
                                                     letter-spacing: 0.6px;
                                                     margin: 0 0 8px 0;
+                                                    font-style: italic;
                                                     text-transform: uppercase;
                                                     font-family: 'Fira Sans', sans-serif;
-                                                    line-height: 1.8;
+                                                    line-height: 1.4;
                                                     ">
 
-                                                    UKDFBA Championship
+                                                    - Sankirtan Fest’s Annual Charity Music Festival
                                                 </p>
                                             </div>
                                             <div class="testimonial-quote-icon">
@@ -501,10 +517,9 @@
                                             </div>
                                         </div>
                                         <p class="testimonial-text">
-                                            Athena was the perfect venue for the UKDFBA Championship—spacious,
-                                            well-organized, and ideal for everyone to enjoy. The facilities were
-                                            top-notch, the staff incredibly helpful, and the atmosphere made the event
-                                            truly memorable. Simply superb from start to finish!</p>
+                                            Hosting SankirtanFest’s annual charity festival at Athena was an exceptional
+                                            experience, thanks to their proactive and solution-driven team. Every detail
+                                            was flawlessly managed, allowing us to focus fully on the event.</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -512,48 +527,17 @@
                                         <div class="testimonial-header" style="margin-bottom: 0rem;">
                                             <div class="testimonial-company">
                                                 <p style="
-                                                    font-size: 25px;
-                                                    font-weight: 900;
-                                                    letter-spacing: 0.6px;
-                                                    margin: 0 0 8px 0;
-                                                    text-transform: uppercase;
-                                                    font-family: 'Fira Sans', sans-serif;
-                                                    line-height: 1.8;
-                                                    ">
+                                                                                    font-size: 20px;
+                                                                                    font-weight: 900;
+                                                                                    letter-spacing: 0.6px;
+                                                                                    margin: 0 0 8px 0;
+                                                                                    font-style: italic;
+                                                                                    text-transform: uppercase;
+                                                                                    font-family: 'Fira Sans', sans-serif;
+                                                                                    line-height: 1.4;
+                                                                                    ">
 
-                                                    Boxing Championship
-                                                </p>
-                                            </div>
-                                            <div class="testimonial-quote-icon">
-                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h3.983v10h-9.984z"
-                                                        fill="currentColor" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <p class="testimonial-text">Attending the boxing event at Athena was
-                                            fantastic—great views from our table, easy drinks service, and superb food.
-                                            A memorable venue we’d happily visit again, with only minor issues with
-                                            toilet locations.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-header" style="margin-bottom: 0rem;">
-                                            <div class="testimonial-company">
-                                                <p style="
-                                                    font-size: 25px;
-                                                    font-weight: 900;
-                                                    letter-spacing: 0.6px;
-                                                    margin: 0 0 8px 0;
-                                                    text-transform: uppercase;
-                                                    font-family: 'Fira Sans', sans-serif;
-                                                    line-height: 1.8;
-                                                    ">
-
-
-                                                    Regen 2024
+                                                    - Vegan Festival
                                                 </p>
                                             </div>
                                             <div class="testimonial-quote-icon">
@@ -565,11 +549,9 @@
                                             </div>
                                         </div>
                                         <p class="testimonial-text">
-
-                                            Regen 2024 was a huge success, and we received a lot of positive feedback on
-                                            the venue, production, and your staff. Your services and assistance over the
-                                            past year were invaluable, and we look forward to discussing a future
-                                            booking.
+                                            What a stunning venue! Athena’s historic charm and spacious design made the
+                                            vegan festival a joy to attend. The range of stalls was fantastic—this place
+                                            really works for any event.
                                         </p>
                                     </div>
                                 </div>
@@ -578,48 +560,17 @@
                                         <div class="testimonial-header" style="margin-bottom: 0rem;">
                                             <div class="testimonial-company">
                                                 <p style="
-                                                    font-size: 25px;
+                                                    font-size: 20px;
                                                     font-weight: 900;
                                                     letter-spacing: 0.6px;
                                                     margin: 0 0 8px 0;
+                                                    font-style: italic;
                                                     text-transform: uppercase;
                                                     font-family: 'Fira Sans', sans-serif;
-                                                    line-height: 1.8;
+                                                    line-height: 1.4;
                                                     ">
 
-                                                    The Varsity Dart
-                                                </p>
-                                            </div>
-                                            <div class="testimonial-quote-icon">
-                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h3.983v10h-9.984z"
-                                                        fill="currentColor" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <p class="testimonial-text">The Varsity Dart was exceptionally well organized,
-                                            ensuring a seamless day of high-level matches. The atmosphere was electric,
-                                            making it a truly memorable event that showcased fantastic sportsmanship and
-                                            competitive skill.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-header" style="margin-bottom: 0rem;">
-                                            <div class="testimonial-company">
-                                                <p style="
-                                                    font-size: 25px;
-                                                    font-weight: 900;
-                                                    letter-spacing: 0.6px;
-                                                    margin: 0 0 8px 0;
-                                                    text-transform: uppercase;
-                                                    font-family: 'Fira Sans', sans-serif;
-                                                    line-height: 1.8;
-                                                    ">
-
-
-                                                    Wrestling Championship
+                                                    - Comic Con
                                                 </p>
                                             </div>
                                             <div class="testimonial-quote-icon">
@@ -631,14 +582,45 @@
                                             </div>
                                         </div>
                                         <p class="testimonial-text">
-
-                                            The venue was absolutely perfect for the Wrestling Championship, providing
-                                            an excellent setup that handled the crowd and action flawlessly. The space
-                                            was well-managed, creating an intense and exciting atmosphere that elevated
-                                            the entire event.</p>
+                                            Athena strikes the perfect balance of size and flexibility, featuring a
+                                            spacious main hall and balcony above. I’ve been to events ranging from Comic
+                                            Con to Christmas parties here, and it always delivers a fantastic
+                                            atmosphere, excellent bar, and convenient parking.</p>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-header" style="margin-bottom: 0rem;">
+                                            <div class="testimonial-company">
+                                                <p style="
+                                                    font-size: 20px;
+                                                    font-weight: 900;
+                                                    letter-spacing: 0.6px;
+                                                    margin: 0 0 8px 0;
+                                                    font-style: italic;
+                                                    text-transform: uppercase;
+                                                    font-family: 'Fira Sans', sans-serif;
+                                                    line-height: 1.4;
+                                                    ">
 
+                                                    - Vegan Festival
+                                                </p>
+                                            </div>
+                                            <div class="testimonial-quote-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h3.983v10h-9.984z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text">
+                                            What a stunning venue! Athena’s historic charm and spacious design made the
+                                            vegan festival a joy to attend. The range of stalls was fantastic—this place
+                                            really works for any event.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="testimonials-pagination"></div>
@@ -653,67 +635,91 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_01.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_01.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_02.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_02.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_03.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_03.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_04.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_04.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_05.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_05.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_06.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_06.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_07.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_07.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_08.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_08.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_09.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_09.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_10.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_10.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="service-image-card">
-                                        <img src="../images/gallery/sporting_events/img_sports_11.png" alt="Athena Service"
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_11.png" alt="Athena Service"
+                                            class="service-carousel-image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_12.png" alt="Athena Service"
+                                            class="service-carousel-image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_13.png" alt="Athena Service"
+                                            class="service-carousel-image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_14.png" alt="Athena Service"
+                                            class="service-carousel-image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="service-image-card">
+                                        <img src="images/gallery/exhibition_and_festivals/img_exhib_15.png" alt="Athena Service"
                                             class="service-carousel-image" />
                                     </div>
                                 </div>
@@ -722,17 +728,18 @@
                         </div>
                         <button class="slider-btn prev-btn">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path d="M20 8L12 16L20 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                <path d="M20 8L12 16L20 24" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                         <button class="slider-btn next-btn">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path d="M12 8L20 16L12 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                <path d="M12 8L20 16L12 24" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg> </button>
                     </div>
                 </div>
+
 
             </main>
             <!-- faq section -->
@@ -743,10 +750,10 @@
                         <div class="faq-item open">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Can Athena Events Venue host live sporting events or
-                                        screenings?</p>
-                                    <p class="faq-answer">Yes. The venue is suitable for live sporting events, award
-                                        ceremonies, and large-scale screenings.</p>
+                                    <p class="faq-question">Is Athena Events Venue suitable for exhibitions and trade
+                                        festivals?</p>
+                                    <p class="faq-answer">Yes. The venue offers large, open spaces ideal for
+                                        exhibitions, showcases, and multi-booth layouts.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -759,9 +766,9 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Are large screens and broadcast-quality AV available?</p>
-                                    <p class="faq-answer">Athena offers professional AV setups suitable for live feeds,
-                                        replays, and commentary.</p>
+                                    <p class="faq-question">Can we customise floor plans for stalls and displays?</p>
+                                    <p class="faq-answer">Absolutely. Layouts can be tailored to suit exhibitor booths,
+                                        walkways, demo zones, and experience areas.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -774,9 +781,10 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Is seating flexible for different sporting formats?</p>
-                                    <p class="faq-answer">Yes. Seating and standing configurations can be adapted based
-                                        on the event format.</p>
+                                    <p class="faq-question">What is the maximum number of exhibitors the venue can
+                                        support?</p>
+                                    <p class="faq-answer">This depends on the layout and booth size. Our team will help
+                                        plan a layout that maximises space and flow.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -789,9 +797,10 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Can we host fan zones or sponsor activations?</p>
-                                    <p class="faq-answer">Absolutely. Spaces can be customised for sponsor branding,
-                                        activations, and interactive zones.</p>
+                                    <p class="faq-question">Does the venue support load-in and load-out for large
+                                        setups?</p>
+                                    <p class="faq-answer">Yes. Athena offers practical access for exhibitors, equipment,
+                                        and large installations.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -806,10 +815,9 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Is the venue suitable for high-energy crowd environments?
-                                    </p>
-                                    <p class="faq-answer">Yes. Athena is designed to safely accommodate energetic crowds
-                                        with professional crowd-management planning.</p>
+                                    <p class="faq-question">Is power and technical support available for exhibitors?</p>
+                                    <p class="faq-answer">Power points, lighting, and technical assistance can be
+                                        arranged based on exhibitor requirements.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -822,10 +830,10 @@
                         <div class="faq-item open">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Are food and beverage services available during sporting
-                                        events?</p>
-                                    <p class="faq-answer">Yes, catering and bar services can be arranged based on event
-                                        requirements.</p>
+                                    <p class="faq-question">Are food and beverage options available during exhibitions?
+                                    </p>
+                                    <p class="faq-answer">Catering solutions can be provided for visitors, exhibitors,
+                                        or VIP guests.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -838,10 +846,9 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Can sporting events be combined with award ceremonies or
-                                        dinners?</p>
-                                    <p class="faq-answer">Yes. The venue is ideal for hybrid sporting events that
-                                        include presentations or post-event celebrations.</p>
+                                    <p class="faq-question">Can exhibitions be hosted over multiple days?</p>
+                                    <p class="faq-answer">Yes, multi-day events can be accommodated with prior planning.
+                                    </p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -854,9 +861,9 @@
                         <div class="faq-item">
                             <div class="faq-content">
                                 <div class="faq-text">
-                                    <p class="faq-question">Does Athena offer accessibility for all guests?</p>
-                                    <p class="faq-answer">Athena is fully accessible and designed to welcome all
-                                        attendees comfortably.</p>
+                                    <p class="faq-question">Is the venue accessible for large public footfall?</p>
+                                    <p class="faq-answer">Athena is designed to manage high visitor numbers comfortably
+                                        and safely.</p>
                                 </div>
                                 <div class="faq-icon-wrapper">
                                     <div class="faq-icon-bg">
@@ -879,7 +886,7 @@
                         <a href="./contact-us.html" class="no-barba">Contact Us</a>
                         <a href="./heritage.html" class="no-barba">History</a>
                         <a href="./testimonials.html" class="no-barba">Testimonials</a>
-                        <a href="./roomlayout.html" class="no-barba">Room Layout</a>
+                        <a href="./room-layout.html" class="no-barba">Room Layouts</a>
                         <a href="./blog/index.html" class="no-barba">Blog</a>
                         <a href="./faq.html" class="no-barba">FAQ</a>
                         <a href="./career.html" class="no-barba">Career</a>
@@ -900,18 +907,18 @@
                     </div>
                     <div class="footer-address">
                         <div class="address-links">
-                            <a href="../terms-and-condition.html">Terms & Conditions</a>
+                            <a href="../terms-and-conditions.html">Terms & Conditions</a>
                             <a href="../privacy-policy.html">Privacy Policy</a>
                             <a href="../terms-of-use.html">Terms of Use</a>
                         </div>
                         <div class="address-links">
                             <a href="tel:01162626556" class="dev-address">0116 262 6556</a>
                             <a href="mailto:contact@athenacb.co.uk">contact@athenacb.co.uk</a>
-                            <a href="#">Queen Street Leicester, LE1 1QD</a>
+                            <a href="./contact-us.html" class="no-barba">Queen Street Leicester, LE1 1QD</a>
                         </div>
-                    </div>
             </footer>
         </div>
+        <!-- main page end here with footer -->
         <div class="lp-whatsapp-icon-bar">
             <a class="no-barba" target="_blank"
                 href="https://web.whatsapp.com/send?phone=+918076865758&amp;text=%F0%9F%91%8B%F0%9F%8F%BB%20Hi%2C%20I%20am%20Interested%20to%20talk.%0A%0A*Page%20URL%3A*%20https%3A%2F%2Fathena-rust.vercel.app%2F">
@@ -935,7 +942,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/animation.js"></script>
-    <script src="../js/insight.js"></script>
+    <script src="../js//insight.js"></script>
     <script>
         // Initialize Testimonials Swiper
         document.addEventListener('DOMContentLoaded', function () {
@@ -1016,6 +1023,7 @@
 
         });
     </script>
+
 </body>
 
 </html>
