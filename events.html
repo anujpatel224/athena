@@ -269,26 +269,10 @@
 
         <!-- Events Section -->
         <section class="live-events-section">
-          <!-- Month Filter -->
-          <div class="month-filter-container">
-            <div class="month-filter">
-              <button class="month-filter-btn active" data-month="april">April</button>
-              <button class="month-filter-btn" data-month="may">May</button>
-              <button class="month-filter-btn" data-month="june">June</button>
-              <button class="month-filter-btn" data-month="july">July</button>
-              <button class="month-filter-btn" data-month="august">August</button>
-              <button class="month-filter-btn" data-month="september">September</button>
-              <button class="month-filter-btn" data-month="october">October</button>
-              <button class="month-filter-btn" data-month="november">November</button>
-              <button class="month-filter-btn" data-month="december">December</button>
-            </div>
-          </div>
-
           <!-- Events Grid -->
           <div class="events-grid-container">
             <div class="events-grid">
-              <!-- April Events -->
-              <div class="events-month-group" data-month="april">
+              <div class="events-month-group">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="images/live-evnts/bingo.jpg" alt="Bongo's Bingo">
@@ -339,10 +323,6 @@
                     <button class="explore-more-btn">More Info</button>
                   </div>
                 </div>
-              </div>
-
-              <!-- May Events -->
-              <div class="events-month-group" data-month="may" style="display: none;">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="/images/live-evnts/kings-voice-1920x1080.jpg" alt="The King's Voice">
@@ -383,10 +363,6 @@
                     <button class="explore-more-btn filled">More Info</button>
                   </div>
                 </div>
-              </div>
-
-              <!-- June Events -->
-              <div class="events-month-group" data-month="june" style="display: none;">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="images/live-evnts/coldplace-social-square-leicester.jpg" alt="Coldplace">
@@ -417,10 +393,6 @@
                     <button class="explore-more-btn">More Info</button>
                   </div>
                 </div>
-              </div>
-
-              <!-- September Events -->
-              <div class="events-month-group" data-month="september" style="display: none;">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="images/live-evnts/1080-x-1080.jpg" alt="UK Pink Floyd Experience">
@@ -431,10 +403,6 @@
                     <button class="explore-more-btn">More Info</button>
                   </div>
                 </div>
-              </div>
-
-              <!-- October Events -->
-              <div class="events-month-group" data-month="october" style="display: none;">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="images/live-evnts/abbamania.png" alt="ABBAMANIA">
@@ -465,10 +433,6 @@
                     <button class="explore-more-btn">More Info</button>
                   </div>
                 </div>
-              </div>
-
-              <!-- November Events -->
-              <div class="events-month-group" data-month="november" style="display: none;">
                 <div class="event-card">
                   <div class="event-image">
                     <img src="images/live-evnts/screenshot-2025-02-22-at-085420.png" alt="The Story of Swing">
@@ -577,31 +541,5 @@
   <script src="js/scripts.js"></script>
   <script src="js/animation.js"></script>
   <script src="js/insight.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const monthFilterBtns = document.querySelectorAll('.month-filter-btn');
-      const eventsMonthGroups = document.querySelectorAll('.events-month-group');
-
-      // Month filter functionality
-      monthFilterBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-          const selectedMonth = this.getAttribute('data-month');
-
-          // Update active button
-          monthFilterBtns.forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-
-          // Show/hide event groups
-          eventsMonthGroups.forEach(group => {
-            if (group.getAttribute('data-month') === selectedMonth) {
-              group.style.display = 'flex';
-            } else {
-              group.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
 
 </html>

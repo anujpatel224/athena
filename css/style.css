@@ -4390,7 +4390,6 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 .welcome-subtext {
   font-family: "Playfair Display";
   font-size: 1rem;
-  font-style: italic;
   line-height: 1.6;
   color: #cccccc;
 }
@@ -6735,7 +6734,6 @@ main .btn-secondary:hover,
 .services_swiper_heading {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 2rem;
-  font-style: italic;
   font-weight: 500;
   line-height: 52.1px;
   text-align: left;
