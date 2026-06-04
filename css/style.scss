@@ -944,6 +944,12 @@ main .line {
 }
 
 .page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 99999990;
+  background-color: #000;
+  pointer-events: all;
+
   .logo-sec {
     position: fixed;
     width: 100%;
@@ -952,13 +958,12 @@ main .line {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: $dark;
+    background-color: #000;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     z-index: 9999994;
-    opacity: 0;
     gap: 4rem;
     @media (min-width: $large) {
       gap: 1rem;
@@ -999,6 +1004,7 @@ main .line {
       }
     }
     .name {
+      opacity: 0;
       @extend %display-font;
       font-size: 6rem;
       font-weight: 600;
@@ -1007,7 +1013,9 @@ main .line {
       }
     }
   }
+
   .transition-overlay {
+    display: none;
     position: fixed;
     left: 0;
     width: 100%;

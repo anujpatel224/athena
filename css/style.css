@@ -991,6 +991,14 @@ h6,
   fill: #141414;
 }
 
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 99999990;
+  background-color: #000;
+  pointer-events: all;
+}
+
 .page-transition .logo-sec {
   position: fixed;
   width: 100%;
@@ -999,14 +1007,17 @@ h6,
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #141414;
+  background-color: #000;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   z-index: 9999994;
-  opacity: 0;
   gap: 4rem;
+}
+
+.page-transition .logo-sec .name {
+  opacity: 0;
 }
 
 .logo-sec .name {
@@ -1068,6 +1079,7 @@ h6,
 }
 
 .page-transition .transition-overlay {
+  display: none;
   position: fixed;
   left: 0;
   width: 100%;

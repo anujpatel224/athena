@@ -122,8 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
  function initLoader() {
      let tl = gsap.timeline();
-     tl.set(".logo-sec", {
+     tl.set(".page-transition .transition-overlay", {
+         display: "none",
+     });
+     tl.set(".logo-sec .name", {
          opacity: 0,
+         letterSpacing: "0em",
+         scale: 0.5
      });
      tl.set(".logo-sec .img-mark .triangle:first-of-type", {
          y: "-20%",
@@ -131,11 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
      tl.set(".logo-sec .img-mark .triangle:last-of-type", {
          y: "20%",
      });
-     tl.set(".logo-sec .name", {
-         letterSpacing: "0em",
-         scale: 0.5
-     });
-     tl.to(".logo-sec", {
+     tl.to(".logo-sec .name", {
          opacity: 1,
          duration: 2.5,
          ease: "custom-ease"
@@ -157,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
          ease: "custom-ease"
 
      }, 0);
-     tl.to(".logo-sec", {
+     tl.to(".logo-sec .name", {
          autoAlpha: 0,
          duration: .4,
      });
@@ -166,7 +167,19 @@ document.addEventListener("DOMContentLoaded", function () {
          scroll.stop();
      }, null, 2.5);
      tl.call(function() {
-         pageTransitionOut();
+         scroll.start();
+         gsap.set(".page-transition", {
+             autoAlpha: 0,
+             height: 0,
+             pointerEvents: "none",
+         });
+         gsap.set(".page-transition .transition-overlay", {
+             display: "none",
+         });
+         gsap.set(".quickbar", {
+             y: 0,
+             autoAlpha: 1,
+         });
      }, null, 2.5);
 
  }
@@ -174,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
  function pageTransitionIn() {
      let tl = gsap.timeline();
      tl.set(".page-transition .transition-overlay", {
+         display: "block",
          yPercent: "0%",
          top: "auto",
          bottom: "0",
